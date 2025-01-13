@@ -12,10 +12,10 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	--max-width: 1200px;
+	--max-width: 1440px;
 	--max-grid-size: min(100vw, var(--max-width));
-	--grid-columns-number: 48;
-	--grid-color: #4448;
+	--grid-columns-number: 52;
+	--grid-color: #aaa8;
 
 	--white-ligth: #edf6f8;
 	--white: #daedf1;
