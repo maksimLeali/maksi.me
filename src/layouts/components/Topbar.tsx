@@ -45,23 +45,24 @@ const TopBarContainer = styled.header`
 	align-items: center;
 	width: 100%;
 	box-sizing: border-box;
-	background-color: ${$color("white")};
+	background-color: ${$color("white-dark")};
 	justify-content: center;
 	border-bottom: 1px solid #ccc;
 	position: fixed;
 	top: 0;
 	z-index: 10;
 	transition: background-color 0.5s ease-in, color 0.5s ease-out;
+	color: ${$color("white")};
 	&.scrolled {
 		background-color: ${$color("glass-dark")};
 		backdrop-filter: blur(8px);
 		.logo {
 			background-color: ${$color("white")};
 		}
-		.nav-link {
+		*{
 			color: ${$color("white")};
 		}
-		color: ${$color("white")};
+		
 	}
 	
 `;
@@ -73,18 +74,16 @@ const Wrapper = styled.div`
 	height: 100%;
 	box-sizing: border-box;
 	justify-content: flex-start;
-
+	padding: ${$cssTRBL(0,1)};
 	height: ${$uw(3)};
-
+	gap:${$uw(1)};
 	color: ${$color("black")};
 		
 	
 	.logo {
 		background-color: ${$color("black")};
 	}
-	.nav-link {
-		color: ${$color("black")};
-	}
+	
 	
 `
 

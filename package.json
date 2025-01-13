@@ -10,11 +10,17 @@
   },
   "dependencies": {
     "next": "15.1.4",
+    "@gsap/react": "^2.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "gsap": "^3.12.5",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "react-hotkeys-hook": "^4.5.0",
     "styled-components": "^6.1.14"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.5",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

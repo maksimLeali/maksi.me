@@ -111,6 +111,7 @@ h5,
 h6,
 p,
 span {
+	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -123,4 +124,42 @@ h6>*,
 p>*,
 span>* {
 	font-size: inherit;
+}
+
+
+@keyframes changeradius {
+	0% {
+		top: 13%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%  ;
+	}
+	12%{
+		
+		top: 16%;
+	}
+	25%{
+		top: 13%;
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42% ;
+	}
+	37% {
+		top: 16%;
+
+	}
+	50% {		
+		top: 13%;
+		border-radius: 61% 39% 41% 59% / 53% 53% 47% 47% ;
+	}
+	63%{
+		top: 16%;		
+	}
+	75%{
+		top: 13%;		
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42%  ;
+	}
+	88%{
+		top: 16%;		
+	}
+	100% {
+		top: 13%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%   ;
+	}
 }

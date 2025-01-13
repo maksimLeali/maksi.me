@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 import { Footer, TopBar } from "./components";
 import styled from "styled-components";
-// import { DebugGrid } from "./components/debugGrid";
+import { DebugGrid } from "./components/debugGrid";
 import { $uw } from "@theme";
 
 type Props = {
@@ -15,7 +15,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
 			<TopBar />
 			<MainWrapper id="mainWrapper">
 				<MainBody>{children}</MainBody>
-				{/* <DebugGrid /> */}
+				<DebugGrid />
 			</MainWrapper>
 			<Footer />
 		</Container>
