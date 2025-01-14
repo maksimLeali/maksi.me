@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
 };
 
 const FooterContainer = styled.footer`
-	background-color: ${$color("black-dark")};
+	background-color: ${$color("black")};
 	color: #fff;
 	text-align: center;
 	padding: ${$uw(1)};

@@ -18,7 +18,7 @@ export default function Main() {
         <p>Ho inoltre sviluppato progetti originali, come siti per <b>giochi tra amici</b>, pagine dedicate a <b>coppie</b>, e piattaforme per <b>piccole realtà locali</b>,
           sempre con un <b>approccio su misura</b> e <b>orientato alle esigenze del cliente.</b></p>
         <CTA type="button">
-          CONTATTAMI
+          FAMMI UNA PROPOSTA
           <RiMailSendLine />
         </CTA>
       </Presentation>
