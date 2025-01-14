@@ -1,11 +1,14 @@
 export type ColorKeys =
   | "primary"
+  | "primary-shade"
   | "primary-light"
   | "primary-dark"
   | "secondary"
+  | "secondary-shade"
   | "secondary-light"
   | "secondary-dark"
   | "tertiary"
+  | "tertiary-shade"
   | "tertiary-light"
   | "tertiary-dark"
   | "black"
@@ -29,12 +32,15 @@ export type ColorKeys =
 
 export const colors: Record<ColorKeys, string> = {
   "primary": "var(--primary)",
+  "primary-shade": "var(--primary-shade)",
   "primary-light": "var(--primary-light)",
   "primary-dark": "var(--primary-dark)",
   "secondary": "var(--secondary)",
+  "secondary-shade": "var(--secondary-shade)",
   "secondary-light": "var(--secondary-light)",
   "secondary-dark": "var(--secondary-dark)",
   "tertiary": "var(--tertiary)",
+  "tertiary-shade": "var(--tertiary-shade)",
   "tertiary-light": "var(--tertiary-light)",
   "tertiary-dark": "var(--tertiary-dark)",
   "black": "var(--black)",

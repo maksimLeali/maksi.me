@@ -28,14 +28,17 @@
 
 	--primary-light: #117888;
 	--primary: #0b505b;
+	--primary-shade: #0b505b88;
 	--primary-dark: #06282d;
 
 	--secondary-light: #9a329a;
 	--secondary: #5c1e5c;
+	--secondary-shade: #5c1e5c88;
 	--secondary-dark: #270c27;
 
 	--tertiary-light: #99fdff;
 	--tertiary: #00fbff;
+	--tertiary-shade: #00fbff88;
 	--tertiary-dark: #00c9cc;
 
 	--gray: #9a9a9a;
@@ -103,6 +106,15 @@ h6 {
 	font-size: 1.1rem;
 }
 
+.title{
+	font-size: 4.5rem!important;
+}
+
+.sub-title{
+	font-size: 3.2rem!important;
+}
+
+
 h1,
 h2,
 h3,
@@ -129,15 +141,17 @@ span>* {
 
 @keyframes changeradius {
 	0% {
+		left: 17%;
 		top: 13%;
 		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%  ;
 	}
 	12%{
 		
 		top: 16%;
+		left: 20%;
 	}
 	25%{
-		top: 13%;
+		top: 13%;		
 		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42% ;
 	}
 	37% {
@@ -146,19 +160,23 @@ span>* {
 	}
 	50% {		
 		top: 13%;
+		left: 14%;
 		border-radius: 61% 39% 41% 59% / 53% 53% 47% 47% ;
 	}
 	63%{
 		top: 16%;		
 	}
 	75%{
-		top: 13%;		
+		top: 13%;	
+		left: 17%;	
 		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42%  ;
 	}
 	88%{
 		top: 16%;		
+		left: 20%;
 	}
 	100% {
+		left: 17%;
 		top: 13%;
 		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%   ;
 	}

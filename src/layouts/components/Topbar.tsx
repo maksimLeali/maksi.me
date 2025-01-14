@@ -22,19 +22,32 @@ export const TopBar: React.FC = () => {
 	return (
 		<TopBarContainer className={`menu ${isScrolled ? "scrolled" : ""}`}>
 			<Wrapper>
-				<LogoPlaceholder className="logo" />
+				<Nav>
+					<ImageWrapper>
+						<img src="/logo_dark.svg" alt="logo" />
+						<img className="light" src="/logo.svg" alt="logo" />
+					</ImageWrapper>
+				</Nav>
 				<Nav>
 					<p className="nav-link">
-						home
+						HOME
 					</p>
-
 				</Nav>
-				<AuthContainer>
-					<p>
-						login
+				<Nav>
+					<p className="nav-link">
+						POST
 					</p>
-
-				</AuthContainer>
+				</Nav>
+				<Nav>
+					<p className="nav-link">
+						ABOUT ME
+					</p>
+				</Nav>
+				<Nav>
+					<p className="nav-link">
+						CONTATTI
+					</p>
+				</Nav>
 			</Wrapper>
 		</TopBarContainer>
 	);
@@ -87,10 +100,18 @@ const Wrapper = styled.div`
 	
 `
 
-const LogoPlaceholder = styled.div`
-	width: 100px;
-	height: 50px;
-	transition: background-color 0.5s ease-in;
+const ImageWrapper = styled.div`
+	width: ${$uw(2.5)};
+	height: ${$uw(2.5)};
+	position: relative;
+	transition: background-color 0.5s ease-in;	
+	> img {
+		position: absolute;
+		transition: opacity .5s ease-in-out;
+	}
+	.scrolled &>.light{
+		opacity: 0;
+	}
 `;
 
 const Nav = styled.nav`
