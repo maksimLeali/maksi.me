@@ -23,7 +23,7 @@
 
 	--black-light: #18393e;
 	--black: #2b2b2b;
-	--black-dark: #061213;
+	--black-dark: #0F0F0F;
 
 
 	--primary-light: #117888;
@@ -139,6 +139,90 @@ span>* {
 }
 
 
+@keyframes changeradiusMin {
+	0% {
+		left: 2%;
+		top: 17%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%  ;
+	}
+	12%{
+		
+		top: 25%;
+		left: 4%;
+	}
+	25%{
+		top: 13%;		
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42% ;
+	}
+	37% {
+		top: 10%;
+
+	}
+	50% {		
+		top: 17%;
+		left: 0%;
+		border-radius: 61% 39% 41% 59% / 53% 53% 47% 47% ;
+	}
+	63%{
+		top: 22%;		
+	}
+	75%{
+		top: 10%;	
+		left: 4%;	
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42%  ;
+	}
+	88%{
+		top: 10%;		
+		left: 0%;
+	}
+	100% {
+		left: 2%;
+		top: 17%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%   ;
+	}
+}
+@keyframes changeradiusMid {
+	0% {
+		left: 0%;
+		top: 13%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%  ;
+	}
+	12%{
+		
+		top: 16%;
+		left: 7%;
+	}
+	25%{
+		top: 13%;		
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42% ;
+	}
+	37% {
+		top: 16%;
+
+	}
+	50% {		
+		top: 13%;
+		left: -2%;
+		border-radius: 61% 39% 41% 59% / 53% 53% 47% 47% ;
+	}
+	63%{
+		top: 16%;		
+	}
+	75%{
+		top: 13%;	
+		left: 7%;	
+		border-radius: 44% 56% 49% 51% / 58% 45% 55% 42%  ;
+	}
+	88%{
+		top: 16%;		
+		left: -2%;
+	}
+	100% {
+		left: 0%;
+		top: 13%;
+		border-radius: 58% 42% 42% 58% / 44% 53% 47% 56%   ;
+	}
+}
 @keyframes changeradius {
 	0% {
 		left: 17%;
