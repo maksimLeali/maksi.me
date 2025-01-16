@@ -15,11 +15,11 @@ export default function Main() {
   useEffect(()=>{
     setTimeout(()=>{
       setRotate(true)
-    }, 1000)
+    }, 500)
   }, [])
 
   return <Container>
-    <MainSection className={`${rotate ? 'rotate' : ''}`}>
+    {/* <MainSection className={`${rotate ? 'rotate' : ''}`}>
       {[...Array(15).keys()].map((i) => (
 
         <Row className={`${i%2==0 ? 'odd' : ''}`}>
@@ -29,7 +29,18 @@ export default function Main() {
         </Row>
       ))
       }
-    </MainSection>
+    </MainSection> */}
+    <Section className={`full ${rotate ? 'rotate' : ''}`}>
+        <Hexagone id="first" >
+            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
+        </Hexagone>
+        <Hexagone id="second" >
+            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
+        </Hexagone>
+        <Hexagone id="third" >
+            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
+        </Hexagone>
+    </Section>
     <Section>
       <Presentation>
         <div>
@@ -113,6 +124,9 @@ const Section = styled.section`
   }
   ${$breakPoint(590)}{
     margin-bottom: ${$uw(6)};
+  }
+  &.full{
+    min-height: 80dvh;
   }
 `
 
@@ -395,15 +409,15 @@ const HexaContainer = styled.div`
   align-items: center;
 `
 
-const Hexagone = styled.div<{delay: number}>`
-  height: 101%;
-  max-height: 101%;
-  width:101%;
-  max-width: 101%;
-  transform-origin: center;
-  background-color: ${$color('primary')};
+const Hexagone = styled.div`
+  height: ${$uw(10)};
   
-  
+  width:${$uw(10)};
+  background-color: ${$color('primary')}; 
+  position: absolute;
+  overflow: hidden;
+  transition: all 1s ease-in;  
+  opacity: 0;
   clip-path: polygon(
       50% 0%, 
       100% 25%, 
@@ -412,12 +426,68 @@ const Hexagone = styled.div<{delay: number}>`
       0% 75%, 
       0% 25%
   );
-  .rotate &{
-    animation: hexaShrink .5s ease-out,
-    hexaFullShrink  1s ease-in ${({delay})=> delay/10}s;
-    animation-fill-mode: forwards; 
-    
-    
+  >img {
+    width:300px;
+    height: 200px;
+    position: fixed; 
+    top:30dvh;
+    left:  60vw;
   }
-
+  &#first{
+    top: 0 ;
+    left: 55vw; ;
+  }
+  &#second{
+    top: 12dvh ;
+    left:  100vw;
+    background-color: ${$color('secondary')}; 
+  }
+  &#third{
+    top: 60dvh;
+    left: 80vw;
+    background-color: ${$color('tertiary')}; 
+  }
+  .rotate & {
+    opacity: 1;
+    &#first{
+    top: 26dvh ;
+    animation: rotatefirst 2s infinite 1s;
+  }
+  &#second{
+    top: 32dvh ;
+    left:  70vw;  
+    animation :rotatesecond  2s infinite 1s;
+  }
+  &#third{
+    top: 37dvh;
+    left: 62vw; 
+    animation: rotatethird  2s infinite 1s;
+  }
+  }
 `
+// const Hexagone = styled.div<{delay: number}>`
+//   height: 101%;
+//   max-height: 101%;
+//   width:101%;
+//   max-width: 101%;
+//   transform-origin: center;
+//   background-color: ${$color('primary')};
+  
+  
+//   clip-path: polygon(
+//       50% 0%, 
+//       100% 25%, 
+//       100% 75%, 
+//       50% 100%, 
+//       0% 75%, 
+//       0% 25%
+//   );
+//   .rotate &{
+//     animation: hexaShrink .5s ease-out,
+//     hexaFullShrink  1s ease-in ${({delay})=> delay/10}s;
+//     animation-fill-mode: forwards; 
+    
+    
+//   }
+
+// `
