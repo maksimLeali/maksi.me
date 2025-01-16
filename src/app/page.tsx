@@ -5,10 +5,31 @@ import styled from "styled-components"
 import { RiMailSendLine } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BsTelegram } from "react-icons/bs";
+import { useEffect, useState } from "react";
 
 
 export default function Main() {
+
+  const [rotate, setRotate] = useState(false)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+      setRotate(true)
+    }, 1000)
+  }, [])
+
   return <Container>
+    <MainSection className={`${rotate ? 'rotate' : ''}`}>
+      {[...Array(15).keys()].map((i) => (
+
+        <Row className={`${i%2==0 ? 'odd' : ''}`}>
+          {[...Array(25).keys()].map(() => 
+            <HexaContainer><Hexagone delay={Math.floor(Math.random() * 10) + 1} /></HexaContainer>
+          )}
+        </Row>
+      ))
+      }
+    </MainSection>
     <Section>
       <Presentation>
         <div>
@@ -340,4 +361,63 @@ const CTA = styled.button`
     margin-bottom: ${$uw(6)};
   }
   
+`
+
+const MainSection = styled.section`
+  width: 110vw;
+  left:0;
+  position:fixed;
+  top:-5dvh;
+  z-index: 999;
+  animation-fill-mode: forwards;
+  &.rotate {
+    animation: mainRotation 3s linear;
+    animation-fill-mode: forwards; 
+  }
+`
+
+const Row = styled.div`
+  height: calc(100dvh/10);
+  width: 110vw;
+  display: flex;
+  margin-bottom: calc((100dvh/10/4)*-1);
+  &.odd{
+    margin-left: calc(-100dvh/20)
+  }
+`
+
+const HexaContainer = styled.div`
+  height: 100%;
+  aspect-ratio:1;
+  display: flex;
+  margin-left: -1vw;
+  justify-content:center;
+  align-items: center;
+`
+
+const Hexagone = styled.div<{delay: number}>`
+  height: 101%;
+  max-height: 101%;
+  width:101%;
+  max-width: 101%;
+  transform-origin: center;
+  background-color: ${$color('primary')};
+  
+  
+  clip-path: polygon(
+      50% 0%, 
+      100% 25%, 
+      100% 75%, 
+      50% 100%, 
+      0% 75%, 
+      0% 25%
+  );
+  .rotate &{
+    animation: hexaShrink .5s ease-out,
+    hexaFullShrink  1s ease-in ${({delay})=> delay/10}s;
+    animation-fill-mode: forwards; 
+    
+    
+  }
+
 `
