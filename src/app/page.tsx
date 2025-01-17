@@ -1,114 +1,94 @@
-"use client"
+"use client";
 
-import { $breakPoint, $color, $cssTRBL, $uw } from "@/theme"
-import styled from "styled-components"
+import { $breakPoint, $color, $cssTRBL, $uw } from "@/theme";
+import styled, { keyframes } from "styled-components";
 import { RiMailSendLine } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BsTelegram } from "react-icons/bs";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { MainSection } from './components/MainSection'
 
 
 export default function Main() {
 
-  const [rotate, setRotate] = useState(false)
+  
+  return (
+    <Container>
+      <MainSection />
+      <Section>
+        <Presentation>
+          <div>
 
-  useEffect(()=>{
-    setTimeout(()=>{
-      setRotate(true)
-    }, 500)
-  }, [])
+            <h1 className="title">Mi presento</h1>
+            <p>Mi chiamo <b>Maksim Leali</b> e sono uno sviluppatore web da ormai <b>8 anni</b></p>
+            <p>Sono specializzato nella realizzazione di <b>siti di presentazione</b>, curati nei dettagli per rappresentare al meglio brand e persone.</p>
+            <p>Ho inoltre sviluppato progetti originali, come siti per <b>giochi tra amici</b>, pagine dedicate a <b>coppie</b>, e piattaforme per <b>piccole realtà locali</b>,
+              sempre con un <b>approccio su misura</b> e <b>orientato alle esigenze del cliente.</b></p>
+          </div>
+          <CTA type="button">
+            FAMMI UNA PROPOSTA
+            <RiMailSendLine />
+          </CTA>
+        </Presentation>
 
-  return <Container>
-    {/* <MainSection className={`${rotate ? 'rotate' : ''}`}>
-      {[...Array(15).keys()].map((i) => (
+        <ImageWrapper>
+          <ImageContainer>
+            <div className="ph" />
+            <ContactBox>
+              <h3>Come contattarmi</h3>
+              <p>Telefono personale: <a target="_blank" href="tel:+393461038526" >+39 3461038526</a></p>
+              <p>E-Mail: <a href="mailto:contact@makso.ne">contacts@makso.me</a></p>
+              <p>Whatsapp: <a href="https://wa.me/+393461038526" target="_blank">3461038526 <IoLogoWhatsapp style={{ marginLeft: "5px" }} /></a></p>
+              <p>Telegram: <a href="https://t.me/+393461038526" target="_blank">3461038526 <BsTelegram style={{ marginLeft: "5px" }} /></a></p>
+            </ContactBox>
+          </ImageContainer>
+        </ImageWrapper>
+      </Section>
+      <Section className="vertical">
+        <h1 className="title">Cardini dello sviluppo di un sito</h1>
+        <InfoWrapper>
+          <Info>
+            <h3>Flessibilità e Personalizzazione</h3>
+            <p>Uno sviluppatore web freelance offre una maggiore flessibilità e personalizzazione rispetto
+              a chi lavora per un'azienda. Può adattarsi meglio alle esigenze specifiche dei clienti,
+              dedicando tempo e attenzione personalizzata a ogni progetto. Inoltre, ha la libertà
+              di sperimentare soluzioni innovative, offrendo design su misura, funzionalità uniche e un
+              approccio più diretto e collaborativo, senza vincoli imposti da politiche aziendali
+              o modelli standardizzati.  </p>
+          </Info>
+          <Info>
+            <h3>SEO</h3>
+            <p>Il SEO (Search Engine Optimization) è l'insieme di tecniche e strategie utilizzate
+              per ottimizzare una pagina web al fine di migliorarne il posizionamento nei risultati
+              dei motori di ricerca, come Google. L'obiettivo principale del SEO è aumentare
+              la visibilità organica (non a pagamento) di un sito web, attirando più traffico qualificato e
+              pertinente. </p>
+          </Info>
+          <Info>
+            <h3>Responsive Design</h3>
+            <p>Il responsive design è un approccio alla progettazione dei siti web che consente alle pagine di
+              adattarsi automaticamente a diversi dispositivi e dimensioni dello schermo, come smartphone, tablet,
+              laptop e desktop. Utilizza tecnologie come griglie fluide, media queries CSS e immagini scalabili
+              per garantire un'esperienza utente ottimale indipendentemente dal dispositivo utilizzato.  </p>
+          </Info>
 
-        <Row className={`${i%2==0 ? 'odd' : ''}`}>
-          {[...Array(25).keys()].map(() => 
-            <HexaContainer><Hexagone delay={Math.floor(Math.random() * 10) + 1} /></HexaContainer>
-          )}
-        </Row>
-      ))
-      }
-    </MainSection> */}
-    <Section className={`full ${rotate ? 'rotate' : ''}`}>
-        <Hexagone id="first" >
-            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
-        </Hexagone>
-        <Hexagone id="second" >
-            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
-        </Hexagone>
-        <Hexagone id="third" >
-            <img src="https://media.istockphoto.com/id/2124401687/it/foto/wing-suit-flier-soars-above-mountain-landscape.jpg?s=1024x1024&w=is&k=20&c=dxXWANa-ZvTjr5WcNEA1C5pL0LpjgcXHLBKmfClpE-4=" />
-        </Hexagone>
-    </Section>
-    <Section>
-      <Presentation>
-        <div>
+        </InfoWrapper>
+      </Section>
+    </Container >
+  )}
 
-          <h1 className="title">Mi presento</h1>
-          <p>Mi chiamo <b>Maksim Leali</b> e sono uno sviluppatore web da ormai <b>8 anni</b></p>
-          <p>Sono specializzato nella realizzazione di <b>siti di presentazione</b>, curati nei dettagli per rappresentare al meglio brand e persone.</p>
-          <p>Ho inoltre sviluppato progetti originali, come siti per <b>giochi tra amici</b>, pagine dedicate a <b>coppie</b>, e piattaforme per <b>piccole realtà locali</b>,
-            sempre con un <b>approccio su misura</b> e <b>orientato alle esigenze del cliente.</b></p>
-        </div>
-        <CTA type="button">
-          FAMMI UNA PROPOSTA
-          <RiMailSendLine />
-        </CTA>
-      </Presentation>
-
-      <ImageWrapper>
-        <ImageContainer>
-          <div className="ph" />
-          <ContactBox>
-            <h3>Come contattarmi</h3>
-            <p>Telefono personale: <a target="_blank" href="tel:+393461038526" >+39 3461038526</a></p>
-            <p>E-Mail: <a href="mailto:contact@makso.ne">contacts@makso.me</a></p>
-            <p>Whatsapp: <a href="https://wa.me/+393461038526" target="_blank">3461038526 <IoLogoWhatsapp style={{ marginLeft: "5px" }} /></a></p>
-            <p>Telegram: <a href="https://t.me/+393461038526" target="_blank">3461038526 <BsTelegram style={{ marginLeft: "5px" }} /></a></p>
-          </ContactBox>
-        </ImageContainer>
-      </ImageWrapper>
-    </Section>
-    <Section className="vertical">
-      <h1 className="title">Cardini dello sviluppo di un sito</h1>
-      <InfoWrapper>
-        <Info>
-          <h3>Flessibilità e Personalizzazione</h3>
-          <p>Uno sviluppatore web freelance offre una maggiore flessibilità e personalizzazione rispetto
-            a chi lavora per un'azienda. Può adattarsi meglio alle esigenze specifiche dei clienti,
-            dedicando tempo e attenzione personalizzata a ogni progetto. Inoltre, ha la libertà
-            di sperimentare soluzioni innovative, offrendo design su misura, funzionalità uniche e un
-            approccio più diretto e collaborativo, senza vincoli imposti da politiche aziendali
-            o modelli standardizzati.  </p>
-        </Info>
-        <Info>
-          <h3>SEO</h3>
-          <p>Il SEO (Search Engine Optimization) è l'insieme di tecniche e strategie utilizzate
-            per ottimizzare una pagina web al fine di migliorarne il posizionamento nei risultati
-            dei motori di ricerca, come Google. L'obiettivo principale del SEO è aumentare
-            la visibilità organica (non a pagamento) di un sito web, attirando più traffico qualificato e
-            pertinente. </p>
-        </Info>
-        <Info>
-          <h3>Responsive Design</h3>
-          <p>Il responsive design è un approccio alla progettazione dei siti web che consente alle pagine di
-            adattarsi automaticamente a diversi dispositivi e dimensioni dello schermo, come smartphone, tablet,
-            laptop e desktop. Utilizza tecnologie come griglie fluide, media queries CSS e immagini scalabili
-            per garantire un'esperienza utente ottimale indipendentemente dal dispositivo utilizzato.  </p>
-        </Info>
-
-      </InfoWrapper>
-    </Section>
-  </Container >
-}
-
+  
 
 
 const Container = styled.div`
   width: 100%;
   padding-bottom:${$uw(2)};
 `
+
+
+
+
 
 const Section = styled.section`
   display: flex;
@@ -124,10 +104,8 @@ const Section = styled.section`
   }
   ${$breakPoint(590)}{
     margin-bottom: ${$uw(6)};
-  }
-  &.full{
-    min-height: 80dvh;
-  }
+  }  
+  
 `
 
 const Presentation = styled.div`
@@ -191,7 +169,6 @@ const Info = styled.div`
 
 `
 
-
 const ImageWrapper = styled.div`
   width: ${$uw(30)};
   height: calc(100dvh - ${$uw(5)});
@@ -236,7 +213,6 @@ const ImageWrapper = styled.div`
     }   
   }
 `
-
 
 const ImageContainer = styled.div`
   width: ${$uw(30)};
@@ -377,18 +353,18 @@ const CTA = styled.button`
   
 `
 
-const MainSection = styled.section`
-  width: 110vw;
-  left:0;
-  position:fixed;
-  top:-5dvh;
-  z-index: 999;
-  animation-fill-mode: forwards;
-  &.rotate {
-    animation: mainRotation 3s linear;
-    animation-fill-mode: forwards; 
-  }
-`
+// const MainSection = styled.section`
+//   width: 110vw;
+//   left:0;
+//   position:fixed;
+//   top:-5dvh;
+//   z-index: 999;
+//   animation-fill-mode: forwards;
+//   &.rotate {
+//     animation: mainRotation 3s linear;
+//     animation-fill-mode: forwards; 
+//   }
+// `
 
 const Row = styled.div`
   height: calc(100dvh/10);
@@ -409,66 +385,42 @@ const HexaContainer = styled.div`
   align-items: center;
 `
 
+
 const Hexagone = styled.div`
-  height: ${$uw(10)};
-  
-  width:${$uw(10)};
-  background-color: ${$color('primary')}; 
+  height: ${$uw(20)};
   position: absolute;
-  overflow: hidden;
-  transition: all 1s ease-in;  
-  opacity: 0;
-  clip-path: polygon(
-      50% 0%, 
-      100% 25%, 
-      100% 75%, 
-      50% 100%, 
-      0% 75%, 
-      0% 25%
-  );
-  >img {
-    width:300px;
-    height: 200px;
-    position: fixed; 
-    top:30dvh;
-    left:  60vw;
+  background-color: ${$color('primary')}; 
+  
+  overflow: hidden;  
+  /* transform-origin: center; */
+  
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+  
+  &#third {
+    background-color: #fff;
+    mix-blend-mode: color;
   }
-  &#first{
-    top: 0 ;
-    left: 55vw; ;
-  }
-  &#second{
-    top: 12dvh ;
-    left:  100vw;
-    background-color: ${$color('secondary')}; 
-  }
-  &#third{
-    top: 60dvh;
-    left: 80vw;
-    background-color: ${$color('tertiary')}; 
-  }
-  .rotate & {
-    opacity: 1;
-    &#first{
-    top: 26dvh ;
-    animation: rotatefirst 2s infinite 1s;
-  }
-  &#second{
-    top: 32dvh ;
-    left:  70vw;  
-    animation :rotatesecond  2s infinite 1s;
-  }
-  &#third{
-    top: 37dvh;
-    left: 62vw; 
-    animation: rotatethird  2s infinite 1s;
-  }
-  }
+  
 `
+
+
+ {/* <MainSection className={`${rotate ? 'rotate' : ''}`}>
+      {[...Array(15).keys()].map((i) => (
+
+        <Row className={`${i%2==0 ? 'odd' : ''}`}>
+          {[...Array(25).keys()].map(() => 
+            <HexaContainer><Hexagone delay={Math.floor(Math.random() * 10) + 1} /></HexaContainer>
+          )}
+        </Row>
+      ))
+      }
+    </MainSection> */}
 // const Hexagone = styled.div<{delay: number}>`
 //   height: 101%;
 //   max-height: 101%;
 //   width:101%;
+//   aspect-ratio: 1/cos(30deg);
 //   max-width: 101%;
 //   transform-origin: center;
 //   background-color: ${$color('primary')};
