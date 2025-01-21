@@ -1,0 +1,6 @@
+export const FOCUSCOLOR = "tertiary-dark"
+export const COLOR = "white"
+export const DISABLEDCOLOR = "gray-dark"
+export const TEXTCOLOR = "white"
+export const ERRORCOLOR = "danger-light"
+export const BGCOLOR = "black-dark"

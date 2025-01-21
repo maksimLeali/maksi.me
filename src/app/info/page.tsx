@@ -2,6 +2,18 @@
 import styled from 'styled-components';
 import {$color, $uw } from '@theme'
 
+export default function Info() {
+  return (
+    <Container>
+      <Title>Qualcosa su di me</Title>
+      <Subtitle>Per capire con chi avrai a che fare</Subtitle>
+      <Paragraph>
+        
+      </Paragraph>
+    </Container>
+  );
+}
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,16 +45,3 @@ const Paragraph = styled.p`
   max-width: 600px;
   
 `;
-
-export default function Info() {
-  return (
-    <Container>
-      <Title>Welcome to the Info Page</Title>
-      <Subtitle>Your go-to source for information</Subtitle>
-      <Paragraph>
-        This is a simple Next.js page styled with styled-components. You can use this layout
-        as a starting point for your project. Customize the styles and content as needed.
-      </Paragraph>
-    </Container>
-  );
-}

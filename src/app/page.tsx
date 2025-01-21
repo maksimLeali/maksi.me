@@ -8,6 +8,7 @@ import { BsTelegram } from "react-icons/bs";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { MainSection } from './components/MainSection'
+import { ContactForm } from "@/components";
 
 
 export default function Main() {
@@ -74,6 +75,10 @@ export default function Main() {
           </Info>
 
         </InfoWrapper>
+      </Section>
+      <Section className="vertical">
+        <h3>Aiutami a <strong>realizzare</strong> la tua idea</h3>
+        <ContactForm width={$uw(35)} />
       </Section>
     </Container >
   )}

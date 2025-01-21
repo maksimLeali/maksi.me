@@ -57,7 +57,7 @@ const Upper = styled.h3`
     z-index: 1;
     top: calc( 50% - ${$uw(1.5)});
     overflow: hidden;
-    animation: titleUp 3s ease-in-out 2s;
+    animation: titleUp 2s ease-in-out 2s;
     animation-fill-mode: forwards;
     background-color: ${$color('black-dark')};
     &::before{
@@ -78,7 +78,7 @@ const Lower = styled.h3`
     z-index: 1;
     top:50%;
     overflow: hidden;
-    animation: titleDown 3s ease-in-out  2s;
+    animation: titleDown 2s ease-in-out  2s;
     background-color: ${$color('black-dark')};
     animation-fill-mode: forwards;
     &::before{
@@ -96,7 +96,7 @@ const Inside = styled.div`
   position: absolute;
 font-size: ${$uw(3)};
 
-animation: appear 4s ease-in-out  2s;
+animation: appear 3s ease-in-out  2s;
 animation-fill-mode: forwards;
     width: 100%;
     text-align: center;
