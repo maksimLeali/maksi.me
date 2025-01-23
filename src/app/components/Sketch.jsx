@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import styled from "styled-components";
-import { $uw } from '@theme'; // Assuming this is valid in your setup
+import { $breakPoint, $uw } from '@theme'; // Assuming this is valid in your setup
 
 const HexagonCollisionGSAP = () => {
   const canvasRef = useRef(null);
@@ -27,6 +27,10 @@ const HexagonCollisionGSAP = () => {
     let pg_size = window.innerWidth;
     const uw = (number) => (pg_size / 52) * number;
     const palette = ["#00fbff"];
+
+    const hexaRadius = pg_size > 820 ? 5 : 9;
+    const hexaLeft = pg_size > 820 ? 6 : 10;
+    const hexaTop = 20;
 
     let size = window.innerWidth;
     canvas.width = size;
@@ -192,8 +196,8 @@ const HexagonCollisionGSAP = () => {
     }
 
     // Create hexagons
-    const h1 = new Hexagon(uw(6), uw(20), uw(5), 0, 0);
-    const h2 = new Hexagon(uw(50), uw(20), uw(5), 0, 1);
+    const h1 = new Hexagon(uw(hexaLeft), uw(hexaTop), uw(hexaRadius), 0, 0);
+    const h2 = new Hexagon(uw(50), uw(hexaTop), uw(hexaRadius), 0, 1);
     const hexagons = [h1, h2];
 
     // Main render loop
@@ -245,7 +249,7 @@ const HexagonCollisionGSAP = () => {
     // 1) Move second hex horizontally into place
     tl.to(h2, {
       duration: 2,
-      posx: uw(6),
+      posx: uw(hexaLeft),
       angle: -Math.PI * 3,
       ease: "power1.inOut",
     })
@@ -383,7 +387,13 @@ const WordsContainer = styled.div`
     animation: appear 1s ease-in-out 4s;
     animation-fill-mode: forwards;
   }
+  ${$breakPoint(820)}{
+    top: calc( 50% - ${$uw(17.5)});
+  left: ${$uw(0)};
+  width: ${$uw(22.5)};
+  }
   /* This container controls the SVG's size/position. 
      The 'letters' will remain invisible initially 
      because of the strokeDashoffset set on mount. */
 `;
+

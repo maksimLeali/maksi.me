@@ -3,11 +3,13 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import HexagonCollisionSketch from "./Sketch";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 
 export const MainSection = () => {
+  const [mounted, setMounted] = useState(false)
   useEffect(() => {
+    setMounted(true);
     const timeline = gsap.timeline();
     timeline
       .fromTo(
@@ -23,10 +25,11 @@ export const MainSection = () => {
       );
   }, []);
 
+
   return (
     <Section id="mainSection">
       <HexagonCollisionSketch />
-      <Title id="title" className=" mainTitle">
+      <Title id="title" className={`${mounted ? "mounted" : ""} mainTitle`}>
         <h1>LeMaks</h1>
         <Cutter id="cutter">
           <Upper className="upper "></Upper>
@@ -59,6 +62,14 @@ const Title = styled.div`
     opacity:0;
     margin-left: ${$uw(12)};
     font-weight: 200;
+    ${$breakPoint(820)}{
+      font-size: ${$uw(6)};
+      margin-left: ${$uw(21)};
+    }
+  }
+
+  ${$breakPoint(820)}{
+    gap: ${$uw(4)};
   }
 `;
 
@@ -69,6 +80,11 @@ const Cutter = styled.div`
   position: relative;
   margin-left: ${$uw(1)};
   opacity: 0;
+  ${$breakPoint(820)}{
+    height: ${$uw(5)};
+
+  }
+  
 `;
 
 const Upper = styled.h3`
@@ -78,9 +94,11 @@ const Upper = styled.h3`
   z-index: 1;
   top: calc(50% - ${$uw(2)});
   overflow: hidden;
-  animation: titleUp 2s ease-in-out 5s;
-  animation-fill-mode: forwards;
   background-color: ${$color("black-dark")};
+  .mounted & {
+    animation: titleUp 2s ease-in-out 5s;
+    animation-fill-mode: forwards;
+  }
   
   &::before {
     position: absolute;
@@ -99,10 +117,11 @@ const Lower = styled.h3`
   z-index: 1;
   top: 50%;
   overflow: hidden;
-  animation: titleDown 2s ease-in-out 5s;
   background-color: ${$color("black-dark")};
-  
-  animation-fill-mode: forwards;
+  .mounted & {
+    animation: titleDown 2s ease-in-out 5s;
+    animation-fill-mode: forwards;
+  }
   &::before {
     position: absolute;
     width: 100%;
@@ -116,8 +135,10 @@ const Lower = styled.h3`
 const Inside = styled.div`
   position: absolute;
   font-size: ${$uw(2.5)};
-  animation: appear 3s ease-in-out 5s;
-  animation-fill-mode: forwards;
+  .mounted & {
+    animation: appear 3s ease-in-out 5s;
+    animation-fill-mode: forwards;
+  }
   width: 100%;
   /* text-align: center; */
   top: calc(50% - ${$uw(2)});
