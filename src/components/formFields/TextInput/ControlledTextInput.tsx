@@ -4,7 +4,7 @@ import { uniqueId } from "lodash";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
-import { useOnClickOutside } from "@/hooks";
+import { useOnClickOutside } from "@hooks";
 import {
 	FocusBox,
 	InputWrapper,
@@ -78,12 +78,12 @@ export const ControlledTextInput: React.FC<ControlledProps & CommonProps> = ({
 	return (
 		<Wrapper
 			className={`text-input ${classes}`}
-			focusColor={focusColor}
-			disabledColor={disabledColor}
-			errorColor={errorColor}
-			color={color}
-			textColor={textColor}
-			bgColor={bgColor}
+			$focuscolor={focusColor}
+			$disabledcolor={disabledColor}
+			$errorcolor={errorColor}
+			$maincolor={color}
+			$textcolor={textColor}
+			$bgcolor={bgColor}
 		>
 			<InputLabel
 				htmlFor={name}

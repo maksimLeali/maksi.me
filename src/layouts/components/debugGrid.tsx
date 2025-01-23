@@ -26,7 +26,7 @@ export const DebugGrid: React.FC = () => {
 	};
 
 	return (
-		<Container id="debugGrid" gridheight={gridHeight} visible={visible}>
+		<Container id="debugGrid" $gridheight={gridHeight} $visible={visible}>
 			<Action
 				onClick={(e) => {
 					e.preventDefault();
@@ -57,14 +57,14 @@ export const DebugGrid: React.FC = () => {
 	);
 };
 
-const Container = styled.div<{ gridheight: number; visible: boolean }>`
+const Container = styled.div<{ $gridheight: number; $visible: boolean }>`
 	width: var(--max-grid-size);
-	height: ${({ gridheight }) => $uw(gridheight)};
+	height: ${({ $gridheight }) => $uw($gridheight)};
 	position: fixed;
 	top: 0;
 	box-sizing: border-box;
-	z-index: ${({ visible }) => (visible ? 999 : `-1!important`)};
-	opacity: ${({ visible }) => (visible ? 1 : 0)};
+	z-index: ${({ $visible }) => ($visible ? 999 : `-1!important`)};
+	opacity: ${({ $visible }) => ($visible ? 1 : 0)};
 	display: flex;
 	justify-content: space-between;
 	align-items: start;

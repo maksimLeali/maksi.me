@@ -9,15 +9,11 @@
     <path class="external" stroke="#117888" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m11.996055 377.99948l180.91795 -313.5274l370.16412 0l180.91791 313.5274l-180.91791 313.52744l-370.16412 0z" fill-rule="evenodd" />
     <path fill="#000000" fill-opacity="0.0" d="m61.02362 197.03937l316.1036 -181.54414l318.75327 181.95468l-0.9985962 361.41626l-316.1036 181.54413l-318.7533 -181.95465z" fill-rule="evenodd" />
     <path class="external" stroke="#117888" stroke-width="12.0" stroke-linejoin="round" stroke-linecap="butt" d="m61.02362 197.03937l316.1036 -181.54414l318.75327 181.95468l-0.9985962 361.41626l-316.1036 181.54413l-318.7533 -181.95465z" fill-rule="evenodd" />
-    <path fill="#000000" fill-opacity="0.0" d="m285.99347 208.14973l-1.1686096 339.6786" fill-rule="evenodd" />
+ 
     <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m285.99347 208.14973l-1.1686096 339.6786" fill-rule="evenodd" />
-    <path fill="#000000" fill-opacity="0.0" d="m285.9888 211.46642l94.09482 241.37422" fill-rule="evenodd" />
     <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m285.9888 211.46642l94.09482 241.37422" fill-rule="evenodd" />
-    <path fill="#000000" fill-opacity="0.0" d="m281.44608 544.51154l161.18176 0" fill-rule="evenodd" />
-    <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m281.44608 544.51154l161.18176 0" fill-rule="evenodd" />
-    <path fill="#000000" fill-opacity="0.0" d="m472.99747 208.14973l1.1686096 339.6786" fill-rule="evenodd" />
     <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m472.99747 208.14973l1.1686096 339.6786" fill-rule="evenodd" />
-    <path fill="#000000" fill-opacity="0.0" d="m473.00214 211.46642l-94.09482 241.37422" fill-rule="evenodd" />
+    <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m281.44608 544.51154l161.18176 0" fill-rule="evenodd" />
     <path class="name" stroke="#0b505b" stroke-width="8.0" stroke-linejoin="round" stroke-linecap="butt" d="m473.00214 211.46642l-94.09482 241.37422" fill-rule="evenodd" />
   </g>
 </svg>

@@ -5,7 +5,7 @@ import { useFormContext } from "react-hook-form";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
-import { useOnClickOutside } from "@/hooks";
+import { useOnClickOutside } from "@hooks";
 import {
 	FocusBox,
 	InputWrapper,
@@ -83,12 +83,12 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
 	return (
 		<Wrapper
 			className={`text-input menu ${classes}`}
-			focusColor={focusColor}
-			disabledColor={disabledColor}
-			errorColor={errorColor}
-			textColor={textColor}
-			color={color}
-			bgColor={bgColor}
+			$focuscolor={focusColor}
+			$disabledcolor={disabledColor}
+			$errorcolor={errorColor}
+			$maincolor={color}
+			$textcolor={textColor}
+			$bgcolor={bgColor}
 			id={id}
 		>
 			<InputLabel

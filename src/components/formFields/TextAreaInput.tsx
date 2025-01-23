@@ -18,9 +18,9 @@ import {
 	ERRORCOLOR,
 	BGCOLOR
 } from './colors';
-import { useOnClickOutside } from "@/hooks";
+import { useOnClickOutside } from "@hooks";
 
-import { $uw, $color } from "@theme";
+import { $uw, $color, $breakPoint } from "@theme";
 
 type props = {
     name: string;
@@ -107,8 +107,8 @@ export const TextAreaInput: React.FC<props> = ({
     return (
         <Wrapper className={`${isSubmitting ? "submitting" : ""}`}>
             <InputLabel
-                color={color}
-                focusColor={focusColor}
+                $mainColor={color}
+                $focuscolor={focusColor}
                 htmlFor={name}
                 onClick={()=> {console.log('******'); setFocus()}}
                 className={`${focused ? "focused" : ""} ${
@@ -118,7 +118,7 @@ export const TextAreaInput: React.FC<props> = ({
                 {textLabel ? textLabel : ntTextLabel}
                 {required && !compiled && " *"}
             </InputLabel>
-            <InputWrapper ref={ref} color={color}>
+            <InputWrapper ref={ref} $mainColor={color}>
                 <Editable
                     id={name}
                     ref={(editableRef)as any}
@@ -132,8 +132,8 @@ export const TextAreaInput: React.FC<props> = ({
                     
                 />
                 <FocusBox
-                    color={color}
-                    focusColor={focusColor}
+                    $mainColor={color}
+                    $focuscolor={focusColor}
                     className={`foxusBox ${focused ? "focused" : ""} ${
                         compiled ? "compiled" : ""
                     } ${error ? "error" : ""}`}
@@ -150,16 +150,16 @@ export const TextAreaInput: React.FC<props> = ({
 };
 
 type wrapperProps = {
-    color: string;
+    $mainColor: string;
 };
 
 type focusCircleProps = {
-    color: string;
-    focusColor: string;
+    $mainColor: string;
+    $focuscolor: string;
 };
 type labelProps = {
-    color: string;
-    focusColor: string;
+    $mainColor: string;
+    $focuscolor: string;
 };
 
 const Wrapper = styled.div`
@@ -172,34 +172,31 @@ const Wrapper = styled.div`
     }
 `;
 
+
 const InputLabel = styled.label<labelProps>`
     z-index: 2;
     position: absolute;
-    left: 20px;
+    left: ${$uw(.5)};
     top: 2px;
     font-size: 2rem;
-    color: ${({ color }) => $color(color)};
+    color: ${({ $mainColor }) => $color($mainColor)};
     transition: top 0.5s ease-in, left 0.5s ease-in, color 0.5s ease-in,
-        font-size 0.5s ease-in;
-    &.focused {
-        font-size: 1.8rem;
-        top: -25px;
-        left: 0px;
-        color:${({ focusColor }) => $color(focusColor)};
-    }
+    font-size 0.5s ease-in;
+    &.focused ,
     &.compiled {
         font-size: 1.8rem;
-        top: -25px;
+        top: ${$uw(-1.5)};
         left: 0px;
-        color:${({ focusColor }) => $color(focusColor)};
+        color:${({ $focuscolor }) => $color($focuscolor)};
     }
     &.error {
         color: var(--ion-color-danger);
     }
 `;
 
+
 const InputWrapper = styled.div<wrapperProps>`
-    background-color: ${({ color }) => $color(color)};
+    background-color: ${({ $mainColor }) => $color($mainColor)};
     position: relative;
     padding: 0 0 2px 2px;
     border-radius: 2px;
@@ -230,14 +227,14 @@ const FocusBox = styled.span<focusCircleProps>`
     transition: background-color 1s cubic-bezier(1, 0.07, 1, 0.12) 0s,
         width 0.5s ease-out, max-height 0.5s ease-out;
     &.focused {
-        background-color:${({ focusColor }) => $color(focusColor)};
+        background-color:${({ $focuscolor }) => $color($focuscolor)};
         width: 100%;
         max-height: 100%;
         transition: background-color 1s cubic-bezier(0.02, 1.17, 0, 0.97) 0s,
             width 0.5s ease-out, max-height 0.5s ease-out;
     }
     &.compiled {
-        background-color:${({ focusColor }) => $color(focusColor)};
+        background-color:${({ $focuscolor }) => $color($focuscolor)};
         width: 100%;
         max-height: 100%;
     }
@@ -282,15 +279,24 @@ const Editable = styled(ContentEditable)<{ textcolor: string, bgcolor?: string }
     &:empty:before {
     content: attr(placeholder);
     color: ${({ textcolor }) => $color(textcolor)};
+    ${$breakPoint(780)}{
+        min-height: ${$uw(12)};
+    }
   }
 
   // Add the onKeyDown event handler
   &:empty {
     min-height: ${$uw(6)}; // This ensures there's always a visible line for the cursor
+    ${$breakPoint(780)}{
+        min-height: ${$uw(12)};
+    }
   }
 
   &:not(:empty) {
     min-height: ${$uw(6)}; // This ensures there's always a visible line for the cursor
+    ${$breakPoint(780)}{
+        min-height: ${$uw(12)};
+    }
   }
 
   &[contentEditable="true"] {

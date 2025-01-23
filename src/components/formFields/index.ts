@@ -1,2 +1,3 @@
 export { TextInput } from './TextInput'
-export {TextAreaInput } from './TextAreaInput'
+export { TextAreaInput } from './TextAreaInput'
+export { Checkbox } from './Checkbox'

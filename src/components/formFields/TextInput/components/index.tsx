@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { $color, $uw } from "@theme";
+import { $breakPoint, $color, $uw } from "@theme";
 
 type wrapperProps = {
-	color: string;
-	focusColor: string;
-	errorColor: string;
-	disabledColor: string;
-	textColor: string;
-	bgColor?: string;
+	$maincolor: string;
+	$focuscolor: string;
+	$errorcolor: string;
+	$disabledcolor: string;
+	$textcolor: string;
+	$bgcolor?: string;
 };
 
 export const Wrapper = styled.div<wrapperProps>`
@@ -17,15 +17,15 @@ export const Wrapper = styled.div<wrapperProps>`
 	margin-bottom: ${$uw(1.5)};
 	> .label,
 	.icon-wrapper > * {
-		color: ${({ color }) => $color(color)};
+		color: ${({ $maincolor }) => $color($maincolor)};
 	}
 	> .input-wrapper {
-		background-color: ${({ color }) => $color(color)};
+		background-color: ${({ $maincolor }) => $color($maincolor)};
 		> input {
-			color: ${({ textColor }) => $color(textColor)};
-			background-color: ${({ bgColor }) =>
-				bgColor
-					? `${$color(bgColor)}`
+			color: ${({ $textcolor }) => $color($textcolor)};
+			background-color: ${({ $bgcolor }) =>
+				$bgcolor
+					? `${$color($bgcolor)}`
 					: `${$color("background-color")}`};
 			&:-webkit-autofill,
 			.dark &:-webkit-autofill,
@@ -34,15 +34,15 @@ export const Wrapper = styled.div<wrapperProps>`
 			&:-webkit-autofill:focus,
 			.dark &:-webkit-autofill:focus,
 			&:-webkit-autofill:active .dark &:-webkit-autofill:active {
-				-webkit-box-shadow: 0 0 0 30px ${({bgColor})=>$color(bgColor ?? "white")} inset !important;
-				color: ${({ textColor }) => $color(textColor)};
-				-webkit-text-fill-color: ${({ textColor }) =>
-					$color(textColor)};
+				-webkit-box-shadow: 0 0 0 30px ${({$bgcolor})=>$color($bgcolor ?? "white")} inset !important;
+				color: ${({ $textcolor }) => $color($textcolor)};
+				-webkit-text-fill-color: ${({ $textcolor }) =>
+					$color($textcolor)};
 			}
 		}
 	}
 	.error-span {
-		color: ${({ errorColor }) => $color(errorColor)};
+		color: ${({ $errorcolor }) => $color($errorcolor)};
 	}
 	&.submitting,
 	&.disabled {
@@ -53,28 +53,43 @@ export const Wrapper = styled.div<wrapperProps>`
 	&.focused {
 		> .label,
 		.icon-wrapper > * {
-			color: ${({ focusColor }) => $color(focusColor)};
+			color: ${({ $focuscolor }) => $color($focuscolor)};
 		}
 		.focus-box {
-			background-color: ${({ focusColor }) => $color(focusColor)};
+			background-color: ${({ $focuscolor }) => $color($focuscolor)};
 		}
 	}
 	&.disabled {
 		> .label,
 		.icon-wrapper > * {
-			color: ${({ disabledColor }) => $color(disabledColor)};
+			color: ${({ $disabledcolor }) => $color($disabledcolor)};
 		}
 		.focus-box {
-			background-color: ${({ disabledColor }) => $color(disabledColor)};
+			background-color: ${({ $disabledcolor }) => $color($disabledcolor)};
 		}
 	}
 	&.error {
 		> .label {
-			color: ${({ errorColor }) => $color(errorColor)};
+			color: ${({ $errorcolor }) => $color($errorcolor)};
 		}
 		.focus-box {
-			background-color: ${({ errorColor }) => $color(errorColor)};
+			background-color: ${({ $errorcolor }) => $color($errorcolor)};
 		}
+	}
+	${$breakPoint(940)}{
+		height: ${$uw(3)};
+	}
+	${$breakPoint(780)}{
+		height: ${$uw(4)};
+		margin-bottom: ${$uw(4)};
+	}
+	${$breakPoint(560)}{
+		margin-bottom: ${$uw(5)};
+
+	}
+	${$breakPoint(480)}{
+		height:${$uw(6)};
+		margin-bottom: ${$uw(8)};
 	}
 `;
 
@@ -83,15 +98,33 @@ export const InputLabel = styled.label`
 	position: absolute;
 	left: ${$uw(0.5)};
 	top: 2px;
-	font-size: 1%.8rem;
+	font-size: 1.8rem;
 	transition: top 0.5s ease-in, left 0.5s ease-in, color 0.5s ease-in,
 		font-size 0.5s ease-in;
 	&.focused,
 	&.compiled {
 		font-size: 1.4rem;
-		top: ${$uw(-1.5)};
+		top: ${$uw(-1.3)};
 		left: 0px;
 	}
+	${$breakPoint(780)}{
+		font-size: 2.2rem;
+		left: ${$uw(1)};
+		&.focused,
+		&.compiled {
+			font-size: 1.8rem;
+			top: ${$uw(-2.5)};
+		}
+	}
+	${$breakPoint(560)}{
+		left: ${$uw(2)};
+		&.focused,
+		&.compiled {
+			font-size: 1.8rem;
+			top: ${$uw(-3.5)};
+		}
+	}
+	
 `;
 
 export const InputWrapper = styled.div`
@@ -100,9 +133,19 @@ export const InputWrapper = styled.div`
 	border-radius: 2px;
 	border-top-right-radius: 0;
 	height: ${$uw(1.5)};
-
+	display:flex;
 	overflow: hidden;
 	z-index: 1;
+	${$breakPoint(940)}{
+		height: ${$uw(2)};
+	}
+	${$breakPoint(780)}{
+		height: ${$uw(3.5)};
+	}
+
+	${$breakPoint(480)}{
+		height:${$uw(6)};
+	}
 `;
 
 export const IconWrapper = styled.div`
@@ -154,6 +197,14 @@ export const StyledInput = styled.input`
 	box-sizing: border-box;
 	padding-left: ${$uw(0.5)};
 	padding-bottom: ${$uw(0.4)};
+	${$breakPoint(780)}{
+		padding-left: ${$uw(1)};
+		padding-bottom: ${$uw(0.8)};
+		font-size: 2rem;
+	}
+	${$breakPoint(560)}{
+		padding-left: ${$uw(2)};
+	}
 `;
 
 export const ErrorSpan = styled.span`

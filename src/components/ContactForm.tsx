@@ -1,8 +1,9 @@
 "use client"
 
-import { TextInput, TextAreaInput } from '@/components';
-import { $uw, $cssTRBL } from '@/theme'
+import { TextInput, TextAreaInput, CTA, Checkbox } from '@components';
+import { $uw, $cssTRBL, $breakPoint } from '@theme'
 import { FormProvider, useForm } from 'react-hook-form'
+import { RiMailSendLine } from 'react-icons/ri';
 import styled from 'styled-components'
 
 type props ={
@@ -25,6 +26,8 @@ const ContactForm :React.FC<props>=({
                 <TextInput id="contactName" ntTextLabel="Nome e cognome" name="nome" />
                 <TextInput id="contactEmail" ntTextLabel="E-Mail" name="email" />
                 <TextAreaInput ntTextLabel='Descrivi la tua idea' name="pippo" />
+                <Checkbox id="contactPrivacy" name="privacy" ntTextLabel='Ho letto la normativa per la privacy' />
+                <CTA type='submit' text='INVIA' iconAfter={<RiMailSendLine />  } />
             </Form>
         </FormProvider>)
 
@@ -40,5 +43,17 @@ const Form = styled.form<{$width:string}>`
     justify-content: space-between;
     #contactName, #contactEmail {
         width: calc(50% - ${$uw(1)});
+        ${$breakPoint(820)}{
+            width:100%;
+        }
+
     }
+    #contactPrivacy{
+        width: 100%;
+    }
+
+    ${$breakPoint(820)}{
+        width:100%;
+        flex-direction: column;           
+    }   
 `
