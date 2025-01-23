@@ -27,19 +27,25 @@
 
 
 	--primary-light: #117888;
+	--primary-light-shade: #11788888;
 	--primary: #0b505b;
 	--primary-shade: #0b505b88;
 	--primary-dark: #06282d;
+	--primary-dark-shade: #06282d88;
 
 	--secondary-light: #9a329a;
+	--secondary-light-shade: #9a329a88;
 	--secondary: #5c1e5c;
 	--secondary-shade: #5c1e5c88;
 	--secondary-dark: #270c27;
+	--secondary-dark-shade: #270c2788;
 
 	--tertiary-light: #99fdff;
+	--tertiary-light-shade: #99fdff88;
 	--tertiary: #00fbff;
 	--tertiary-shade: #00fbff88;
 	--tertiary-dark: #00c9cc;
+	--tertiary-dark-shade: #00c9cc88;
 
 	--gray: #9a9a9a;
 	--gray-light: #e9e9e9;

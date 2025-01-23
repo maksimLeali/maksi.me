@@ -48,9 +48,9 @@ const Section = styled.section`
   height: calc(100dvh - ${$uw(3)}) ;
   width: 100%;
   align-items: center;
+
   position: relative;
   overflow: hidden;
-
 `;
 
 const Title = styled.div`
