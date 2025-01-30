@@ -5,6 +5,7 @@ import styled from "styled-components";
 import HexagonCollisionSketch from "./Sketch";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
+import { FaAngleDoubleDown } from "react-icons/fa";
 
 export const MainSection = () => {
   const [mounted, setMounted] = useState(false)
@@ -34,9 +35,13 @@ export const MainSection = () => {
         <Cutter id="cutter">
           <Upper className="upper "></Upper>
           <Lower className="lower "></Lower>
-          <Inside className="inside mainTitle">Costruisco l'essenziale</Inside>
+          <Inside className="inside mainTitle">Realizzo l'essenziale</Inside>
         </Cutter>
       </Title>
+      <ScrollDown href="#presentation">
+        <p>Scopri di più</p>
+        <FaAngleDoubleDown />
+      </ScrollDown>
     </Section>
   );
 };
@@ -145,3 +150,29 @@ const Inside = styled.div`
   z-index: 0;
   color: ${$color("white")};
 `;
+
+
+const ScrollDown = styled.a`
+  width: ${$uw(5)};
+  position: absolute;
+  opacity: 0;
+  right:${$uw(2)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: ${$uw(.5)};
+  bottom: ${$uw(2)}; 
+  cursor: pointer;
+  color: ${$color('white')};
+  animation: appear 1s ease-in 8s;
+  animation-fill-mode: forwards;
+  > svg {
+    width :${$uw(1)};
+    height :${$uw(1)};
+  } 
+  > * {
+    position: relative;    
+    animation: upandDown 2s ease-in-out infinite;
+  }
+
+`

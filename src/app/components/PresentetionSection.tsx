@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 export const PresentationSection = ()=>{
     return (
-        <Section>
+        <Section id="presentation">
         <Presentation>
           <div>
 
@@ -43,6 +43,7 @@ const Section = styled.section`
   display: flex;
   justify-content: space-between;
   padding:${$cssTRBL(1)};
+  padding-top: ${$uw(3)};
   align-items: center;
   
   
