@@ -10,11 +10,8 @@ export const PresentationSection = ()=>{
         <Presentation>
           <div>
 
-            <h1 className="title">Mi presento</h1>
-            <p>Mi chiamo <b>Maksim Leali</b> e sono uno sviluppatore web da ormai <b>8 anni</b></p>
-            <p>Sono specializzato nella realizzazione di <b>siti di presentazione</b>, curati nei dettagli per rappresentare al meglio brand e persone.</p>
-            <p>Ho inoltre sviluppato progetti originali, come siti per <b>giochi tra amici</b>, pagine dedicate a <b>coppie</b>, e piattaforme per <b>piccole realtà locali</b>,
-              sempre con un <b>approccio su misura</b> e <b>orientato alle esigenze del cliente.</b></p>
+            <h1 className="title">Chi sono?</h1>
+            <p>Mi chiamo Maksim Leali, sviluppatore web da 8 anni. Realizzo siti essenziali, funzionali e su misura per brand e persone</p>
           </div>
           <CTA href="#contact">
             FAMMI UNA PROPOSTA
