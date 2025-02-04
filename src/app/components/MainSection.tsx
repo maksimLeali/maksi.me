@@ -84,9 +84,11 @@ const Cutter = styled.div`
   overflow: hidden;
   position: relative;
   margin-left: ${$uw(1)};
+  padding-left: ${$uw(1)};
   opacity: 0;
+  /* background-color: #00f; */
   ${$breakPoint(820)}{
-    height: ${$uw(5)};
+    /* height: ${$uw(5)}; */
 
   }
   
@@ -95,11 +97,13 @@ const Cutter = styled.div`
 const Upper = styled.h3`
   position: absolute;
   width: 100%;
-  height: ${$uw(2)};
+  height: 50%;
+  /* height: ${$uw(5)}; */
   z-index: 1;
-  top: calc(50% - ${$uw(2)});
+  top:0;
   overflow: hidden;
-  background-color: ${$color("black-dark")};
+  /* background-color: #f00; */
+  /* background-color: ${$color("black-dark")}; */
   .mounted & {
     animation: titleUp 2s ease-in-out 5s;
     animation-fill-mode: forwards;
@@ -108,21 +112,26 @@ const Upper = styled.h3`
   &::before {
     position: absolute;
     width: 100%;
-    height: ${$uw(2)};
-    font-size: ${$uw(3)};
-    top: ${$uw(-.5)};
+    height: 50%;
+    /* height: ${$uw(2.5)}; */
+    font-size: 50%;
+    top: 50%;
+    /* top: ${$uw(2.5)}; */
     content: "Taglio il superfluo";
+    /* background-color: #faa; */
   }
 `;
 
 const Lower = styled.h3`
   position: absolute;
   width: 100%;
-  height: ${$uw(2)};
+  height: 50%;
+  /* height: ${$uw(5)}; */
   z-index: 1;
-  top: 50%;
+  top: calc(50% - 1px);
   overflow: hidden;
-  background-color: ${$color("black-dark")};
+  /* background-color: ${$color("black-dark")}; */
+  /* background-color: #0f0; */
   .mounted & {
     animation: titleDown 2s ease-in-out 5s;
     animation-fill-mode: forwards;
@@ -130,15 +139,18 @@ const Lower = styled.h3`
   &::before {
     position: absolute;
     width: 100%;
-    font-size: ${$uw(3)};
-    height: ${$uw(1.5)};
-    top:${$uw(-2.5)};    
+    font-size: 50%;
+    height: 50%;
+    /* height: ${$uw(2.5)}; */
+    top: -50%;    
     content: "Taglio il superfluo";
+    /* background-color: #afa; */
   }
 `;
 
 const Inside = styled.div`
   position: absolute;
+  opacity: 0;
   font-size: ${$uw(2.5)};
   .mounted & {
     animation: appear 3s ease-in-out 5s;

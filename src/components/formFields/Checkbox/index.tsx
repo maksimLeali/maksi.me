@@ -1,6 +1,8 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { Wrapper, InputLabel, InputWrapper, StyledCheckbox, ErrorSpan } from "./components";
+import { FaCheck } from "react-icons/fa";
+
 
 interface CheckboxInputProps {
     name: string;
@@ -18,7 +20,7 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
     id,
     required = false,
     registerOptions,
-}) => { 
+}) => {
     const {
         register,
         formState: { errors },
@@ -38,6 +40,8 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
                     })}
                     id={name}
                 />
+                 <FaCheck className="check" />   
+                
                 <InputLabel htmlFor={name}>
                     {textLabel ? textLabel : ntTextLabel}
                     {required && " *"}

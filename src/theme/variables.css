@@ -88,7 +88,7 @@ body *::-webkit-scrollbar {
 }
 
 html * {
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 }
 
 h1 {
@@ -96,23 +96,23 @@ h1 {
 }
 
 h2 {
-	font-size: 2.4rem;
+	font-size: 2.8rem;
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 2.4rem;
 }
 
 h4 {
-	font-size: 1.6rem;
+	font-size: 2rem;
 }
 
 h5 {
-	font-size: 1.2rem;
+	font-size: 1.8rem;
 }
 
 h6 {
-	font-size: 1.1rem;
+	font-size: 1.6rem;
 }
 
 .title {
@@ -412,16 +412,19 @@ span>* {
 @keyframes titleUp {
 
 	0% {
-		top: calc(50% - var(--max-grid-size) / var(--grid-columns-number)* 2);
+		/* top: calc(50% - var(--max-grid-size) / var(--grid-columns-number)* 2); */
+		top: 0;
 		opacity: 1;
 		transform: rotateX(0);
 	}
-	15%{
-		top: calc(48% - var(--max-grid-size) / var(--grid-columns-number)* 2);
+	25%{
+		/* top: calc(48% - var(--max-grid-size) / var(--grid-columns-number)* 2); */
+		top: -2%;
+	
 	}
 	80%,
 	100% {
-		top: 0;
+		top: -10%;
 		opacity: 0;
 		transform: perspective(600px) rotateX(90deg);
 	}
@@ -431,16 +434,17 @@ span>* {
 @keyframes titleDown {
 	
 	0% {
-		top: 50%;
+		top: calc(50% - 1px);
 		opacity: 1;
-		transform: rotateX(0);
+		transform:rotateX(0);
+		
 	}
-	15%{
+	25%{
 		top: 52%;
 	}
 	80%,
 	100% {
-		top: calc(100% - var(--max-grid-size) / var(--grid-columns-number)* 1.5);
+		top: 70%;
 		opacity: 0;
 		transform: perspective(600px) rotateX(-90deg);
 	}

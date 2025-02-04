@@ -187,8 +187,7 @@ const ContactBox = styled.div`
   background-color: ${$color('secondary')};
   border-radius: 4px;
   display: flex;
-  flex-direction: column;
- 
+  flex-direction: column;    
   box-shadow: ${$uw(.2)} ${$uw(.2)} ${$color('secondary-dark')};
   
   ${$breakPoint(1024)}{
