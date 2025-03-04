@@ -1,4 +1,4 @@
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme"
+import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system"
 import { BsTelegram } from "react-icons/bs"
 import { IoLogoWhatsapp } from "react-icons/io"
 import { RiCornerDownRightLine } from "react-icons/ri";

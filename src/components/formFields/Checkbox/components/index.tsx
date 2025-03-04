@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { $breakPoint, $color, $uw } from "@theme";
+import { $breakPoint, $color, $uw } from "@lemaks/grid_system";
 import { FOCUSCOLOR } from "../../colors";
 
 export const StyledCheckbox = styled.input`

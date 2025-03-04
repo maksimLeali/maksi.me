@@ -1,6 +1,6 @@
 "use client";
 
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system";
 import styled from "styled-components";
 import HexagonCollisionSketch from "./Sketch";
 import { useEffect, useState } from "react";

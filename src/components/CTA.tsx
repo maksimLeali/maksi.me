@@ -1,4 +1,4 @@
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system";
 import styled from "styled-components";
 import Link from "next/link";
 import React from "react";

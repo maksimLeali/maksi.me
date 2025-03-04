@@ -1,5 +1,5 @@
 import { ContactForm } from "@components"
-import { $breakPoint, $cssTRBL, $uw } from "@theme"
+import { $breakPoint, $cssTRBL, $uw } from "@lemaks/grid_system"
 import styled from "styled-components"
 
 

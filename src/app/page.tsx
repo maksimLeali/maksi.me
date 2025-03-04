@@ -1,6 +1,6 @@
 "use client";
 
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system";
 import styled from "styled-components";
 import { RiMailSendLine } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
