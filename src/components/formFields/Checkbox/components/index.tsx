@@ -12,6 +12,7 @@ export const StyledCheckbox = styled.input`
     border-radius: 2px;
     width: ${$uw(.5)};
     height: ${$uw(.5)};
+    mix-blend-mode: plus-lighter;
     &:checked {
         background-color:${$color(FOCUSCOLOR)};
     }
@@ -44,6 +45,18 @@ export const Wrapper = styled.div`
 export const InputWrapper = styled.div`
     display: flex;
     align-items: center;
+    position:relative;
+    .check {
+        position:absolute;
+        z-index: -1;
+        
+        height: ${$uw(.5)};
+        width: ${$uw(.5)};
+        padding: 2px;
+        left: 4px;
+
+
+    }
    
 `;
 
