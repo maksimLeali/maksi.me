@@ -114,7 +114,7 @@ const Upper = styled.h3`
     width: 100%;
     height: 50%;
     /* height: ${$uw(2.5)}; */
-    font-size: 50%;
+    font-size: ${$uw(3)};
     top: 50%;
     /* top: ${$uw(2.5)}; */
     content: "Taglio il superfluo";
@@ -139,7 +139,7 @@ const Lower = styled.h3`
   &::before {
     position: absolute;
     width: 100%;
-    font-size: 50%;
+    font-size: ${$uw(3)};
     height: 50%;
     /* height: ${$uw(2.5)}; */
     top: -50%;    
