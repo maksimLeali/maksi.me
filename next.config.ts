@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       meaninglessFileNames: ["index"], // Customize meaningless filenames
       minify: true, // Minify styles in production
       transpileTemplateLiterals: true, // Optimize template literals
-      namespace: "", // Use a namespace to scope classnames if needed
+      namespace: "lemaks", // Use a namespace to scope classnames if needed
       pure: false, // Enable pure annotation for dead code elimination
       cssProp: true,
       }
