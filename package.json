@@ -1,6 +1,6 @@
 {
   "name": "makso.me",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev -p 3001",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@lemaks/grid_system": "^1.0.6",
     "dayjs": "^1.11.7",
     "gsap": "^3.12.5",
     "lodash": "^4.17.21",

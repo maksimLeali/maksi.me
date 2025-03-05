@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { $color, $uw } from "@theme";
+import { $color, $uw } from "@lemaks/grid_system";
 
 
 export const Footer: React.FC = () => {

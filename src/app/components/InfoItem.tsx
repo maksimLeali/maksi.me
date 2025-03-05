@@ -1,4 +1,4 @@
-import { $breakPoint, $color, $uw } from "@theme";
+import { $breakPoint, $color, $uw } from "@lemaks/grid_system";
 import styled from "styled-components";
 
 type props = {

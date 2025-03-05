@@ -1,5 +1,5 @@
 "use client"
-import { $color, $cssTRBL, $uw } from "@theme";
+import { $color, $cssTRBL, $uw } from "@lemaks/grid_system";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 

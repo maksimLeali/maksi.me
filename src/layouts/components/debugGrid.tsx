@@ -4,7 +4,7 @@ import { Draggable as GSAPDraggable } from "gsap/dist/Draggable";
 import { useState } from "react";
 import styled from "styled-components";
 import { useHotkeys } from "react-hotkeys-hook";
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system";
 
 
 gsap.registerPlugin(GSAPDraggable);

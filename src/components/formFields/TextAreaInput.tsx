@@ -20,7 +20,7 @@ import {
 } from './colors';
 import { useOnClickOutside } from "@hooks";
 
-import { $uw, $color, $breakPoint } from "@theme";
+import { $uw, $color, $breakPoint } from "@lemaks/grid_system";
 
 type props = {
     name: string;
