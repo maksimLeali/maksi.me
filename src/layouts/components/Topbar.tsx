@@ -1,5 +1,5 @@
 "use client"
-import { $color, $cssTRBL, $uw } from "@lemaks/grid_system";
+import { $color, $cssTRBL, $uw } from "@theme";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
@@ -67,7 +67,9 @@ const TopBarContainer = styled.header`
 	transition: background-color 0.5s ease-in, color 0.5s ease-out;
 	color: ${$color("white")};
 	&.scrolled {
+		
 		background-color: ${$color("glass-dark")};
+		background-color: ${()=>$color("glass-dark")};
 		backdrop-filter: blur(8px);
 		.logo {
 			background-color: ${$color("white")};

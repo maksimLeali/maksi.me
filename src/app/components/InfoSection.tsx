@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { InfoItem } from "./InfoItem"
-import { $breakPoint, $cssTRBL, $uw } from "@lemaks/grid_system"
+import { $breakPoint, $cssTRBL, $uw } from "@theme"
 
 export const InfoSection = () => {
     return (

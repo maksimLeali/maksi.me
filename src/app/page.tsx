@@ -1,6 +1,6 @@
 "use client";
 
-import { $breakPoint, $color, $cssTRBL, $uw } from "@lemaks/grid_system";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@theme"
 import styled from "styled-components";
 import { RiMailSendLine } from "react-icons/ri";
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -9,9 +9,6 @@ import { MainSection } from './components/MainSection'
 import { ContactSection } from "./components/ContactSection";
 import { PresentationSection } from "./components/PresentetionSection";
 import { InfoSection } from "./components/InfoSection";
-
-
-
 
 export default function Main() {
 
@@ -33,9 +30,6 @@ const Container = styled.div`
   width: 100%;
   padding-bottom:${$uw(2)};
 `
-
-
-
 
 
 const Section = styled.section`

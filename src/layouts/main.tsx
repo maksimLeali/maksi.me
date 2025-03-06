@@ -2,9 +2,9 @@
 import { ReactNode } from "react";
 import { Footer, TopBar } from "./components";
 import styled from "styled-components";
-// import { DebugGrid } from "./components/debugGrid";
-import { DebugGrid } from "@lemaks/grid_system";
-import { $uw } from "@lemaks/grid_system";
+import { DebugGrid } from "./components/debugGrid";
+// import { DebugGrid } from "@theme"
+import { $uw } from "@theme"
 
 type Props = {
 	children: ReactNode;

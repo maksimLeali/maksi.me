@@ -1,7 +1,7 @@
 "use client"
 
 import { TextInput, TextAreaInput, CTA, Checkbox } from '@components';
-import { $uw, $cssTRBL, $breakPoint } from '@theme'
+import { $uw, $breakPoint } from '@theme'
 import { FormProvider, useForm } from 'react-hook-form'
 import { RiMailSendLine } from 'react-icons/ri';
 import styled from 'styled-components'

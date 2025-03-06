@@ -25,7 +25,7 @@
       "@hooks": ["./src/hooks"],
       "@i18n": ["./src/i18n"],
       "@layouts": ["./src/layouts"],
-      //"@lemaks/grid_system": ["./src/theme"],
+      "@theme": ["./src/theme"],
       "@utils": ["./src/utils"],
     }
   },
