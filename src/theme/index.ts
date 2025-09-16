@@ -8,8 +8,9 @@ const userColors =   {
 
 
 export const userGridConfig = {    
-    "grid-columns-number": "52",    
+    "grid-columns-number": "52",   
+     
     colors: userColors
 };
 
-export const {$color, $breakPoint, $uw, $cssTRBL, $variable, colors, css} = createTheme(userGridConfig);
+export const {$color, $breakPoint, $uw, $cssTRBL, $variable, colors, css } = createTheme(userGridConfig);

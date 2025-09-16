@@ -23,9 +23,10 @@ const ContactForm :React.FC<props>=({
             <Form $width={width} onSubmit={handleSubmit((data) => {
                 console.log(data)
             })}>
-                <TextInput id="contactName" ntTextLabel="Nome e cognome" name="nome" />
+                <TextInput id="contactName" ntTextLabel="Nome" name="nome" />
+                <TextInput id="contactSecondName" ntTextLabel="Cognome" name="secondName" />
                 <TextInput id="contactEmail" ntTextLabel="E-Mail" name="email" />
-                <TextAreaInput ntTextLabel='Descrivi la tua idea' name="pippo" />
+                <TextAreaInput ntTextLabel='Descrivi la tua idea' name="notes" />
                 <Checkbox id="contactPrivacy" name="privacy" ntTextLabel='Ho letto la normativa per la privacy' />
                 <CTA type='submit' text='INVIA' iconAfter={<RiMailSendLine />  } />
             </Form>
@@ -41,7 +42,7 @@ const Form = styled.form<{$width:string}>`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    #contactName, #contactEmail {
+    #contactName, #contactSecondName {
         width: calc(50% - ${$uw(1)});
         ${$breakPoint(820)}{
             width:100%;

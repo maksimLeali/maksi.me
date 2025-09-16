@@ -154,7 +154,7 @@ const ImageContainer = styled.div`
       z-index:1;
       width: ${$uw(20)};
       aspect-ratio: 1;
-      animation: changeradius 20s ease-in-out infinite;
+      animation: changeradius 20s ease-in-out infinite,rotate 15s linear infinite;;
       background-color: ${$color('tertiary')};
       ${$breakPoint(820)}{
         width:${$uw(24)};

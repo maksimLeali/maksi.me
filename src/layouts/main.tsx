@@ -1,22 +1,27 @@
 "use client"
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Footer, TopBar } from "./components";
 import styled from "styled-components";
-import { DebugGrid } from "./components/debugGrid";
-// import { DebugGrid } from "@theme"
+import { DebugGrid } from "@lemaks/grid_system";
 import { $uw } from "@theme"
+import { useHotkeys } from "react-hotkeys-hook";
 
 type Props = {
 	children: ReactNode;
 };
 
 export const MainLayout: React.FC<Props> = ({ children }) => {
+	const [visible, setVisible] = useState(false);
+
+	useHotkeys("mod+alt+g", () =>
+		setVisible(!visible) 
+	);
 	return (
 		<Container>
 			<TopBar />
 			<MainWrapper id="mainWrapper">
 				<MainBody>{children}</MainBody>
-				<DebugGrid />
+				<DebugGrid visible={visible} setVisible={setVisible} />
 			</MainWrapper>
 			<Footer />
 		</Container>

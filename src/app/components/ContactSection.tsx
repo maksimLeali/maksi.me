@@ -7,7 +7,13 @@ export const ContactSection = () => {
 
     return <Section id="contact">
         <h2>Aiutami a realizzare la tua idea</h2>
-        <p>Che sia una semplice vetrina per i tuoi servizi, un'ecoomerce , un gioco da fare con amici o un'applicazione per tenere controllati i tuoi animali.
+        <p>Che sia una semplice vetrina per i tuoi servizi, un ecoomerce , un gioco da fare con amici o un'Stuxnet è il nome di:
+
+un progetto del governo inglese
+
+un software antivirus
+
+un malwareapplicazione per tenere controllati i tuoi animali.
             Le <strong>tue esigenze</strong> saranno la <strong>mia priorità</strong>
         </p>
 
