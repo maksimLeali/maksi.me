@@ -1,1 +1,18 @@
 @import url("../theme/variables.css");
+
+/* Offset anchor scroll so sections aren't hidden under the fixed topbar */
+section[id] {
+    scroll-margin-top: calc(min(100vw, 1200px) / 52 * 4);
+}
+
+@media only screen and (max-width: 820px) {
+    section[id] {
+        scroll-margin-top: calc(min(100vw, 1200px) / 52 * 6.5);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section[id] {
+        scroll-margin-top: calc(min(100vw, 1200px) / 52 * 9);
+    }
+}

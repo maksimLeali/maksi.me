@@ -4,7 +4,7 @@ import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
 
-const TYPED_TEXT = "Curiosità applicata.";
+const TYPED_TEXT = "Curiosità\napplicata.";
 
 export const AboutSection = () => {
     const [typed, setTyped] = useState("");
@@ -202,11 +202,14 @@ const Copy = styled.div`
 const Typed = styled.p`
     margin-top: ${$uw(1)};
     font-size: ${$uw(2)} !important;
+    line-height: 1.5;
     color: ${$color("tertiary")} !important;
-    min-height: ${$uw(2.5)};
+    white-space: pre-wrap;
+    /* reserve space for 2 lines from the start to avoid layout shift */
+    min-height: calc(${$uw(2)} * 1.5 * 2);
     ${$breakPoint(500)} {
         font-size: ${$uw(3.4)} !important;
-        min-height: ${$uw(4)};
+        min-height: calc(${$uw(3.4)} * 1.5 * 2);
         margin-top: ${$uw(1.5)};
     }
     .caret {
