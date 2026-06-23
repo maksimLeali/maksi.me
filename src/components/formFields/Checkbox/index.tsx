@@ -10,7 +10,7 @@ interface CheckboxInputProps {
     ntTextLabel?: string;
     required?: boolean;
     id?: string;
-    registerOptions?: Record<string, any>;
+    registerOptions?: Record<string, unknown>;
 }
 
 export const Checkbox: React.FC<CheckboxInputProps> = ({

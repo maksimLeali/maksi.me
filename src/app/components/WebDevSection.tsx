@@ -61,11 +61,13 @@ export const WebDevSection = () => {
                     </Cta>
                 </div>
                 <Mockups>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         className="desktop"
                         src="/assets/barba.png"
                         alt="Mockup desktop di un sito sviluppato da LeMaks"
                     />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         className="mobile"
                         src="/assets/barba_mobile.png"

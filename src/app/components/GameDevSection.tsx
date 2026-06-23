@@ -57,6 +57,7 @@ export const GameDevSection = () => {
                     </Cta>
                 </div>
                 <Preview>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/game.jpg"
                         alt="Controller e schermo di gioco"
@@ -146,14 +147,17 @@ export const GameDevSection = () => {
                     </SpotlightCta>
                 </div>
                 <div className="spotlight-screens">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz3.png"
                         alt="Screenshot del gioco — schermata 1"
                     />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz2.png"
                         alt="Screenshot del gioco — schermata 2"
                     />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz.png"
                         alt="Screenshot del gioco — schermata 3"
@@ -195,6 +199,7 @@ export const GameDevSection = () => {
                 </p>
                 <ProtoCard>
                     <div className="clip">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/assets/zodiac_lullaby.png"
                             alt="Concept visuale del primo gioco web"

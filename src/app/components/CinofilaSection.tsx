@@ -36,6 +36,7 @@ export const CinofilaSection = () => {
         <Section id="cinofila">
             <Intro>
                 <Photo>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo3.jpg"
                         alt="Cane durante una sessione di educazione"
@@ -88,6 +89,7 @@ export const CinofilaSection = () => {
                     />
                 </Curve>
                 <PhotoTall>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo.jpg"
                         alt="Cane in un momento di relax"
@@ -125,6 +127,7 @@ export const CinofilaSection = () => {
                     <span className="soon mono">DIARIO IN ARRIVO</span>
                 </div>
                 <Notebook>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo2.jpg"
                         alt="Momento di connessione con il cane"

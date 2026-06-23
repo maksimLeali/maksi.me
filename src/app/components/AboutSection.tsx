@@ -41,6 +41,7 @@ export const AboutSection = () => {
                 <span className="shape" />
                 <div className="portrait-border" />
                 <div className="portrait-mask">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         className="portrait"
                         src="/assets/presentation.png"

@@ -67,7 +67,7 @@ export const ControlledTextInput: React.FC<ControlledProps & CommonProps> = ({
 			} ${error && "error"}`;
 	}, [error, disabled, focused, compiled]);
 
-	// @ts-ignore
+	// @ts-expect-error – useOnClickOutside ref type mismatch
 	useOnClickOutside(ref, () => {
 		setFocused(false);
 		const hide = ref.current?.children[0];

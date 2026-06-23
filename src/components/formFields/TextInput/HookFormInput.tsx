@@ -59,6 +59,7 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
 			return;
 		}
 		setCompiled(true);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [getValues(name)]);
 
 	const setFocus = () => {
@@ -70,9 +71,10 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
 	const classes = useMemo(() => {
 		return `${disabled && "disabled"} ${focused && "focused"} ${compiled && "compiled"
 			} ${errors[name] && "error"}`;
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [errors[name], disabled, focused, compiled]);
 
-	// @ts-ignore
+	// @ts-expect-error – useOnClickOutside ref type mismatch
 	useOnClickOutside(ref, () => {
 		setFocused(false);
 		const hide = ref.current?.children[0];
@@ -135,7 +137,7 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
 			</InputWrapper>
 			{errors[name]?.message && (
 				<ErrorSpan className="error-span">
-					{/* @ts-ignore  */}
+					{/* @ts-expect-error – react-hook-form message type */}
 					{errors[name]?.message}
 				</ErrorSpan>
 			)}

@@ -30,6 +30,7 @@ export default function RootLayout({
                         href="https://fonts.gstatic.com"
                         crossOrigin="anonymous"
                     />
+                    {/* eslint-disable @next/next/no-page-custom-font */}
                     <link
                         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
                         rel="stylesheet"
@@ -38,6 +39,7 @@ export default function RootLayout({
                         href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Oxygen:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
                         rel="stylesheet"
                     />
+                    {/* eslint-enable @next/next/no-page-custom-font */}
                 </head>
                 <body>
                     <MainLayout>{children}</MainLayout>

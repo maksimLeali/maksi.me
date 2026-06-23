@@ -52,7 +52,9 @@ export const TopBar: React.FC = () => {
             <Wrapper>
                 <Brand href="/" onClick={closeMenu}>
                     <ImageWrapper>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/logo_dark.svg" alt="LeMaks" />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img className="light" src="/logo.svg" alt="LeMaks" />
                     </ImageWrapper>
                     <span className="brand-name">LeMaks</span>

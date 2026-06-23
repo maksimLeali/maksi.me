@@ -12,10 +12,8 @@ import ContentEditable from "react-contenteditable";
 
 import {
 	FOCUSCOLOR,
-	DISABLEDCOLOR,
 	TEXTCOLOR,
 	COLOR,
-	ERRORCOLOR,
 	BGCOLOR
 } from './colors';
 import { useOnClickOutside } from "@hooks";
@@ -58,13 +56,12 @@ export const TextAreaInput: React.FC<props> = ({
     
     const {
         setValue,
-        register,
         getValues,
         formState: { errors, isSubmitting },
     } = useFormContext();
 
     const onContentBlur = useCallback(
-        (evt: any) => {
+        (evt: React.SyntheticEvent<HTMLElement>) => {
             const sanitizeConf = {
                 allowedTags: ["b", "i", "a", "p", 'br', 'div'],
                 allowedAttributes: { a: ["href"] },
@@ -82,20 +79,22 @@ export const TextAreaInput: React.FC<props> = ({
             if (!compiled) {
                 setCompiled(true);
             }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         },[]
     );
 
     const setFocus = () => {
         if(editableRef.current){
-            (editableRef.current as any).el.current.focus()
+            (editableRef.current as unknown as { el: { current: HTMLElement } }).el.current.focus()
         }
     };
 
     useEffect(() => {
         setError(errors[name] != undefined);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [errors[name]]);
 
-    // @ts-ignore
+    // @ts-expect-error – useOnClickOutside ref type mismatch
     useOnClickOutside(ref, () => {
         setFocused(false);
         const hide = ref.current?.children[0];
@@ -121,7 +120,8 @@ export const TextAreaInput: React.FC<props> = ({
             <InputWrapper ref={ref} $mainColor={color}>
                 <Editable
                     id={name}
-                    ref={(editableRef)as any}
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    ref={editableRef as any}
                     textcolor={textColor}
                     bgcolor={bgColor}
                     onChange={onContentBlur}
@@ -140,7 +140,7 @@ export const TextAreaInput: React.FC<props> = ({
                 />
             </InputWrapper>
             {errors[name]?.message ? (
-                // @ts-ignore
+                // @ts-expect-error – react-hook-form message type
                 <ErrorSpan>{errors[name]?.message }</ErrorSpan>
             ) : (
                 ""
@@ -307,40 +307,6 @@ const Editable = styled(ContentEditable)<{ textcolor: string, bgcolor?: string }
     white-space: pre-wrap; // This preserves whitespace and line breaks
   }
 `;
-const StyledInput = styled.textarea<{ textColor: string }>`
-    outline: none;
-    border: none!important;
-    position: relative;
-    z-index: 2;
-    background-image: none;
-    color: ${({ textColor }) => $color(textColor)};
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    font-size: 1.6rem;
-    box-shadow: none;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    @media (prefers-color-scheme: dark) {
-        background-color: var(--ion-background-color);
-    }
-    &:-webkit-autofill,
-    .dark &:-webkit-autofill,
-    &:-webkit-autofill:hover,
-    .dark &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus,
-    .dark &:-webkit-autofill:focus,
-    &:-webkit-autofill:active .dark &:-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 30px white inset !important;
-        color: ${({ textColor }) => $color(textColor)};
-        -webkit-text-fill-color: var(
-            --ion-color-${({ textColor }) => textColor}
-        );
-    }
-`;
-
 const ErrorSpan = styled.span`
     color: var(--ion-color-danger);
     font-size: 1.6rem;
