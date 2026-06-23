@@ -4,7 +4,8 @@ import { MainLayout } from "@layouts";
 
 export const metadata = {
     title: "Le Maks",
-    description: "Il sito personale di Maksim Leali, sviluppatore web e appassionato di tecnologia.",
+    description:
+        "Il sito personale di Maksim Leali, sviluppatore web e appassionato di tecnologia.",
 };
 
 export default function RootLayout({

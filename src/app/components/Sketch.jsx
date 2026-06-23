@@ -377,7 +377,7 @@ const Canvas = styled.canvas`
     left: 0;
     ${$breakPoint(500)} {
         top: auto;
-        bottom: ${$uw(-5)};
+        bottom: ${$uw(20)};
     }
 `;
 
@@ -399,8 +399,9 @@ const WordsContainer = styled.div`
     }
     ${$breakPoint(500)} {
         top: auto;
-        bottom: ${$uw(20.75 - 5)};
-        left: ${$uw(14.75)};
+        bottom: ${$uw(40)};
+        left: 50%;
+        transform: translateX(-50%);
         width: ${$uw(22.5)};
     }
     /* This container controls the SVG's size/position. 

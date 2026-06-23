@@ -30,7 +30,6 @@ export const MainSection = () => {
         <Section id="mainSection">
             <HexagonCollisionSketch />
             <Content className={mounted ? "mounted" : ""}>
-                <span className="brand mono">LeMaks</span>
                 <Title className="mainTitle">
                     <span className="line">Realizzo</span>
                     <span className="line">
@@ -60,7 +59,7 @@ export const MainSection = () => {
                 </Actions>
             </Content>
             <ScrollDown href="#manifesto">
-                <p>Scopri di più</p>
+                <p className="label">Scopri di più</p>
                 <FaAngleDoubleDown />
             </ScrollDown>
         </Section>
@@ -82,7 +81,8 @@ const Section = styled.section`
     ${$breakPoint(500)} {
         align-items: flex-start;
         padding: ${$cssTRBL(2, 2)};
-        min-height: calc(100dvh - ${$uw(7)});
+        min-height: calc(100dvh + ${$uw(30)});
+        overflow: visible;
     }
 `;
 
@@ -136,7 +136,7 @@ const Title = styled.h1`
             font-size: ${$uw(4.5)};
         }
         ${$breakPoint(500)} {
-            font-size: ${$uw(6.5)};
+            font-size: ${$uw(3.25)};
         }
     }
 
@@ -268,7 +268,7 @@ const ScrollDown = styled.a`
     bottom: ${$uw(2)};
     cursor: pointer;
     color: ${$color("white")};
-    z-index: 3;
+    z-index: 10;
     animation: fadeIn 1s ease-in 2.4s forwards;
     > svg {
         width: ${$uw(1)};
@@ -279,13 +279,19 @@ const ScrollDown = styled.a`
         animation: upandDown 2s ease-in-out infinite;
     }
     ${$breakPoint(500)} {
-        right: 50%;
-        transform: translateX(50%);
+        position: fixed;
+        right: ${$uw(2)};
+        transform: none;
         bottom: ${$uw(3)};
         width: auto;
+        display: flex;
+        animation: fadeIn 1s ease-in 4s forwards;
+        .label {
+            display: none;
+        }
         > svg {
-            width: ${$uw(2)};
-            height: ${$uw(2)};
+            width: ${$uw(2.5)};
+            height: ${$uw(2.5)};
         }
     }
 `;

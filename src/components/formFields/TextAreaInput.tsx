@@ -1,24 +1,16 @@
-"use client"
+"use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import {
-    RegisterOptions,
-    useFormContext,
-} from "react-hook-form";
+import { RegisterOptions, useFormContext } from "react-hook-form";
 
 import styled from "styled-components";
 import sanitizeHtml from "sanitize-html";
 import ContentEditable from "react-contenteditable";
 
-import {
-	FOCUSCOLOR,
-	TEXTCOLOR,
-	COLOR,
-	BGCOLOR
-} from './colors';
+import { FOCUSCOLOR, TEXTCOLOR, COLOR, BGCOLOR } from "./colors";
 import { useOnClickOutside } from "@hooks";
 
-import { $uw, $color, $breakPoint } from "@theme"
+import { $uw, $color, $breakPoint } from "@theme";
 
 type props = {
     name: string;
@@ -33,7 +25,7 @@ type props = {
     pattern?: RegExp;
     registerOptions?: RegisterOptions;
     errorColor?: string;
-    bgColor?: string
+    bgColor?: string;
 };
 
 export const TextAreaInput: React.FC<props> = ({
@@ -42,18 +34,17 @@ export const TextAreaInput: React.FC<props> = ({
     color = COLOR,
     required = false,
     textColor = TEXTCOLOR,
-    focusColor = FOCUSCOLOR,    
-    bgColor=BGCOLOR,
+    focusColor = FOCUSCOLOR,
+    bgColor = BGCOLOR,
     name,
 }: props) => {
-    
     const [focused, setFocused] = useState(false);
     const [compiled, setCompiled] = useState(false);
     const [error, setError] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    
+
     const editableRef = useRef<HTMLDivElement>(null);
-    
+
     const {
         setValue,
         getValues,
@@ -63,35 +54,40 @@ export const TextAreaInput: React.FC<props> = ({
     const onContentBlur = useCallback(
         (evt: React.SyntheticEvent<HTMLElement>) => {
             const sanitizeConf = {
-                allowedTags: ["b", "i", "a", "p", 'br', 'div'],
+                allowedTags: ["b", "i", "a", "p", "br", "div"],
                 allowedAttributes: { a: ["href"] },
             };
             const text = sanitizeHtml(
                 evt.currentTarget.innerHTML,
-                sanitizeConf
+                sanitizeConf,
             );
-            setValue(name, text??'');
+            setValue(name, text ?? "");
             // setEditableText(text)
-            if(text.length == 0) {
-              setCompiled(false);
-              return
+            if (text.length == 0) {
+                setCompiled(false);
+                return;
             }
             if (!compiled) {
                 setCompiled(true);
             }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        },[]
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        },
+        [],
     );
 
     const setFocus = () => {
-        if(editableRef.current){
-            (editableRef.current as unknown as { el: { current: HTMLElement } }).el.current.focus()
+        if (editableRef.current) {
+            (
+                editableRef.current as unknown as {
+                    el: { current: HTMLElement };
+                }
+            ).el.current.focus();
         }
     };
 
     useEffect(() => {
         setError(errors[name] != undefined);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [errors[name]]);
 
     // @ts-expect-error – useOnClickOutside ref type mismatch
@@ -101,7 +97,6 @@ export const TextAreaInput: React.FC<props> = ({
         if (!hide) return;
         hide.classList.remove("hide");
     });
-    
 
     return (
         <Wrapper className={`${isSubmitting ? "submitting" : ""}`}>
@@ -109,7 +104,10 @@ export const TextAreaInput: React.FC<props> = ({
                 $mainColor={color}
                 $focuscolor={focusColor}
                 htmlFor={name}
-                onClick={()=> {console.log('******'); setFocus()}}
+                onClick={() => {
+                    console.log("******");
+                    setFocus();
+                }}
                 className={`${focused ? "focused" : ""} ${
                     compiled ? "compiled" : ""
                 } ${error ? "error" : ""}`}
@@ -127,9 +125,7 @@ export const TextAreaInput: React.FC<props> = ({
                     onChange={onContentBlur}
                     onFocus={() => setFocused(true)}
                     onBlur={onContentBlur}
-                     
-                    html={getValues(name )?? ''}
-                    
+                    html={getValues(name) ?? ""}
                 />
                 <FocusBox
                     $mainColor={color}
@@ -141,7 +137,7 @@ export const TextAreaInput: React.FC<props> = ({
             </InputWrapper>
             {errors[name]?.message ? (
                 // @ts-expect-error – react-hook-form message type
-                <ErrorSpan>{errors[name]?.message }</ErrorSpan>
+                <ErrorSpan>{errors[name]?.message}</ErrorSpan>
             ) : (
                 ""
             )}
@@ -172,7 +168,6 @@ const Wrapper = styled.div`
     }
 `;
 
-
 const InputLabel = styled.label<labelProps>`
     z-index: 2;
     position: absolute;
@@ -180,14 +175,17 @@ const InputLabel = styled.label<labelProps>`
     top: 2px;
     font-size: 2rem;
     color: ${({ $mainColor }) => $color($mainColor)};
-    transition: top 0.5s ease-in, left 0.5s ease-in, color 0.5s ease-in,
-    font-size 0.5s ease-in;
-    &.focused ,
+    transition:
+        top 0.5s ease-in,
+        left 0.5s ease-in,
+        color 0.5s ease-in,
+        font-size 0.5s ease-in;
+    &.focused,
     &.compiled {
         font-size: 1.8rem;
         top: ${$uw(-1.5)};
         left: 0px;
-        color:${({ $focuscolor }) => $color($focuscolor)};
+        color: ${({ $focuscolor }) => $color($focuscolor)};
         ${$breakPoint(780)} {
             top: -2.6rem;
             font-size: 1.4rem;
@@ -197,7 +195,6 @@ const InputLabel = styled.label<labelProps>`
         color: var(--ion-color-danger);
     }
 `;
-
 
 const InputWrapper = styled.div<wrapperProps>`
     background-color: ${({ $mainColor }) => $color($mainColor)};
@@ -228,17 +225,21 @@ const FocusBox = styled.span<focusCircleProps>`
     max-height: 0;
     height: 100%;
 
-    transition: background-color 1s cubic-bezier(1, 0.07, 1, 0.12) 0s,
-        width 0.5s ease-out, max-height 0.5s ease-out;
+    transition:
+        background-color 1s cubic-bezier(1, 0.07, 1, 0.12) 0s,
+        width 0.5s ease-out,
+        max-height 0.5s ease-out;
     &.focused {
-        background-color:${({ $focuscolor }) => $color($focuscolor)};
+        background-color: ${({ $focuscolor }) => $color($focuscolor)};
         width: 100%;
         max-height: 100%;
-        transition: background-color 1s cubic-bezier(0.02, 1.17, 0, 0.97) 0s,
-            width 0.5s ease-out, max-height 0.5s ease-out;
+        transition:
+            background-color 1s cubic-bezier(0.02, 1.17, 0, 0.97) 0s,
+            width 0.5s ease-out,
+            max-height 0.5s ease-out;
     }
     &.compiled {
-        background-color:${({ $focuscolor }) => $color($focuscolor)};
+        background-color: ${({ $focuscolor }) => $color($focuscolor)};
         width: 100%;
         max-height: 100%;
     }
@@ -247,14 +248,17 @@ const FocusBox = styled.span<focusCircleProps>`
     }
 `;
 
-const Editable = styled(ContentEditable)<{ textcolor: string, bgcolor?: string }>`
+const Editable = styled(ContentEditable)<{
+    textcolor: string;
+    bgcolor?: string;
+}>`
     height: 100%;
     width: 100%;
     min-height: ${$uw(6)};
     font-size: 1.6rem;
     padding-left: 20px;
     padding-bottom: 10px;
-    box-sizing:border-box;
+    box-sizing: border-box;
     border: none !important;
     color: ${({ textcolor }) => $color(textcolor)};
     position: relative;
@@ -263,10 +267,8 @@ const Editable = styled(ContentEditable)<{ textcolor: string, bgcolor?: string }
     padding-top: 8px;
     outline: 0px solid transparent;
     background-color: ${({ bgcolor }) =>
-        bgcolor
-            ? $color(bgcolor)
-            : "var(--ion-background-color)"};
-    
+        bgcolor ? $color(bgcolor) : "var(--ion-background-color)"};
+
     &:-webkit-autofill,
     .dark &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -281,31 +283,35 @@ const Editable = styled(ContentEditable)<{ textcolor: string, bgcolor?: string }
         );
     }
     &:empty:before {
-    content: attr(placeholder);
-    color: ${({ textcolor }) => $color(textcolor)};
-    ${$breakPoint(780)}{
-        min-height: ${$uw(12)};
+        content: attr(placeholder);
+        color: ${({ textcolor }) => $color(textcolor)};
+        ${$breakPoint(780)} {
+            min-height: ${$uw(12)};
+        }
     }
-  }
 
-  // Add the onKeyDown event handler
-  &:empty {
-    min-height: ${$uw(6)}; // This ensures there's always a visible line for the cursor
-    ${$breakPoint(780)}{
-        min-height: ${$uw(12)};
+    // Add the onKeyDown event handler
+    &:empty {
+        min-height: ${$uw(
+            6,
+        )}; // This ensures there's always a visible line for the cursor
+        ${$breakPoint(780)} {
+            min-height: ${$uw(12)};
+        }
     }
-  }
 
-  &:not(:empty) {
-    min-height: ${$uw(6)}; // This ensures there's always a visible line for the cursor
-    ${$breakPoint(780)}{
-        min-height: ${$uw(12)};
+    &:not(:empty) {
+        min-height: ${$uw(
+            6,
+        )}; // This ensures there's always a visible line for the cursor
+        ${$breakPoint(780)} {
+            min-height: ${$uw(12)};
+        }
     }
-  }
 
-  &[contentEditable="true"] {
-    white-space: pre-wrap; // This preserves whitespace and line breaks
-  }
+    &[contentEditable="true"] {
+        white-space: pre-wrap; // This preserves whitespace and line breaks
+    }
 `;
 const ErrorSpan = styled.span`
     color: var(--ion-color-danger);

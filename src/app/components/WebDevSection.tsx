@@ -60,21 +60,22 @@ export const WebDevSection = () => {
                         <RiCornerDownRightLine />
                     </Cta>
                 </div>
-                <Mockups>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        className="desktop"
-                        src="/assets/barba.png"
-                        alt="Mockup desktop di un sito sviluppato da LeMaks"
-                    />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        className="mobile"
-                        src="/assets/barba_mobile.png"
-                        alt="Mockup mobile di un sito sviluppato da LeMaks"
-                    />
-                </Mockups>
             </Intro>
+
+            <Mockups>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    className="desktop"
+                    src="/assets/barba.png"
+                    alt="Mockup desktop di un sito sviluppato da LeMaks"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    className="mobile"
+                    src="/assets/barba_mobile.png"
+                    alt="Mockup mobile di un sito sviluppato da LeMaks"
+                />
+            </Mockups>
 
             <Block>
                 <h3>
@@ -178,16 +179,9 @@ const Section = styled.section`
 
 const Intro = styled.div`
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: ${$uw(2)};
-    ${$breakPoint(820)} {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: ${$uw(3)};
-    }
+    flex-direction: column;
     .copy {
-        max-width: ${$uw(30)};
+        max-width: ${$uw(34)};
         display: flex;
         flex-direction: column;
         gap: ${$uw(0.8)};
@@ -234,11 +228,18 @@ const Cta = styled.a`
 
 const Mockups = styled.div`
     position: relative;
-    width: ${$uw(26)};
-    height: ${$uw(20)};
-    flex-shrink: 0;
+    /* bleed outside the section's horizontal padding to go full width */
+    margin-left: ${$uw(-1)};
+    margin-right: ${$uw(-1)};
+    height: ${$uw(28)};
     ${$breakPoint(820)} {
-        width: 100%;
+        margin-left: ${$uw(-1.5)};
+        margin-right: ${$uw(-1.5)};
+        height: ${$uw(30)};
+    }
+    ${$breakPoint(500)} {
+        margin-left: ${$uw(-2)};
+        margin-right: ${$uw(-2)};
         height: ${$uw(34)};
     }
     .desktop,
@@ -253,19 +254,24 @@ const Mockups = styled.div`
     }
     .desktop {
         top: 0;
-        right: ${$uw(2)};
-        width: ${$uw(22)};
-        height: ${$uw(15)};
+        left: 0;
+        width: 100%;
+        height: 100%;
         animation: fadeInUp 1s ease-out forwards;
     }
     .mobile {
-        bottom: 0;
-        right: 0;
-        width: ${$uw(6)};
-        height: ${$uw(11)};
+        bottom: ${$uw(1)};
+        right: ${$uw(1)};
+        width: ${$uw(7)};
+        height: ${$uw(13)};
         object-position: top center;
+        border: 2px solid ${$color("tertiary-dark-shade")};
         animation: fadeInUp 1s ease-out 0.3s forwards;
         opacity: 0;
+        ${$breakPoint(500)} {
+            width: ${$uw(9)};
+            height: ${$uw(16)};
+        }
     }
 `;
 

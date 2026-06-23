@@ -1,8 +1,13 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import { Wrapper, InputLabel, InputWrapper, StyledCheckbox, ErrorSpan } from "./components";
+import {
+    Wrapper,
+    InputLabel,
+    InputWrapper,
+    StyledCheckbox,
+    ErrorSpan,
+} from "./components";
 import { FaCheck } from "react-icons/fa";
-
 
 interface CheckboxInputProps {
     name: string;
@@ -27,7 +32,10 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
     } = useFormContext();
 
     return (
-        <Wrapper id={id} className={`checkbox-input ${errors[name] ? "error" : ""}`}>
+        <Wrapper
+            id={id}
+            className={`checkbox-input ${errors[name] ? "error" : ""}`}
+        >
             <InputWrapper>
                 <StyledCheckbox
                     type="checkbox"
@@ -40,8 +48,8 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
                     })}
                     id={name}
                 />
-                 <FaCheck className="check" />   
-                
+                <FaCheck className="check" />
+
                 <InputLabel htmlFor={name}>
                     {textLabel ? textLabel : ntTextLabel}
                     {required && " *"}
