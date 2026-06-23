@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  
+  output: "standalone",
+
   compiler: {
     styledComponents: {
       displayName: true, // Show component names in classnames (useful for debugging)

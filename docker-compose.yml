@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  makso_me:
+    container_name: maksome
+    image: maksome
+    build:
+      context: .
+      target: production
+    ports:
+      - "3111:3111"
+    restart: unless-stopped
