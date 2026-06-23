@@ -176,7 +176,7 @@ const Wrapper = styled.div`
 const InputLabel = styled.label<labelProps>`
     z-index: 2;
     position: absolute;
-    left: ${$uw(.5)};
+    left: 20px;
     top: 2px;
     font-size: 2rem;
     color: ${({ $mainColor }) => $color($mainColor)};
@@ -188,6 +188,10 @@ const InputLabel = styled.label<labelProps>`
         top: ${$uw(-1.5)};
         left: 0px;
         color:${({ $focuscolor }) => $color($focuscolor)};
+        ${$breakPoint(780)} {
+            top: -2.6rem;
+            font-size: 1.4rem;
+        }
     }
     &.error {
         color: var(--ion-color-danger);

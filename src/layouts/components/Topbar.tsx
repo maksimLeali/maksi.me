@@ -1,132 +1,376 @@
-"use client"
-import { $color, $cssTRBL, $uw } from "@theme";
-import React, { useEffect, useState } from "react";
+"use client";
+import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { useOnClickOutside } from "@hooks";
+import React, { useEffect, useRef, useState } from "react";
+import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import styled from "styled-components";
 
+const NAV_LINKS = [
+    { label: "Web Development", href: "/#web" },
+    { label: "Game Development", href: "/#game" },
+    { label: "Educazione Cinofila", href: "/#cinofila" },
+    { label: "Articoli", href: "/#articles" },
+    { label: "Chi sono", href: "/#about" },
+    { label: "Contatti", href: "/#contact" },
+];
+
 export const TopBar: React.FC = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const drawerRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
 
-	const [isScrolled, setIsScrolled] = useState(false);
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
-	useEffect(() => {
-		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 0);
-		};
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [menuOpen]);
 
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
+    useOnClickOutside(drawerRef as React.RefObject<HTMLDivElement>, () => {
+        if (menuOpen) setMenuOpen(false);
+    });
 
-	return (
-		<TopBarContainer className={`menu ${isScrolled ? "scrolled" : ""}`}>
-			<Wrapper>
-				<Nav>
-					<ImageWrapper>
-						<img src="/logo_dark.svg" alt="logo" />
-						<img className="light" src="/logo.svg" alt="logo" />
-					</ImageWrapper>
-				</Nav>
-				<Nav>
-					<p className="nav-link">
-						HOME
-					</p>
-				</Nav>
-				<Nav>
-					<p className="nav-link">
-						POST
-					</p>
-				</Nav>
-				<Nav>
-					<p className="nav-link">
-						ABOUT ME
-					</p>
-				</Nav>
-				<Nav>
-					<p className="nav-link">
-						CONTATTI
-					</p>
-				</Nav>
-			</Wrapper>
-		</TopBarContainer>
-	);
+    const closeMenu = () => setMenuOpen(false);
+
+    return (
+        <TopBarContainer className={`menu ${isScrolled ? "scrolled" : ""}`}>
+            <Wrapper>
+                <Brand href="/" onClick={closeMenu}>
+                    <ImageWrapper>
+                        <img src="/logo_dark.svg" alt="LeMaks" />
+                        <img className="light" src="/logo.svg" alt="LeMaks" />
+                    </ImageWrapper>
+                    <span className="brand-name">LeMaks</span>
+                </Brand>
+                <NavLinks>
+                    {NAV_LINKS.map((link) => (
+                        <a
+                            key={link.href}
+                            className="nav-link"
+                            href={link.href}
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                </NavLinks>
+                <MenuButton
+                    type="button"
+                    aria-label={menuOpen ? "Chiudi menu" : "Apri menu"}
+                    aria-expanded={menuOpen}
+                    onClick={() => setMenuOpen((v) => !v)}
+                >
+                    {menuOpen ? <RiCloseLine /> : <RiMenuLine />}
+                </MenuButton>
+            </Wrapper>
+
+            <Backdrop $open={menuOpen} aria-hidden="true" />
+            <Drawer ref={drawerRef} $open={menuOpen} aria-hidden={!menuOpen}>
+                <DrawerHeader>
+                    <span className="title mono">MENU</span>
+                    <button
+                        type="button"
+                        aria-label="Chiudi menu"
+                        onClick={closeMenu}
+                    >
+                        <RiCloseLine />
+                    </button>
+                </DrawerHeader>
+                <DrawerNav>
+                    {NAV_LINKS.map((link) => (
+                        <a key={link.href} href={link.href} onClick={closeMenu}>
+                            {link.label}
+                        </a>
+                    ))}
+                </DrawerNav>
+            </Drawer>
+        </TopBarContainer>
+    );
 };
 
 const TopBarContainer = styled.header`
-	display: flex;
-	align-items: center;
-	width: 100%;
-	box-sizing: border-box;
-	background-color: ${$color("white-dark")};
-	justify-content: center;
-	border-bottom: 1px solid #ccc;
-	position: fixed;
-	top: 0;
-	z-index: 10;
-	transition: background-color 0.5s ease-in, color 0.5s ease-out;
-	color: ${$color("white")};
-	&.scrolled {
-		
-		background-color: ${$color("glass-dark")};
-		background-color: ${()=>$color("glass-dark")};
-		backdrop-filter: blur(8px);
-		.logo {
-			background-color: ${$color("white")};
-		}
-		*{
-			color: ${$color("white")};
-		}
-		
-	}
-	
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: ${$color("dust")};
+    justify-content: center;
+    border-bottom: 1px solid ${$color("dust-dark")};
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition:
+        background-color 0.5s ease-in,
+        color 0.5s ease-out;
+    color: ${$color("black-dark")};
+    &.scrolled {
+        background-color: ${$color("glass-dark")};
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid ${$color("tertiary-dark-shade")};
+        .logo {
+            background-color: ${$color("white")};
+        }
+        * {
+            color: ${$color("white")};
+        }
+    }
 `;
 
 const Wrapper = styled.div`
-	display: flex;
-	align-items: center;
-	width: var(--max-width);
-	height: 100%;
-	box-sizing: border-box;
-	justify-content: flex-start;
-	padding: ${$cssTRBL(0,1)};
-	height: ${$uw(3)};
-	gap:${$uw(1)};
-	color: ${$color("black")};
-		
-	
-	.logo {
-		background-color: ${$color("black")};
-	}
-	
-	
-`
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    height: ${$uw(3)};
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: ${$cssTRBL(0, 1)};
+    gap: ${$uw(1)};
+    color: ${$color("black-dark")};
+    ${$breakPoint(820)} {
+        height: ${$uw(5)};
+        padding: ${$cssTRBL(0, 1.5)};
+    }
+    ${$breakPoint(500)} {
+        height: ${$uw(7)};
+        padding: ${$cssTRBL(0, 2)};
+        gap: ${$uw(1.5)};
+    }
+
+    .logo {
+        background-color: ${$color("black")};
+    }
+`;
+
+const Brand = styled.a`
+    display: flex;
+    align-items: center;
+    gap: ${$uw(0.6)};
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    ${$breakPoint(500)} {
+        gap: ${$uw(1)};
+    }
+
+    .brand-name {
+        font-family: "Space Mono", "Martian Mono", monospace;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        ${$breakPoint(500)} {
+            font-size: 2rem;
+            letter-spacing: 0.18em;
+        }
+    }
+
+    &:active img {
+        animation: slowSpin 0.6s ease-in-out;
+    }
+`;
 
 const ImageWrapper = styled.div`
-	width: ${$uw(2.5)};
-	height: ${$uw(2.5)};
-	position: relative;
-	transition: background-color 0.5s ease-in;	
-	> img {
-		position: absolute;
-		transition: opacity .5s ease-in-out;
-	}
-	.scrolled &>.light{
-		opacity: 0;
-	}
+    width: ${$uw(2.5)};
+    height: ${$uw(2.5)};
+    position: relative;
+    transition: background-color 0.5s ease-in;
+    ${$breakPoint(820)} {
+        width: ${$uw(3.5)};
+        height: ${$uw(3.5)};
+    }
+    ${$breakPoint(500)} {
+        display: none;
+    }
+    > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .scrolled & > .light {
+        opacity: 0;
+    }
 `;
 
-const Nav = styled.nav`
-	display: flex;
-	align-items: flex-start;
-	gap: 20px;
+const NavLinks = styled.nav`
+    display: flex;
+    align-items: center;
+    gap: ${$uw(1.4)};
+    margin-left: auto;
+
+    .nav-link {
+        position: relative;
+        font-family: "Space Mono", "Martian Mono", monospace;
+        font-size: 1.2rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        padding-bottom: 2px;
+        white-space: nowrap;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: ${$color("tertiary")};
+        transition: width 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+    ${$breakPoint(820)} {
+        gap: ${$uw(1)};
+        .nav-link {
+            font-size: 1rem;
+            letter-spacing: 0.06em;
+        }
+    }
+    ${$breakPoint(500)} {
+        display: none;
+    }
 `;
 
+const MenuButton = styled.button`
+    display: none;
+    background: transparent;
+    border: none;
+    padding: ${$uw(0.5)};
+    margin-left: auto;
+    cursor: pointer;
+    color: inherit;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
 
-const AuthContainer = styled.div`
-	display: flex;
-	align-items: center;
-	gap: ${$uw(1)};
-	justify-self: flex-end;
-	margin-left: auto;
+    svg {
+        width: ${$uw(4)};
+        height: ${$uw(4)};
+        display: block;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    ${$breakPoint(500)} {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+`;
+
+const Backdrop = styled.div<{ $open: boolean }>`
+    display: none;
+    ${$breakPoint(500)} {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+        opacity: ${({ $open }) => ($open ? 1 : 0)};
+        pointer-events: ${({ $open }) => ($open ? "auto" : "none")};
+        transition: opacity 0.3s ease;
+        z-index: 9;
+    }
+`;
+
+const Drawer = styled.aside<{ $open: boolean }>`
+    display: none;
+    ${$breakPoint(500)} {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100dvh;
+        width: min(80vw, ${$uw(40)});
+        background-color: ${$color("black-dark")};
+        border-left: 1px solid ${$color("tertiary-dark-shade")};
+        padding: ${$cssTRBL(2, 2.5)};
+        transform: translateX(${({ $open }) => ($open ? "0" : "100%")});
+        transition: transform 0.35s ease;
+        z-index: 11;
+        color: ${$color("white-light")};
+        box-shadow: -${$uw(0.5)} 0 ${$uw(2)} rgba(0, 0, 0, 0.4);
+    }
+`;
+
+const DrawerHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: ${$uw(2)};
+    border-bottom: 1px solid ${$color("gray-dark")};
+    margin-bottom: ${$uw(2)};
+
+    .title {
+        font-size: 1.4rem;
+        letter-spacing: 0.3em;
+        color: ${$color("tertiary-dark")};
+    }
+
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: ${$color("white-light")};
+        padding: ${$uw(0.5)};
+        border-radius: 4px;
+        -webkit-tap-highlight-color: transparent;
+        svg {
+            width: ${$uw(4)};
+            height: ${$uw(4)};
+            display: block;
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+    }
+`;
+
+const DrawerNav = styled.nav`
+    display: flex;
+    flex-direction: column;
+    gap: ${$uw(1.5)};
+
+    a {
+        font-family: "Space Mono", "Martian Mono", monospace;
+        font-size: ${$uw(2.6)};
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: ${$color("white-light")};
+        padding: ${$uw(1)} 0;
+        border-bottom: 1px solid ${$color("gray-dark")};
+        transition: color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+
+        &:hover,
+        &:active {
+            color: ${$color("tertiary")};
+        }
+    }
 `;

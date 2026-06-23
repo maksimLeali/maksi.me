@@ -39,6 +39,34 @@ body *::-webkit-scrollbar {
 	font-family: "Oxygen", sans-serif;
 }
 
+.mono {
+	font-family: "Space Mono", "Martian Mono", monospace;
+}
+
+.tech-label {
+	font-family: "Space Mono", "Martian Mono", monospace;
+	font-size: 1.3rem !important;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: var(--gray);
+}
+
+.cyan {
+	color: var(--tertiary);
+}
+
+.magenta {
+	color: var(--secondary-light);
+}
+
+.aqua {
+	color: var(--aqua-light);
+}
+
+.petrol {
+	color: var(--primary-light);
+}
+
 html * {
 	font-size: 1.8rem;
 }
@@ -442,3 +470,58 @@ span>* {
 		
 	}
 }
+
+/* ---- LeMaks creative direction animations ---- */
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes wordSwap {
+	0% { opacity: 0; transform: translateY(40%); }
+	8%, 92% { opacity: 1; transform: translateY(0); }
+	100% { opacity: 0; transform: translateY(-40%); }
+}
+
+@keyframes blinkCaret {
+	0%, 49% { opacity: 1; }
+	50%, 100% { opacity: 0; }
+}
+
+@keyframes slowSpin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@keyframes slowFloat {
+	0% { transform: translateY(0) rotate(0deg); }
+	50% { transform: translateY(-10px) rotate(3deg); }
+	100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes scanline {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 100%; }
+}
+
+@keyframes gridScan {
+	0% { background-position: 0 0; }
+	100% { background-position: 0 var(--max-grid-size, 800px); }
+}
+
+@keyframes pulseDot {
+	0%, 100% { opacity: 0.3; transform: scale(0.8); }
+	50% { opacity: 1; transform: scale(1.1); }
+}
+

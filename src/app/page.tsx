@@ -1,33 +1,32 @@
 "use client";
 
-import { $uw } from "@theme"
+import { $uw } from "@theme";
 import styled from "styled-components";
-import { MainSection } from './components/MainSection'
+import { MainSection } from "./components/MainSection";
+import { ManifestoSection } from "./components/ManifestoSection";
+import { WebDevSection } from "./components/WebDevSection";
+import { CinofilaSection } from "./components/CinofilaSection";
+import { GameDevSection } from "./components/GameDevSection";
+import { ArticlesSection } from "./components/ArticlesSection";
+import { AboutSection } from "./components/AboutSection";
 import { ContactSection } from "./components/ContactSection";
-import { PresentationSection } from "./components/PresentetionSection";
-import { InfoSection } from "./components/InfoSection";
 
 export default function Main() {
-
-  
-  return (
-    <Container>
-      
-      <MainSection />
-      <PresentationSection />
-      <InfoSection />
-      <ContactSection />
-    </Container >
-  )}
-
-  
-
+    return (
+        <Container>
+            <MainSection />
+            <ManifestoSection />
+            <WebDevSection />
+            <GameDevSection />
+            <CinofilaSection />
+            <ArticlesSection />
+            <AboutSection />
+            <ContactSection />
+        </Container>
+    );
+}
 
 const Container = styled.div`
-  width: 100%;
-  padding-bottom:${$uw(2)};
-`
-
-
-
-
+    width: 100%;
+    padding-bottom: ${$uw(2)};
+`;

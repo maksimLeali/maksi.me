@@ -1,190 +1,291 @@
 "use client";
 
-import { $breakPoint, $color, $cssTRBL, $uw } from "@theme"
+import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import HexagonCollisionSketch from "./Sketch";
 import { useEffect, useState } from "react";
-import gsap from "gsap";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
+const ROTATING_WORDS = [
+    "essenziali",
+    "chiare",
+    "utili",
+    "giocabili",
+    "consapevoli",
+];
+
 export const MainSection = () => {
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => {
-    setMounted(true);
-    const timeline = gsap.timeline();
-    timeline
-      .fromTo(
-        "#title h1",
-        { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 1, delay: 2 }
-      )
-      .fromTo(
-        "#cutter",
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1 },
-        "<" // Start this animation at the same time as the previous one ends
-      );
-  }, []);
+    const [mounted, setMounted] = useState(false);
+    const [wordIndex, setWordIndex] = useState(0);
 
+    useEffect(() => {
+        setMounted(true);
+        const interval = setInterval(() => {
+            setWordIndex((i) => (i + 1) % ROTATING_WORDS.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <Section id="mainSection">
-      <HexagonCollisionSketch />
-      <Title id="title" className={`${mounted ? "mounted" : ""} mainTitle`}>
-        <h1>LeMaks</h1>
-        <Cutter id="cutter">
-          <Upper className="upper "></Upper>
-          <Lower className="lower "></Lower>
-          <Inside className="inside mainTitle">Realizzo l'essenziale</Inside>
-        </Cutter>
-      </Title>
-      <ScrollDown href="#presentation">
-        <p>Scopri di più</p>
-        <FaAngleDoubleDown />
-      </ScrollDown>
-    </Section>
-  );
+    return (
+        <Section id="mainSection">
+            <HexagonCollisionSketch />
+            <Content className={mounted ? "mounted" : ""}>
+                <span className="brand mono">LeMaks</span>
+                <Title className="mainTitle">
+                    <span className="line">Realizzo</span>
+                    <span className="line">
+                        <span className="cyan">esperienze</span>
+                    </span>
+                    <span className="line rotating">
+                        <RotatingWord key={wordIndex}>
+                            {ROTATING_WORDS[wordIndex]}
+                        </RotatingWord>
+                        <span className="caret">_</span>
+                    </span>
+                </Title>
+                <Lead>
+                    Progetto siti web, studio la relazione tra persone e cani e
+                    sperimento con il game development.
+                </Lead>
+                <Lead className="muted">
+                    Tre percorsi diversi, un&apos;unica direzione: osservare,
+                    semplificare e costruire qualcosa che funzioni davvero.
+                </Lead>
+                <TechLabel className="tech-label">
+                    WEB / GAME DEVELOPMENT / CINOFILIA
+                </TechLabel>
+                <Actions>
+                    <Primary href="#web">Esplora il mio mondo</Primary>
+                    <Ghost href="#contact">Contattami</Ghost>
+                </Actions>
+            </Content>
+            <ScrollDown href="#manifesto">
+                <p>Scopri di più</p>
+                <FaAngleDoubleDown />
+            </ScrollDown>
+        </Section>
+    );
 };
 
 const Section = styled.section`
-  display: flex;
-  justify-content: space-between;
-  padding: ${$cssTRBL(1)};
-  height: calc(100dvh - ${$uw(3)}) ;
-  width: 100%;
-  align-items: center;
-
-  position: relative;
-  overflow: hidden;
-`;
-
-const Title = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  h1 {
-    font-size: ${$uw(4)};
-    opacity:0;
-    margin-left: ${$uw(12)};
-    font-weight: 200;
-    ${$breakPoint(820)}{
-      font-size: ${$uw(6)};
-      margin-left: ${$uw(21)};
+    display: flex;
+    align-items: center;
+    padding: ${$cssTRBL(1)};
+    min-height: calc(100dvh - ${$uw(3)});
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    ${$breakPoint(820)} {
+        padding: ${$cssTRBL(2, 1.5)};
+        min-height: calc(100dvh - ${$uw(5)});
     }
-  }
-
-  ${$breakPoint(820)}{
-    gap: ${$uw(4)};
-  }
+    ${$breakPoint(500)} {
+        align-items: flex-start;
+        padding: ${$cssTRBL(2, 2)};
+        min-height: calc(100dvh - ${$uw(7)});
+    }
 `;
 
-const Cutter = styled.div`
-  width: 100%;
-  height: ${$uw(10)};
-  overflow: hidden;
-  position: relative;
-  margin-left: ${$uw(1)};
-  padding-left: ${$uw(1)};
-  opacity: 0;
-  /* background-color: #00f; */
-  ${$breakPoint(820)}{
-    /* height: ${$uw(5)}; */
+const Content = styled.div`
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    max-width: ${$uw(28)};
+    pointer-events: none;
+    ${$breakPoint(820)} {
+        max-width: 100%;
+    }
 
-  }
-  
+    > * {
+        pointer-events: auto;
+    }
+
+    .brand {
+        font-size: 1.6rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: ${$color("dust")};
+        opacity: 0;
+        margin-bottom: ${$uw(0.8)};
+        ${$breakPoint(500)} {
+            margin-bottom: ${$uw(1.5)};
+        }
+    }
+    &.mounted .brand {
+        animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
 `;
 
-const Upper = styled.h3`
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  /* height: ${$uw(5)}; */
-  z-index: 1;
-  top:0;
-  overflow: hidden;
-  /* background-color: #f00; */
-  /* background-color: ${$color("black-dark")}; */
-  .mounted & {
-    animation: titleUp 2s ease-in-out 5s;
-    animation-fill-mode: forwards;
-  }
-  
-  &::before {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    /* height: ${$uw(2.5)}; */
-    font-size: ${$uw(3)};
-    top: 50%;
-    /* top: ${$uw(2.5)}; */
-    content: "Taglio il superfluo";
-    /* background-color: #faa; */
-  }
+const Title = styled.h1`
+    display: flex;
+    flex-direction: column;
+    font-weight: 200;
+    line-height: 0.95;
+    margin-bottom: ${$uw(2)};
+    ${$breakPoint(500)} {
+        margin-bottom: ${$uw(3)};
+    }
+
+    .line {
+        font-size: ${$uw(3)};
+        opacity: 0;
+        display: block;
+        margin-bottom: ${$uw(0.5)};
+        ${$breakPoint(820)} {
+            font-size: ${$uw(4.5)};
+        }
+        ${$breakPoint(500)} {
+            font-size: ${$uw(6.5)};
+        }
+    }
+
+    .line.rotating {
+        display: flex;
+        align-items: baseline;
+        color: ${$color("white-light")};
+    }
+
+    .caret {
+        color: ${$color("tertiary")};
+        animation: blinkCaret 1s step-end infinite;
+        margin-left: 0.1em;
+    }
+
+    &.mainTitle .line:nth-child(1) {
+        animation: fadeInUp 0.7s ease-out 0.5s forwards;
+    }
+    &.mainTitle .line:nth-child(2) {
+        animation: fadeInUp 0.7s ease-out 0.8s forwards;
+    }
+    &.mainTitle .line:nth-child(3) {
+        animation: fadeInUp 0.7s ease-out 1.1s forwards;
+    }
 `;
 
-const Lower = styled.h3`
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  /* height: ${$uw(5)}; */
-  z-index: 1;
-  top: calc(50% - 1px);
-  overflow: hidden;
-  /* background-color: ${$color("black-dark")}; */
-  /* background-color: #0f0; */
-  .mounted & {
-    animation: titleDown 2s ease-in-out 5s;
-    animation-fill-mode: forwards;
-  }
-  &::before {
-    position: absolute;
-    width: 100%;
-    font-size: ${$uw(3)};
-    height: 50%;
-    /* height: ${$uw(2.5)}; */
-    top: -50%;    
-    content: "Taglio il superfluo";
-    /* background-color: #afa; */
-  }
+const RotatingWord = styled.span`
+    display: inline-block;
+    color: ${$color("white-light")};
+    animation: wordSwap 3s ease-in-out;
 `;
 
-const Inside = styled.div`
-  position: absolute;
-  opacity: 0;
-  font-size: ${$uw(2.5)};
-  .mounted & {
-    animation: appear 3s ease-in-out 5s;
-    animation-fill-mode: forwards;
-  }
-  width: 100%;
-  /* text-align: center; */
-  top: calc(50% - ${$uw(2)});
-  z-index: 0;
-  color: ${$color("white")};
+const Lead = styled.p`
+    max-width: ${$uw(28)};
+    margin-bottom: ${$uw(0.6)};
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.4s forwards;
+    &.muted {
+        color: ${$color("gray")};
+        animation-delay: 1.6s;
+    }
+    ${$breakPoint(500)} {
+        max-width: 100%;
+        font-size: 1.6rem;
+        margin-bottom: ${$uw(1)};
+    }
 `;
 
+const TechLabel = styled.span`
+    margin-top: ${$uw(1)};
+    margin-bottom: ${$uw(1)};
+    color: ${$color("tertiary-dark")} !important;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1.8s forwards;
+    ${$breakPoint(500)} {
+        margin-top: ${$uw(2)};
+        margin-bottom: ${$uw(2)};
+    }
+`;
+
+const Actions = styled.div`
+    display: flex;
+    gap: ${$uw(1)};
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 2s forwards;
+    ${$breakPoint(500)} {
+        flex-direction: column;
+        gap: ${$uw(1.5)};
+        align-items: stretch;
+    }
+`;
+
+const Primary = styled.a`
+    font-family: "Space Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: ${$cssTRBL(0.7, 1.5)};
+    border-radius: 2px;
+    color: ${$color("black-dark")};
+    background-color: ${$color("tertiary")};
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    box-shadow: ${$uw(0.2)} ${$uw(0.2)} ${$color("tertiary-dark-shade")};
+    ${$breakPoint(500)} {
+        padding: ${$cssTRBL(1.4, 2)};
+        text-align: center;
+    }
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: ${$uw(0.3)} ${$uw(0.3)} ${$color("tertiary-dark")};
+    }
+`;
+
+const Ghost = styled.a`
+    font-family: "Space Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: ${$cssTRBL(0.7, 1.5)};
+    border-radius: 2px;
+    color: ${$color("white-light")};
+    border: 1px solid ${$color("gray-dark")};
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+    ${$breakPoint(500)} {
+        padding: ${$cssTRBL(1.4, 2)};
+        text-align: center;
+    }
+    &:hover {
+        border-color: ${$color("tertiary")};
+        color: ${$color("tertiary")};
+    }
+`;
 
 const ScrollDown = styled.a`
-  width: ${$uw(5)};
-  position: absolute;
-  opacity: 0;
-  right:${$uw(2)};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: ${$uw(.5)};
-  bottom: ${$uw(2)}; 
-  cursor: pointer;
-  color: ${$color('white')};
-  animation: appear 1s ease-in 8s;
-  animation-fill-mode: forwards;
-  > svg {
-    width :${$uw(1)};
-    height :${$uw(1)};
-  } 
-  > * {
-    position: relative;    
-    animation: upandDown 2s ease-in-out infinite;
-  }
-
-`
+    width: ${$uw(5)};
+    position: absolute;
+    opacity: 0;
+    right: ${$uw(2)};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: ${$uw(0.5)};
+    bottom: ${$uw(2)};
+    cursor: pointer;
+    color: ${$color("white")};
+    z-index: 3;
+    animation: fadeIn 1s ease-in 2.4s forwards;
+    > svg {
+        width: ${$uw(1)};
+        height: ${$uw(1)};
+    }
+    > * {
+        position: relative;
+        animation: upandDown 2s ease-in-out infinite;
+    }
+    ${$breakPoint(500)} {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: ${$uw(3)};
+        width: auto;
+        > svg {
+            width: ${$uw(2)};
+            height: ${$uw(2)};
+        }
+    }
+`;
