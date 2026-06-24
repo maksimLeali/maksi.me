@@ -232,6 +232,7 @@ const Mockups = styled.div`
     margin-left: ${$uw(-1)};
     margin-right: ${$uw(-1)};
     height: ${$uw(28)};
+    overflow: visible;
     ${$breakPoint(820)} {
         margin-left: ${$uw(-1.5)};
         margin-right: ${$uw(-1.5)};
@@ -258,19 +259,27 @@ const Mockups = styled.div`
         width: 100%;
         height: 100%;
         animation: fadeInUp 1s ease-out forwards;
+        ${$breakPoint(500)} { 
+            width: calc(100% - ${$uw(2)});
+            margin-left: ${$uw(1)};
+        }
+        
     }
     .mobile {
-        bottom: ${$uw(1)};
+        top: ${$uw(-3)};
         right: ${$uw(1)};
-        width: ${$uw(7)};
-        height: ${$uw(13)};
+        width: ${$uw(12)};
+        height: ${$uw(26)};
         object-position: top center;
         border: 2px solid ${$color("tertiary-dark-shade")};
         animation: fadeInUp 1s ease-out 0.3s forwards;
         opacity: 0;
         ${$breakPoint(500)} {
-            width: ${$uw(9)};
-            height: ${$uw(16)};
+            top:unset;
+            width: ${$uw(15)};
+            height: ${$uw(32)};
+            bottom: ${$uw(-5)};
+            right: ${$uw(5)};
         }
     }
 `;
