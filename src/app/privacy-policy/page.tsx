@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
         <Container>
             <Header>
                 <Title>Informativa Privacy</Title>
-                <LastUpdate>Ultimo aggiornamento: 23/06/2026</LastUpdate>
+                <LastUpdate>Ultimo aggiornamento: 24/06/2026</LastUpdate>
             </Header>
 
             <Section>
