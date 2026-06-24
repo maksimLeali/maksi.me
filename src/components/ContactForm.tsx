@@ -63,86 +63,88 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
         <FormProvider {...methods}>
             <Form $width={width} onSubmit={handleSubmit(onSubmit)}>
                 <Fieldset disabled={status === "sending"}>
-                {/* Honeypot anti-spam: nascosto agli utenti reali */}
-                <input
-                    type="text"
-                    {...register("website")}
-                    style={{ display: "none" }}
-                    tabIndex={-1}
-                    autoComplete="off"         
-                    aria-hidden="true"
-                />
-                <TextInput
-                    id="contactName"
-                    required
-                    errorLabel="Inserisci il nome."
-                    ntTextLabel="Nome"
-                    name="nome"
-                    focusColor="tertiary"
-                />
-                <TextInput
-                    id="contactSurname"
-                    ntTextLabel="Cognome"
-                    name="cognome"
-                    required
-                    errorLabel="Inserisci il cognome."
-                    focusColor="tertiary"
-                />
-                <TextInput
-                    id="contactEmail"
-                    ntTextLabel="Email"
-                    name="email"
-                    inputMode="email"
-                    required
-                    errorLabel="Inserisci l'email."
-                    focusColor="tertiary"
-                    registerOptions={{
-                        pattern: {
-                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                            message: "Inserisci un indirizzo email valido.",
-                        },
-                    }}
-                />
-                <TextInput
-                    id="contactCompany"
-                    ntTextLabel="Azienda o progetto"
-                    name="azienda"
-                    required      
-                    errorLabel="Inserisci il nome dell'azienda o del progetto."              
-                    focusColor="tertiary"
-                />
-                <TextAreaInput
-                    ntTextLabel="Messaggio"
-                    name="messaggio"
-                    errorLabel="Inserisci il messaggio."
-                    required
-                />
-                <Checkbox
-                    id="contactPrivacy"
-                    name="privacy"
-                    errorLabel="Devi accettare l'informativa sulla privacy."
-                    required
-                    labelNode={
-                        <>
-                            Ho letto l&apos;{""}
-                            <PrivacyLink href="/privacy-policy">
-                                informativa sulla privacy
-                            </PrivacyLink>
-                        </>
-                    }
-                />
-                {status === "error" && <ErrorMessage>{errorMsg}</ErrorMessage>}
-                <CTA
-                    className="send-cta"
-                    type="submit"
-                    color="secondary-light"
-                    text={
-                        status === "sending"
-                            ? "INVIO IN CORSO…"
-                            : "INVIA IL MESSAGGIO"
-                    }
-                    iconAfter={<RiMailSendLine />}
-                />
+                    {/* Honeypot anti-spam: nascosto agli utenti reali */}
+                    <input
+                        type="text"
+                        {...register("website")}
+                        style={{ display: "none" }}
+                        tabIndex={-1}
+                        autoComplete="off"
+                        aria-hidden="true"
+                    />
+                    <TextInput
+                        id="contactName"
+                        required
+                        errorLabel="Inserisci il nome."
+                        ntTextLabel="Nome"
+                        name="nome"
+                        focusColor="tertiary"
+                    />
+                    <TextInput
+                        id="contactSurname"
+                        ntTextLabel="Cognome"
+                        name="cognome"
+                        required
+                        errorLabel="Inserisci il cognome."
+                        focusColor="tertiary"
+                    />
+                    <TextInput
+                        id="contactEmail"
+                        ntTextLabel="Email"
+                        name="email"
+                        inputMode="email"
+                        required
+                        errorLabel="Inserisci l'email."
+                        focusColor="tertiary"
+                        registerOptions={{
+                            pattern: {
+                                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                message: "Inserisci un indirizzo email valido.",
+                            },
+                        }}
+                    />
+                    <TextInput
+                        id="contactCompany"
+                        ntTextLabel="Azienda o progetto"
+                        name="azienda"
+                        required
+                        errorLabel="Inserisci il nome dell'azienda o del progetto."
+                        focusColor="tertiary"
+                    />
+                    <TextAreaInput
+                        ntTextLabel="Messaggio"
+                        name="messaggio"
+                        errorLabel="Inserisci il messaggio."
+                        required
+                    />
+                    <Checkbox
+                        id="contactPrivacy"
+                        name="privacy"
+                        errorLabel="Devi accettare l'informativa sulla privacy."
+                        required
+                        labelNode={
+                            <>
+                                Ho letto l&apos;{""}
+                                <PrivacyLink href="/privacy-policy">
+                                    informativa sulla privacy
+                                </PrivacyLink>
+                            </>
+                        }
+                    />
+                    {status === "error" && (
+                        <ErrorMessage>{errorMsg}</ErrorMessage>
+                    )}
+                    <CTA
+                        className="send-cta"
+                        type="submit"
+                        color="secondary-light"
+                        text={
+                            status === "sending"
+                                ? "INVIO IN CORSO…"
+                                : "INVIA IL MESSAGGIO"
+                        }
+                        iconAfter={<RiMailSendLine />}
+                    />
                 </Fieldset>
             </Form>
         </FormProvider>

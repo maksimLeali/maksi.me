@@ -38,10 +38,11 @@ export default function PrivacyPolicy() {
                     </li>
                 </List>
                 <Paragraph>
-                    Il sito può inoltre raccogliere dati tecnici di navigazione,
-                    come indirizzo IP, informazioni sul browser e dati necessari
-                    al corretto funzionamento del sito, secondo quanto indicato
-                    nella Cookie Policy, ove presente.
+                    Il sito non utilizza cookie di profilazione, strumenti di
+                    analisi statistica o altri strumenti di tracciamento non
+                    tecnici. Possono essere trattati esclusivamente dati tecnici
+                    di navigazione necessari alla sicurezza e al corretto
+                    funzionamento del sito.
                 </Paragraph>
             </Section>
 
