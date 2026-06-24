@@ -4,7 +4,7 @@ import { ContactForm } from "@components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import Link from "next/link";
 import styled from "styled-components";
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiMailLine } from "react-icons/ri";
 
 export const ContactSection = () => {
@@ -12,32 +12,16 @@ export const ContactSection = () => {
         <Section id="contact">
             <Header>
                 <span className="tech-label cyan">CONTATTI</span>
-                <h2>Hai un progetto da rendere più chiaro?</h2>
-                <WipBanner>
-                    ⚠ WIP: Attivazione del servizio contatti in sviluppo
-                </WipBanner>
+                <h2>Parliamo del tuo sito o della tua automazione</h2>
                 <p>
-                    Realizzare la tua idea è più semplice di quanto pensi: oggi
-                    hai l&apos;opportunità di trasformarla in realtà attraverso
-                    un <strong>sito web</strong>. Che sia un{" "}
-                    <strong>e-commerce</strong> per vendere i tuoi prodotti, una{" "}
-                    <strong>vetrina</strong> per mostrare i tuoi servizi, un{" "}
-                    <strong>sito di presentazione</strong> per raccontare la tua
-                    storia, o un&apos;<strong>applicazione web</strong>{" "}
-                    innovativa, il web è la porta d&apos;accesso per raggiungere
-                    il tuo pubblico e far crescere il tuo progetto. Con il
-                    giusto <strong>strumento</strong> e una visione chiara, puoi
-                    dare vita a qualcosa di <strong>unico</strong> e{" "}
-                    <strong>memorabile</strong>. Non lasciare che l&apos;idea
-                    rimanga nella tua mente: inizia a costruire il tuo{" "}
-                    <strong>spazio online</strong> e scopri il potenziale{" "}
-                    <strong>illimitato</strong> che solo il digitale può
-                    offrirti.
+                    Hai un evento, un&apos;attività o un processo che vuoi
+                    rendere più semplice da gestire? Scrivimi: ti rispondo entro
+                    24 ore per capire insieme se posso aiutarti.
                 </p>
             </Header>
 
             <Body>
-                <FormWrapper $disabled>
+                <FormWrapper>
                     <ContactForm width="100%" />
                     <PrivacyNote>
                         I dati inseriti saranno utilizzati esclusivamente per
@@ -54,6 +38,14 @@ export const ContactSection = () => {
                     <h3>Dove trovarmi</h3>
                     <a href="mailto:contacts@makso.me">
                         <RiMailLine /> contacts@makso.me
+                    </a>
+                    <a
+                        href="https://wa.me/+39NUMEROQUI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp"
+                    >
+                        <FaWhatsapp /> WhatsApp
                     </a>
                     <a
                         href="https://www.linkedin.com/in/maksim-leali-50a940168/"
@@ -139,22 +131,7 @@ const Body = styled.div`
     }
 `;
 
-const WipBanner = styled.span`
-    display: inline-block;
-    font-family: "Space Mono", monospace;
-    font-size: 1.3rem;
-    letter-spacing: 0.06em;
-    color: ${$color("secondary-light")};
-    border: 1px solid ${$color("secondary")};
-    border-radius: 2px;
-    padding: ${$cssTRBL(0.4, 0.8)};
-    width: fit-content;
-    ${$breakPoint(500)} {
-        font-size: 1.2rem;
-    }
-`;
-
-const FormWrapper = styled.div<{ $disabled?: boolean }>`
+const FormWrapper = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -162,14 +139,6 @@ const FormWrapper = styled.div<{ $disabled?: boolean }>`
     ${$breakPoint(820)} {
         max-width: 100%;
     }
-    ${({ $disabled }) =>
-        $disabled &&
-        `
-        opacity: 0.4;
-        pointer-events: none;
-        user-select: none;
-        filter: grayscale(0.4);
-    `}
 `;
 
 const PrivacyNote = styled.p`
@@ -224,6 +193,12 @@ const Aside = styled.div`
     }
     a:hover {
         color: ${$color("tertiary")};
+    }
+    a.whatsapp {
+        color: #25d366;
+    }
+    a.whatsapp:hover {
+        color: #1ebe5d;
     }
     a svg {
         width: ${$uw(1)};

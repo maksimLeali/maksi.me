@@ -10,6 +10,7 @@ import { GameDevSection } from "./components/GameDevSection";
 import { ArticlesSection } from "./components/ArticlesSection";
 import { AboutSection } from "./components/AboutSection";
 import { ContactSection } from "./components/ContactSection";
+import { ServicesSection } from "./components/ServicesSection";
 
 export default function Main() {
     return (
@@ -21,6 +22,7 @@ export default function Main() {
             <CinofilaSection />
             <ArticlesSection />
             <AboutSection />
+            <ServicesSection />
             <ContactSection />
         </Container>
     );
