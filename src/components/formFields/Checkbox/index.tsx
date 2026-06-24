@@ -13,6 +13,7 @@ interface CheckboxInputProps {
     name: string;
     textLabel?: string;
     ntTextLabel?: string;
+    labelNode?: React.ReactNode;
     required?: boolean;
     id?: string;
     registerOptions?: Record<string, unknown>;
@@ -22,6 +23,7 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
     name,
     textLabel,
     ntTextLabel,
+    labelNode,
     id,
     required = false,
     registerOptions,
@@ -51,7 +53,7 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
                 <FaCheck className="check" />
 
                 <InputLabel htmlFor={name}>
-                    {textLabel ? textLabel : ntTextLabel}
+                    {labelNode ?? (textLabel ? textLabel : ntTextLabel)}
                     {required && " *"}
                 </InputLabel>
             </InputWrapper>

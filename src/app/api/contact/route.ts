@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     try {
         const body = await request.json();
         console.log("[contact] body:", body);
-        const { nome, email, progetto, bisogno, messaggio, website } = body;
+        const { nome, cognome, email, azienda, messaggio, website } = body;
 
         // Honeypot: se "website" è compilato è quasi certamente un bot
         if (website) {
@@ -56,10 +56,10 @@ export async function POST(request: Request) {
         console.log("[contact] connessione SMTP OK");
 
         const textBody = [
-            `Nome: ${nome}`,
+            nome ? `Nome: ${nome}` : null,
+            cognome ? `Cognome: ${cognome}` : null,
             `Email: ${email}`,
-            progetto ? `Azienda / Progetto: ${progetto}` : null,
-            bisogno ? `Di cosa ha bisogno: ${bisogno}` : null,
+            azienda ? `Azienda / Progetto: ${azienda}` : null,
             `\nMessaggio:\n${messaggio}`,
         ]
             .filter(Boolean)

@@ -4,6 +4,8 @@ services:
   makso_me:
     container_name: maksome
     image: maksome
+    env_file:
+      - .env.local
     build:
       context: .
       target: production

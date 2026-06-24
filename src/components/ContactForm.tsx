@@ -2,6 +2,7 @@
 
 import { TextInput, TextAreaInput, CTA, Checkbox } from "@components";
 import { $uw, $breakPoint, $color } from "@theme";
+import Link from "next/link";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { RiMailSendLine } from "react-icons/ri";
@@ -29,9 +30,9 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     nome: data.nome,
+                    cognome: data.cognome,
                     email: data.email,
-                    progetto: data.progetto,
-                    bisogno: data.bisogno,
+                    azienda: data.azienda,
                     messaggio: data.messaggio,
                     website: data.website, // honeypot
                 }),
@@ -77,29 +78,42 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     focusColor="tertiary"
                 />
                 <TextInput
+                    id="contactSurname"
+                    ntTextLabel="Cognome"
+                    name="cognome"
+                    focusColor="tertiary"
+                />
+                <TextInput
                     id="contactEmail"
-                    ntTextLabel="Email"
+                    ntTextLabel="Email *"
                     name="email"
                     inputMode="email"
+                    required
                     focusColor="tertiary"
                 />
                 <TextInput
-                    id="contactProject"
+                    id="contactCompany"
                     ntTextLabel="Azienda o progetto"
-                    name="progetto"
+                    name="azienda"
                     focusColor="tertiary"
                 />
-                <TextInput
-                    id="contactNeed"
-                    ntTextLabel="Di cosa hai bisogno?"
-                    name="bisogno"
-                    focusColor="tertiary"
+                <TextAreaInput
+                    ntTextLabel="Messaggio *"
+                    name="messaggio"
+                    required
                 />
-                <TextAreaInput ntTextLabel="Messaggio" name="messaggio" />
                 <Checkbox
                     id="contactPrivacy"
                     name="privacy"
-                    ntTextLabel="Ho letto la normativa per la privacy"
+                    required
+                    labelNode={
+                        <>
+                            Ho letto l&apos;{""}
+                            <PrivacyLink href="/privacy-policy">
+                                informativa sulla privacy
+                            </PrivacyLink>
+                        </>
+                    }
                 />
                 {status === "error" && <ErrorMessage>{errorMsg}</ErrorMessage>}
                 <CTA
@@ -126,14 +140,14 @@ const Form = styled.form<{ $width: string }>`
     flex-wrap: wrap;
     justify-content: space-between;
     #contactName,
-    #contactEmail {
+    #contactSurname {
         width: calc(50% - ${$uw(1)});
         ${$breakPoint(820)} {
             width: 100%;
         }
     }
-    #contactProject,
-    #contactNeed {
+    #contactEmail,
+    #contactCompany {
         width: 100%;
     }
     #contactPrivacy {
@@ -176,4 +190,12 @@ const ErrorMessage = styled.p`
     font-size: 1.4rem;
     color: ${$color("secondary-light")};
     margin-bottom: ${$uw(0.5)};
+`;
+
+const PrivacyLink = styled(Link)`
+    color: ${$color("tertiary")};
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
 `;
