@@ -14,6 +14,7 @@ interface CheckboxInputProps {
     textLabel?: string;
     ntTextLabel?: string;
     labelNode?: React.ReactNode;
+    errorLabel?: string;
     required?: boolean;
     id?: string;
     registerOptions?: Record<string, unknown>;
@@ -24,6 +25,7 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
     textLabel,
     ntTextLabel,
     labelNode,
+    errorLabel,
     id,
     required = false,
     registerOptions,
@@ -44,7 +46,7 @@ export const Checkbox: React.FC<CheckboxInputProps> = ({
                     {...register(name, {
                         required: required && {
                             value: true,
-                            message: "messages.errors.required",
+                            message: errorLabel ?? "messages.errors.required",
                         },
                         ...registerOptions,
                     })}

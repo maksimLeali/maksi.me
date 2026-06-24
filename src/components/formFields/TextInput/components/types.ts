@@ -27,6 +27,7 @@ export type CommonProps = {
     type?: "text" | "password";
     inputMode?: "text" | "email";
     errorText?: string;
+    errorLabel?: string;
     pattern?: RegExp;
     icon?:  React.ReactNode
     id?: string;

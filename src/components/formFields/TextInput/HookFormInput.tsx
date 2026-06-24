@@ -41,6 +41,7 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
     id,
     name,
     disabled = false,
+    errorLabel,
     registerOptions,
 }) => {
     const [focused, setFocused] = useState(false);
@@ -118,7 +119,7 @@ export const HookFormInput: React.FC<HookFormProps & CommonProps> = ({
                     {...register(name, {
                         required: {
                             value: required,
-                            message: "messages.errors.required",
+                            message: errorLabel ?? "messages.errors.required",
                         },
                         ...registerOptions,
                     })}

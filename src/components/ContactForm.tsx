@@ -62,17 +62,20 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
     return (
         <FormProvider {...methods}>
             <Form $width={width} onSubmit={handleSubmit(onSubmit)}>
+                <Fieldset disabled={status === "sending"}>
                 {/* Honeypot anti-spam: nascosto agli utenti reali */}
                 <input
                     type="text"
                     {...register("website")}
                     style={{ display: "none" }}
                     tabIndex={-1}
-                    autoComplete="off"
+                    autoComplete="off"         
                     aria-hidden="true"
                 />
                 <TextInput
                     id="contactName"
+                    required
+                    errorLabel="Inserisci il nome."
                     ntTextLabel="Nome"
                     name="nome"
                     focusColor="tertiary"
@@ -81,6 +84,8 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     id="contactSurname"
                     ntTextLabel="Cognome"
                     name="cognome"
+                    required
+                    errorLabel="Inserisci il cognome."
                     focusColor="tertiary"
                 />
                 <TextInput
@@ -89,22 +94,33 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     name="email"
                     inputMode="email"
                     required
+                    errorLabel="Inserisci l'email."
                     focusColor="tertiary"
+                    registerOptions={{
+                        pattern: {
+                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                            message: "Inserisci un indirizzo email valido.",
+                        },
+                    }}
                 />
                 <TextInput
                     id="contactCompany"
                     ntTextLabel="Azienda o progetto"
                     name="azienda"
+                    required      
+                    errorLabel="Inserisci il nome dell'azienda o del progetto."              
                     focusColor="tertiary"
                 />
                 <TextAreaInput
                     ntTextLabel="Messaggio"
                     name="messaggio"
+                    errorLabel="Inserisci il messaggio."
                     required
                 />
                 <Checkbox
                     id="contactPrivacy"
                     name="privacy"
+                    errorLabel="Devi accettare l'informativa sulla privacy."
                     required
                     labelNode={
                         <>
@@ -127,6 +143,7 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     }
                     iconAfter={<RiMailSendLine />}
                 />
+                </Fieldset>
             </Form>
         </FormProvider>
     );
@@ -190,6 +207,22 @@ const ErrorMessage = styled.p`
     font-size: 1.4rem;
     color: ${$color("secondary-light")};
     margin-bottom: ${$uw(0.5)};
+`;
+
+const Fieldset = styled.fieldset`
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
 `;
 
 const PrivacyLink = styled(Link)`

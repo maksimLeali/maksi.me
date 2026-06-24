@@ -22,6 +22,7 @@ type props = {
     disabledColor?: string;
     textColor?: string;
     errorText?: string;
+    errorLabel?: string;
     pattern?: RegExp;
     registerOptions?: RegisterOptions;
     errorColor?: string;
@@ -33,6 +34,7 @@ export const TextAreaInput: React.FC<props> = ({
     textLabel,
     color = COLOR,
     required = false,
+    errorLabel,
     textColor = TEXTCOLOR,
     focusColor = FOCUSCOLOR,
     bgColor = BGCOLOR,
@@ -46,10 +48,18 @@ export const TextAreaInput: React.FC<props> = ({
     const editableRef = useRef<HTMLDivElement>(null);
 
     const {
+        register,
         setValue,
         getValues,
         formState: { errors, isSubmitting },
     } = useFormContext();
+
+    // Registra il campo con le regole di validazione (il valore viene
+    // aggiornato via setValue, la ref non serve per ContentEditable)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { ref: _ref, ...registerProps } = register(name, {
+        required: required ? (errorLabel ?? "Campo obbligatorio.") : false,
+    });
 
     const onContentBlur = useCallback(
         (evt: React.SyntheticEvent<HTMLElement>) => {
@@ -57,13 +67,20 @@ export const TextAreaInput: React.FC<props> = ({
                 allowedTags: ["b", "i", "a", "p", "br", "div"],
                 allowedAttributes: { a: ["href"] },
             };
-            const text = sanitizeHtml(
+            const html = sanitizeHtml(
                 evt.currentTarget.innerHTML,
                 sanitizeConf,
             );
-            setValue(name, text ?? "");
-            // setEditableText(text)
-            if (text.length == 0) {
+
+            // Estrae il testo visibile rimuovendo tutti i tag HTML
+            const plainText = html
+                .replace(/<br\s*\/?>/gi, "\n")
+                .replace(/<[^>]+>/g, "")
+                .trim();
+
+            setValue(name, plainText);
+
+            if (plainText.length === 0) {
                 setCompiled(false);
                 return;
             }
