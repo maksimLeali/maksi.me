@@ -85,7 +85,7 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                 />
                 <TextInput
                     id="contactEmail"
-                    ntTextLabel="Email *"
+                    ntTextLabel="Email"
                     name="email"
                     inputMode="email"
                     required
@@ -98,7 +98,7 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     focusColor="tertiary"
                 />
                 <TextAreaInput
-                    ntTextLabel="Messaggio *"
+                    ntTextLabel="Messaggio"
                     name="messaggio"
                     required
                 />
