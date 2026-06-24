@@ -31,6 +31,7 @@ export default function PrivacyPolicy() {
                     <li>nome;</li>
                     <li>cognome;</li>
                     <li>indirizzo e-mail;</li>
+                    <li>azienda o progetto </li>
                     <li>contenuto del messaggio inviato dall&apos;utente;</li>
                     <li>
                         eventuali ulteriori dati che l&apos;utente decide
@@ -139,11 +140,6 @@ export default function PrivacyPolicy() {
                     <li>
                         <strong>Maksim Leali</strong> (titolare del trattamento)
                         — gestione diretta delle richieste di contatto;
-                    </li>
-                    <li>
-                        <strong>Brevo</strong> (Sendinblue SAS) — fornitore del
-                        servizio di posta elettronica utilizzato per gestire le
-                        comunicazioni;
                     </li>
                     <li>
                         <strong>DigitalOcean, LLC</strong> — provider di hosting
