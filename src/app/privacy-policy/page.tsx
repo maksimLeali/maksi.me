@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
                 <Paragraph>
                     Il titolare del trattamento dei dati personali è Maksim
                     Leali, contattabile all&apos;indirizzo e-mail:{" "}
-                    <a href="mailto:contacts@makso.me">contacts@makso.me</a>.
+                    <a href="mailto:contact@lemaks.it">contact@lemaks.it</a>.
                 </Paragraph>
             </Section>
 
@@ -121,10 +121,18 @@ export default function PrivacyPolicy() {
             <Section>
                 <SectionTitle>6. Modalità del trattamento</SectionTitle>
                 <Paragraph>
-                    I dati sono trattati con strumenti informatici e telematici,
-                    adottando misure organizzative e tecniche adeguate per
-                    proteggerli da accessi non autorizzati, perdita, alterazione
-                    o divulgazione.
+                    I dati inviati tramite il modulo di contatto non sono
+                    registrati in un database del sito. Essi vengono trasmessi
+                    tramite posta elettronica alla casella di contatto del
+                    Titolare e trattati esclusivamente per rispondere alla
+                    richiesta dell&apos;utente, fornire informazioni o avviare
+                    eventuali rapporti precontrattuali.
+                </Paragraph>
+                <Paragraph>
+                    Il trattamento avviene con strumenti informatici e
+                    telematici, adottando misure organizzative e tecniche
+                    adeguate per proteggere i dati da accessi non autorizzati,
+                    perdita, alterazione o divulgazione.
                 </Paragraph>
             </Section>
 
@@ -160,22 +168,13 @@ export default function PrivacyPolicy() {
                     Europeo
                 </SectionTitle>
                 <Paragraph>
-                    Il sito è ospitato su infrastrutture DigitalOcean con server
-                    collocati nello Spazio Economico Europeo.
-                </Paragraph>
-                <Paragraph>
-                    Tuttavia, DigitalOcean è una società con sede negli Stati
-                    Uniti e, in alcune circostanze, potrebbe trattare dati
-                    personali al di fuori dello Spazio Economico Europeo, ad
-                    esempio per finalità di supporto tecnico, sicurezza o
-                    gestione dell&apos;infrastruttura.
-                </Paragraph>
-                <Paragraph>
-                    Eventuali trasferimenti avvengono nel rispetto delle
-                    garanzie previste dalla normativa applicabile, incluse, ove
-                    necessarie, le Clausole Contrattuali Standard approvate
-                    dalla Commissione europea e le ulteriori misure di
-                    protezione adottate dal fornitore.
+                    I dati personali raccolti tramite il sito sono ospitati su
+                    infrastrutture DigitalOcean situate nello Spazio Economico
+                    Europeo. DigitalOcean agisce quale fornitore di hosting.
+                    Eventuali accessi o trasferimenti verso Paesi terzi connessi
+                    all&apos;erogazione del servizio da parte del fornitore
+                    avvengono nel rispetto delle garanzie previste dagli artt.
+                    44 e seguenti del GDPR.
                 </Paragraph>
             </Section>
 
@@ -184,12 +183,12 @@ export default function PrivacyPolicy() {
             <Section>
                 <SectionTitle>9. Periodo di conservazione</SectionTitle>
                 <Paragraph>
-                    I dati raccolti tramite il modulo di contatto saranno
-                    conservati per il tempo necessario a gestire la richiesta e,
-                    comunque, per un periodo non superiore a{" "}
-                    <strong>12 MESI</strong> dall&apos;ultimo contatto, salvo
-                    necessità di ulteriore conservazione per obblighi di legge o
-                    per la tutela di diritti del titolare.
+                    I messaggi ricevuti tramite il modulo di contatto sono
+                    conservati nella casella email del Titolare per il tempo
+                    necessario alla gestione della richiesta e, in ogni caso,
+                    non oltre <strong>12 mesi</strong> dalla ricezione, salvo
+                    eventuale necessità di ulteriore conservazione per obblighi
+                    di legge o per la tutela di diritti del Titolare.
                 </Paragraph>
             </Section>
 
@@ -220,7 +219,7 @@ export default function PrivacyPolicy() {
                 <Paragraph>
                     Per esercitare questi diritti, l&apos;utente può contattare
                     il titolare all&apos;indirizzo:{" "}
-                    <a href="mailto:contacts@makso.me">contacts@makso.me</a>.
+                    <a href="mailto:contact@lemaks.it">contact@lemaks.it</a>.
                 </Paragraph>
                 <Paragraph>
                     L&apos;utente ha inoltre il diritto di proporre reclamo al

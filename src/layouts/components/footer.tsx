@@ -9,7 +9,7 @@ const LINKS = [
     },
     { label: "GitHub", href: "https://github.com/maksimLeali" },
     { label: "Instagram", href: "https://www.instagram.com/lemaks_dev/" },
-    { label: "Email", href: "mailto:contacts@makso.me" },
+    { label: "Email", href: "mailto:contact@lemaks.it" },
 ];
 
 export const Footer: React.FC = () => {

@@ -36,8 +36,8 @@ export const ContactSection = () => {
 
                 <Aside>
                     <h3>Dove trovarmi</h3>
-                    <a href="mailto:contacts@makso.me">
-                        <RiMailLine /> contacts@makso.me
+                    <a href="mailto:contact@lemaks.it">
+                        <RiMailLine /> contact@lemaks.it
                     </a>
                     <a
                         href="https://wa.me/+39NUMEROQUI"
