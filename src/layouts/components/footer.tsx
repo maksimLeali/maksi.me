@@ -45,6 +45,8 @@ export const Footer: React.FC = () => {
                 © 2026 LeMaks
                 <span aria-hidden="true"> · </span>
                 <PrivacyLink href="/privacy-policy">Privacy Policy</PrivacyLink>
+                <span aria-hidden="true"> · </span>
+                <PrivacyLink href="/termini-e-condizioni">Termini e condizioni</PrivacyLink>
             </Copy>
         </FooterContainer>
     );
