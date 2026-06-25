@@ -1,6 +1,7 @@
 import StyledComponentsRegistry from "../layouts/StyledComponentsRegistry";
 import "./globals.css";
 import { MainLayout } from "@layouts";
+import Script from "next/script";
 
 export const metadata = {
     title: "Le Maks",
@@ -44,6 +45,15 @@ export default function RootLayout({
                 </head>
                 <body>
                     <MainLayout>{children}</MainLayout>
+                    <Script
+                        defer
+                        src="https://analytics.lemaks.it/script.js"
+                        data-website-id="c2ecd1dd-1be4-404d-bb0e-a0d096832d10"
+                        data-domains="lemaks.it,www.lemaks.it"
+                        data-do-not-track="true"
+                        data-exclude-search="true"
+                        data-exclude-hash="true"
+                    ></Script>
                 </body>
             </html>
         </StyledComponentsRegistry>

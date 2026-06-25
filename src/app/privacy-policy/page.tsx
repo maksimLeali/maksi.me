@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
         <Container>
             <Header>
                 <Title>Informativa Privacy</Title>
-                <LastUpdate>Ultimo aggiornamento: 24/06/2026</LastUpdate>
+                <LastUpdate>Ultimo aggiornamento: 25/06/2026</LastUpdate>
             </Header>
 
             <Section>
@@ -22,28 +22,80 @@ export default function PrivacyPolicy() {
             <Divider />
 
             <Section>
-                <SectionTitle>2. Dati personali raccolti</SectionTitle>
+                <SectionTitle>2. Dati personali trattati</SectionTitle>
+
+                <SubSectionTitle>
+                    Dati forniti tramite il modulo di contatto
+                </SubSectionTitle>
                 <Paragraph>
                     Attraverso il modulo di contatto presente sul sito possono
-                    essere raccolti i seguenti dati:
+                    essere trattati i seguenti dati:
                 </Paragraph>
                 <List>
                     <li>nome;</li>
-                    <li>cognome;</li>
                     <li>indirizzo e-mail;</li>
-                    <li>azienda o progetto </li>
-                    <li>contenuto del messaggio inviato dall&apos;utente;</li>
+                    <li>
+                        azienda o progetto, se inserito dall&apos;utente;
+                    </li>
+                    <li>
+                        indicazioni sulla richiesta o sul servizio di interesse;
+                    </li>
+                    <li>contenuto del messaggio;</li>
                     <li>
                         eventuali ulteriori dati che l&apos;utente decide
-                        spontaneamente di inserire nella richiesta.
+                        spontaneamente di comunicare.
                     </li>
                 </List>
                 <Paragraph>
-                    Il sito non utilizza cookie di profilazione, strumenti di
-                    analisi statistica o altri strumenti di tracciamento non
-                    tecnici. Possono essere trattati esclusivamente dati tecnici
-                    di navigazione necessari alla sicurezza e al corretto
-                    funzionamento del sito.
+                    Si invita l&apos;utente a non inserire nel modulo dati
+                    personali non necessari, categorie particolari di dati
+                    personali o informazioni riservate.
+                </Paragraph>
+
+                <SubSectionTitle>
+                    Dati di navigazione e statistiche
+                </SubSectionTitle>
+                <Paragraph>
+                    Il sito utilizza Umami, un sistema di analisi statistica
+                    self-hosted e gestito dal Titolare tramite
+                    l&apos;infrastruttura analytics.lemaks.it.
+                </Paragraph>
+                <Paragraph>
+                    Umami è utilizzato esclusivamente per comprendere in forma
+                    statistica e aggregata come viene utilizzato il sito. Possono
+                    essere trattati dati tecnici e di navigazione quali:
+                </Paragraph>
+                <List>
+                    <li>
+                        pagina visitata, titolo della pagina e dominio di
+                        provenienza;
+                    </li>
+                    <li>
+                        tipo di browser, sistema operativo, tipo di dispositivo,
+                        lingua e risoluzione dello schermo;
+                    </li>
+                    <li>informazioni geografiche approssimative;</li>
+                    <li>data e ora della visita.</li>
+                </List>
+                <Paragraph>
+                    Il tracker è configurato per non raccogliere parametri di
+                    ricerca e frammenti degli URL. L&apos;indirizzo IP può essere
+                    utilizzato temporaneamente dal sistema per ricavare
+                    informazioni statistiche geografiche, ma non viene
+                    memorizzato da Umami.
+                </Paragraph>
+                <Paragraph>
+                    Il sito non utilizza cookie di profilazione, cookie
+                    pubblicitari, strumenti di remarketing o tecnologie destinate
+                    a seguire l&apos;utente tra siti diversi.
+                </Paragraph>
+
+                <SubSectionTitle>Log tecnici</SubSectionTitle>
+                <Paragraph>
+                    Per ragioni di sicurezza, manutenzione e prevenzione di
+                    abusi, il server può registrare dati tecnici quali indirizzo
+                    IP, data e ora della richiesta, risorsa richiesta, codice di
+                    risposta e informazioni del browser.
                 </Paragraph>
             </Section>
 
@@ -51,7 +103,9 @@ export default function PrivacyPolicy() {
 
             <Section>
                 <SectionTitle>3. Finalità del trattamento</SectionTitle>
-                <Paragraph>I dati personali vengono trattati per:</Paragraph>
+                <Paragraph>
+                    I dati personali sono trattati per:
+                </Paragraph>
                 <List>
                     <li>
                         rispondere alle richieste inviate tramite il modulo di
@@ -62,18 +116,26 @@ export default function PrivacyPolicy() {
                         ricevuta;
                     </li>
                     <li>
-                        gestire eventuali richieste di informazioni,
-                        collaborazioni o preventivi;
+                        gestire richieste di informazioni, collaborazioni o
+                        preventivi;
                     </li>
                     <li>
-                        tutelare i diritti del titolare e garantire la sicurezza
-                        tecnica del sito.
+                        garantire sicurezza, manutenzione e corretto
+                        funzionamento del sito;
+                    </li>
+                    <li>
+                        produrre statistiche aggregate sull&apos;utilizzo del
+                        sito e migliorarne contenuti, struttura e prestazioni;
+                    </li>
+                    <li>
+                        tutelare i diritti del Titolare in caso di abusi,
+                        violazioni o contestazioni.
                     </li>
                 </List>
                 <Paragraph>
-                    I dati non saranno utilizzati per inviare comunicazioni
-                    promozionali o newsletter senza uno specifico consenso
-                    dell&apos;utente.
+                    I dati non sono utilizzati per newsletter, comunicazioni
+                    commerciali, profilazione o marketing diretto senza uno
+                    specifico consenso dell&apos;utente.
                 </Paragraph>
             </Section>
 
@@ -81,22 +143,23 @@ export default function PrivacyPolicy() {
 
             <Section>
                 <SectionTitle>4. Base giuridica del trattamento</SectionTitle>
-                <Paragraph>Il trattamento dei dati è effettuato:</Paragraph>
+                <Paragraph>Il trattamento dei dati avviene:</Paragraph>
                 <List>
                     <li>
-                        per rispondere a una richiesta dell&apos;utente e,
-                        quando applicabile, per adottare misure precontrattuali
-                        richieste dall&apos;interessato;
+                        per l&apos;esecuzione di misure precontrattuali adottate
+                        su richiesta dell&apos;interessato, quando l&apos;utente
+                        richiede informazioni, un contatto o un preventivo;
                     </li>
                     <li>
-                        per il legittimo interesse del titolare a gestire le
-                        richieste ricevute e proteggere il sito da abusi o
-                        utilizzi impropri;
+                        per il legittimo interesse del Titolare a garantire la
+                        sicurezza del sito, prevenire abusi e analizzare in modo
+                        aggregato il suo utilizzo;
                     </li>
                     <li>
-                        sulla base del consenso dell&apos;utente, esclusivamente
-                        quando richiesto per finalità ulteriori, come
-                        l&apos;invio di newsletter o comunicazioni marketing.
+                        sulla base del consenso dell&apos;utente,
+                        esclusivamente quando richiesto per finalità ulteriori
+                        non necessarie, quali eventuali future comunicazioni
+                        marketing.
                     </li>
                 </List>
             </Section>
@@ -106,13 +169,13 @@ export default function PrivacyPolicy() {
             <Section>
                 <SectionTitle>5. Conferimento dei dati</SectionTitle>
                 <Paragraph>
-                    Il conferimento di nome, cognome, indirizzo e-mail e
-                    messaggio è necessario per poter inviare e gestire la
-                    richiesta di contatto.
+                    Il conferimento dei dati contrassegnati come obbligatori nel
+                    modulo di contatto è necessario per inviare e gestire la
+                    richiesta.
                 </Paragraph>
                 <Paragraph>
-                    Il mancato conferimento di tali dati potrebbe rendere
-                    impossibile rispondere alla richiesta.
+                    Il mancato conferimento può rendere impossibile rispondere
+                    all&apos;utente.
                 </Paragraph>
             </Section>
 
@@ -121,18 +184,22 @@ export default function PrivacyPolicy() {
             <Section>
                 <SectionTitle>6. Modalità del trattamento</SectionTitle>
                 <Paragraph>
-                    I dati inviati tramite il modulo di contatto non sono
-                    registrati in un database del sito. Essi vengono trasmessi
-                    tramite posta elettronica alla casella di contatto del
-                    Titolare e trattati esclusivamente per rispondere alla
-                    richiesta dell&apos;utente, fornire informazioni o avviare
-                    eventuali rapporti precontrattuali.
+                    I dati inviati tramite il modulo di contatto non vengono
+                    registrati in un database del sito. Sono trasmessi tramite
+                    posta elettronica alla casella di contatto del Titolare e
+                    utilizzati esclusivamente per gestire la richiesta
+                    dell&apos;utente.
                 </Paragraph>
                 <Paragraph>
-                    Il trattamento avviene con strumenti informatici e
-                    telematici, adottando misure organizzative e tecniche
-                    adeguate per proteggere i dati da accessi non autorizzati,
-                    perdita, alterazione o divulgazione.
+                    Le statistiche di navigazione vengono memorizzate in un
+                    database separato utilizzato esclusivamente dal sistema
+                    Umami self-hosted.
+                </Paragraph>
+                <Paragraph>
+                    Il trattamento avviene mediante strumenti informatici e
+                    telematici, adottando misure tecniche e organizzative
+                    adeguate per prevenire accessi non autorizzati, perdita,
+                    alterazione o divulgazione dei dati.
                 </Paragraph>
             </Section>
 
@@ -146,17 +213,26 @@ export default function PrivacyPolicy() {
                 </Paragraph>
                 <List>
                     <li>
-                        <strong>Maksim Leali</strong> (titolare del trattamento)
-                        — gestione diretta delle richieste di contatto;
+                        Maksim Leali, in qualità di Titolare del trattamento;
                     </li>
                     <li>
-                        <strong>DigitalOcean, LLC</strong> — provider di hosting
-                        sul quale è ospitato il sito web.
+                        DigitalOcean, LLC, quale fornitore di infrastruttura
+                        cloud e hosting per il sito e per il sistema di analisi
+                        statistica self-hosted;
+                    </li>
+                    <li>
+                        fornitore del servizio di posta elettronica e/o invio
+                        dei messaggi generati dal modulo di contatto;
+                    </li>
+                    <li>
+                        eventuali soggetti autorizzati dal Titolare o fornitori
+                        tecnici strettamente necessari alla gestione, sicurezza
+                        e manutenzione del sito.
                     </li>
                 </List>
                 <Paragraph>
-                    Tali soggetti trattano i dati, quando necessario, in qualità
-                    di responsabili del trattamento o soggetti autorizzati.
+                    I dati non vengono ceduti, venduti o comunicati a soggetti
+                    terzi per finalità pubblicitarie o di marketing.
                 </Paragraph>
             </Section>
 
@@ -164,17 +240,24 @@ export default function PrivacyPolicy() {
 
             <Section>
                 <SectionTitle>
-                    8. Trasferimento dei dati al di fuori dello Spazio Economico
-                    Europeo
+                    8. Trasferimenti al di fuori dello Spazio Economico Europeo
                 </SectionTitle>
                 <Paragraph>
-                    I dati personali raccolti tramite il sito sono ospitati su
+                    Il sito e il sistema di analisi Umami sono ospitati su
                     infrastrutture DigitalOcean situate nello Spazio Economico
-                    Europeo. DigitalOcean agisce quale fornitore di hosting.
-                    Eventuali accessi o trasferimenti verso Paesi terzi connessi
-                    all&apos;erogazione del servizio da parte del fornitore
-                    avvengono nel rispetto delle garanzie previste dagli artt.
-                    44 e seguenti del GDPR.
+                    Europeo.
+                </Paragraph>
+                <Paragraph>
+                    Qualora, per esigenze tecniche connesse all&apos;erogazione
+                    dei servizi da parte dei fornitori indicati, si rendesse
+                    necessario un trasferimento verso Paesi al di fuori dello
+                    Spazio Economico Europeo, il trasferimento avverrà nel
+                    rispetto delle garanzie previste dagli articoli 44 e
+                    seguenti del Regolamento UE 2016/679.
+                </Paragraph>
+                <Paragraph>
+                    Informazioni sulle garanzie applicate possono essere
+                    richieste contattando il Titolare.
                 </Paragraph>
             </Section>
 
@@ -184,11 +267,23 @@ export default function PrivacyPolicy() {
                 <SectionTitle>9. Periodo di conservazione</SectionTitle>
                 <Paragraph>
                     I messaggi ricevuti tramite il modulo di contatto sono
-                    conservati nella casella email del Titolare per il tempo
-                    necessario alla gestione della richiesta e, in ogni caso,
-                    non oltre <strong>12 mesi</strong> dalla ricezione, salvo
-                    eventuale necessità di ulteriore conservazione per obblighi
-                    di legge o per la tutela di diritti del Titolare.
+                    conservati per il tempo necessario a gestire la richiesta e,
+                    in ogni caso, non oltre <strong>12 mesi</strong> dalla
+                    ricezione, salvo necessità di ulteriore conservazione per
+                    obblighi di legge o tutela di diritti del Titolare.
+                </Paragraph>
+                <Paragraph>
+                    I dati statistici raccolti tramite Umami sono conservati per
+                    un periodo massimo di <strong>12 mesi</strong> e
+                    successivamente cancellati o anonimizzati.
+                </Paragraph>
+                <Paragraph>
+                    I log tecnici del server sono conservati per il tempo
+                    strettamente necessario alle finalità di sicurezza e
+                    manutenzione e, di norma, non oltre{" "}
+                    <strong>30 giorni</strong>, salvo necessità di ulteriore
+                    conservazione in caso di incidenti di sicurezza o richieste
+                    dell&apos;autorità competente.
                 </Paragraph>
             </Section>
 
@@ -210,15 +305,17 @@ export default function PrivacyPolicy() {
                     </li>
                     <li>chiedere la limitazione del trattamento;</li>
                     <li>opporsi al trattamento, nei casi previsti;</li>
-                    <li>richiedere la portabilità dei dati;</li>
+                    <li>
+                        richiedere la portabilità dei dati, quando applicabile;
+                    </li>
                     <li>
                         revocare il consenso in qualsiasi momento, quando il
                         trattamento si basa sul consenso.
                     </li>
                 </List>
                 <Paragraph>
-                    Per esercitare questi diritti, l&apos;utente può contattare
-                    il titolare all&apos;indirizzo:{" "}
+                    Per esercitare i propri diritti, l&apos;utente può
+                    contattare il Titolare all&apos;indirizzo:{" "}
                     <a href="mailto:contact@lemaks.it">contact@lemaks.it</a>.
                 </Paragraph>
                 <Paragraph>
@@ -230,7 +327,9 @@ export default function PrivacyPolicy() {
             <Divider />
 
             <Section>
-                <SectionTitle>11. Decisioni automatizzate</SectionTitle>
+                <SectionTitle>
+                    11. Decisioni automatizzate e profilazione
+                </SectionTitle>
                 <Paragraph>
                     I dati personali non sono utilizzati per processi
                     decisionali automatizzati né per attività di profilazione.
@@ -245,8 +344,8 @@ export default function PrivacyPolicy() {
                 </SectionTitle>
                 <Paragraph>
                     La presente informativa può essere aggiornata nel tempo.
-                    Eventuali modifiche saranno pubblicate su questa pagina, con
-                    indicazione della data dell&apos;ultimo aggiornamento.
+                    Eventuali modifiche saranno pubblicate su questa pagina con
+                    indicazione della data di ultimo aggiornamento.
                 </Paragraph>
             </Section>
         </Container>
@@ -316,6 +415,22 @@ const SectionTitle = styled.h2`
     ${$breakPoint(500)} {
         font-size: ${$uw(3.2)};
         margin: 0 0 ${$uw(1.2)};
+    }
+`;
+
+const SubSectionTitle = styled.h3`
+    font-family: "Martian Mono", monospace;
+    font-size: ${$uw(1.3)};
+    font-weight: 300;
+    line-height: 1.3;
+    margin: ${$uw(1.2)} 0 ${$uw(0.6)};
+    color: ${$color("tertiary-dark")};
+    ${$breakPoint(820)} {
+        font-size: ${$uw(1.8)};
+    }
+    ${$breakPoint(500)} {
+        font-size: ${$uw(2.6)};
+        margin: ${$uw(1.8)} 0 ${$uw(1)};
     }
 `;
 

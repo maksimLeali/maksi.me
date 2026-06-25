@@ -46,7 +46,11 @@ export const Footer: React.FC = () => {
                 <span aria-hidden="true"> · </span>
                 <PrivacyLink href="/privacy-policy">Privacy Policy</PrivacyLink>
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/termini-e-condizioni">Termini e condizioni</PrivacyLink>
+                <PrivacyLink href="/cookie-policy">Cookie Policy</PrivacyLink>
+                <span aria-hidden="true"> · </span>
+                <PrivacyLink href="/termini-e-condizioni">
+                    Termini e condizioni
+                </PrivacyLink>
             </Copy>
         </FooterContainer>
     );

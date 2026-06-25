@@ -13,7 +13,7 @@ export default function TerminiECondizioni() {
             <Section>
                 <SectionTitle>1. Titolare del sito</SectionTitle>
                 <Paragraph>
-                    Il sito è gestito da Maksim Leali, contattabile
+                    Il sito lemaks.it è gestito da Maksim Leali, contattabile
                     all&apos;indirizzo e-mail:{" "}
                     <a href="mailto:contact@lemaks.it">contact@lemaks.it</a>.
                 </Paragraph>
@@ -25,31 +25,34 @@ export default function TerminiECondizioni() {
                 <SectionTitle>2. Finalità del sito</SectionTitle>
                 <Paragraph>
                     Il sito ha finalità informative e presenta attività,
-                    progetti e servizi relativi a web development, game
-                    development e contenuti sull&apos;educazione cinofila.
+                    progetti e servizi relativi allo sviluppo web, allo
+                    sviluppo di videogiochi e ai contenuti sull&apos;educazione
+                    cinofila.
                 </Paragraph>
                 <Paragraph>
                     Le informazioni pubblicate hanno carattere generale e non
                     costituiscono preventivo, proposta contrattuale vincolante,
-                    consulenza professionale o garanzia di risultato.
+                    consulenza professionale, promessa di risultato o garanzia
+                    di disponibilità dei servizi descritti.
                 </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>3. Richieste di contatto e preventivi</SectionTitle>
+                <SectionTitle>
+                    3. Richieste di contatto e preventivi
+                </SectionTitle>
                 <Paragraph>
-                    L&apos;invio di una richiesta attraverso il modulo di
-                    contatto o via email non comporta la conclusione di alcun
-                    contratto.
+                    L&apos;invio di una richiesta tramite il modulo di contatto
+                    o via e-mail non comporta la conclusione di alcun contratto.
                 </Paragraph>
                 <Paragraph>
                     Eventuali servizi, tempi di realizzazione, corrispettivi,
-                    modalità di pagamento, revisioni, consegne e diritti di
-                    utilizzo saranno definiti separatamente mediante preventivo,
-                    accordo scritto o altro documento contrattuale concordato
-                    con il cliente.
+                    modalità di pagamento, revisioni, consegne, assistenza e
+                    diritti di utilizzo saranno disciplinati separatamente
+                    mediante preventivo, accordo scritto o altro documento
+                    contrattuale concordato tra le parti.
                 </Paragraph>
             </Section>
 
@@ -59,70 +62,79 @@ export default function TerminiECondizioni() {
                 <SectionTitle>4. Proprietà intellettuale</SectionTitle>
                 <Paragraph>
                     Salvo diversa indicazione, i contenuti presenti sul sito,
-                    inclusi testi, struttura, grafica, elementi visivi, codice e
-                    materiali originali, sono di proprietà del titolare o
-                    utilizzati con autorizzazione.
+                    inclusi testi, struttura, grafica, elementi visivi,
+                    immagini, codice, loghi e materiali originali, sono di
+                    proprietà del Titolare o utilizzati con autorizzazione.
                 </Paragraph>
                 <Paragraph>
                     Non è consentito copiare, riprodurre, modificare,
-                    distribuire o utilizzare tali contenuti per finalità
-                    commerciali senza preventiva autorizzazione scritta del
-                    titolare, salvo i casi consentiti dalla legge.
+                    distribuire, pubblicare o utilizzare tali contenuti per
+                    finalità commerciali senza preventiva autorizzazione scritta
+                    del Titolare, fatti salvi gli utilizzi consentiti dalla
+                    legge.
                 </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>5. Collegamenti a siti esterni</SectionTitle>
+                <SectionTitle>
+                    5. Collegamenti a siti e servizi esterni
+                </SectionTitle>
                 <Paragraph>
                     Il sito può contenere collegamenti a siti, piattaforme o
-                    servizi di terzi. Il titolare non controlla tali risorse e
-                    non è responsabile dei relativi contenuti, disponibilità,
-                    sicurezza, privacy policy o condizioni di utilizzo.
+                    servizi di terzi.
                 </Paragraph>
                 <Paragraph>
-                    L&apos;utente è invitato a consultare le informative e le
-                    condizioni dei siti esterni prima di utilizzarli.
+                    Il Titolare non controlla tali risorse e non è responsabile
+                    dei relativi contenuti, disponibilità, sicurezza, privacy
+                    policy, cookie policy o condizioni di utilizzo. L&apos;utente
+                    è invitato a consultare le informative e le condizioni
+                    applicabili ai servizi esterni prima di utilizzarli.
                 </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>6. Limitazione di responsabilità</SectionTitle>
+                <SectionTitle>
+                    6. Disponibilità e limitazione di responsabilità
+                </SectionTitle>
                 <Paragraph>
-                    Il titolare si impegna a mantenere le informazioni del sito
-                    accurate e aggiornate, ma non garantisce l&apos;assenza di
-                    errori, omissioni, interruzioni o indisponibilità
-                    temporanee.
+                    Il Titolare si impegna a mantenere le informazioni del sito
+                    ragionevolmente accurate e aggiornate, ma non garantisce
+                    l&apos;assenza di errori, omissioni, interruzioni,
+                    malfunzionamenti o indisponibilità temporanee.
                 </Paragraph>
                 <Paragraph>
-                    Nei limiti consentiti dalla legge, il titolare non risponde
+                    Nei limiti consentiti dalla legge, il Titolare non risponde
                     di danni diretti o indiretti derivanti dall&apos;uso o
                     dall&apos;impossibilità di utilizzare il sito, i suoi
-                    contenuti o eventuali servizi esterni collegati.
+                    contenuti o servizi esterni collegati.
                 </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>7. Privacy</SectionTitle>
+                <SectionTitle>7. Privacy e cookie</SectionTitle>
                 <Paragraph>
-                    Il trattamento dei dati personali avviene secondo quanto
-                    descritto nella{" "}
-                    <a href="/privacy-policy">Informativa Privacy</a>{" "}
+                    Il trattamento dei dati personali è descritto
+                    nell&apos;<a href="/privacy-policy">Informativa Privacy</a>{" "}
                     disponibile sul sito.
                 </Paragraph>
+                <Paragraph>
+                    Le informazioni relative ai cookie e agli strumenti di
+                    analisi statistica sono disponibili nella Cookie Policy.
+                </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>8. Modifiche</SectionTitle>
+                <SectionTitle>8. Modifiche ai termini</SectionTitle>
                 <Paragraph>
-                    Il titolare può aggiornare questi termini in qualsiasi
+                    Il Titolare può aggiornare i presenti termini in qualsiasi
                     momento. Le modifiche saranno efficaci dalla data di
                     pubblicazione della versione aggiornata sul sito.
                 </Paragraph>
@@ -134,8 +146,11 @@ export default function TerminiECondizioni() {
                 <SectionTitle>9. Legge applicabile</SectionTitle>
                 <Paragraph>
                     I presenti termini sono disciplinati dalla legge italiana.
-                    Restano fermi gli eventuali diritti inderogabili riconosciuti
-                    dalla normativa applicabile agli utenti consumatori.
+                </Paragraph>
+                <Paragraph>
+                    Restano fermi gli eventuali diritti inderogabili
+                    riconosciuti dalla normativa applicabile agli utenti
+                    consumatori.
                 </Paragraph>
             </Section>
         </Container>
