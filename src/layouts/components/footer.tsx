@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { useTranslation } from "react-i18next";
 
 const LINKS = [
     {
@@ -13,18 +15,15 @@ const LINKS = [
 ];
 
 export const Footer: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <FooterContainer className="menu">
             <Logo src="/logo.svg" alt="" aria-hidden="true" />
             <Inner>
                 <Brand>
                     <span className="name mono">LeMaks</span>
-                    <span className="disc">
-                        Web Development · Educazione Cinofila · Game Development
-                    </span>
-                    <span className="claim mono">
-                        Realizzo esperienze essenziali.
-                    </span>
+                    <span className="disc">{t("footer.tagline")}</span>
+                    <span className="claim mono">{t("footer.claim")}</span>
                 </Brand>
                 <Links>
                     {LINKS.map((l) => (
@@ -44,12 +43,16 @@ export const Footer: React.FC = () => {
             <Copy>
                 © 2026 LeMaks
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/privacy-policy">Privacy Policy</PrivacyLink>
+                <PrivacyLink href="/privacy-policy">
+                    {t("footer.privacy")}
+                </PrivacyLink>
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/cookie-policy">Cookie Policy</PrivacyLink>
+                <PrivacyLink href="/cookie-policy">
+                    {t("footer.cookies")}
+                </PrivacyLink>
                 <span aria-hidden="true"> · </span>
                 <PrivacyLink href="/termini-e-condizioni">
-                    Termini e condizioni
+                    {t("footer.terms")}
                 </PrivacyLink>
             </Copy>
         </FooterContainer>

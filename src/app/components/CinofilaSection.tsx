@@ -3,35 +3,17 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { RiCornerDownRightLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
-const TOPICS = [
-    {
-        symbol: "◜",
-        title: "Cuccioli e primi mesi",
-        desc: "Routine, inserimento in famiglia e costruzione delle prime basi.",
-        hint: "Costruire abitudini serene fin da subito.",
-    },
-    {
-        symbol: "◝",
-        title: "Comunicazione",
-        desc: "Imparare a leggere segnali, bisogni e momenti di difficoltà.",
-        hint: "Ascoltare prima di chiedere.",
-    },
-    {
-        symbol: "◟",
-        title: "Passeggiata e ambiente",
-        desc: "Creare esperienze più serene dentro e fuori casa.",
-        hint: "L'ambiente è parte dell'educazione.",
-    },
-    {
-        symbol: "◞",
-        title: "Cani adottati",
-        desc: "Accogliere la storia del cane e costruire nuove abitudini con gradualità.",
-        hint: "Ogni storia merita tempo.",
-    },
-];
+const TOPIC_KEYS = [
+    { symbol: "◜", key: "puppies" },
+    { symbol: "◝", key: "communication" },
+    { symbol: "◟", key: "walking" },
+    { symbol: "◞", key: "adopted" },
+] as const;
 
 export const CinofilaSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="cinofila">
             <Intro>
@@ -39,23 +21,17 @@ export const CinofilaSection = () => {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo3.jpg"
-                        alt="Cane durante una sessione di educazione"
+                        alt={t("cinofila.photoAlt1")}
                     />
                 </Photo>
                 <div className="copy">
                     <span className="tech-label aqua">
-                        03 / EDUCAZIONE CINOFILA
+                        {t("cinofila.techLabel")}
                     </span>
-                    <h2>Capire il cane è il primo passo per educarlo.</h2>
-                    <p>
-                        Sto approfondendo il metodo cognitivo-relazionale per
-                        imparare a osservare il cane come individuo: con
-                        emozioni, bisogni, esperienze e un proprio modo di
-                        comunicare. Un percorso in formazione, portato avanti
-                        con serietà, studio e rispetto.
-                    </p>
+                    <h2>{t("cinofila.title")}</h2>
+                    <p>{t("cinofila.intro")}</p>
                     <Cta href="#contact">
-                        Scopri il mio percorso
+                        {t("cinofila.cta")}
                         <RiCornerDownRightLine />
                     </Cta>
                 </div>
@@ -63,21 +39,24 @@ export const CinofilaSection = () => {
 
             <Approach>
                 <div className="text">
-                    <h3>Ogni cane ha una storia. Da lì si comincia.</h3>
+                    <h3>{t("cinofila.approach.title")}</h3>
                     <p>
-                        Non esistono soluzioni standard valide per tutti. Ogni
-                        percorso parte dall&apos;
-                        <span className="aqua">osservazione</span> del cane, dal
-                        contesto in cui vive e dalle esigenze della sua
-                        famiglia.
+                        {t("cinofila.approach.p1Before")}
+                        <span className="aqua">
+                            {t("cinofila.approach.p1Highlight1")}
+                        </span>
+                        {t("cinofila.approach.p1After")}
                     </p>
                     <p>
-                        Il metodo cognitivo-relazionale valorizza{" "}
-                        <span className="aqua">collaborazione</span> e{" "}
-                        <span className="aqua">fiducia</span>. L&apos;obiettivo
-                        non è avere un cane perfetto, ma un cane più sereno,
-                        ascoltato e capace di affrontare il mondo accanto alla
-                        sua persona.
+                        {t("cinofila.approach.p2Before")}
+                        <span className="aqua">
+                            {t("cinofila.approach.p2Highlight1")}
+                        </span>
+                        {t("cinofila.approach.p2Middle")}
+                        <span className="aqua">
+                            {t("cinofila.approach.p2Highlight2")}
+                        </span>
+                        {t("cinofila.approach.p2After")}
                     </p>
                 </div>
                 <Curve viewBox="0 0 200 300" preserveAspectRatio="none">
@@ -92,23 +71,29 @@ export const CinofilaSection = () => {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo.jpg"
-                        alt="Cane in un momento di relax"
+                        alt={t("cinofila.photoAlt2")}
                     />
                 </PhotoTall>
             </Approach>
 
             <Topics>
-                <h3>Piccoli passi, utili nella vita reale.</h3>
+                <h3>{t("cinofila.topics.title")}</h3>
                 <div className="grid">
-                    {TOPICS.map((t, i) => (
+                    {TOPIC_KEYS.map((topic, i) => (
                         <Topic
-                            key={t.title}
+                            key={topic.key}
                             style={{ animationDelay: `${0.1 * i}s` }}
                         >
-                            <span className="symbol">{t.symbol}</span>
-                            <h4>{t.title}</h4>
-                            <p>{t.desc}</p>
-                            <span className="hint aqua">{t.hint}</span>
+                            <span className="symbol">{topic.symbol}</span>
+                            <h4>
+                                {t(`cinofila.topics.items.${topic.key}.title`)}
+                            </h4>
+                            <p>
+                                {t(`cinofila.topics.items.${topic.key}.desc`)}
+                            </p>
+                            <span className="hint aqua">
+                                {t(`cinofila.topics.items.${topic.key}.hint`)}
+                            </span>
                         </Topic>
                     ))}
                 </div>
@@ -116,21 +101,17 @@ export const CinofilaSection = () => {
 
             <Diary>
                 <div className="copy">
-                    <h3>Studio, osservo, imparo.</h3>
-                    <p>
-                        Questo spazio raccoglie appunti, riflessioni e
-                        osservazioni dal mio percorso di formazione. Non vuole
-                        dare risposte assolute: vuole condividere domande
-                        migliori e un modo più consapevole di stare accanto ai
-                        cani.
-                    </p>
-                    <span className="soon mono">DIARIO IN ARRIVO</span>
+                    <h3>{t("cinofila.diary.title")}</h3>
+                    <p>{t("cinofila.diary.desc")}</p>
+                    <span className="soon mono">
+                        {t("cinofila.diary.soon")}
+                    </span>
                 </div>
                 <Notebook>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/doggo2.jpg"
-                        alt="Momento di connessione con il cane"
+                        alt={t("cinofila.photoAlt3")}
                     />
                 </Notebook>
             </Diary>

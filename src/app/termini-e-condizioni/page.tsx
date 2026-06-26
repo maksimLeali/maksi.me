@@ -25,9 +25,8 @@ export default function TerminiECondizioni() {
                 <SectionTitle>2. Finalità del sito</SectionTitle>
                 <Paragraph>
                     Il sito ha finalità informative e presenta attività,
-                    progetti e servizi relativi allo sviluppo web, allo
-                    sviluppo di videogiochi e ai contenuti sull&apos;educazione
-                    cinofila.
+                    progetti e servizi relativi allo sviluppo web, allo sviluppo
+                    di videogiochi e ai contenuti sull&apos;educazione cinofila.
                 </Paragraph>
                 <Paragraph>
                     Le informazioni pubblicate hanno carattere generale e non
@@ -88,9 +87,10 @@ export default function TerminiECondizioni() {
                 <Paragraph>
                     Il Titolare non controlla tali risorse e non è responsabile
                     dei relativi contenuti, disponibilità, sicurezza, privacy
-                    policy, cookie policy o condizioni di utilizzo. L&apos;utente
-                    è invitato a consultare le informative e le condizioni
-                    applicabili ai servizi esterni prima di utilizzarli.
+                    policy, cookie policy o condizioni di utilizzo.
+                    L&apos;utente è invitato a consultare le informative e le
+                    condizioni applicabili ai servizi esterni prima di
+                    utilizzarli.
                 </Paragraph>
             </Section>
 
@@ -119,8 +119,8 @@ export default function TerminiECondizioni() {
             <Section>
                 <SectionTitle>7. Privacy e cookie</SectionTitle>
                 <Paragraph>
-                    Il trattamento dei dati personali è descritto
-                    nell&apos;<a href="/privacy-policy">Informativa Privacy</a>{" "}
+                    Il trattamento dei dati personali è descritto nell&apos;
+                    <a href="/privacy-policy">Informativa Privacy</a>{" "}
                     disponibile sul sito.
                 </Paragraph>
                 <Paragraph>

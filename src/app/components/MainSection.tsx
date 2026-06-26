@@ -3,63 +3,61 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import HexagonCollisionSketch from "./Sketch";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FaAngleDoubleDown } from "react-icons/fa";
-
-const ROTATING_WORDS = [
-    "essenziali",
-    "chiare",
-    "utili",
-    "giocabili",
-    "consapevoli",
-];
+import { useTranslation } from "react-i18next";
 
 export const MainSection = () => {
+    const { t, i18n } = useTranslation();
     const [mounted, setMounted] = useState(false);
     const [wordIndex, setWordIndex] = useState(0);
 
+    const rotatingWords = useMemo(
+        () => t("main.rotatingWords", { returnObjects: true }) as string[],
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [t, i18n.language],
+    );
+
     useEffect(() => {
         setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        setWordIndex(0);
         const interval = setInterval(() => {
-            setWordIndex((i) => (i + 1) % ROTATING_WORDS.length);
+            setWordIndex((i) => (i + 1) % rotatingWords.length);
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    }, [rotatingWords]);
 
     return (
         <Section id="mainSection">
             <HexagonCollisionSketch />
             <Content className={mounted ? "mounted" : ""}>
                 <Title className="mainTitle">
-                    <span className="line">Realizzo</span>
+                    <span className="line">{t("main.titleLine1")}</span>
                     <span className="line">
-                        <span className="cyan">esperienze</span>
+                        <span className="cyan">{t("main.titleLine2")}</span>
                     </span>
                     <span className="line rotating">
                         <RotatingWord key={wordIndex}>
-                            {ROTATING_WORDS[wordIndex]}
+                            {rotatingWords[wordIndex]}
                         </RotatingWord>
                         <span className="caret">_</span>
                     </span>
                 </Title>
-                <Lead>
-                    Progetto siti web, studio la relazione tra persone e cani e
-                    sperimento con il game development.
-                </Lead>
-                <Lead className="muted">
-                    Tre percorsi diversi, un&apos;unica direzione: osservare,
-                    semplificare e costruire qualcosa che funzioni davvero.
-                </Lead>
+                <Lead>{t("main.lead1")}</Lead>
+                <Lead className="muted">{t("main.lead2")}</Lead>
                 <TechLabel className="tech-label">
-                    WEB / GAME DEVELOPMENT / CINOFILIA
+                    {t("main.techLabel")}
                 </TechLabel>
                 <Actions>
-                    <Primary href="#web">Esplora il mio mondo</Primary>
-                    <Ghost href="#contact">Contattami</Ghost>
+                    <Primary href="#web">{t("main.ctaPrimary")}</Primary>
+                    <Ghost href="#contact">{t("main.ctaGhost")}</Ghost>
                 </Actions>
             </Content>
             <ScrollDown href="#manifesto">
-                <p className="label">Scopri di più</p>
+                <p className="label">{t("main.scrollDown")}</p>
                 <FaAngleDoubleDown />
             </ScrollDown>
         </Section>

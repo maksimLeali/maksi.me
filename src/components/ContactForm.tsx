@@ -5,6 +5,7 @@ import { $uw, $breakPoint, $color } from "@theme";
 import Link from "next/link";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { RiMailSendLine } from "react-icons/ri";
 import styled from "styled-components";
 
@@ -13,6 +14,7 @@ type props = {
 };
 
 const ContactForm: React.FC<props> = ({ width = "100%" }) => {
+    const { t } = useTranslation();
     const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
         "idle",
     );
@@ -39,24 +41,20 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
             });
             const json = await res.json();
             if (!res.ok) {
-                setErrorMsg(json.error ?? "Errore sconosciuto.");
+                setErrorMsg(json.error ?? t("contact.form.errors.unknown"));
                 setStatus("error");
             } else {
                 setStatus("ok");
                 reset();
             }
         } catch {
-            setErrorMsg("Invio non riuscito. Controlla la connessione.");
+            setErrorMsg(t("contact.form.errors.network"));
             setStatus("error");
         }
     };
 
     if (status === "ok") {
-        return (
-            <SuccessMessage>
-                ✓ Messaggio inviato. Ti risponderò al più presto.
-            </SuccessMessage>
-        );
+        return <SuccessMessage>{t("contact.form.success")}</SuccessMessage>;
     }
 
     return (
@@ -75,58 +73,58 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                     <TextInput
                         id="contactName"
                         required
-                        errorLabel="Inserisci il nome."
-                        ntTextLabel="Nome"
+                        errorLabel={t("contact.form.errors.name")}
+                        ntTextLabel={t("contact.form.labels.name")}
                         name="nome"
                         focusColor="tertiary"
                     />
                     <TextInput
                         id="contactSurname"
-                        ntTextLabel="Cognome"
+                        ntTextLabel={t("contact.form.labels.surname")}
                         name="cognome"
                         required
-                        errorLabel="Inserisci il cognome."
+                        errorLabel={t("contact.form.errors.surname")}
                         focusColor="tertiary"
                     />
                     <TextInput
                         id="contactEmail"
-                        ntTextLabel="Email"
+                        ntTextLabel={t("contact.form.labels.email")}
                         name="email"
                         inputMode="email"
                         required
-                        errorLabel="Inserisci l'email."
+                        errorLabel={t("contact.form.errors.email")}
                         focusColor="tertiary"
                         registerOptions={{
                             pattern: {
                                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                message: "Inserisci un indirizzo email valido.",
+                                message: t("contact.form.errors.emailPattern"),
                             },
                         }}
                     />
                     <TextInput
                         id="contactCompany"
-                        ntTextLabel="Azienda o progetto"
+                        ntTextLabel={t("contact.form.labels.company")}
                         name="azienda"
                         required
-                        errorLabel="Inserisci il nome dell'azienda o del progetto."
+                        errorLabel={t("contact.form.errors.company")}
                         focusColor="tertiary"
                     />
                     <TextAreaInput
-                        ntTextLabel="Messaggio"
+                        ntTextLabel={t("contact.form.labels.message")}
                         name="messaggio"
-                        errorLabel="Inserisci il messaggio."
+                        errorLabel={t("contact.form.errors.message")}
                         required
                     />
                     <Checkbox
                         id="contactPrivacy"
                         name="privacy"
-                        errorLabel="Devi accettare l'informativa sulla privacy."
+                        errorLabel={t("contact.form.errors.privacy")}
                         required
                         labelNode={
                             <>
-                                Ho letto l&apos;{""}
+                                {t("contact.form.privacyBefore")}
                                 <PrivacyLink href="/privacy-policy">
-                                    informativa sulla privacy
+                                    {t("contact.form.privacyLink")}
                                 </PrivacyLink>
                             </>
                         }
@@ -140,8 +138,8 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                         color="secondary-light"
                         text={
                             status === "sending"
-                                ? "INVIO IN CORSO…"
-                                : "INVIA IL MESSAGGIO"
+                                ? t("contact.form.sending")
+                                : t("contact.form.submit")
                         }
                         iconAfter={<RiMailSendLine />}
                     />

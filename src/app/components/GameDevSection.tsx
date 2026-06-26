@@ -3,67 +3,42 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { RiCornerDownRightLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
-const SKILLS = [
-    { label: "GDScript", filled: true },
-    { label: "Sviluppo 2D", filled: true },
-    { label: "Movimento e fisica", filled: true },
-    { label: "Interazioni tra oggetti", filled: true },
-    { label: "UI e feedback di gioco", filled: false },
-    { label: "Level design", filled: false },
-    { label: "Prototipazione", filled: true },
-];
+const SKILL_KEYS = [
+    { key: "gdscript", filled: true },
+    { key: "twod", filled: true },
+    { key: "physics", filled: true },
+    { key: "interactions", filled: true },
+    { key: "ui", filled: false },
+    { key: "leveldesign", filled: false },
+    { key: "prototyping", filled: true },
+] as const;
 
-const CATEGORIES = [
-    {
-        title: "Giochi web app",
-        desc: "Esperienze interattive accessibili dal browser, progettate per essere semplici da avviare e coinvolgenti da giocare.",
-    },
-    {
-        title: "Prototipi e meccaniche",
-        desc: "Piccoli esperimenti per testare idee, regole, ritmo e feedback di gioco.",
-    },
-    {
-        title: "Progetti con Godot",
-        desc: "Nuovi esercizi e prototipi realizzati per approfondire lo sviluppo 2D, GDScript, fisica e level design.",
-    },
-];
+const CATEGORY_KEYS = ["webApp", "prototypes", "godot"] as const;
 
 export const GameDevSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="game">
             <Intro>
                 <div className="copy">
                     <span className="tech-label magenta">
-                        02 / GAME DEVELOPMENT
+                        {t("game.techLabel")}
                     </span>
-                    <h2>
-                        Creo giochi per il web. Ora sto esplorando anche Godot.
-                    </h2>
-                    <p>
-                        Ho già realizzato giochi sotto forma di web app,
-                        trasformando idee e meccaniche in esperienze accessibili
-                        direttamente dal browser.
-                    </p>
-                    <p>
-                        Oggi sto approfondendo Godot per avvicinarmi in modo più
-                        strutturato allo sviluppo videoludico: prototipazione,
-                        game design, fisica, interazioni e costruzione di
-                        piccoli mondi giocabili.
-                    </p>
+                    <h2>{t("game.title")}</h2>
+                    <p>{t("game.intro1")}</p>
+                    <p>{t("game.intro2")}</p>
                     <Cta href="#contact">
-                        Esplora i miei giochi
+                        {t("game.cta")}
                         <RiCornerDownRightLine />
                     </Cta>
                 </div>
                 <Preview>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src="/assets/game.jpg"
-                        alt="Controller e schermo di gioco"
-                    />
+                    <img src="/assets/game.jpg" alt={t("game.previewAlt")} />
                     <span className="credit">
-                        Foto di{" "}
+                        {t("game.credit.by")}{" "}
                         <a
                             href="https://unsplash.com/it/@sigmund?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                             target="_blank"
@@ -71,7 +46,7 @@ export const GameDevSection = () => {
                         >
                             Compagnons
                         </a>{" "}
-                        su{" "}
+                        {t("game.credit.on")}{" "}
                         <a
                             href="https://unsplash.com/it/foto/dispositivo-digitale-nero-a-0-00-By-tZImt0Ms?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
                             target="_blank"
@@ -84,31 +59,19 @@ export const GameDevSection = () => {
             </Intro>
 
             <Block>
-                <h3>Dal browser al game engine.</h3>
-                <p className="muted">
-                    Il mio percorso nel game development è iniziato dal web:
-                    giochi e piccole esperienze interattive costruite per essere
-                    immediate, accessibili e giocabili ovunque.
-                </p>
-                <p className="muted">
-                    Ora sto studiando Godot per ampliare il mio modo di
-                    progettare giochi, sperimentando con strumenti pensati
-                    specificamente per il game development.
-                </p>
-                <p className="muted">
-                    Non parto da zero: porto con me l&apos;esperienza maturata
-                    nello sviluppo web, nella progettazione di interfacce e
-                    nella costruzione di interazioni chiare.
-                </p>
+                <h3>{t("game.browserBlock.title")}</h3>
+                <p className="muted">{t("game.browserBlock.p1")}</p>
+                <p className="muted">{t("game.browserBlock.p2")}</p>
+                <p className="muted">{t("game.browserBlock.p3")}</p>
             </Block>
 
             <Block>
-                <h3>Cosa creo</h3>
+                <h3>{t("game.createBlock.title")}</h3>
                 <CatGrid>
-                    {CATEGORIES.map((c) => (
-                        <CatCard key={c.title}>
-                            <h4>{c.title}</h4>
-                            <p>{c.desc}</p>
+                    {CATEGORY_KEYS.map((k) => (
+                        <CatCard key={k}>
+                            <h4>{t(`game.categories.${k}.title`)}</h4>
+                            <p>{t(`game.categories.${k}.desc`)}</p>
                         </CatCard>
                     ))}
                 </CatGrid>
@@ -117,127 +80,106 @@ export const GameDevSection = () => {
             <Spotlight>
                 <div className="spotlight-header">
                     <span className="tech-label magenta">
-                        WEB GAME / MOBILE FIRST
+                        {t("game.spotlight.techLabel")}
                     </span>
-                    <h3>
-                        Un gioco di parole, pensato per lo schermo che hai in
-                        mano.
-                    </h3>
-                    <p>
-                        Un piccolo gioco web ispirato ai word game a tentativi:
-                        semplice da capire, rapido da giocare e progettato per
-                        funzionare al meglio da smartphone.
-                    </p>
-                    <p>
-                        L&apos;obiettivo è indovinare la parola corretta
-                        attraverso tentativi, indizi e feedback visivi. Ogni
-                        scelta deve essere immediata, leggibile e soddisfacente.
-                    </p>
+                    <h3>{t("game.spotlight.title")}</h3>
+                    <p>{t("game.spotlight.p1")}</p>
+                    <p>{t("game.spotlight.p2")}</p>
                     <div className="spotlight-tags">
-                        <span className="mono">PIATTAFORMA: WEB</span>
-                        <span className="mono">FORMATO: MOBILE FIRST</span>
-                        <span className="mono">STATO: PUBBLICATO</span>
+                        <span className="mono">
+                            {t("game.spotlight.tags.platform")}
+                        </span>
+                        <span className="mono">
+                            {t("game.spotlight.tags.format")}
+                        </span>
+                        <span className="mono">
+                            {t("game.spotlight.tags.status")}
+                        </span>
                     </div>
                     <SpotlightCta
                         href="https://b-day-quiz.makso.me/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Prova il gioco ↗
+                        {t("game.spotlight.cta")}
                     </SpotlightCta>
                 </div>
                 <div className="spotlight-screens">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz3.png"
-                        alt="Screenshot del gioco — schermata 1"
+                        alt={t("game.spotlight.screenAlt1")}
                     />
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz2.png"
-                        alt="Screenshot del gioco — schermata 2"
+                        alt={t("game.spotlight.screenAlt2")}
                     />
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         src="/assets/quiz.png"
-                        alt="Screenshot del gioco — schermata 3"
+                        alt={t("game.spotlight.screenAlt3")}
                     />
                 </div>
-                <p className="spotlight-note">
-                    Il gioco è ottimizzato principalmente per dispositivi
-                    mobili. Le schermate mostrate rappresentano
-                    l&apos;esperienza pensata per smartphone.
-                </p>
+                <p className="spotlight-note">{t("game.spotlight.note")}</p>
             </Spotlight>
 
             <Block>
-                <h3>Cosa sto approfondendo con Godot</h3>
+                <h3>{t("game.skillsTitle")}</h3>
                 <Nodes>
-                    {SKILLS.map((s, i) => (
+                    {SKILL_KEYS.map((s, i) => (
                         <Node
-                            key={s.label}
+                            key={s.key}
                             $filled={s.filled}
                             style={{ animationDelay: `${0.08 * i}s` }}
                         >
                             <span className="dot" />
-                            {s.label}
+                            {t(`game.skills.${s.key}`)}
                         </Node>
                     ))}
                 </Nodes>
             </Block>
 
             <Projects>
-                <h3>Idee che diventano giocabili.</h3>
-                <p className="muted">
-                    Qui raccolgo giochi web, prototipi e progetti in sviluppo.
-                </p>
-                <p className="muted">
-                    Alcuni nascono per esplorare una meccanica, altri per creare
-                    un&apos;esperienza completa. Ogni progetto è
-                    un&apos;occasione per capire meglio come funzionano
-                    interazione, ritmo, difficoltà e divertimento.
-                </p>
+                <h3>{t("game.projects.title")}</h3>
+                <p className="muted">{t("game.projects.muted1")}</p>
+                <p className="muted">{t("game.projects.muted2")}</p>
                 <ProtoCard>
                     <div className="clip">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             src="/assets/zodiac_lullaby.png"
-                            alt="Concept visuale del primo gioco web"
+                            alt={t("game.projects.proto.imageAlt")}
                         />
                     </div>
                     <div className="meta">
-                        <h4>Primo gioco Godot</h4>
-                        <p>
-                            Un&apos;esperienza interattiva costruita per il
-                            browser, tra meccanica semplice e ritmo di gioco.
-                        </p>
+                        <h4>{t("game.projects.proto.title")}</h4>
+                        <p>{t("game.projects.proto.desc")}</p>
                         <p className="ai-note">
-                            Concept visuale generato con IA, utilizzato come
-                            placeholder per rappresentare l&apos;idea e
-                            l&apos;atmosfera del gioco. Non è materiale
-                            artistico definitivo.
+                            {t("game.projects.proto.aiNote")}
                         </p>
                         <div className="tags">
-                            <span className="mono">PIATTAFORMA: GODOT</span>
-                            <span className="mono">TIPO: GIOCO</span>
-                            <span className="mono">STATO: IN SVILUPPO</span>
+                            <span className="mono">
+                                {t("game.projects.proto.tags.platform")}
+                            </span>
+                            <span className="mono">
+                                {t("game.projects.proto.tags.type")}
+                            </span>
+                            <span className="mono">
+                                {t("game.projects.proto.tags.status")}
+                            </span>
                         </div>
-                        <span className="build mono">BUILD 0.1.0</span>
+                        <span className="build mono">
+                            {t("game.projects.proto.build")}
+                        </span>
                     </div>
                 </ProtoCard>
             </Projects>
 
             <Block>
-                <h3>Costruire esperienze che invitano a giocare.</h3>
-                <p className="muted">
-                    Voglio continuare a sviluppare giochi per il web e, allo
-                    stesso tempo, far crescere le mie competenze con Godot.
-                </p>
-                <p className="muted">
-                    L&apos;obiettivo è unire ciò che già conosco del web con
-                    strumenti e logiche proprie del game development, per creare
-                    esperienze più curate, interattive e memorabili.
-                </p>
+                <h3>{t("game.vision.title")}</h3>
+                <p className="muted">{t("game.vision.p1")}</p>
+                <p className="muted">{t("game.vision.p2")}</p>
             </Block>
         </Section>
     );

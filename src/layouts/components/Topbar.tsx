@@ -3,18 +3,19 @@ import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import { useOnClickOutside } from "@hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+import { LanguageSelector } from "./LanguageSelector";
+
 const NAV_LINKS = [
-    { label: "Web Development", href: "/#web" },
-    { label: "Game Development", href: "/#game" },
-    { label: "Educazione Cinofila", href: "/#cinofila" },
-    { label: "Articoli", href: "/#articles" },
-    { label: "Chi sono", href: "/#about" },
-    { label: "Contatti", href: "/#contact" },
-];
+    { key: "web", href: "/#web" },
+    { key: "game", href: "/#game" },
+    { key: "contact", href: "/#contact" },
+] as const;
 
 export const TopBar: React.FC = () => {
+    const { t } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const drawerRef = useRef<HTMLDivElement>(null);
@@ -66,27 +67,30 @@ export const TopBar: React.FC = () => {
                             className="nav-link"
                             href={link.href}
                         >
-                            {link.label}
+                            {t(`nav.${link.key}`)}
                         </a>
                     ))}
                 </NavLinks>
-                <MenuButton
-                    type="button"
-                    aria-label={menuOpen ? "Chiudi menu" : "Apri menu"}
-                    aria-expanded={menuOpen}
-                    onClick={() => setMenuOpen((v) => !v)}
-                >
-                    {menuOpen ? <RiCloseLine /> : <RiMenuLine />}
-                </MenuButton>
+                <Tools>
+                    <LanguageSelector />
+                    <MenuButton
+                        type="button"
+                        aria-label={menuOpen ? t("menu.close") : t("menu.open")}
+                        aria-expanded={menuOpen}
+                        onClick={() => setMenuOpen((v) => !v)}
+                    >
+                        {menuOpen ? <RiCloseLine /> : <RiMenuLine />}
+                    </MenuButton>
+                </Tools>
             </Wrapper>
 
             <Backdrop $open={menuOpen} aria-hidden="true" />
             <Drawer ref={drawerRef} $open={menuOpen} aria-hidden={!menuOpen}>
                 <DrawerHeader>
-                    <span className="title mono">MENU</span>
+                    <span className="title mono">{t("menu.title")}</span>
                     <button
                         type="button"
-                        aria-label="Chiudi menu"
+                        aria-label={t("menu.close")}
                         onClick={closeMenu}
                     >
                         <RiCloseLine />
@@ -95,7 +99,7 @@ export const TopBar: React.FC = () => {
                 <DrawerNav>
                     {NAV_LINKS.map((link) => (
                         <a key={link.href} href={link.href} onClick={closeMenu}>
-                            {link.label}
+                            {t(`nav.${link.key}`)}
                         </a>
                     ))}
                 </DrawerNav>
@@ -256,12 +260,25 @@ const NavLinks = styled.nav`
     }
 `;
 
+const Tools = styled.div`
+    display: flex;
+    align-items: center;
+    gap: ${$uw(0.6)};
+    margin-left: ${$uw(0.5)};
+    ${$breakPoint(820)} {
+        gap: ${$uw(0.8)};
+    }
+    ${$breakPoint(500)} {
+        margin-left: auto;
+        gap: ${$uw(1)};
+    }
+`;
+
 const MenuButton = styled.button`
     display: none;
     background: transparent;
     border: none;
     padding: ${$uw(0.5)};
-    margin-left: auto;
     cursor: pointer;
     color: inherit;
     border-radius: 4px;

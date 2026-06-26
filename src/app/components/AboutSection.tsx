@@ -3,16 +3,19 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
-
-const TYPED_TEXT = "Curiosità\napplicata.";
+import { useTranslation } from "react-i18next";
 
 export const AboutSection = () => {
+    const { t, i18n } = useTranslation();
+    const typedText = t("about.typed");
     const [typed, setTyped] = useState("");
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const node = ref.current;
         if (!node) return;
+        // Reset al cambio lingua
+        setTyped("");
         let interval: ReturnType<typeof setInterval> | undefined;
         const observer = new IntersectionObserver(
             (entries) => {
@@ -20,8 +23,8 @@ export const AboutSection = () => {
                     let i = 0;
                     interval = setInterval(() => {
                         i += 1;
-                        setTyped(TYPED_TEXT.slice(0, i));
-                        if (i >= TYPED_TEXT.length && interval)
+                        setTyped(typedText.slice(0, i));
+                        if (i >= typedText.length && interval)
                             clearInterval(interval);
                     }, 90);
                 }
@@ -33,7 +36,7 @@ export const AboutSection = () => {
             observer.disconnect();
             if (interval) clearInterval(interval);
         };
-    }, []);
+    }, [typedText, i18n.language]);
 
     return (
         <Section id="about" ref={ref}>
@@ -45,29 +48,16 @@ export const AboutSection = () => {
                     <img
                         className="portrait"
                         src="/assets/presentation.png"
-                        alt="Foto di Maksim Leali"
+                        alt={t("about.portraitAlt")}
                     />
                 </div>
             </Visual>
             <Copy>
-                <span className="tech-label">CHI SONO</span>
-                <h2>Progetto, osservo, sperimento.</h2>
-                <p>
-                    Sono Maksim, web developer con oltre 8 anni di esperienza.
-                    Il web è il mio lavoro principale: progetto siti di
-                    presentazione per aiutare attività, professionisti e aziende
-                    a raccontarsi meglio online.
-                </p>
-                <p>
-                    Accanto al lavoro, sto approfondendo due percorsi che mi
-                    stanno insegnando molto: l&apos;educazione cinofila
-                    cognitivo-relazionale e il game development con Godot.
-                </p>
-                <p>
-                    Sono ambiti diversi, ma hanno qualcosa in comune: richiedono
-                    ascolto, osservazione, pazienza e la capacità di costruire
-                    esperienze che abbiano senso per chi le vive.
-                </p>
+                <span className="tech-label">{t("about.techLabel")}</span>
+                <h2>{t("about.title")}</h2>
+                <p>{t("about.p1")}</p>
+                <p>{t("about.p2")}</p>
+                <p>{t("about.p3")}</p>
                 <Typed className="mono">
                     {typed}
                     <span className="caret">_</span>

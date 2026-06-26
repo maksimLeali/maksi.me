@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { DebugGrid } from "@lemaks/grid_system";
 import { $breakPoint, $uw } from "@theme";
 import { useHotkeys } from "react-hotkeys-hook";
+import { I18nProvider } from "@i18n";
 
 type Props = {
     children: ReactNode;
@@ -15,14 +16,16 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
 
     useHotkeys("mod+alt+g", () => setVisible(!visible));
     return (
-        <Container>
-            <TopBar />
-            <MainWrapper id="mainWrapper">
-                <MainBody>{children}</MainBody>
-                <DebugGrid visible={visible} setVisible={setVisible} />
-            </MainWrapper>
-            <Footer />
-        </Container>
+        <I18nProvider>
+            <Container>
+                <TopBar />
+                <MainWrapper id="mainWrapper">
+                    <MainBody>{children}</MainBody>
+                    <DebugGrid visible={visible} setVisible={setVisible} />
+                </MainWrapper>
+                <Footer />
+            </Container>
+        </I18nProvider>
     );
 };
 

@@ -3,58 +3,53 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { RiArrowRightUpLine, RiCornerDownRightLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
-const FEATURED = {
-    category: "REACT / STYLED-COMPONENTS / RESPONSIVE DESIGN",
-    title: "Enhancing React Development with Dynamic Styled Components and a Custom Grid System",
-    desc: "Un approfondimento su come usare funzioni e utility personalizzate con styled-components per gestire colori, spaziature, breakpoint e un sistema grid responsive costruito su misura.",
-    meta: "8 min di lettura · Medium · 30 maggio 2024",
-    href: "https://medium.com/@xmaksimlealix/enhancing-react-development-with-dynamic-styled-components-and-a-custom-grid-system-64b187f17e0d",
-};
-
+const FEATURED_HREF =
+    "https://medium.com/@xmaksimlealix/enhancing-react-development-with-dynamic-styled-components-and-a-custom-grid-system-64b187f17e0d";
 const PROFILE_URL = "https://medium.com/@xmaksimlealix";
 
 export const ArticlesSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="articles">
             <Header>
-                <span className="tech-label cyan">04 / ARTICOLI</span>
-                <h2>Scrivo di ciò che sto costruendo.</h2>
-                <p>
-                    Raccolgo qui articoli, appunti tecnici e approfondimenti
-                    nati dai miei progetti.
-                </p>
-                <p>
-                    Non sono contenuti pubblicati automaticamente: seleziono
-                    solo quelli che rappresentano bene il mio modo di lavorare,
-                    le tecnologie che uso e le idee che voglio condividere.
-                </p>
+                <span className="tech-label cyan">
+                    {t("articles.techLabel")}
+                </span>
+                <h2>{t("articles.title")}</h2>
+                <p>{t("articles.p1")}</p>
+                <p>{t("articles.p2")}</p>
                 <Cta
                     href={PROFILE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Scopri gli articoli
+                    {t("articles.cta")}
                     <RiCornerDownRightLine />
                 </Cta>
             </Header>
 
             <Featured>
-                <h3>Articolo in evidenza</h3>
+                <h3>{t("articles.featured.title")}</h3>
                 <Card
-                    href={FEATURED.href}
+                    href={FEATURED_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <CardCopy>
                         <span className="category tech-label cyan">
-                            {FEATURED.category}
+                            {t("articles.featured.category")}
                         </span>
-                        <h4>{FEATURED.title}</h4>
-                        <p className="desc">{FEATURED.desc}</p>
-                        <span className="meta mono">{FEATURED.meta}</span>
+                        <h4>{t("articles.featured.articleTitle")}</h4>
+                        <p className="desc">
+                            {t("articles.featured.articleDesc")}
+                        </p>
+                        <span className="meta mono">
+                            {t("articles.featured.meta")}
+                        </span>
                         <span className="read mono">
-                            Leggi l&apos;articolo su Medium
+                            {t("articles.featured.read")}
                             <RiArrowRightUpLine />
                         </span>
                     </CardCopy>

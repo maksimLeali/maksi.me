@@ -1,0 +1,309 @@
+{
+    "nav": {
+        "web": "Web Development",
+        "game": "Game Development",
+        "contact": "Contact"
+    },
+    "menu": {
+        "open": "Open menu",
+        "close": "Close menu",
+        "title": "MENU"
+    },
+    "footer": {
+        "tagline": "Web Development · Dog Training · Game Development",
+        "claim": "I build essential experiences.",
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy",
+        "terms": "Terms and Conditions"
+    },
+    "language": {
+        "selector": "Select language",
+        "it": "IT-it",
+        "en": "EN-en",
+        "fr": "FR-fr",
+        "es": "ES-es"
+    },
+    "main": {
+        "rotatingWords": [
+            "essential",
+            "clear",
+            "useful",
+            "playable",
+            "mindful"
+        ],
+        "titleLine1": "I build",
+        "titleLine2": "experiences",
+        "lead1": "I design websites, study the relationship between people and dogs, and experiment with game development.",
+        "lead2": "Three different paths, one direction: observe, simplify and build something that truly works.",
+        "techLabel": "WEB / GAME DEVELOPMENT / DOG TRAINING",
+        "ctaPrimary": "Explore my world",
+        "ctaGhost": "Get in touch",
+        "scrollDown": "Discover more"
+    },
+    "manifesto": {
+        "techLabel": "MANIFESTO",
+        "title": "Three directions. One way of working.",
+        "intro": "I'm not interested in adding complexity where it isn't needed. In every project I start with the essentials: understanding the context, observing what matters, and building an experience that's simpler to live with.",
+        "columns": {
+            "clarity": {
+                "context": "On the web I look for",
+                "keyword": "clarity",
+                "desc": "Understand the context, remove the superfluous and make every page easy to read."
+            },
+            "comprehension": {
+                "context": "With dogs I look for",
+                "keyword": "understanding",
+                "desc": "Observe the individual, listen to their signals and build trust, one step at a time."
+            },
+            "interaction": {
+                "context": "In video games I look for",
+                "keyword": "interaction",
+                "desc": "Turn an idea into a mechanic, and a mechanic into an experience worth playing."
+            }
+        }
+    },
+    "web": {
+        "techLabel": "01 / WEB DEVELOPMENT",
+        "title": "Websites that tell who you really are.",
+        "intro": "For over 8 years I've been designing and developing showcase websites for professionals, local businesses and companies. I create digital experiences that are tidy, fast and built to help visitors immediately grasp one thing: why choose you.",
+        "cta": "Let's talk about your site",
+        "mockupAltDesktop": "Desktop mockup of a site developed by LeMaks",
+        "mockupAltMobile": "Mobile mockup of a site developed by LeMaks",
+        "block1Title": "I design sites that work before they look good.",
+        "block1Muted": "An effective site doesn't just need good design. It must guide, explain, reassure and lead people toward a concrete action.",
+        "services": {
+            "showcase": {
+                "title": "Showcase sites",
+                "desc": "For professionals and businesses who want to tell their story clearly."
+            },
+            "corporate": {
+                "title": "Corporate sites",
+                "desc": "For companies that need a credible and well-organised online presence."
+            },
+            "landing": {
+                "title": "Landing pages",
+                "desc": "For services, campaigns, products or ideas to be presented directly."
+            },
+            "restyling": {
+                "title": "Restyling",
+                "desc": "To turn a dated site into a clearer, faster and more up-to-date tool."
+            }
+        },
+        "block2Title": "Strategy, design and development in the same path.",
+        "block2Muted": "Every project starts with a simple question: what should a person understand when they land on your site? From there I build structure, content, design and development.",
+        "process": {
+            "01": "Understand goals and audience",
+            "02": "Organise content and structure",
+            "03": "Design a coherent interface",
+            "04": "Develop, test and optimise",
+            "05": "Publish a site ready to grow"
+        }
+    },
+    "game": {
+        "techLabel": "02 / GAME DEVELOPMENT",
+        "title": "I build games for the web. Now I'm also exploring Godot.",
+        "intro1": "I've already created games as web apps, turning ideas and mechanics into experiences accessible right from the browser.",
+        "intro2": "Today I'm digging deeper into Godot to approach game development in a more structured way: prototyping, game design, physics, interactions and building small playable worlds.",
+        "cta": "Explore my games",
+        "previewAlt": "Controller and game screen",
+        "credit": {
+            "by": "Photo by",
+            "on": "on"
+        },
+        "browserBlock": {
+            "title": "From the browser to the game engine.",
+            "p1": "My journey in game development started on the web: games and small interactive experiences built to be immediate, accessible and playable anywhere.",
+            "p2": "Now I'm studying Godot to broaden the way I design games, experimenting with tools designed specifically for game development.",
+            "p3": "I'm not starting from scratch: I bring the experience I built in web development, interface design and creating clear interactions."
+        },
+        "createBlock": {
+            "title": "What I create"
+        },
+        "categories": {
+            "webApp": {
+                "title": "Web app games",
+                "desc": "Interactive experiences accessible from the browser, designed to be easy to launch and engaging to play."
+            },
+            "prototypes": {
+                "title": "Prototypes and mechanics",
+                "desc": "Small experiments to test ideas, rules, pacing and game feedback."
+            },
+            "godot": {
+                "title": "Godot projects",
+                "desc": "New exercises and prototypes built to deepen my 2D development, GDScript, physics and level design."
+            }
+        },
+        "spotlight": {
+            "techLabel": "WEB GAME / MOBILE FIRST",
+            "title": "A word game, designed for the screen in your hand.",
+            "p1": "A small web game inspired by guess-the-word games: simple to understand, quick to play and designed to work best on a smartphone.",
+            "p2": "The goal is to guess the right word through attempts, hints and visual feedback. Every choice must be immediate, readable and satisfying.",
+            "tags": {
+                "platform": "PLATFORM: WEB",
+                "format": "FORMAT: MOBILE FIRST",
+                "status": "STATUS: PUBLISHED"
+            },
+            "cta": "Try the game ↗",
+            "screenAlt1": "Game screenshot — screen 1",
+            "screenAlt2": "Game screenshot — screen 2",
+            "screenAlt3": "Game screenshot — screen 3",
+            "note": "The game is mainly optimised for mobile devices. The screens shown reflect the smartphone experience."
+        },
+        "skillsTitle": "What I'm exploring with Godot",
+        "skills": {
+            "gdscript": "GDScript",
+            "twod": "2D development",
+            "physics": "Movement and physics",
+            "interactions": "Object interactions",
+            "ui": "UI and game feedback",
+            "leveldesign": "Level design",
+            "prototyping": "Prototyping"
+        },
+        "projects": {
+            "title": "Ideas that become playable.",
+            "muted1": "Here I gather web games, prototypes and projects in development.",
+            "muted2": "Some are born to explore a mechanic, others to create a complete experience. Each project is a chance to better understand how interaction, pacing, difficulty and fun really work.",
+            "proto": {
+                "imageAlt": "Visual concept of the first web game",
+                "title": "First Godot game",
+                "desc": "An interactive experience built for the browser, between simple mechanics and game pacing.",
+                "aiNote": "Visual concept generated with AI, used as a placeholder to convey the idea and atmosphere of the game. Not final artwork.",
+                "tags": {
+                    "platform": "PLATFORM: GODOT",
+                    "type": "TYPE: GAME",
+                    "status": "STATUS: IN DEVELOPMENT"
+                },
+                "build": "BUILD 0.1.0"
+            }
+        },
+        "vision": {
+            "title": "Building experiences that invite you to play.",
+            "p1": "I want to keep building games for the web and, at the same time, grow my skills with Godot.",
+            "p2": "The goal is to combine what I already know about the web with tools and logic specific to game development, to create more curated, interactive and memorable experiences."
+        }
+    },
+    "cinofila": {
+        "techLabel": "03 / DOG TRAINING",
+        "title": "Understanding the dog is the first step in training them.",
+        "intro": "I'm studying the cognitive-relational method to learn to observe the dog as an individual: with emotions, needs, experiences and their own way of communicating. A learning journey carried out with seriousness, study and respect.",
+        "cta": "Discover my path",
+        "photoAlt1": "Dog during a training session",
+        "photoAlt2": "Dog in a relaxed moment",
+        "photoAlt3": "A moment of connection with the dog",
+        "approach": {
+            "title": "Every dog has a story. That's where we begin.",
+            "p1Before": "There are no standard solutions that work for everyone. Every path starts from ",
+            "p1Highlight1": "observation",
+            "p1After": " of the dog, the context they live in and the needs of their family.",
+            "p2Before": "The cognitive-relational method values ",
+            "p2Highlight1": "collaboration",
+            "p2Middle": " and ",
+            "p2Highlight2": "trust",
+            "p2After": ". The goal isn't a perfect dog, but a dog who is calmer, listened to and able to face the world alongside their person."
+        },
+        "topics": {
+            "title": "Small steps, useful in real life.",
+            "items": {
+                "puppies": {
+                    "title": "Puppies and first months",
+                    "desc": "Routines, settling into the family and building the first foundations.",
+                    "hint": "Building calm habits right from the start."
+                },
+                "communication": {
+                    "title": "Communication",
+                    "desc": "Learning to read signals, needs and moments of difficulty.",
+                    "hint": "Listen before asking."
+                },
+                "walking": {
+                    "title": "Walking and environment",
+                    "desc": "Creating calmer experiences inside and outside the home.",
+                    "hint": "The environment is part of the education."
+                },
+                "adopted": {
+                    "title": "Adopted dogs",
+                    "desc": "Welcoming the dog's history and gradually building new habits.",
+                    "hint": "Every story deserves time."
+                }
+            }
+        },
+        "diary": {
+            "title": "I study, observe, learn.",
+            "desc": "This space gathers notes, reflections and observations from my learning journey. It doesn't aim to give absolute answers: it wants to share better questions and a more mindful way of being alongside dogs.",
+            "soon": "DIARY COMING SOON"
+        }
+    },
+    "articles": {
+        "techLabel": "04 / ARTICLES",
+        "title": "I write about what I'm building.",
+        "p1": "Here I collect articles, technical notes and deep dives born from my projects.",
+        "p2": "It's not auto-published content: I only pick the ones that best represent how I work, the technologies I use and the ideas I want to share.",
+        "cta": "Discover the articles",
+        "featured": {
+            "title": "Featured article",
+            "category": "REACT / STYLED-COMPONENTS / RESPONSIVE DESIGN",
+            "articleTitle": "Enhancing React Development with Dynamic Styled Components and a Custom Grid System",
+            "articleDesc": "A deep dive into how to use custom functions and utilities with styled-components to manage colours, spacing, breakpoints and a tailor-made responsive grid system.",
+            "meta": "8 min read · Medium · May 30, 2024",
+            "read": "Read the article on Medium"
+        }
+    },
+    "about": {
+        "techLabel": "ABOUT ME",
+        "title": "I design, observe, experiment.",
+        "p1": "I'm Maksim, a web developer with over 8 years of experience. The web is my main job: I design showcase sites to help businesses, professionals and companies tell their story better online.",
+        "p2": "Alongside work, I'm exploring two paths that are teaching me a lot: cognitive-relational dog training and game development with Godot.",
+        "p3": "They're different fields, but they have something in common: they require listening, observation, patience and the ability to build experiences that make sense for those who live them.",
+        "typed": "Applied\ncuriosity.",
+        "portraitAlt": "Photo of Maksim Leali"
+    },
+    "services": {
+        "techLabel": "SERVICES",
+        "title": "What I can do for you",
+        "subtitle": "I work with local businesses, associations, events and small operations. Drop me a line to see if I can help.",
+        "items": {
+            "local": {
+                "title": "Sites for events and local businesses",
+                "desc": "Fast, mobile and easy-to-share landing pages: schedule, maps, contacts, sign-ups and social links. All in one place, so information doesn't stay scattered between posts and flyers."
+            },
+            "automation": {
+                "title": "Automations to reduce manual work",
+                "desc": "Forms, requests, confirmations, reminders, management sheets and small processes wired together. Fewer messages to handle by hand, more time for the work that matters."
+            }
+        },
+        "cta": "Let's talk about your site or your automation →"
+    },
+    "contact": {
+        "techLabel": "CONTACT",
+        "title": "Let's talk about your site or your automation",
+        "subtitle": "Do you have an event, a business or a process you want to make easier to run? Drop me a line: I reply within 24 hours to figure out together if I can help.",
+        "privacyNote": "The data entered will be used exclusively to reply to your contact request and will not be used for marketing purposes without your consent.",
+        "privacyMore": "For more information, see the ",
+        "privacyLink": "Privacy Notice",
+        "asideTitle": "Where to find me",
+        "form": {
+            "labels": {
+                "name": "First name",
+                "surname": "Last name",
+                "email": "Email",
+                "company": "Company or project",
+                "message": "Message"
+            },
+            "errors": {
+                "name": "Please enter your first name.",
+                "surname": "Please enter your last name.",
+                "email": "Please enter your email.",
+                "emailPattern": "Please enter a valid email address.",
+                "company": "Please enter the name of the company or project.",
+                "message": "Please enter your message.",
+                "privacy": "You must accept the privacy notice.",
+                "unknown": "Unknown error.",
+                "network": "Send failed. Check your connection."
+            },
+            "privacyBefore": "I have read the ",
+            "privacyLink": "privacy notice",
+            "submit": "SEND MESSAGE",
+            "sending": "SENDING…",
+            "success": "✓ Message sent. I'll reply as soon as possible."
+        }
+    }
+}

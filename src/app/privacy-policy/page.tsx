@@ -34,9 +34,7 @@ export default function PrivacyPolicy() {
                 <List>
                     <li>nome;</li>
                     <li>indirizzo e-mail;</li>
-                    <li>
-                        azienda o progetto, se inserito dall&apos;utente;
-                    </li>
+                    <li>azienda o progetto, se inserito dall&apos;utente;</li>
                     <li>
                         indicazioni sulla richiesta o sul servizio di interesse;
                     </li>
@@ -62,8 +60,8 @@ export default function PrivacyPolicy() {
                 </Paragraph>
                 <Paragraph>
                     Umami è utilizzato esclusivamente per comprendere in forma
-                    statistica e aggregata come viene utilizzato il sito. Possono
-                    essere trattati dati tecnici e di navigazione quali:
+                    statistica e aggregata come viene utilizzato il sito.
+                    Possono essere trattati dati tecnici e di navigazione quali:
                 </Paragraph>
                 <List>
                     <li>
@@ -79,15 +77,15 @@ export default function PrivacyPolicy() {
                 </List>
                 <Paragraph>
                     Il tracker è configurato per non raccogliere parametri di
-                    ricerca e frammenti degli URL. L&apos;indirizzo IP può essere
-                    utilizzato temporaneamente dal sistema per ricavare
+                    ricerca e frammenti degli URL. L&apos;indirizzo IP può
+                    essere utilizzato temporaneamente dal sistema per ricavare
                     informazioni statistiche geografiche, ma non viene
                     memorizzato da Umami.
                 </Paragraph>
                 <Paragraph>
                     Il sito non utilizza cookie di profilazione, cookie
-                    pubblicitari, strumenti di remarketing o tecnologie destinate
-                    a seguire l&apos;utente tra siti diversi.
+                    pubblicitari, strumenti di remarketing o tecnologie
+                    destinate a seguire l&apos;utente tra siti diversi.
                 </Paragraph>
 
                 <SubSectionTitle>Log tecnici</SubSectionTitle>
@@ -103,9 +101,7 @@ export default function PrivacyPolicy() {
 
             <Section>
                 <SectionTitle>3. Finalità del trattamento</SectionTitle>
-                <Paragraph>
-                    I dati personali sono trattati per:
-                </Paragraph>
+                <Paragraph>I dati personali sono trattati per:</Paragraph>
                 <List>
                     <li>
                         rispondere alle richieste inviate tramite il modulo di
@@ -156,10 +152,9 @@ export default function PrivacyPolicy() {
                         aggregato il suo utilizzo;
                     </li>
                     <li>
-                        sulla base del consenso dell&apos;utente,
-                        esclusivamente quando richiesto per finalità ulteriori
-                        non necessarie, quali eventuali future comunicazioni
-                        marketing.
+                        sulla base del consenso dell&apos;utente, esclusivamente
+                        quando richiesto per finalità ulteriori non necessarie,
+                        quali eventuali future comunicazioni marketing.
                     </li>
                 </List>
             </Section>

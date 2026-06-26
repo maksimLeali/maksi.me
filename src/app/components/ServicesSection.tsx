@@ -4,47 +4,36 @@ import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import Link from "next/link";
 import styled from "styled-components";
 import { RiGlobalLine, RiFlowChart } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
-const SERVICES = [
-    {
-        icon: <RiGlobalLine />,
-        title: "Siti per eventi e attività locali",
-        desc: "Landing page rapide, mobile e facili da condividere: programma, mappe, contatti, iscrizioni e link social. Tutto in un posto solo, senza che le informazioni restino sparse tra post e locandine.",
-        accent: "tertiary",
-    },
-    {
-        icon: <RiFlowChart />,
-        title: "Automazioni per ridurre il lavoro manuale",
-        desc: "Moduli, richieste, conferme, promemoria, fogli di gestione e piccoli processi collegati tra loro. Meno messaggi da gestire a mano, più tempo per il lavoro che conta.",
-        accent: "primary",
-    },
-];
+const SERVICE_KEYS = [
+    { key: "local", icon: <RiGlobalLine />, accent: "tertiary" },
+    { key: "automation", icon: <RiFlowChart />, accent: "primary" },
+] as const;
 
 export const ServicesSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="servizi">
             <Header>
-                <span className="tech-label cyan">SERVIZI</span>
-                <h2>Cosa posso fare per te</h2>
-                <p>
-                    Lavoro con realtà locali, associazioni, eventi e piccole
-                    attività. Scrivimi per capire se posso aiutarti.
-                </p>
+                <span className="tech-label cyan">
+                    {t("services.techLabel")}
+                </span>
+                <h2>{t("services.title")}</h2>
+                <p>{t("services.subtitle")}</p>
             </Header>
 
             <Grid>
-                {SERVICES.map((s) => (
-                    <Card key={s.title} $accent={s.accent}>
+                {SERVICE_KEYS.map((s) => (
+                    <Card key={s.key} $accent={s.accent}>
                         <IconWrap $accent={s.accent}>{s.icon}</IconWrap>
-                        <h3>{s.title}</h3>
-                        <p>{s.desc}</p>
+                        <h3>{t(`services.items.${s.key}.title`)}</h3>
+                        <p>{t(`services.items.${s.key}.desc`)}</p>
                     </Card>
                 ))}
             </Grid>
 
-            <CTA href="#contact">
-                Parliamo del tuo sito o della tua automazione →
-            </CTA>
+            <CTA href="#contact">{t("services.cta")}</CTA>
         </Section>
     );
 };

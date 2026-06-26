@@ -1,0 +1,309 @@
+{
+    "nav": {
+        "web": "Web Development",
+        "game": "Game Development",
+        "contact": "Contatti"
+    },
+    "menu": {
+        "open": "Apri menu",
+        "close": "Chiudi menu",
+        "title": "MENU"
+    },
+    "footer": {
+        "tagline": "Web Development · Educazione Cinofila · Game Development",
+        "claim": "Realizzo esperienze essenziali.",
+        "privacy": "Privacy Policy",
+        "cookies": "Cookie Policy",
+        "terms": "Termini e condizioni"
+    },
+    "language": {
+        "selector": "Seleziona lingua",
+        "it": "IT-it",
+        "en": "EN-en",
+        "fr": "FR-fr",
+        "es": "ES-es"
+    },
+    "main": {
+        "rotatingWords": [
+            "essenziali",
+            "chiare",
+            "utili",
+            "giocabili",
+            "consapevoli"
+        ],
+        "titleLine1": "Realizzo",
+        "titleLine2": "esperienze",
+        "lead1": "Progetto siti web, studio la relazione tra persone e cani e sperimento con il game development.",
+        "lead2": "Tre percorsi diversi, un'unica direzione: osservare, semplificare e costruire qualcosa che funzioni davvero.",
+        "techLabel": "WEB / GAME DEVELOPMENT / CINOFILIA",
+        "ctaPrimary": "Esplora il mio mondo",
+        "ctaGhost": "Contattami",
+        "scrollDown": "Scopri di più"
+    },
+    "manifesto": {
+        "techLabel": "MANIFESTO",
+        "title": "Tre direzioni. Un solo modo di lavorare.",
+        "intro": "Non mi interessa aggiungere complessità dove non serve. In ogni progetto parto dall'essenziale: capire il contesto, osservare ciò che conta e costruire un'esperienza più semplice da vivere.",
+        "columns": {
+            "clarity": {
+                "context": "Nel web cerco",
+                "keyword": "chiarezza",
+                "desc": "Capire il contesto, togliere il superfluo e rendere ogni pagina facile da leggere."
+            },
+            "comprehension": {
+                "context": "Con i cani cerco",
+                "keyword": "comprensione",
+                "desc": "Osservare l'individuo, ascoltare i suoi segnali e costruire fiducia, un passo alla volta."
+            },
+            "interaction": {
+                "context": "Nei videogiochi cerco",
+                "keyword": "interazione",
+                "desc": "Trasformare un'idea in una meccanica, e una meccanica in un'esperienza da giocare."
+            }
+        }
+    },
+    "web": {
+        "techLabel": "01 / WEB DEVELOPMENT",
+        "title": "Siti web che raccontano bene chi sei.",
+        "intro": "Da oltre 8 anni progetto e sviluppo siti di presentazione per professionisti, attività locali e aziende. Creo esperienze digitali ordinate, veloci e costruite per aiutare chi visita il sito a capire subito una cosa: perché scegliere proprio te.",
+        "cta": "Parliamo del tuo sito",
+        "mockupAltDesktop": "Mockup desktop di un sito sviluppato da LeMaks",
+        "mockupAltMobile": "Mockup mobile di un sito sviluppato da LeMaks",
+        "block1Title": "Progetto siti che funzionano prima ancora di essere belli.",
+        "block1Muted": "Un sito efficace non deve solo avere un buon design. Deve guidare, spiegare, rassicurare e portare le persone verso un'azione concreta.",
+        "services": {
+            "showcase": {
+                "title": "Siti vetrina",
+                "desc": "Per professionisti e attività che vogliono raccontarsi con chiarezza."
+            },
+            "corporate": {
+                "title": "Siti aziendali",
+                "desc": "Per aziende che hanno bisogno di una presenza online credibile e ordinata."
+            },
+            "landing": {
+                "title": "Landing page",
+                "desc": "Per servizi, campagne, prodotti o idee da presentare in modo diretto."
+            },
+            "restyling": {
+                "title": "Restyling",
+                "desc": "Per trasformare un sito datato in uno strumento più chiaro, veloce e attuale."
+            }
+        },
+        "block2Title": "Strategia, design e sviluppo nello stesso percorso.",
+        "block2Muted": "Ogni progetto parte da una domanda semplice: cosa deve capire una persona quando arriva sul tuo sito? Da lì costruisco struttura, contenuti, design e sviluppo.",
+        "process": {
+            "01": "Capire obiettivi e pubblico",
+            "02": "Organizzare contenuti e struttura",
+            "03": "Disegnare un'interfaccia coerente",
+            "04": "Sviluppare, testare e ottimizzare",
+            "05": "Pubblicare un sito pronto a crescere"
+        }
+    },
+    "game": {
+        "techLabel": "02 / GAME DEVELOPMENT",
+        "title": "Creo giochi per il web. Ora sto esplorando anche Godot.",
+        "intro1": "Ho già realizzato giochi sotto forma di web app, trasformando idee e meccaniche in esperienze accessibili direttamente dal browser.",
+        "intro2": "Oggi sto approfondendo Godot per avvicinarmi in modo più strutturato allo sviluppo videoludico: prototipazione, game design, fisica, interazioni e costruzione di piccoli mondi giocabili.",
+        "cta": "Esplora i miei giochi",
+        "previewAlt": "Controller e schermo di gioco",
+        "credit": {
+            "by": "Foto di",
+            "on": "su"
+        },
+        "browserBlock": {
+            "title": "Dal browser al game engine.",
+            "p1": "Il mio percorso nel game development è iniziato dal web: giochi e piccole esperienze interattive costruite per essere immediate, accessibili e giocabili ovunque.",
+            "p2": "Ora sto studiando Godot per ampliare il mio modo di progettare giochi, sperimentando con strumenti pensati specificamente per il game development.",
+            "p3": "Non parto da zero: porto con me l'esperienza maturata nello sviluppo web, nella progettazione di interfacce e nella costruzione di interazioni chiare."
+        },
+        "createBlock": {
+            "title": "Cosa creo"
+        },
+        "categories": {
+            "webApp": {
+                "title": "Giochi web app",
+                "desc": "Esperienze interattive accessibili dal browser, progettate per essere semplici da avviare e coinvolgenti da giocare."
+            },
+            "prototypes": {
+                "title": "Prototipi e meccaniche",
+                "desc": "Piccoli esperimenti per testare idee, regole, ritmo e feedback di gioco."
+            },
+            "godot": {
+                "title": "Progetti con Godot",
+                "desc": "Nuovi esercizi e prototipi realizzati per approfondire lo sviluppo 2D, GDScript, fisica e level design."
+            }
+        },
+        "spotlight": {
+            "techLabel": "WEB GAME / MOBILE FIRST",
+            "title": "Un gioco di parole, pensato per lo schermo che hai in mano.",
+            "p1": "Un piccolo gioco web ispirato ai word game a tentativi: semplice da capire, rapido da giocare e progettato per funzionare al meglio da smartphone.",
+            "p2": "L'obiettivo è indovinare la parola corretta attraverso tentativi, indizi e feedback visivi. Ogni scelta deve essere immediata, leggibile e soddisfacente.",
+            "tags": {
+                "platform": "PIATTAFORMA: WEB",
+                "format": "FORMATO: MOBILE FIRST",
+                "status": "STATO: PUBBLICATO"
+            },
+            "cta": "Prova il gioco ↗",
+            "screenAlt1": "Screenshot del gioco — schermata 1",
+            "screenAlt2": "Screenshot del gioco — schermata 2",
+            "screenAlt3": "Screenshot del gioco — schermata 3",
+            "note": "Il gioco è ottimizzato principalmente per dispositivi mobili. Le schermate mostrate rappresentano l'esperienza pensata per smartphone."
+        },
+        "skillsTitle": "Cosa sto approfondendo con Godot",
+        "skills": {
+            "gdscript": "GDScript",
+            "twod": "Sviluppo 2D",
+            "physics": "Movimento e fisica",
+            "interactions": "Interazioni tra oggetti",
+            "ui": "UI e feedback di gioco",
+            "leveldesign": "Level design",
+            "prototyping": "Prototipazione"
+        },
+        "projects": {
+            "title": "Idee che diventano giocabili.",
+            "muted1": "Qui raccolgo giochi web, prototipi e progetti in sviluppo.",
+            "muted2": "Alcuni nascono per esplorare una meccanica, altri per creare un'esperienza completa. Ogni progetto è un'occasione per capire meglio come funzionano interazione, ritmo, difficoltà e divertimento.",
+            "proto": {
+                "imageAlt": "Concept visuale del primo gioco web",
+                "title": "Primo gioco Godot",
+                "desc": "Un'esperienza interattiva costruita per il browser, tra meccanica semplice e ritmo di gioco.",
+                "aiNote": "Concept visuale generato con IA, utilizzato come placeholder per rappresentare l'idea e l'atmosfera del gioco. Non è materiale artistico definitivo.",
+                "tags": {
+                    "platform": "PIATTAFORMA: GODOT",
+                    "type": "TIPO: GIOCO",
+                    "status": "STATO: IN SVILUPPO"
+                },
+                "build": "BUILD 0.1.0"
+            }
+        },
+        "vision": {
+            "title": "Costruire esperienze che invitano a giocare.",
+            "p1": "Voglio continuare a sviluppare giochi per il web e, allo stesso tempo, far crescere le mie competenze con Godot.",
+            "p2": "L'obiettivo è unire ciò che già conosco del web con strumenti e logiche proprie del game development, per creare esperienze più curate, interattive e memorabili."
+        }
+    },
+    "cinofila": {
+        "techLabel": "03 / EDUCAZIONE CINOFILA",
+        "title": "Capire il cane è il primo passo per educarlo.",
+        "intro": "Sto approfondendo il metodo cognitivo-relazionale per imparare a osservare il cane come individuo: con emozioni, bisogni, esperienze e un proprio modo di comunicare. Un percorso in formazione, portato avanti con serietà, studio e rispetto.",
+        "cta": "Scopri il mio percorso",
+        "photoAlt1": "Cane durante una sessione di educazione",
+        "photoAlt2": "Cane in un momento di relax",
+        "photoAlt3": "Momento di connessione con il cane",
+        "approach": {
+            "title": "Ogni cane ha una storia. Da lì si comincia.",
+            "p1Before": "Non esistono soluzioni standard valide per tutti. Ogni percorso parte dall'",
+            "p1Highlight1": "osservazione",
+            "p1After": " del cane, dal contesto in cui vive e dalle esigenze della sua famiglia.",
+            "p2Before": "Il metodo cognitivo-relazionale valorizza ",
+            "p2Highlight1": "collaborazione",
+            "p2Middle": " e ",
+            "p2Highlight2": "fiducia",
+            "p2After": ". L'obiettivo non è avere un cane perfetto, ma un cane più sereno, ascoltato e capace di affrontare il mondo accanto alla sua persona."
+        },
+        "topics": {
+            "title": "Piccoli passi, utili nella vita reale.",
+            "items": {
+                "puppies": {
+                    "title": "Cuccioli e primi mesi",
+                    "desc": "Routine, inserimento in famiglia e costruzione delle prime basi.",
+                    "hint": "Costruire abitudini serene fin da subito."
+                },
+                "communication": {
+                    "title": "Comunicazione",
+                    "desc": "Imparare a leggere segnali, bisogni e momenti di difficoltà.",
+                    "hint": "Ascoltare prima di chiedere."
+                },
+                "walking": {
+                    "title": "Passeggiata e ambiente",
+                    "desc": "Creare esperienze più serene dentro e fuori casa.",
+                    "hint": "L'ambiente è parte dell'educazione."
+                },
+                "adopted": {
+                    "title": "Cani adottati",
+                    "desc": "Accogliere la storia del cane e costruire nuove abitudini con gradualità.",
+                    "hint": "Ogni storia merita tempo."
+                }
+            }
+        },
+        "diary": {
+            "title": "Studio, osservo, imparo.",
+            "desc": "Questo spazio raccoglie appunti, riflessioni e osservazioni dal mio percorso di formazione. Non vuole dare risposte assolute: vuole condividere domande migliori e un modo più consapevole di stare accanto ai cani.",
+            "soon": "DIARIO IN ARRIVO"
+        }
+    },
+    "articles": {
+        "techLabel": "04 / ARTICOLI",
+        "title": "Scrivo di ciò che sto costruendo.",
+        "p1": "Raccolgo qui articoli, appunti tecnici e approfondimenti nati dai miei progetti.",
+        "p2": "Non sono contenuti pubblicati automaticamente: seleziono solo quelli che rappresentano bene il mio modo di lavorare, le tecnologie che uso e le idee che voglio condividere.",
+        "cta": "Scopri gli articoli",
+        "featured": {
+            "title": "Articolo in evidenza",
+            "category": "REACT / STYLED-COMPONENTS / RESPONSIVE DESIGN",
+            "articleTitle": "Enhancing React Development with Dynamic Styled Components and a Custom Grid System",
+            "articleDesc": "Un approfondimento su come usare funzioni e utility personalizzate con styled-components per gestire colori, spaziature, breakpoint e un sistema grid responsive costruito su misura.",
+            "meta": "8 min di lettura · Medium · 30 maggio 2024",
+            "read": "Leggi l'articolo su Medium"
+        }
+    },
+    "about": {
+        "techLabel": "CHI SONO",
+        "title": "Progetto, osservo, sperimento.",
+        "p1": "Sono Maksim, web developer con oltre 8 anni di esperienza. Il web è il mio lavoro principale: progetto siti di presentazione per aiutare attività, professionisti e aziende a raccontarsi meglio online.",
+        "p2": "Accanto al lavoro, sto approfondendo due percorsi che mi stanno insegnando molto: l'educazione cinofila cognitivo-relazionale e il game development con Godot.",
+        "p3": "Sono ambiti diversi, ma hanno qualcosa in comune: richiedono ascolto, osservazione, pazienza e la capacità di costruire esperienze che abbiano senso per chi le vive.",
+        "typed": "Curiosità\napplicata.",
+        "portraitAlt": "Foto di Maksim Leali"
+    },
+    "services": {
+        "techLabel": "SERVIZI",
+        "title": "Cosa posso fare per te",
+        "subtitle": "Lavoro con realtà locali, associazioni, eventi e piccole attività. Scrivimi per capire se posso aiutarti.",
+        "items": {
+            "local": {
+                "title": "Siti per eventi e attività locali",
+                "desc": "Landing page rapide, mobile e facili da condividere: programma, mappe, contatti, iscrizioni e link social. Tutto in un posto solo, senza che le informazioni restino sparse tra post e locandine."
+            },
+            "automation": {
+                "title": "Automazioni per ridurre il lavoro manuale",
+                "desc": "Moduli, richieste, conferme, promemoria, fogli di gestione e piccoli processi collegati tra loro. Meno messaggi da gestire a mano, più tempo per il lavoro che conta."
+            }
+        },
+        "cta": "Parliamo del tuo sito o della tua automazione →"
+    },
+    "contact": {
+        "techLabel": "CONTATTI",
+        "title": "Parliamo del tuo sito o della tua automazione",
+        "subtitle": "Hai un evento, un'attività o un processo che vuoi rendere più semplice da gestire? Scrivimi: ti rispondo entro 24 ore per capire insieme se posso aiutarti.",
+        "privacyNote": "I dati inseriti saranno utilizzati esclusivamente per rispondere alla tua richiesta di contatto e non saranno utilizzati per finalità di marketing senza il tuo consenso.",
+        "privacyMore": "Per maggiori informazioni, consulta l'",
+        "privacyLink": "Informativa Privacy",
+        "asideTitle": "Dove trovarmi",
+        "form": {
+            "labels": {
+                "name": "Nome",
+                "surname": "Cognome",
+                "email": "Email",
+                "company": "Azienda o progetto",
+                "message": "Messaggio"
+            },
+            "errors": {
+                "name": "Inserisci il nome.",
+                "surname": "Inserisci il cognome.",
+                "email": "Inserisci l'email.",
+                "emailPattern": "Inserisci un indirizzo email valido.",
+                "company": "Inserisci il nome dell'azienda o del progetto.",
+                "message": "Inserisci il messaggio.",
+                "privacy": "Devi accettare l'informativa sulla privacy.",
+                "unknown": "Errore sconosciuto.",
+                "network": "Invio non riuscito. Controlla la connessione."
+            },
+            "privacyBefore": "Ho letto l'",
+            "privacyLink": "informativa sulla privacy",
+            "submit": "INVIA IL MESSAGGIO",
+            "sending": "INVIO IN CORSO…",
+            "success": "✓ Messaggio inviato. Ti risponderò al più presto."
+        }
+    }
+}

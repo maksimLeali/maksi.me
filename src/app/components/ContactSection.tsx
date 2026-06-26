@@ -6,36 +6,36 @@ import Link from "next/link";
 import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiMailLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
 export const ContactSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="contact">
             <Header>
-                <span className="tech-label cyan">CONTATTI</span>
-                <h2>Parliamo del tuo sito o della tua automazione</h2>
-                <p>
-                    Hai un evento, un&apos;attività o un processo che vuoi
-                    rendere più semplice da gestire? Scrivimi: ti rispondo entro
-                    24 ore per capire insieme se posso aiutarti.
-                </p>
+                <span className="tech-label cyan">
+                    {t("contact.techLabel")}
+                </span>
+                <h2>{t("contact.title")}</h2>
+                <p>{t("contact.subtitle")}</p>
             </Header>
 
             <Body>
                 <FormWrapper>
                     <ContactForm width="100%" />
                     <PrivacyNote>
-                        I dati inseriti saranno utilizzati esclusivamente per
-                        rispondere alla tua richiesta di contatto e non saranno
-                        utilizzati per finalità di marketing senza il tuo
-                        consenso.
+                        {t("contact.privacyNote")}
                         <br />
-                        Per maggiori informazioni, consulta l&apos;
-                        <Link href="/privacy-policy">Informativa Privacy</Link>.
+                        {t("contact.privacyMore")}
+                        <Link href="/privacy-policy">
+                            {t("contact.privacyLink")}
+                        </Link>
+                        .
                     </PrivacyNote>
                 </FormWrapper>
 
                 <Aside>
-                    <h3>Dove trovarmi</h3>
+                    <h3>{t("contact.asideTitle")}</h3>
                     <a href="mailto:contact@lemaks.it">
                         <RiMailLine /> contact@lemaks.it
                     </a>

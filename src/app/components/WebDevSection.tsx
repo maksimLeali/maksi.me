@@ -3,60 +3,30 @@
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { RiCornerDownRightLine } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
 
-const SERVICES = [
-    {
-        n: "01",
-        title: "Siti vetrina",
-        desc: "Per professionisti e attività che vogliono raccontarsi con chiarezza.",
-        color: "primary",
-    },
-    {
-        n: "02",
-        title: "Siti aziendali",
-        desc: "Per aziende che hanno bisogno di una presenza online credibile e ordinata.",
-        color: "primary-dark",
-    },
-    {
-        n: "03",
-        title: "Landing page",
-        desc: "Per servizi, campagne, prodotti o idee da presentare in modo diretto.",
-        color: "aqua-dark",
-    },
-    {
-        n: "04",
-        title: "Restyling",
-        desc: "Per trasformare un sito datato in uno strumento più chiaro, veloce e attuale.",
-        color: "secondary",
-    },
-];
+const SERVICE_KEYS = [
+    { n: "01", key: "showcase", color: "primary" },
+    { n: "02", key: "corporate", color: "primary-dark" },
+    { n: "03", key: "landing", color: "aqua-dark" },
+    { n: "04", key: "restyling", color: "secondary" },
+] as const;
 
-const PROCESS = [
-    { n: "01", text: "Capire obiettivi e pubblico" },
-    { n: "02", text: "Organizzare contenuti e struttura" },
-    { n: "03", text: "Disegnare un'interfaccia coerente" },
-    { n: "04", text: "Sviluppare, testare e ottimizzare" },
-    { n: "05", text: "Pubblicare un sito pronto a crescere" },
-];
+const PROCESS_KEYS = ["01", "02", "03", "04", "05"] as const;
 
 export const WebDevSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="web">
             <Intro>
                 <div className="copy">
                     <span className="tech-label cyan">
-                        01 / WEB DEVELOPMENT
+                        {t("web.techLabel")}
                     </span>
-                    <h2>Siti web che raccontano bene chi sei.</h2>
-                    <p>
-                        Da oltre 8 anni progetto e sviluppo siti di
-                        presentazione per professionisti, attività locali e
-                        aziende. Creo esperienze digitali ordinate, veloci e
-                        costruite per aiutare chi visita il sito a capire subito
-                        una cosa: perché scegliere proprio te.
-                    </p>
+                    <h2>{t("web.title")}</h2>
+                    <p>{t("web.intro")}</p>
                     <Cta href="#contact">
-                        Parliamo del tuo sito
+                        {t("web.cta")}
                         <RiCornerDownRightLine />
                     </Cta>
                 </div>
@@ -67,52 +37,42 @@ export const WebDevSection = () => {
                 <img
                     className="desktop"
                     src="/assets/barba.png"
-                    alt="Mockup desktop di un sito sviluppato da LeMaks"
+                    alt={t("web.mockupAltDesktop")}
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     className="mobile"
                     src="/assets/barba_mobile.png"
-                    alt="Mockup mobile di un sito sviluppato da LeMaks"
+                    alt={t("web.mockupAltMobile")}
                 />
             </Mockups>
 
             <Block>
-                <h3>
-                    Progetto siti che funzionano prima ancora di essere belli.
-                </h3>
-                <p className="muted">
-                    Un sito efficace non deve solo avere un buon design. Deve
-                    guidare, spiegare, rassicurare e portare le persone verso
-                    un&apos;azione concreta.
-                </p>
+                <h3>{t("web.block1Title")}</h3>
+                <p className="muted">{t("web.block1Muted")}</p>
                 <Cards>
-                    {SERVICES.map((s, i) => (
+                    {SERVICE_KEYS.map((s, i) => (
                         <Card
                             key={s.n}
                             $bg={s.color}
                             style={{ animationDelay: `${0.12 * i}s` }}
                         >
                             <span className="num mono">{s.n}</span>
-                            <h4>{s.title}</h4>
-                            <p>{s.desc}</p>
+                            <h4>{t(`web.services.${s.key}.title`)}</h4>
+                            <p>{t(`web.services.${s.key}.desc`)}</p>
                         </Card>
                     ))}
                 </Cards>
             </Block>
 
             <Block>
-                <h3>Strategia, design e sviluppo nello stesso percorso.</h3>
-                <p className="muted">
-                    Ogni progetto parte da una domanda semplice: cosa deve
-                    capire una persona quando arriva sul tuo sito? Da lì
-                    costruisco struttura, contenuti, design e sviluppo.
-                </p>
+                <h3>{t("web.block2Title")}</h3>
+                <p className="muted">{t("web.block2Muted")}</p>
                 <Timeline>
-                    {PROCESS.map((p) => (
-                        <Step key={p.n}>
-                            <span className="num mono">{p.n}</span>
-                            <p>{p.text}</p>
+                    {PROCESS_KEYS.map((n) => (
+                        <Step key={n}>
+                            <span className="num mono">{n}</span>
+                            <p>{t(`web.process.${n}`)}</p>
                         </Step>
                     ))}
                 </Timeline>
@@ -259,11 +219,10 @@ const Mockups = styled.div`
         width: 100%;
         height: 100%;
         animation: fadeInUp 1s ease-out forwards;
-        ${$breakPoint(500)} { 
+        ${$breakPoint(500)} {
             width: calc(100% - ${$uw(2)});
             margin-left: ${$uw(1)};
         }
-        
     }
     .mobile {
         top: ${$uw(-3)};
@@ -275,7 +234,7 @@ const Mockups = styled.div`
         animation: fadeInUp 1s ease-out 0.3s forwards;
         opacity: 0;
         ${$breakPoint(500)} {
-            top:unset;
+            top: unset;
             width: ${$uw(15)};
             height: ${$uw(32)};
             bottom: ${$uw(-5)};

@@ -2,51 +2,39 @@
 
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const COLUMNS = [
-    {
-        symbol: "◇",
-        context: "Nel web cerco",
-        keyword: "chiarezza",
-        desc: "Capire il contesto, togliere il superfluo e rendere ogni pagina facile da leggere.",
-    },
-    {
-        symbol: "◯",
-        context: "Con i cani cerco",
-        keyword: "comprensione",
-        desc: "Osservare l'individuo, ascoltare i suoi segnali e costruire fiducia, un passo alla volta.",
-    },
-    {
-        symbol: "△",
-        context: "Nei videogiochi cerco",
-        keyword: "interazione",
-        desc: "Trasformare un'idea in una meccanica, e una meccanica in un'esperienza da giocare.",
-    },
-];
+    { symbol: "◇", key: "clarity" },
+    { symbol: "◯", key: "comprehension" },
+    { symbol: "△", key: "interaction" },
+] as const;
 
 export const ManifestoSection = () => {
+    const { t } = useTranslation();
     return (
         <Section id="manifesto">
             <Header>
-                <span className="tech-label">MANIFESTO</span>
-                <h2>Tre direzioni. Un solo modo di lavorare.</h2>
-                <p>
-                    Non mi interessa aggiungere complessità dove non serve. In
-                    ogni progetto parto dall&apos;essenziale: capire il
-                    contesto, osservare ciò che conta e costruire
-                    un&apos;esperienza più semplice da vivere.
-                </p>
+                <span className="tech-label">{t("manifesto.techLabel")}</span>
+                <h2>{t("manifesto.title")}</h2>
+                <p>{t("manifesto.intro")}</p>
             </Header>
             <Columns>
                 {COLUMNS.map((col, i) => (
                     <Column
-                        key={col.keyword}
+                        key={col.key}
                         style={{ animationDelay: `${0.15 * i}s` }}
                     >
                         <span className="symbol">{col.symbol}</span>
-                        <p className="context">{col.context}</p>
-                        <p className="keyword cyan">{col.keyword}.</p>
-                        <p className="desc">{col.desc}</p>
+                        <p className="context">
+                            {t(`manifesto.columns.${col.key}.context`)}
+                        </p>
+                        <p className="keyword cyan">
+                            {t(`manifesto.columns.${col.key}.keyword`)}.
+                        </p>
+                        <p className="desc">
+                            {t(`manifesto.columns.${col.key}.desc`)}
+                        </p>
                     </Column>
                 ))}
             </Columns>

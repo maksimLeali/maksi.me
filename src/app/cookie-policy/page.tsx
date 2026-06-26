@@ -7,7 +7,7 @@ export default function CookiePolicy() {
         <Container>
             <Header>
                 <Title>Cookie Policy</Title>
-                <LastUpdate>Ultimo aggiornamento: 25/06/2026</LastUpdate>
+                <LastUpdate>Ultimo aggiornamento: 26/06/2026</LastUpdate>
             </Header>
 
             <Section>
@@ -19,8 +19,8 @@ export default function CookiePolicy() {
                     navigazione.
                 </Paragraph>
                 <Paragraph>
-                    Alcune tecnologie di analisi possono raccogliere informazioni
-                    anche senza utilizzare cookie.
+                    Alcune tecnologie di analisi possono raccogliere
+                    informazioni anche senza utilizzare cookie.
                 </Paragraph>
             </Section>
 
@@ -29,9 +29,9 @@ export default function CookiePolicy() {
             <Section>
                 <SectionTitle>2. Cookie utilizzati dal sito</SectionTitle>
                 <Paragraph>
-                    Il sito lemaks.it non utilizza cookie di profilazione, cookie
-                    pubblicitari, cookie di remarketing o cookie destinati a
-                    monitorare gli utenti su siti web diversi.
+                    Il sito lemaks.it non utilizza cookie di profilazione,
+                    cookie pubblicitari, cookie di remarketing o cookie
+                    destinati a monitorare gli utenti su siti web diversi.
                 </Paragraph>
                 <Paragraph>
                     Il sito non utilizza cookie analytics di terze parti, quali
@@ -69,9 +69,7 @@ export default function CookiePolicy() {
                         rispettare l&apos;impostazione &ldquo;Do Not
                         Track&rdquo; del browser;
                     </li>
-                    <li>
-                        non inviare dati contenuti nei moduli di contatto;
-                    </li>
+                    <li>non inviare dati contenuti nei moduli di contatto;</li>
                     <li>
                         non utilizzare identificativi personali, profilazione,
                         pubblicità comportamentale o monitoraggio tra siti.
@@ -87,11 +85,49 @@ export default function CookiePolicy() {
             <Divider />
 
             <Section>
-                <SectionTitle>4. Consenso e banner cookie</SectionTitle>
+                <SectionTitle>
+                    4. Tecnologie simili: memorizzazione locale della lingua
+                </SectionTitle>
+                <Paragraph>
+                    Il sito è disponibile in più lingue (italiano, inglese,
+                    francese e spagnolo). Per ricordare la lingua scelta
+                    dall&apos;utente tra una visita e l&apos;altra viene
+                    utilizzata la <strong>memoria locale del browser</strong>{" "}
+                    (localStorage), tramite una singola voce denominata{" "}
+                    <code>lemaks_lang</code>.
+                </Paragraph>
+                <Paragraph>
+                    Non si tratta di un cookie: il valore non viene mai inviato
+                    al server, non contiene dati personali, non viene condiviso
+                    con terze parti e non è utilizzabile per profilare
+                    l&apos;utente o tracciarlo su altri siti.
+                </Paragraph>
+                <Paragraph>
+                    Questa tecnologia è considerata{" "}
+                    <strong>strettamente necessaria</strong> per fornire la
+                    funzionalità di cambio lingua espressamente richiesta
+                    dall&apos;utente, e pertanto non richiede consenso
+                    preventivo ai sensi dell&apos;art. 122 del Codice Privacy.
+                </Paragraph>
+                <Paragraph>
+                    L&apos;utente può cancellare la preferenza in qualsiasi
+                    momento dalle impostazioni del browser (sezione &ldquo;dati
+                    dei siti&rdquo; / &ldquo;storage&rdquo; / &ldquo;cookie e
+                    dati dei siti&rdquo;).
+                </Paragraph>
+            </Section>
+
+            <Divider />
+
+            <Section>
+                <SectionTitle>5. Consenso e banner cookie</SectionTitle>
                 <Paragraph>
                     Poiché il sito non utilizza cookie o strumenti di
-                    tracciamento per finalità di profilazione o marketing, non
-                    viene richiesto il consenso preventivo tramite banner cookie.
+                    tracciamento per finalità di profilazione o marketing, e le
+                    tecnologie utilizzate (statistiche aggregate e
+                    memorizzazione della lingua) sono strettamente necessarie al
+                    funzionamento del sito, non viene richiesto il consenso
+                    preventivo tramite banner cookie.
                 </Paragraph>
                 <Paragraph>
                     L&apos;utente può comunque impedire l&apos;invio delle
@@ -104,7 +140,7 @@ export default function CookiePolicy() {
 
             <Section>
                 <SectionTitle>
-                    5. Dati trattati e periodo di conservazione
+                    6. Dati trattati e periodo di conservazione
                 </SectionTitle>
                 <Paragraph>
                     Le informazioni raccolte tramite Umami sono utilizzate
@@ -116,9 +152,15 @@ export default function CookiePolicy() {
                     anonimizzati.
                 </Paragraph>
                 <Paragraph>
-                    Per ulteriori informazioni sul trattamento dei dati personali
-                    e sui diritti dell&apos;utente, è possibile consultare
-                    l&apos;{" "}
+                    La preferenza di lingua memorizzata localmente sul browser
+                    rimane fino a quando l&apos;utente non la cancella
+                    manualmente o non svuota i dati del sito dalle impostazioni
+                    del browser.
+                </Paragraph>
+                <Paragraph>
+                    Per ulteriori informazioni sul trattamento dei dati
+                    personali e sui diritti dell&apos;utente, è possibile
+                    consultare l&apos;{" "}
                     <a href="/privacy-policy">Informativa Privacy</a>.
                 </Paragraph>
             </Section>
@@ -126,7 +168,7 @@ export default function CookiePolicy() {
             <Divider />
 
             <Section>
-                <SectionTitle>6. Modifiche alla Cookie Policy</SectionTitle>
+                <SectionTitle>7. Modifiche alla Cookie Policy</SectionTitle>
                 <Paragraph>
                     La presente Cookie Policy può essere aggiornata nel tempo.
                     Eventuali modifiche saranno pubblicate su questa pagina con
@@ -220,6 +262,15 @@ const Paragraph = styled.p`
         &:hover {
             text-decoration: underline;
         }
+    }
+
+    code {
+        font-family: "Space Mono", monospace;
+        font-size: 0.9em;
+        padding: 0.1em 0.4em;
+        border-radius: 3px;
+        background-color: rgba(255, 255, 255, 0.08);
+        color: ${$color("tertiary")};
     }
 `;
 
