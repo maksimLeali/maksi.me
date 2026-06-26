@@ -46,6 +46,14 @@ export const WebDevSection = () => {
                     alt={t("web.mockupAltMobile")}
                 />
             </Mockups>
+            <DemoLink
+                href="https://barber.makso.me"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <RiCornerDownRightLine />
+                Guarda questo sito demo
+            </DemoLink>
 
             <Block>
                 <h3>{t("web.block1Title")}</h3>
@@ -240,6 +248,32 @@ const Mockups = styled.div`
             bottom: ${$uw(-5)};
             right: ${$uw(5)};
         }
+    }
+`;
+
+const DemoLink = styled.a`
+    display: inline-flex;
+    align-items: center;
+    gap: ${$uw(0.6)};
+    width: fit-content;
+    align-self: center;
+    margin-top: ${$uw(-1)};
+    padding: ${$cssTRBL(0.6, 1.2)};
+    border-radius: 2px;
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: ${$color("black-dark")};
+    background-color: ${$color("tertiary")};
+    transition: transform 0.2s ease;
+    ${$breakPoint(500)} {
+        padding: ${$cssTRBL(1.2, 2)};
+        margin-top: ${$uw(2)};
+    }
+    &:hover {
+        transform: translateY(-2px);
     }
 `;
 
