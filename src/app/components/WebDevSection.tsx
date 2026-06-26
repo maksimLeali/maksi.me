@@ -52,7 +52,7 @@ export const WebDevSection = () => {
                 rel="noopener noreferrer"
             >
                 <RiCornerDownRightLine />
-                Guarda questo sito demo
+                {t("web.demoLink")}
             </DemoLink>
 
             <Block>

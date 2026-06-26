@@ -91,6 +91,7 @@
         },
         "block2Title": "Strategy, design and development in the same path.",
         "block2Muted": "Every project starts with a simple question: what should a person understand when they land on your site? From there I build structure, content, design and development.",
+        "demoLink": "View this demo site",
         "process": {
             "01": "Understand goals and audience",
             "02": "Organise content and structure",
@@ -304,6 +305,214 @@
             "submit": "SEND MESSAGE",
             "sending": "SENDING…",
             "success": "✓ Message sent. I'll reply as soon as possible."
-        }
-    }
+        }    },
+    "legal": {
+        "lastUpdate": "Last updated",
+        "privacy": {
+            "title": "Privacy Policy",
+            "s1": { "title": "1. Data Controller", "p1": "The data controller is Maksim Leali, reachable by email:" },
+            "s2": {
+                "title": "2. Personal data processed",
+                "sub1": "Data provided via the contact form",
+                "p1": "Through the contact form on the site, the following data may be processed:",
+                "l1": "first name;",
+                "l2": "email address;",
+                "l3": "company or project, if provided by the user;",
+                "l4": "details about the request or service of interest;",
+                "l5": "message content;",
+                "l6": "any additional data the user voluntarily chooses to share.",
+                "p2": "Users are advised not to submit unnecessary personal data, special categories of personal data, or confidential information through the form.",
+                "sub2": "Navigation and analytics data",
+                "p3": "The site uses Umami, a self-hosted analytics system managed by the Controller via analytics.lemaks.it.",
+                "p4": "Umami is used solely to understand, in aggregated and statistical form, how the site is used. Technical and navigation data may be processed, including:",
+                "l7": "page visited, page title and referrer domain;",
+                "l8": "browser type, operating system, device type, language and screen resolution;",
+                "l9": "approximate geographic information;",
+                "l10": "date and time of visit.",
+                "p5": "The tracker is configured not to collect search parameters or URL fragments. The IP address may be temporarily used by the system to derive geographic statistics, but is not stored by Umami.",
+                "p6": "The site does not use profiling cookies, advertising cookies, remarketing tools, or technologies designed to track the user across different sites.",
+                "sub3": "Technical logs",
+                "p7": "For security, maintenance and abuse-prevention purposes, the server may log technical data such as IP address, date and time of request, requested resource, response code and browser information."
+            },
+            "s3": {
+                "title": "3. Purposes of processing",
+                "p1": "Personal data are processed to:",
+                "l1": "respond to requests submitted via the contact form;",
+                "l2": "follow up with the user regarding the received request;",
+                "l3": "handle information requests, collaborations or quotes;",
+                "l4": "ensure security, maintenance and proper functioning of the site;",
+                "l5": "produce aggregated statistics on site usage and improve its content, structure and performance;",
+                "l6": "protect the Controller's rights in case of abuse, violations or disputes.",
+                "p2": "Data are not used for newsletters, commercial communications, profiling or direct marketing without the user's specific consent."
+            },
+            "s4": {
+                "title": "4. Legal basis of processing",
+                "p1": "Processing takes place:",
+                "l1": "for the execution of pre-contractual measures taken at the request of the data subject, when the user requests information, contact or a quote;",
+                "l2": "for the legitimate interest of the Controller in ensuring site security, preventing abuse and analysing its usage in aggregate form;",
+                "l3": "based on the user's consent, exclusively when required for additional non-necessary purposes, such as any future marketing communications."
+            },
+            "s5": {
+                "title": "5. Data provision",
+                "p1": "Providing the data marked as mandatory in the contact form is necessary to submit and manage the request.",
+                "p2": "Failure to provide them may make it impossible to respond to the user."
+            },
+            "s6": {
+                "title": "6. Processing methods",
+                "p1": "Data submitted via the contact form are not stored in a site database. They are transmitted by email to the Controller's contact inbox and used solely to handle the user's request.",
+                "p2": "Navigation statistics are stored in a separate database used exclusively by the self-hosted Umami system.",
+                "p3": "Processing is carried out through IT and electronic tools, adopting appropriate technical and organisational measures to prevent unauthorised access, loss, alteration or disclosure of data."
+            },
+            "s7": {
+                "title": "7. Recipients of data",
+                "p1": "Personal data may be processed by the following parties:",
+                "l1": "Maksim Leali, as Data Controller;",
+                "l2": "DigitalOcean, LLC, as cloud infrastructure and hosting provider for the site and the self-hosted analytics system;",
+                "l3": "provider of the email service and/or message delivery generated by the contact form;",
+                "l4": "any parties authorised by the Controller or technical providers strictly necessary for site management, security and maintenance.",
+                "p2": "Data are not shared, sold or communicated to third parties for advertising or marketing purposes."
+            },
+            "s8": {
+                "title": "8. Transfers outside the European Economic Area",
+                "p1": "The site and the Umami analytics system are hosted on DigitalOcean infrastructure located within the European Economic Area.",
+                "p2": "Should a transfer outside the European Economic Area become necessary for technical reasons related to the services provided by the listed suppliers, such transfer will comply with the safeguards set out in Articles 44 and following of EU Regulation 2016/679.",
+                "p3": "Information on the applicable safeguards can be requested by contacting the Controller."
+            },
+            "s9": {
+                "title": "9. Retention period",
+                "p1Pre": "Messages received via the contact form are retained for the time necessary to handle the request and, in any case, no longer than",
+                "p1Bold": "12 months",
+                "p1Post": "from receipt, unless further retention is required by law or to protect the Controller's rights.",
+                "p2Pre": "Statistical data collected via Umami are retained for a maximum period of",
+                "p2Bold": "12 months",
+                "p2Post": "and subsequently deleted or anonymised.",
+                "p3Pre": "Server technical logs are retained for the time strictly necessary for security and maintenance purposes, and generally no longer than",
+                "p3Bold": "30 days",
+                "p3Post": "unless further retention is required due to security incidents or requests from competent authorities."
+            },
+            "s10": {
+                "title": "10. Rights of the data subject",
+                "p1": "Users may exercise the rights provided by Articles 15-22 of EU Regulation 2016/679, including:",
+                "l1": "obtain confirmation of the existence of their personal data;",
+                "l2": "request access, rectification or erasure of data;",
+                "l3": "request restriction of processing;",
+                "l4": "object to processing, where applicable;",
+                "l5": "request data portability, where applicable;",
+                "l6": "withdraw consent at any time, where processing is based on consent.",
+                "p2": "To exercise their rights, users may contact the Controller at:",
+                "p3": "Users also have the right to lodge a complaint with the relevant supervisory authority."
+            },
+            "s11": {
+                "title": "11. Automated decisions and profiling",
+                "p1": "Personal data are not used for automated decision-making processes or profiling activities."
+            },
+            "s12": {
+                "title": "12. Changes to this policy",
+                "p1": "This policy may be updated over time. Any changes will be published on this page with the date of the latest update."
+            }
+        },
+        "cookie": {
+            "title": "Cookie Policy",
+            "s1": {
+                "title": "1. What are cookies",
+                "p1": "Cookies are small text files that websites can save on the user's device to enable certain features, store preferences or analyse navigation.",
+                "p2": "Some analytics technologies may collect information without using cookies."
+            },
+            "s2": {
+                "title": "2. Cookies used by this site",
+                "p1": "The site lemaks.it does not use profiling cookies, advertising cookies, remarketing cookies or cookies intended to track users across different websites.",
+                "p2": "The site does not use third-party analytics cookies such as Google Analytics, Meta Pixel, Microsoft Clarity, Hotjar or equivalent tools."
+            },
+            "s3": {
+                "title": "3. Self-hosted analytics",
+                "p1": "The site uses Umami, a self-hosted analytics system accessible via analytics.lemaks.it.",
+                "p2": "Umami does not use cookies and does not store IP addresses. The service is used exclusively to produce aggregated statistics on site traffic, such as pages visited, visit source, browser, device, language and approximate geographic area.",
+                "p3": "The tracker is configured to:",
+                "l1": "limit operation to the lemaks.it and www.lemaks.it domains;",
+                "l2": "not collect search parameters or URL fragments;",
+                "l3": "respect the browser's \"Do Not Track\" setting;",
+                "l4": "not send data contained in contact forms;",
+                "l5": "not use personal identifiers, profiling, behavioural advertising or cross-site tracking.",
+                "p4": "No session replay tools, heatmaps, conversion pixels, persistent identifiers or equivalent features are active."
+            },
+            "s4": {
+                "title": "4. Similar technologies: local language storage",
+                "p1Pre": "The site is available in multiple languages (Italian, English, French and Spanish). To remember the user's chosen language between visits, the site uses the",
+                "p1Bold": "browser's local storage",
+                "p1Post": "(localStorage), via a single entry called",
+                "p2": "This is not a cookie: the value is never sent to the server, contains no personal data, is not shared with third parties and cannot be used to profile the user or track them across other sites.",
+                "p3Pre": "This technology is considered",
+                "p3Bold": "strictly necessary",
+                "p3Post": "to provide the language-switching feature explicitly requested by the user, and therefore does not require prior consent.",
+                "p4": "Users can delete the preference at any time from the browser settings (\"site data\" / \"storage\" / \"cookies and site data\" section)."
+            },
+            "s5": {
+                "title": "5. Consent and cookie banner",
+                "p1": "Since the site does not use cookies or tracking tools for profiling or marketing purposes, and the technologies used (aggregated statistics and language storage) are strictly necessary for the site to function, prior consent via a cookie banner is not requested.",
+                "p2": "Users can nonetheless prevent statistics from being sent by enabling the \"Do Not Track\" setting in their browser."
+            },
+            "s6": {
+                "title": "6. Data processed and retention period",
+                "p1": "Information collected via Umami is used exclusively to analyse and improve the site.",
+                "p2Pre": "Statistical data are retained for a maximum period of",
+                "p2Bold": "12 months",
+                "p2Post": "and subsequently deleted or anonymised.",
+                "p3": "The language preference stored locally in the browser persists until the user manually deletes it or clears site data from the browser settings.",
+                "p4Pre": "For further information on personal data processing and user rights, please see the",
+                "p4Link": "Privacy Policy",
+                "p4Post": "."
+            },
+            "s7": {
+                "title": "7. Changes to the Cookie Policy",
+                "p1": "This Cookie Policy may be updated over time. Any changes will be published on this page with the date of the latest update."
+            }
+        },
+        "terms": {
+            "title": "Terms and Conditions of Use",
+            "s1": {
+                "title": "1. Site owner",
+                "p1": "The site lemaks.it is managed by Maksim Leali, reachable by email:"
+            },
+            "s2": {
+                "title": "2. Purpose of the site",
+                "p1": "The site has informational purposes and presents activities, projects and services related to web development, game development and dog training content.",
+                "p2": "The information published is of a general nature and does not constitute a quote, binding contractual offer, professional advice, promise of result or guarantee of availability of the described services."
+            },
+            "s3": {
+                "title": "3. Contact requests and quotes",
+                "p1": "Submitting a request via the contact form or by email does not constitute the conclusion of any contract.",
+                "p2": "Any services, timelines, fees, payment terms, revisions, deliveries, support and usage rights will be governed separately by a quote, written agreement or other contractual document agreed between the parties."
+            },
+            "s4": {
+                "title": "4. Intellectual property",
+                "p1": "Unless otherwise stated, the content on this site, including texts, structure, graphics, visual elements, images, code, logos and original materials, are the property of the Controller or used with authorisation.",
+                "p2": "Copying, reproducing, modifying, distributing, publishing or using such content for commercial purposes without prior written authorisation from the Controller is not permitted, except as allowed by law."
+            },
+            "s5": {
+                "title": "5. Links to external sites and services",
+                "p1": "The site may contain links to third-party sites, platforms or services.",
+                "p2": "The Controller does not control such resources and is not responsible for their content, availability, security, privacy policy, cookie policy or terms of use. Users are invited to review the applicable policies and conditions of external services before using them."
+            },
+            "s6": {
+                "title": "6. Availability and limitation of liability",
+                "p1": "The Controller endeavours to keep the site's information reasonably accurate and up to date, but does not guarantee the absence of errors, omissions, interruptions, malfunctions or temporary unavailability.",
+                "p2": "To the extent permitted by law, the Controller is not liable for direct or indirect damages arising from the use or inability to use the site, its content or linked external services."
+            },
+            "s7": {
+                "title": "7. Privacy and cookies",
+                "p1Pre": "The processing of personal data is described in the",
+                "p1Link": "Privacy Policy",
+                "p1Post": "available on the site.",
+                "p2": "Information about cookies and statistical analytics tools is available in the Cookie Policy."
+            },
+            "s8": {
+                "title": "8. Changes to terms",
+                "p1": "The Controller may update these terms at any time. Changes will take effect from the date the updated version is published on the site."
+            },
+            "s9": {
+                "title": "9. Applicable law",
+                "p1": "These terms are governed by Italian law.",
+                "p2": "The mandatory rights recognised by applicable legislation to consumer users remain unaffected."
+            }
+        }    }
 }

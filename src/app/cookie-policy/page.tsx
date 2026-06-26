@@ -1,179 +1,95 @@
 "use client";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { useTranslation } from "react-i18next";
 
 export default function CookiePolicy() {
+    const { t } = useTranslation();
+    const c = (k: string) => t(`legal.cookie.${k}`);
     return (
         <Container>
             <Header>
-                <Title>Cookie Policy</Title>
-                <LastUpdate>Ultimo aggiornamento: 26/06/2026</LastUpdate>
+                <Title>{c("title")}</Title>
+                <LastUpdate>{t("legal.lastUpdate")}: 26/06/2026</LastUpdate>
             </Header>
 
             <Section>
-                <SectionTitle>1. Cosa sono i cookie</SectionTitle>
-                <Paragraph>
-                    I cookie sono piccoli file di testo che i siti web possono
-                    salvare sul dispositivo dell&apos;utente per consentire
-                    alcune funzionalità, memorizzare preferenze o analizzare la
-                    navigazione.
-                </Paragraph>
-                <Paragraph>
-                    Alcune tecnologie di analisi possono raccogliere
-                    informazioni anche senza utilizzare cookie.
-                </Paragraph>
+                <SectionTitle>{c("s1.title")}</SectionTitle>
+                <Paragraph>{c("s1.p1")}</Paragraph>
+                <Paragraph>{c("s1.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>2. Cookie utilizzati dal sito</SectionTitle>
-                <Paragraph>
-                    Il sito lemaks.it non utilizza cookie di profilazione,
-                    cookie pubblicitari, cookie di remarketing o cookie
-                    destinati a monitorare gli utenti su siti web diversi.
-                </Paragraph>
-                <Paragraph>
-                    Il sito non utilizza cookie analytics di terze parti, quali
-                    Google Analytics, Meta Pixel, Microsoft Clarity, Hotjar o
-                    strumenti equivalenti.
-                </Paragraph>
+                <SectionTitle>{c("s2.title")}</SectionTitle>
+                <Paragraph>{c("s2.p1")}</Paragraph>
+                <Paragraph>{c("s2.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>3. Analisi statistica self-hosted</SectionTitle>
-                <Paragraph>
-                    Il sito utilizza Umami, un sistema di analisi statistica
-                    self-hosted raggiungibile tramite analytics.lemaks.it.
-                </Paragraph>
-                <Paragraph>
-                    Umami non utilizza cookie e non memorizza l&apos;indirizzo
-                    IP. Il servizio viene utilizzato esclusivamente per produrre
-                    statistiche aggregate sul traffico del sito, quali pagine
-                    visitate, provenienza della visita, browser, dispositivo,
-                    lingua e area geografica approssimativa.
-                </Paragraph>
-                <Paragraph>Il tracker è configurato per:</Paragraph>
+                <SectionTitle>{c("s3.title")}</SectionTitle>
+                <Paragraph>{c("s3.p1")}</Paragraph>
+                <Paragraph>{c("s3.p2")}</Paragraph>
+                <Paragraph>{c("s3.p3")}</Paragraph>
                 <List>
-                    <li>
-                        limitare il funzionamento ai domini lemaks.it e
-                        www.lemaks.it;
-                    </li>
-                    <li>
-                        non raccogliere parametri di ricerca o frammenti degli
-                        URL;
-                    </li>
-                    <li>
-                        rispettare l&apos;impostazione &ldquo;Do Not
-                        Track&rdquo; del browser;
-                    </li>
-                    <li>non inviare dati contenuti nei moduli di contatto;</li>
-                    <li>
-                        non utilizzare identificativi personali, profilazione,
-                        pubblicità comportamentale o monitoraggio tra siti.
-                    </li>
+                    <li>{c("s3.l1")}</li>
+                    <li>{c("s3.l2")}</li>
+                    <li>{c("s3.l3")}</li>
+                    <li>{c("s3.l4")}</li>
+                    <li>{c("s3.l5")}</li>
                 </List>
+                <Paragraph>{c("s3.p4")}</Paragraph>
+            </Section>
+
+            <Divider />
+
+            <Section>
+                <SectionTitle>{c("s4.title")}</SectionTitle>
                 <Paragraph>
-                    Non sono attivi strumenti di session replay, heatmap, pixel
-                    di conversione, identificativi persistenti o funzionalità
-                    equivalenti.
+                    {c("s4.p1Pre")} <strong>{c("s4.p1Bold")}</strong>{" "}
+                    {c("s4.p1Post")} <code>lemaks_lang</code>.
+                </Paragraph>
+                <Paragraph>{c("s4.p2")}</Paragraph>
+                <Paragraph>
+                    {c("s4.p3Pre")} <strong>{c("s4.p3Bold")}</strong>{" "}
+                    {c("s4.p3Post")}
+                </Paragraph>
+                <Paragraph>{c("s4.p4")}</Paragraph>
+            </Section>
+
+            <Divider />
+
+            <Section>
+                <SectionTitle>{c("s5.title")}</SectionTitle>
+                <Paragraph>{c("s5.p1")}</Paragraph>
+                <Paragraph>{c("s5.p2")}</Paragraph>
+            </Section>
+
+            <Divider />
+
+            <Section>
+                <SectionTitle>{c("s6.title")}</SectionTitle>
+                <Paragraph>{c("s6.p1")}</Paragraph>
+                <Paragraph>
+                    {c("s6.p2Pre")} <strong>{c("s6.p2Bold")}</strong>{" "}
+                    {c("s6.p2Post")}
+                </Paragraph>
+                <Paragraph>{c("s6.p3")}</Paragraph>
+                <Paragraph>
+                    {c("s6.p4Pre")}{" "}
+                    <a href="/privacy-policy">{c("s6.p4Link")}</a>
+                    {c("s6.p4Post")}
                 </Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>
-                    4. Tecnologie simili: memorizzazione locale della lingua
-                </SectionTitle>
-                <Paragraph>
-                    Il sito è disponibile in più lingue (italiano, inglese,
-                    francese e spagnolo). Per ricordare la lingua scelta
-                    dall&apos;utente tra una visita e l&apos;altra viene
-                    utilizzata la <strong>memoria locale del browser</strong>{" "}
-                    (localStorage), tramite una singola voce denominata{" "}
-                    <code>lemaks_lang</code>.
-                </Paragraph>
-                <Paragraph>
-                    Non si tratta di un cookie: il valore non viene mai inviato
-                    al server, non contiene dati personali, non viene condiviso
-                    con terze parti e non è utilizzabile per profilare
-                    l&apos;utente o tracciarlo su altri siti.
-                </Paragraph>
-                <Paragraph>
-                    Questa tecnologia è considerata{" "}
-                    <strong>strettamente necessaria</strong> per fornire la
-                    funzionalità di cambio lingua espressamente richiesta
-                    dall&apos;utente, e pertanto non richiede consenso
-                    preventivo ai sensi dell&apos;art. 122 del Codice Privacy.
-                </Paragraph>
-                <Paragraph>
-                    L&apos;utente può cancellare la preferenza in qualsiasi
-                    momento dalle impostazioni del browser (sezione &ldquo;dati
-                    dei siti&rdquo; / &ldquo;storage&rdquo; / &ldquo;cookie e
-                    dati dei siti&rdquo;).
-                </Paragraph>
-            </Section>
-
-            <Divider />
-
-            <Section>
-                <SectionTitle>5. Consenso e banner cookie</SectionTitle>
-                <Paragraph>
-                    Poiché il sito non utilizza cookie o strumenti di
-                    tracciamento per finalità di profilazione o marketing, e le
-                    tecnologie utilizzate (statistiche aggregate e
-                    memorizzazione della lingua) sono strettamente necessarie al
-                    funzionamento del sito, non viene richiesto il consenso
-                    preventivo tramite banner cookie.
-                </Paragraph>
-                <Paragraph>
-                    L&apos;utente può comunque impedire l&apos;invio delle
-                    statistiche attivando l&apos;impostazione &ldquo;Do Not
-                    Track&rdquo; nel proprio browser.
-                </Paragraph>
-            </Section>
-
-            <Divider />
-
-            <Section>
-                <SectionTitle>
-                    6. Dati trattati e periodo di conservazione
-                </SectionTitle>
-                <Paragraph>
-                    Le informazioni raccolte tramite Umami sono utilizzate
-                    esclusivamente per analizzare e migliorare il sito.
-                </Paragraph>
-                <Paragraph>
-                    I dati statistici sono conservati per un periodo massimo di{" "}
-                    <strong>12 mesi</strong> e successivamente cancellati o
-                    anonimizzati.
-                </Paragraph>
-                <Paragraph>
-                    La preferenza di lingua memorizzata localmente sul browser
-                    rimane fino a quando l&apos;utente non la cancella
-                    manualmente o non svuota i dati del sito dalle impostazioni
-                    del browser.
-                </Paragraph>
-                <Paragraph>
-                    Per ulteriori informazioni sul trattamento dei dati
-                    personali e sui diritti dell&apos;utente, è possibile
-                    consultare l&apos;{" "}
-                    <a href="/privacy-policy">Informativa Privacy</a>.
-                </Paragraph>
-            </Section>
-
-            <Divider />
-
-            <Section>
-                <SectionTitle>7. Modifiche alla Cookie Policy</SectionTitle>
-                <Paragraph>
-                    La presente Cookie Policy può essere aggiornata nel tempo.
-                    Eventuali modifiche saranno pubblicate su questa pagina con
-                    indicazione della data di ultimo aggiornamento.
-                </Paragraph>
+                <SectionTitle>{c("s7.title")}</SectionTitle>
+                <Paragraph>{c("s7.p1")}</Paragraph>
             </Section>
         </Container>
     );

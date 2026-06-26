@@ -1,20 +1,22 @@
 "use client";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
+import { useTranslation } from "react-i18next";
 
 export default function TerminiECondizioni() {
+    const { t } = useTranslation();
+    const tr = (k: string) => t(`legal.terms.${k}`);
     return (
         <Container>
             <Header>
-                <Title>Termini e condizioni di utilizzo</Title>
-                <LastUpdate>Ultimo aggiornamento: 25/06/2026</LastUpdate>
+                <Title>{tr("title")}</Title>
+                <LastUpdate>{t("legal.lastUpdate")}: 25/06/2026</LastUpdate>
             </Header>
 
             <Section>
-                <SectionTitle>1. Titolare del sito</SectionTitle>
+                <SectionTitle>{tr("s1.title")}</SectionTitle>
                 <Paragraph>
-                    Il sito lemaks.it è gestito da Maksim Leali, contattabile
-                    all&apos;indirizzo e-mail:{" "}
+                    {tr("s1.p1")}{" "}
                     <a href="mailto:contact@lemaks.it">contact@lemaks.it</a>.
                 </Paragraph>
             </Section>
@@ -22,136 +24,68 @@ export default function TerminiECondizioni() {
             <Divider />
 
             <Section>
-                <SectionTitle>2. Finalità del sito</SectionTitle>
-                <Paragraph>
-                    Il sito ha finalità informative e presenta attività,
-                    progetti e servizi relativi allo sviluppo web, allo sviluppo
-                    di videogiochi e ai contenuti sull&apos;educazione cinofila.
-                </Paragraph>
-                <Paragraph>
-                    Le informazioni pubblicate hanno carattere generale e non
-                    costituiscono preventivo, proposta contrattuale vincolante,
-                    consulenza professionale, promessa di risultato o garanzia
-                    di disponibilità dei servizi descritti.
-                </Paragraph>
+                <SectionTitle>{tr("s2.title")}</SectionTitle>
+                <Paragraph>{tr("s2.p1")}</Paragraph>
+                <Paragraph>{tr("s2.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>
-                    3. Richieste di contatto e preventivi
-                </SectionTitle>
-                <Paragraph>
-                    L&apos;invio di una richiesta tramite il modulo di contatto
-                    o via e-mail non comporta la conclusione di alcun contratto.
-                </Paragraph>
-                <Paragraph>
-                    Eventuali servizi, tempi di realizzazione, corrispettivi,
-                    modalità di pagamento, revisioni, consegne, assistenza e
-                    diritti di utilizzo saranno disciplinati separatamente
-                    mediante preventivo, accordo scritto o altro documento
-                    contrattuale concordato tra le parti.
-                </Paragraph>
+                <SectionTitle>{tr("s3.title")}</SectionTitle>
+                <Paragraph>{tr("s3.p1")}</Paragraph>
+                <Paragraph>{tr("s3.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>4. Proprietà intellettuale</SectionTitle>
-                <Paragraph>
-                    Salvo diversa indicazione, i contenuti presenti sul sito,
-                    inclusi testi, struttura, grafica, elementi visivi,
-                    immagini, codice, loghi e materiali originali, sono di
-                    proprietà del Titolare o utilizzati con autorizzazione.
-                </Paragraph>
-                <Paragraph>
-                    Non è consentito copiare, riprodurre, modificare,
-                    distribuire, pubblicare o utilizzare tali contenuti per
-                    finalità commerciali senza preventiva autorizzazione scritta
-                    del Titolare, fatti salvi gli utilizzi consentiti dalla
-                    legge.
-                </Paragraph>
+                <SectionTitle>{tr("s4.title")}</SectionTitle>
+                <Paragraph>{tr("s4.p1")}</Paragraph>
+                <Paragraph>{tr("s4.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>
-                    5. Collegamenti a siti e servizi esterni
-                </SectionTitle>
-                <Paragraph>
-                    Il sito può contenere collegamenti a siti, piattaforme o
-                    servizi di terzi.
-                </Paragraph>
-                <Paragraph>
-                    Il Titolare non controlla tali risorse e non è responsabile
-                    dei relativi contenuti, disponibilità, sicurezza, privacy
-                    policy, cookie policy o condizioni di utilizzo.
-                    L&apos;utente è invitato a consultare le informative e le
-                    condizioni applicabili ai servizi esterni prima di
-                    utilizzarli.
-                </Paragraph>
+                <SectionTitle>{tr("s5.title")}</SectionTitle>
+                <Paragraph>{tr("s5.p1")}</Paragraph>
+                <Paragraph>{tr("s5.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>
-                    6. Disponibilità e limitazione di responsabilità
-                </SectionTitle>
-                <Paragraph>
-                    Il Titolare si impegna a mantenere le informazioni del sito
-                    ragionevolmente accurate e aggiornate, ma non garantisce
-                    l&apos;assenza di errori, omissioni, interruzioni,
-                    malfunzionamenti o indisponibilità temporanee.
-                </Paragraph>
-                <Paragraph>
-                    Nei limiti consentiti dalla legge, il Titolare non risponde
-                    di danni diretti o indiretti derivanti dall&apos;uso o
-                    dall&apos;impossibilità di utilizzare il sito, i suoi
-                    contenuti o servizi esterni collegati.
-                </Paragraph>
+                <SectionTitle>{tr("s6.title")}</SectionTitle>
+                <Paragraph>{tr("s6.p1")}</Paragraph>
+                <Paragraph>{tr("s6.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>7. Privacy e cookie</SectionTitle>
+                <SectionTitle>{tr("s7.title")}</SectionTitle>
                 <Paragraph>
-                    Il trattamento dei dati personali è descritto nell&apos;
-                    <a href="/privacy-policy">Informativa Privacy</a>{" "}
-                    disponibile sul sito.
+                    {tr("s7.p1Pre")}{" "}
+                    <a href="/privacy-policy">{tr("s7.p1Link")}</a>{" "}
+                    {tr("s7.p1Post")}
                 </Paragraph>
-                <Paragraph>
-                    Le informazioni relative ai cookie e agli strumenti di
-                    analisi statistica sono disponibili nella Cookie Policy.
-                </Paragraph>
+                <Paragraph>{tr("s7.p2")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>8. Modifiche ai termini</SectionTitle>
-                <Paragraph>
-                    Il Titolare può aggiornare i presenti termini in qualsiasi
-                    momento. Le modifiche saranno efficaci dalla data di
-                    pubblicazione della versione aggiornata sul sito.
-                </Paragraph>
+                <SectionTitle>{tr("s8.title")}</SectionTitle>
+                <Paragraph>{tr("s8.p1")}</Paragraph>
             </Section>
 
             <Divider />
 
             <Section>
-                <SectionTitle>9. Legge applicabile</SectionTitle>
-                <Paragraph>
-                    I presenti termini sono disciplinati dalla legge italiana.
-                </Paragraph>
-                <Paragraph>
-                    Restano fermi gli eventuali diritti inderogabili
-                    riconosciuti dalla normativa applicabile agli utenti
-                    consumatori.
-                </Paragraph>
+                <SectionTitle>{tr("s9.title")}</SectionTitle>
+                <Paragraph>{tr("s9.p1")}</Paragraph>
+                <Paragraph>{tr("s9.p2")}</Paragraph>
             </Section>
         </Container>
     );

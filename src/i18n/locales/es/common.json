@@ -91,6 +91,7 @@
         },
         "block2Title": "Estrategia, diseño y desarrollo en el mismo camino.",
         "block2Muted": "Cada proyecto parte de una pregunta sencilla: ¿qué tiene que entender una persona cuando llega a tu sitio? A partir de ahí construyo estructura, contenidos, diseño y desarrollo.",
+        "demoLink": "Ver este sitio de demostración",
         "process": {
             "01": "Entender objetivos y público",
             "02": "Organizar contenidos y estructura",
@@ -304,6 +305,216 @@
             "submit": "ENVIAR MENSAJE",
             "sending": "ENVIANDO…",
             "success": "✓ Mensaje enviado. Te responderé lo antes posible."
+        }
+    },
+    "legal": {
+        "lastUpdate": "Última actualización",
+        "privacy": {
+            "title": "Política de privacidad",
+            "s1": { "title": "1. Responsable del tratamiento", "p1": "El responsable del tratamiento de los datos personales es Maksim Leali, contactable por correo electrónico:" },
+            "s2": {
+                "title": "2. Datos personales tratados",
+                "sub1": "Datos proporcionados a través del formulario de contacto",
+                "p1": "A través del formulario de contacto del sitio pueden tratarse los siguientes datos:",
+                "l1": "nombre;",
+                "l2": "dirección de correo electrónico;",
+                "l3": "empresa o proyecto, si lo indica el usuario;",
+                "l4": "información sobre la solicitud o el servicio de interés;",
+                "l5": "contenido del mensaje;",
+                "l6": "cualquier otro dato que el usuario decida comunicar voluntariamente.",
+                "p2": "Se invita al usuario a no incluir en el formulario datos personales innecesarios, categorías especiales de datos personales o información confidencial.",
+                "sub2": "Datos de navegación y estadísticas",
+                "p3": "El sitio utiliza Umami, un sistema de análisis estadístico autoalojado gestionado por el Responsable a través de la infraestructura analytics.lemaks.it.",
+                "p4": "Umami se utiliza exclusivamente para comprender, de forma estadística y agregada, cómo se utiliza el sitio. Pueden tratarse datos técnicos y de navegación como:",
+                "l7": "página visitada, título de la página y dominio de origen;",
+                "l8": "tipo de navegador, sistema operativo, tipo de dispositivo, idioma y resolución de pantalla;",
+                "l9": "información geográfica aproximada;",
+                "l10": "fecha y hora de la visita.",
+                "p5": "El rastreador está configurado para no recopilar parámetros de búsqueda ni fragmentos de URL. La dirección IP puede ser utilizada temporalmente por el sistema para obtener información estadística geográfica, pero Umami no la almacena.",
+                "p6": "El sitio no utiliza cookies de elaboración de perfiles, cookies publicitarias, herramientas de remarketing ni tecnologías destinadas a rastrear al usuario en distintos sitios.",
+                "sub3": "Registros técnicos",
+                "p7": "Por motivos de seguridad, mantenimiento y prevención de abusos, el servidor puede registrar datos técnicos como la dirección IP, la fecha y hora de la solicitud, el recurso solicitado, el código de respuesta y la información del navegador."
+            },
+            "s3": {
+                "title": "3. Finalidades del tratamiento",
+                "p1": "Los datos personales se tratan para:",
+                "l1": "responder a las solicitudes enviadas a través del formulario de contacto;",
+                "l2": "ponerse en contacto con el usuario en relación con la solicitud recibida;",
+                "l3": "gestionar solicitudes de información, colaboración o presupuestos;",
+                "l4": "garantizar la seguridad, el mantenimiento y el correcto funcionamiento del sitio;",
+                "l5": "elaborar estadísticas agregadas sobre el uso del sitio y mejorar su contenido, estructura y rendimiento;",
+                "l6": "proteger los derechos del Responsable en caso de abusos, infracciones o reclamaciones.",
+                "p2": "Los datos no se utilizan para boletines, comunicaciones comerciales, elaboración de perfiles ni marketing directo sin el consentimiento específico del usuario."
+            },
+            "s4": {
+                "title": "4. Base jurídica del tratamiento",
+                "p1": "El tratamiento se lleva a cabo:",
+                "l1": "para la ejecución de medidas precontractuales adoptadas a petición del interesado, cuando el usuario solicita información, contacto o un presupuesto;",
+                "l2": "por el interés legítimo del Responsable en garantizar la seguridad del sitio, prevenir abusos y analizar su uso de forma agregada;",
+                "l3": "sobre la base del consentimiento del usuario, únicamente cuando se requiera para finalidades adicionales no necesarias, como posibles comunicaciones de marketing futuras."
+            },
+            "s5": {
+                "title": "5. Carácter obligatorio de los datos",
+                "p1": "La aportación de los datos marcados como obligatorios en el formulario de contacto es necesaria para enviar y gestionar la solicitud.",
+                "p2": "No proporcionarlos puede imposibilitar la respuesta al usuario."
+            },
+            "s6": {
+                "title": "6. Modalidades del tratamiento",
+                "p1": "Los datos enviados a través del formulario de contacto no se almacenan en una base de datos del sitio. Se transmiten por correo electrónico al buzón de contacto del Responsable y se utilizan exclusivamente para gestionar la solicitud del usuario.",
+                "p2": "Las estadísticas de navegación se almacenan en una base de datos separada utilizada exclusivamente por el sistema Umami autoalojado.",
+                "p3": "El tratamiento se realiza mediante herramientas informáticas y electrónicas, adoptando medidas técnicas y organizativas adecuadas para prevenir accesos no autorizados, pérdida, alteración o divulgación de los datos."
+            },
+            "s7": {
+                "title": "7. Destinatarios de los datos",
+                "p1": "Los datos personales pueden ser tratados por las siguientes partes:",
+                "l1": "Maksim Leali, en calidad de Responsable del tratamiento;",
+                "l2": "DigitalOcean, LLC, como proveedor de infraestructura en la nube y alojamiento para el sitio y el sistema de análisis estadístico autoalojado;",
+                "l3": "proveedor del servicio de correo electrónico y/o envío de mensajes generados por el formulario de contacto;",
+                "l4": "cualquier tercero autorizado por el Responsable o proveedores técnicos estrictamente necesarios para la gestión, seguridad y mantenimiento del sitio.",
+                "p2": "Los datos no se ceden, venden ni comunican a terceros con fines publicitarios o de marketing."
+            },
+            "s8": {
+                "title": "8. Transferencias fuera del Espacio Económico Europeo",
+                "p1": "El sitio y el sistema de análisis Umami están alojados en infraestructuras de DigitalOcean situadas en el Espacio Económico Europeo.",
+                "p2": "Si, por razones técnicas relacionadas con los servicios prestados por los proveedores indicados, fuera necesaria una transferencia fuera del Espacio Económico Europeo, dicha transferencia se realizará respetando las garantías previstas en los artículos 44 y siguientes del Reglamento UE 2016/679.",
+                "p3": "Se puede solicitar información sobre las garantías aplicables contactando con el Responsable."
+            },
+            "s9": {
+                "title": "9. Período de conservación",
+                "p1Pre": "Los mensajes recibidos a través del formulario de contacto se conservan durante el tiempo necesario para gestionar la solicitud y, en todo caso, no más de",
+                "p1Bold": "12 meses",
+                "p1Post": "desde la recepción, salvo necesidad de conservación adicional por obligaciones legales o protección de los derechos del Responsable.",
+                "p2Pre": "Los datos estadísticos recopilados a través de Umami se conservan durante un período máximo de",
+                "p2Bold": "12 meses",
+                "p2Post": "y posteriormente se eliminan o anonimizan.",
+                "p3Pre": "Los registros técnicos del servidor se conservan durante el tiempo estrictamente necesario para los fines de seguridad y mantenimiento, y por norma no más de",
+                "p3Bold": "30 días",
+                "p3Post": "salvo necesidad de conservación adicional por incidentes de seguridad o solicitudes de las autoridades competentes."
+            },
+            "s10": {
+                "title": "10. Derechos del interesado",
+                "p1": "El usuario puede ejercer los derechos previstos en los artículos 15-22 del Reglamento UE 2016/679, entre ellos:",
+                "l1": "obtener confirmación de la existencia de sus datos personales;",
+                "l2": "solicitar acceso, rectificación o supresión de los datos;",
+                "l3": "solicitar la limitación del tratamiento;",
+                "l4": "oponerse al tratamiento, en los casos previstos;",
+                "l5": "solicitar la portabilidad de los datos, cuando proceda;",
+                "l6": "retirar el consentimiento en cualquier momento, cuando el tratamiento se base en el consentimiento.",
+                "p2": "Para ejercer sus derechos, el usuario puede contactar con el Responsable en:",
+                "p3": "El usuario también tiene derecho a presentar una reclamación ante la autoridad de control competente."
+            },
+            "s11": {
+                "title": "11. Decisiones automatizadas y elaboración de perfiles",
+                "p1": "Los datos personales no se utilizan en procesos de decisión automatizada ni en actividades de elaboración de perfiles."
+            },
+            "s12": {
+                "title": "12. Cambios en esta política",
+                "p1": "Esta política puede actualizarse con el tiempo. Cualquier modificación se publicará en esta página indicando la fecha de la última actualización."
+            }
+        },
+        "cookie": {
+            "title": "Política de cookies",
+            "s1": {
+                "title": "1. Qué son las cookies",
+                "p1": "Las cookies son pequeños archivos de texto que los sitios web pueden guardar en el dispositivo del usuario para habilitar ciertas funciones, memorizar preferencias o analizar la navegación.",
+                "p2": "Algunas tecnologías de análisis pueden recopilar información sin utilizar cookies."
+            },
+            "s2": {
+                "title": "2. Cookies utilizadas por el sitio",
+                "p1": "El sitio lemaks.it no utiliza cookies de elaboración de perfiles, cookies publicitarias, cookies de remarketing ni cookies destinadas a rastrear a los usuarios en distintos sitios web.",
+                "p2": "El sitio no utiliza cookies de análisis de terceros como Google Analytics, Meta Pixel, Microsoft Clarity, Hotjar u herramientas equivalentes."
+            },
+            "s3": {
+                "title": "3. Análisis estadístico autoalojado",
+                "p1": "El sitio utiliza Umami, un sistema de análisis estadístico autoalojado accesible a través de analytics.lemaks.it.",
+                "p2": "Umami no utiliza cookies y no almacena direcciones IP. El servicio se utiliza exclusivamente para producir estadísticas agregadas sobre el tráfico del sitio, como páginas visitadas, origen de la visita, navegador, dispositivo, idioma y área geográfica aproximada.",
+                "p3": "El rastreador está configurado para:",
+                "l1": "limitar su funcionamiento a los dominios lemaks.it y www.lemaks.it;",
+                "l2": "no recopilar parámetros de búsqueda ni fragmentos de URL;",
+                "l3": "respetar la configuración \"Do Not Track\" del navegador;",
+                "l4": "no transmitir datos contenidos en los formularios de contacto;",
+                "l5": "no utilizar identificadores personales, elaboración de perfiles, publicidad conductual ni seguimiento entre sitios.",
+                "p4": "No hay activos herramientas de reproducción de sesiones, mapas de calor, píxeles de conversión, identificadores persistentes ni funcionalidades equivalentes."
+            },
+            "s4": {
+                "title": "4. Tecnologías similares: almacenamiento local del idioma",
+                "p1Pre": "El sitio está disponible en varios idiomas (italiano, inglés, francés y español). Para recordar el idioma elegido por el usuario entre visitas, el sitio utiliza el",
+                "p1Bold": "almacenamiento local del navegador",
+                "p1Post": "(localStorage), a través de una única entrada denominada",
+                "p2": "No se trata de una cookie: el valor nunca se envía al servidor, no contiene datos personales, no se comparte con terceros y no puede utilizarse para elaborar el perfil del usuario ni rastrearlo en otros sitios.",
+                "p3Pre": "Esta tecnología se considera",
+                "p3Bold": "estrictamente necesaria",
+                "p3Post": "para proporcionar la funcionalidad de cambio de idioma expresamente solicitada por el usuario, y por tanto no requiere consentimiento previo.",
+                "p4": "El usuario puede eliminar la preferencia en cualquier momento desde la configuración del navegador (sección \"datos del sitio\" / \"almacenamiento\" / \"cookies y datos del sitio\")."
+            },
+            "s5": {
+                "title": "5. Consentimiento y banner de cookies",
+                "p1": "Dado que el sitio no utiliza cookies ni herramientas de seguimiento con fines de elaboración de perfiles o marketing, y las tecnologías utilizadas (estadísticas agregadas y almacenamiento del idioma) son estrictamente necesarias para el funcionamiento del sitio, no se solicita consentimiento previo mediante un banner de cookies.",
+                "p2": "El usuario puede, no obstante, impedir el envío de estadísticas activando la configuración \"Do Not Track\" en su navegador."
+            },
+            "s6": {
+                "title": "6. Datos tratados y período de conservación",
+                "p1": "La información recopilada a través de Umami se utiliza exclusivamente para analizar y mejorar el sitio.",
+                "p2Pre": "Los datos estadísticos se conservan durante un período máximo de",
+                "p2Bold": "12 meses",
+                "p2Post": "y posteriormente se eliminan o anonimizan.",
+                "p3": "La preferencia de idioma almacenada localmente en el navegador permanece hasta que el usuario la elimine manualmente o vacíe los datos del sitio desde la configuración del navegador.",
+                "p4Pre": "Para más información sobre el tratamiento de datos personales y los derechos del usuario, puede consultarse la",
+                "p4Link": "Política de privacidad",
+                "p4Post": "."
+            },
+            "s7": {
+                "title": "7. Cambios en la política de cookies",
+                "p1": "Esta política de cookies puede actualizarse con el tiempo. Cualquier modificación se publicará en esta página indicando la fecha de la última actualización."
+            }
+        },
+        "terms": {
+            "title": "Términos y condiciones de uso",
+            "s1": {
+                "title": "1. Titular del sitio",
+                "p1": "El sitio lemaks.it está gestionado por Maksim Leali, contactable por correo electrónico:"
+            },
+            "s2": {
+                "title": "2. Finalidad del sitio",
+                "p1": "El sitio tiene fines informativos y presenta actividades, proyectos y servicios relacionados con el desarrollo web, el desarrollo de videojuegos y los contenidos sobre educación canina.",
+                "p2": "La información publicada tiene carácter general y no constituye presupuesto, oferta contractual vinculante, asesoramiento profesional, promesa de resultado ni garantía de disponibilidad de los servicios descritos."
+            },
+            "s3": {
+                "title": "3. Solicitudes de contacto y presupuestos",
+                "p1": "El envío de una solicitud a través del formulario de contacto o por correo electrónico no implica la celebración de ningún contrato.",
+                "p2": "Los servicios, plazos de ejecución, honorarios, modalidades de pago, revisiones, entregas, asistencia y derechos de uso se regularán por separado mediante presupuesto, acuerdo escrito u otro documento contractual acordado entre las partes."
+            },
+            "s4": {
+                "title": "4. Propiedad intelectual",
+                "p1": "Salvo indicación contraria, los contenidos del sitio, incluidos textos, estructura, gráficos, elementos visuales, imágenes, código, logotipos y materiales originales, son propiedad del Titular o se utilizan con autorización.",
+                "p2": "No está permitido copiar, reproducir, modificar, distribuir, publicar ni utilizar dichos contenidos con fines comerciales sin autorización escrita previa del Titular, salvo los usos permitidos por la ley."
+            },
+            "s5": {
+                "title": "5. Enlaces a sitios y servicios externos",
+                "p1": "El sitio puede contener enlaces a sitios, plataformas o servicios de terceros.",
+                "p2": "El Titular no controla dichos recursos y no es responsable de su contenido, disponibilidad, seguridad, política de privacidad, política de cookies ni condiciones de uso. Se invita al usuario a consultar las políticas y condiciones aplicables a los servicios externos antes de utilizarlos."
+            },
+            "s6": {
+                "title": "6. Disponibilidad y limitación de responsabilidad",
+                "p1": "El Titular se compromete a mantener la información del sitio razonablemente precisa y actualizada, pero no garantiza la ausencia de errores, omisiones, interrupciones, fallos ni indisponibilidades temporales.",
+                "p2": "En la medida permitida por la ley, el Titular no es responsable de los daños directos o indirectos derivados del uso o de la imposibilidad de utilizar el sitio, su contenido o servicios externos vinculados."
+            },
+            "s7": {
+                "title": "7. Privacidad y cookies",
+                "p1Pre": "El tratamiento de los datos personales se describe en la",
+                "p1Link": "Política de privacidad",
+                "p1Post": "disponible en el sitio.",
+                "p2": "La información relativa a las cookies y a las herramientas de análisis estadístico está disponible en la política de cookies."
+            },
+            "s8": {
+                "title": "8. Cambios en los términos",
+                "p1": "El Titular puede actualizar estos términos en cualquier momento. Los cambios serán efectivos desde la fecha de publicación de la versión actualizada en el sitio."
+            },
+            "s9": {
+                "title": "9. Ley aplicable",
+                "p1": "Los presentes términos se rigen por la ley italiana.",
+                "p2": "Se mantienen los derechos irrenunciables reconocidos por la normativa aplicable a los usuarios consumidores."
+            }
         }
     }
 }
