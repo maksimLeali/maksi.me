@@ -24,6 +24,7 @@ if (!i18n.isInitialized) {
                 fr: { common: fr },
                 es: { common: es },
             },
+            lng: "it",
             fallbackLng: "it",
             supportedLngs: SUPPORTED_LANGUAGES,
             defaultNS: "common",
