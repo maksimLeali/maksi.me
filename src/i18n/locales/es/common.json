@@ -29,18 +29,17 @@
   },
   "main": {
     "rotatingWords": [
-      "esenciales",
-      "claras",
-      "útiles",
-      "jugables",
-      "conscientes"
+      "en Brescia",
+      "a medida",
+      "sencillas",
+      "que funcionan"
     ],
-    "titleLine1": "Creo",
-    "titleLine2": "experiencias",
-    "lead1": "Diseño sitios web, estudio la relación entre personas y perros y experimento con el desarrollo de videojuegos.",
-    "lead2": "Tres caminos distintos, una única dirección: observar, simplificar y construir algo que funcione de verdad.",
-    "techLabel": "WEB / DESARROLLO DE VIDEOJUEGOS / CINOFILIA",
-    "ctaPrimary": "Explora mi mundo",
+    "titleLine1": "Sitios web y",
+    "titleLine2": "automatizaciones",
+    "lead1": "Ayudo a negocios locales, asociaciones y eventos en Brescia y provincia a presentarse mejor online y reducir el trabajo manual.",
+    "lead2": "El desarrollo de videojuegos y la cinofilia siguen siendo parte de mi camino, pero el foco es la web para realidades locales.",
+    "techLabel": "SITIOS WEB / PÁGINAS DE EVENTO / AUTOMATIZACIONES",
+    "ctaPrimary": "Ver los servicios",
     "ctaGhost": "Contáctame",
     "scrollDown": "Descubre más"
   },

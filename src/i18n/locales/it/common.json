@@ -29,18 +29,17 @@
   },
   "main": {
     "rotatingWords": [
-      "essenziali",
-      "chiare",
-      "utili",
-      "giocabili",
-      "consapevoli"
+      "a Brescia",
+      "su misura",
+      "semplici",
+      "che funzionano"
     ],
-    "titleLine1": "Realizzo",
-    "titleLine2": "esperienze",
-    "lead1": "Progetto siti web, studio la relazione tra persone e cani e sperimento con il game development.",
-    "lead2": "Tre percorsi diversi, un'unica direzione: osservare, semplificare e costruire qualcosa che funzioni davvero.",
-    "techLabel": "WEB / GAME DEVELOPMENT / CINOFILIA",
-    "ctaPrimary": "Esplora il mio mondo",
+    "titleLine1": "Siti web e",
+    "titleLine2": "automazioni",
+    "lead1": "Aiuto attività locali, associazioni ed eventi a Brescia e provincia a presentarsi meglio online e ridurre il lavoro manuale.",
+    "lead2": "Game development e cinofilia restano parte del mio percorso, ma il focus è il web per le realtà locali.",
+    "techLabel": "SITI WEB / PAGINE EVENTO / AUTOMAZIONI",
+    "ctaPrimary": "Scopri i servizi",
     "ctaGhost": "Contattami",
     "scrollDown": "Scopri di più"
   },

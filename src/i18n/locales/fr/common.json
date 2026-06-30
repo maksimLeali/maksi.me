@@ -29,18 +29,17 @@
   },
   "main": {
     "rotatingWords": [
-      "essentielles",
-      "claires",
-      "utiles",
-      "jouables",
-      "conscientes"
+      "à Brescia",
+      "sur mesure",
+      "simples",
+      "qui fonctionnent"
     ],
-    "titleLine1": "Je crée des",
-    "titleLine2": "expériences",
-    "lead1": "Je conçois des sites web, j'étudie la relation entre les personnes et les chiens, et j'expérimente avec le développement de jeux.",
-    "lead2": "Trois parcours différents, une seule direction : observer, simplifier et construire quelque chose qui fonctionne vraiment.",
-    "techLabel": "WEB / DÉVELOPPEMENT DE JEUX / CYNOLOGIE",
-    "ctaPrimary": "Explorer mon monde",
+    "titleLine1": "Sites web et",
+    "titleLine2": "automatisations",
+    "lead1": "J'aide les entreprises locales, associations et événements à Brescia et sa province à mieux se présenter en ligne et réduire le travail manuel.",
+    "lead2": "Le développement de jeux et la cynologie font toujours partie de mon parcours, mais le focus est le web pour les réalités locales.",
+    "techLabel": "SITES WEB / PAGES D'ÉVÉNEMENT / AUTOMATISATIONS",
+    "ctaPrimary": "Voir les services",
     "ctaGhost": "Me contacter",
     "scrollDown": "En savoir plus"
   },

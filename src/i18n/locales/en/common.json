@@ -29,18 +29,17 @@
   },
   "main": {
     "rotatingWords": [
-      "essential",
-      "clear",
-      "useful",
-      "playable",
-      "mindful"
+      "in Brescia",
+      "tailored",
+      "made simple",
+      "that work"
     ],
-    "titleLine1": "I build",
-    "titleLine2": "experiences",
-    "lead1": "I design websites, study the relationship between people and dogs, and experiment with game development.",
-    "lead2": "Three different paths, one direction: observe, simplify and build something that truly works.",
-    "techLabel": "WEB / GAME DEVELOPMENT / DOG TRAINING",
-    "ctaPrimary": "Explore my world",
+    "titleLine1": "Websites and",
+    "titleLine2": "automations",
+    "lead1": "I help local businesses, associations and events in Brescia and its province show up better online and cut manual work.",
+    "lead2": "Game development and dog training are still part of my journey, but the focus is web for local realities.",
+    "techLabel": "WEBSITES / EVENT PAGES / AUTOMATIONS",
+    "ctaPrimary": "See the services",
     "ctaGhost": "Get in touch",
     "scrollDown": "Discover more"
   },

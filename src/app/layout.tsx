@@ -5,8 +5,8 @@ import Script from "next/script";
 
 export const metadata: import("next").Metadata = {
     title: {
-        default: "Le Maks",
-        template: "%s | Le Maks",
+        default: "LeMaks — Maksim Leali",
+        template: "%s | LeMaks",
     },
     description:
         "Maksim Leali — web developer, dog trainer and game developer. I design websites, study the relationship between people and dogs, and experiment with game development.",
@@ -22,15 +22,15 @@ export const metadata: import("next").Metadata = {
     ],
     openGraph: {
         type: "website",
-        siteName: "Le Maks",
-        title: "Le Maks",
+        siteName: "LeMaks",
+        title: "LeMaks — Maksim Leali",
         description:
             "Maksim Leali — web developer, dog trainer and game developer.",
         url: "https://lemaks.it",
     },
     twitter: {
         card: "summary",
-        title: "Le Maks",
+        title: "LeMaks — Maksim Leali",
         description:
             "Maksim Leali — web developer, dog trainer and game developer.",
     },
@@ -76,6 +76,39 @@ export default async function RootLayout({
                         rel="stylesheet"
                     />
                     {/* eslint-enable @next/next/no-page-custom-font */}
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@graph": [
+                                    {
+                                        "@type": "Person",
+                                        "@id": "https://lemaks.it/#person",
+                                        name: "Maksim Leali",
+                                        alternateName: "Le Maks",
+                                        url: "https://lemaks.it",
+                                        jobTitle: "Web Developer",
+                                        sameAs: [
+                                            "https://github.com/maksimLeali",
+                                            "https://www.instagram.com/lemaks_dev/",
+                                            "https://www.linkedin.com/in/maksim-leali-50a940168/",
+                                        ],
+                                    },
+                                    {
+                                        "@type": "WebSite",
+                                        "@id": "https://lemaks.it/#website",
+                                        url: "https://lemaks.it",
+                                        name: "LeMaks",
+                                        publisher: {
+                                            "@id": "https://lemaks.it/#person",
+                                        },
+                                        inLanguage: "it",
+                                    },
+                                ],
+                            }),
+                        }}
+                    />
                 </head>
                 <body>
                     {children}

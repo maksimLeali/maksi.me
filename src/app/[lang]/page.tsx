@@ -36,10 +36,10 @@ export async function generateMetadata({
         description: m.description,
         alternates: { canonical: `https://lemaks.it/${lang}` },
         openGraph: {
-            title: `${m.title} | Le Maks`,
+            title: `${m.title} | LeMaks`,
             description: m.description,
             url: `https://lemaks.it/${lang}`,
-            siteName: "Le Maks",
+            siteName: "LeMaks",
             type: "website",
         },
     };
