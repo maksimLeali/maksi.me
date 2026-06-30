@@ -523,5 +523,32 @@
         "p2": "Se mantienen los derechos irrenunciables reconocidos por la normativa aplicable a los usuarios consumidores."
       }
     }
+  },
+  "home": {
+    "seoH1": "Desarrollador web en Brescia para negocios locales y eventos",
+    "seoLead": "Creo sitios web, páginas de eventos y automatizaciones sencillas para negocios locales, asociaciones, profesionales y eventos en Brescia y su provincia.",
+    "seoH2": "Sitios web y automatizaciones para Brescia y provincia",
+    "seoBody": "Trabajo con realidades locales que quieren presentar mejor sus servicios y recoger solicitudes de contacto, inscripciones o presupuestos de forma más ordenada."
+  },
+  "localServices": {
+    "h1": "Sitios web para negocios locales en Brescia",
+    "lead": "Creo sitios web sencillos y cuidados para tiendas, despachos profesionales y asociaciones en Brescia y provincia, pensados para ser encontrados y recibir solicitudes.",
+    "h2": "Qué incluyo",
+    "body": "Estructura clara, textos esenciales, formulario de contacto y optimización básica para Google. Hecho para ser rápido y fácil de actualizar.",
+    "cta": "Solicita un presupuesto"
+  },
+  "events": {
+    "h1": "Páginas de eventos y formularios de inscripción en Brescia",
+    "lead": "Creo páginas dedicadas a eventos, cursos e iniciativas en Brescia y provincia, con formularios de inscripción y recogida de solicitudes fáciles de gestionar.",
+    "h2": "Para quién es útil",
+    "body": "Asociaciones, organizadores y profesionales que quieren una página clara para presentar un evento y recoger inscripciones sin complicaciones.",
+    "cta": "Hablemos de tu evento"
+  },
+  "automations": {
+    "h1": "Automatizaciones sencillas para solicitudes y contactos",
+    "lead": "Configuro automatizaciones ligeras para gestionar solicitudes, contactos e inscripciones: correos automáticos, notificaciones y recogida ordenada de datos.",
+    "h2": "Ejemplos prácticos",
+    "body": "Confirmaciones automáticas tras un formulario, solicitudes reunidas en un solo lugar, recordatorios y notificaciones. Sin sistemas complicados: solo lo necesario.",
+    "cta": "Descubre si te encaja"
   }
 }

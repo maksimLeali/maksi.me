@@ -523,5 +523,32 @@
         "p2": "The mandatory rights recognised by applicable legislation to consumer users remain unaffected."
       }
     }
+  },
+  "home": {
+    "seoH1": "Web developer in Brescia for local businesses and events",
+    "seoLead": "I build websites, event pages and simple automations for local businesses, associations, professionals and events in Brescia and its province.",
+    "seoH2": "Websites and automations for Brescia and its province",
+    "seoBody": "I work with local organisations that want to present their services better and collect contact requests, sign-ups or quotes in a more organised way."
+  },
+  "localServices": {
+    "h1": "Websites for local businesses in Brescia",
+    "lead": "I build simple, well-crafted websites for shops, professional studios and associations in Brescia and its province, designed to be found and to receive requests.",
+    "h2": "What's included",
+    "body": "Clear structure, essential copy, a contact form and basic Google optimisation. Built to be fast and easy to update.",
+    "cta": "Request a quote"
+  },
+  "events": {
+    "h1": "Event pages and sign-up forms in Brescia",
+    "lead": "I create dedicated pages for events, courses and initiatives in Brescia and its province, with sign-up forms and request collection that are easy to manage.",
+    "h2": "Who it's for",
+    "body": "Associations, organisers and professionals who want a clear page to present an event and collect sign-ups without hassle.",
+    "cta": "Let's talk about your event"
+  },
+  "automations": {
+    "h1": "Simple automations for requests and contacts",
+    "lead": "I set up light automations to handle requests, contacts and sign-ups: automatic emails, notifications and tidy data collection.",
+    "h2": "Practical examples",
+    "body": "Automatic confirmations after a form, all requests collected in one place, reminders and notifications. No complicated systems — only what you need.",
+    "cta": "See if it fits you"
   }
 }

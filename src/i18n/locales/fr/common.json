@@ -523,5 +523,32 @@
         "p2": "Les droits inaliénables reconnus par la réglementation applicable aux utilisateurs consommateurs restent inchangés."
       }
     }
+  },
+  "home": {
+    "seoH1": "Développeur web à Brescia pour entreprises locales et événements",
+    "seoLead": "Je crée des sites web, des pages d'événement et des automatisations simples pour les entreprises locales, associations, professionnels et événements à Brescia et sa province.",
+    "seoH2": "Sites web et automatisations pour Brescia et sa province",
+    "seoBody": "Je travaille avec des structures locales qui veulent mieux présenter leurs services et recueillir des demandes de contact, inscriptions ou devis de façon plus ordonnée."
+  },
+  "localServices": {
+    "h1": "Sites web pour entreprises locales à Brescia",
+    "lead": "Je réalise des sites web simples et soignés pour commerces, cabinets et associations à Brescia et sa province, conçus pour être trouvés et recevoir des demandes.",
+    "h2": "Ce que j'inclus",
+    "body": "Structure claire, textes essentiels, formulaire de contact et optimisation de base pour Google. Pensé pour être rapide et facile à mettre à jour.",
+    "cta": "Demander un devis"
+  },
+  "events": {
+    "h1": "Pages d'événement et formulaires d'inscription à Brescia",
+    "lead": "Je crée des pages dédiées aux événements, cours et initiatives à Brescia et sa province, avec des formulaires d'inscription faciles à gérer.",
+    "h2": "À qui ça s'adresse",
+    "body": "Associations, organisateurs et professionnels qui veulent une page claire pour présenter un événement et recueillir les inscriptions sans complications.",
+    "cta": "Parlons de votre événement"
+  },
+  "automations": {
+    "h1": "Automatisations simples pour demandes et contacts",
+    "lead": "Je mets en place des automatisations légères pour gérer demandes, contacts et inscriptions : e-mails automatiques, notifications et collecte ordonnée des données.",
+    "h2": "Exemples concrets",
+    "body": "Confirmations automatiques après un formulaire, demandes regroupées au même endroit, rappels et notifications. Pas de systèmes compliqués : seulement l'essentiel.",
+    "cta": "Voyez si ça vous convient"
   }
 }

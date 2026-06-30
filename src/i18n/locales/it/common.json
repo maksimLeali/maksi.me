@@ -523,5 +523,32 @@
         "p2": "Restano fermi gli eventuali diritti inderogabili riconosciuti dalla normativa applicabile agli utenti consumatori."
       }
     }
+  },
+  "home": {
+    "seoH1": "Sviluppatore web a Brescia per attività locali ed eventi",
+    "seoLead": "Creo siti web, pagine evento e automazioni semplici per attività locali, associazioni, professionisti ed eventi a Brescia e provincia.",
+    "seoH2": "Siti web e automazioni per Brescia e provincia",
+    "seoBody": "Lavoro con realtà locali che vogliono presentare meglio i propri servizi, raccogliere richieste di contatto, iscrizioni o preventivi in modo più ordinato."
+  },
+  "localServices": {
+    "h1": "Siti web per attività locali a Brescia",
+    "lead": "Realizzo siti web semplici e curati per negozi, studi professionali e associazioni di Brescia e provincia, pensati per farsi trovare e ricevere richieste.",
+    "h2": "Cosa includo",
+    "body": "Struttura chiara, testi essenziali, modulo di contatto e ottimizzazione di base per Google. Tutto pensato per essere veloce e facile da aggiornare.",
+    "cta": "Richiedi un preventivo"
+  },
+  "events": {
+    "h1": "Pagine evento e moduli di iscrizione a Brescia",
+    "lead": "Creo pagine dedicate a eventi, corsi e iniziative a Brescia e provincia, con moduli di iscrizione e raccolta richieste semplici da gestire.",
+    "h2": "Per chi è utile",
+    "body": "Associazioni, organizzatori e professionisti che vogliono una pagina chiara dove presentare l'evento e raccogliere iscrizioni senza complicazioni.",
+    "cta": "Parliamo del tuo evento"
+  },
+  "automations": {
+    "h1": "Automazioni semplici per richieste e contatti",
+    "lead": "Imposto automazioni leggere per gestire richieste, contatti e iscrizioni: email automatiche, notifiche e raccolta ordinata dei dati.",
+    "h2": "Esempi pratici",
+    "body": "Conferme automatiche dopo un modulo, raccolta delle richieste in un unico posto, promemoria e notifiche. Niente sistemi complicati: solo ciò che serve.",
+    "cta": "Scopri se fa per te"
   }
 }
