@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { ManifestoSection } from "../../components/ManifestoSection";
 
 export const metadata: Metadata = {
-    title: "Manifesto | LeMaks",
+    title: "Manifesto",
     description:
         "Three directions, one way of working. How Maksim Leali approaches web development, game development, and dog training — clarity, comprehension, interaction.",
     alternates: { canonical: "https://lemaks.it/manifesto" },

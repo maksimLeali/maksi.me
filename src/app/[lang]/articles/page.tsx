@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { ArticlesSection } from "../../components/ArticlesSection";
 
 export const metadata: Metadata = {
-    title: "Articles | LeMaks",
+    title: "Articles",
     description:
         "Articles and thoughts by Maksim Leali on web development, game design, and dog training. Essays, tutorials and observations.",
     alternates: { canonical: "https://lemaks.it/articles" },

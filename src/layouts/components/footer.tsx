@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 const SOCIAL_LINKS = [
     {
@@ -196,7 +197,7 @@ const NavGroupLabel = styled.span`
     margin-bottom: ${$uw(0.3)};
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
     color: ${$color("white-dark")};
     text-decoration: none;
     font-size: 1.4rem;
@@ -246,7 +247,7 @@ const Copy = styled.p`
     }
 `;
 
-const PrivacyLink = styled.a`
+const PrivacyLink = styled(Link)`
     color: ${$color("gray-dark")};
     text-decoration: underline;
     text-underline-offset: 3px;

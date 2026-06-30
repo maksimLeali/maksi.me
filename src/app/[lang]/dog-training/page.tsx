@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { CinofilaSection } from "../../components/CinofilaSection";
 
 export const metadata: Metadata = {
-    title: "Dog Training | LeMaks",
+    title: "Dog Training",
     description:
         "Canine education and dog training by Maksim Leali. Puppies, communication, walking and adoption — building a real relationship with your dog.",
     alternates: { canonical: "https://lemaks.it/dog-training" },

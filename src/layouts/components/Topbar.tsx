@@ -4,7 +4,8 @@ import { useOnClickOutside } from "@hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
+import Link from "next/link";
 import styled from "styled-components";
 
 import { LanguageSelector } from "./LanguageSelector";
@@ -19,9 +20,28 @@ const NAV_LINKS = [
 export const TopBar: React.FC = () => {
     const { t } = useTranslation();
     const { lang } = useParams<{ lang: string }>();
+    const pathname = usePathname();
+    const [hash, setHash] = useState("");
+    const isActive = (href: string) => {
+        if (href.includes("#")) {
+            const h = href.slice(href.indexOf("#"));
+            return pathname === `/${lang}` && hash === h;
+        }
+        return pathname === `/${lang}${href}`;
+    };
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [spinKey, setSpinKey] = useState(0);
     const drawerRef = useRef<HTMLDivElement>(null);
+
+    const spinLogo = () => setSpinKey((k) => k + 1);
+
+    useEffect(() => {
+        const updateHash = () => setHash(window.location.hash);
+        updateHash();
+        window.addEventListener("hashchange", updateHash);
+        return () => window.removeEventListener("hashchange", updateHash);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,8 +74,14 @@ export const TopBar: React.FC = () => {
     return (
         <TopBarContainer className={`menu ${isScrolled ? "scrolled" : ""}`}>
             <Wrapper>
-                <Brand href={`/${lang}`} onClick={closeMenu}>
-                    <ImageWrapper>
+                <Brand
+                    href={`/${lang}`}
+                    onClick={() => {
+                        closeMenu();
+                        spinLogo();
+                    }}
+                >
+                    <ImageWrapper key={spinKey} className={spinKey > 0 ? "spin" : ""}>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/logo_dark.svg" alt="LeMaks" />
                         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -64,15 +90,32 @@ export const TopBar: React.FC = () => {
                     <span className="brand-name">LeMaks</span>
                 </Brand>
                 <NavLinks>
-                    {NAV_LINKS.map((link) => (
-                        <a
-                            key={link.href}
-                            className="nav-link"
-                            href={`/${lang}${link.href}`}
-                        >
-                            {t(`nav.${link.key}`)}
-                        </a>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                        const isHash = link.href.includes("#");
+                        const href = isHash
+                            ? `/${lang}${link.href.slice(link.href.indexOf("#"))}`
+                            : `/${lang}${link.href}`;
+                        const className = `nav-link${isActive(link.href) ? " active" : ""}`;
+                        return isHash ? (
+                            <a
+                                key={link.href}
+                                className={className}
+                                href={href}
+                                onClick={spinLogo}
+                            >
+                                {t(`nav.${link.key}`)}
+                            </a>
+                        ) : (
+                            <Link
+                                key={link.href}
+                                className={className}
+                                href={href}
+                                onClick={spinLogo}
+                            >
+                                {t(`nav.${link.key}`)}
+                            </Link>
+                        );
+                    })}
                 </NavLinks>
                 <Tools>
                     <LanguageSelector />
@@ -100,11 +143,25 @@ export const TopBar: React.FC = () => {
                     </button>
                 </DrawerHeader>
                 <DrawerNav>
-                    {NAV_LINKS.map((link) => (
-                        <a key={link.href} href={`/${lang}${link.href}`} onClick={closeMenu}>
-                            {t(`nav.${link.key}`)}
-                        </a>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                        const isHash = link.href.includes("#");
+                        const href = isHash
+                            ? `/${lang}${link.href.slice(link.href.indexOf("#"))}`
+                            : `/${lang}${link.href}`;
+                        const onClick = () => {
+                            closeMenu();
+                            spinLogo();
+                        };
+                        return isHash ? (
+                            <a key={link.href} href={href} onClick={onClick}>
+                                {t(`nav.${link.key}`)}
+                            </a>
+                        ) : (
+                            <Link key={link.href} href={href} onClick={onClick}>
+                                {t(`nav.${link.key}`)}
+                            </Link>
+                        );
+                    })}
                 </DrawerNav>
             </Drawer>
         </TopBarContainer>
@@ -166,7 +223,7 @@ const Wrapper = styled.div`
     }
 `;
 
-const Brand = styled.a`
+const Brand = styled(Link)`
     display: flex;
     align-items: center;
     gap: ${$uw(0.6)};
@@ -188,10 +245,6 @@ const Brand = styled.a`
             letter-spacing: 0.18em;
         }
     }
-
-    &:active img {
-        animation: slowSpin 0.6s ease-in-out;
-    }
 `;
 
 const ImageWrapper = styled.div`
@@ -205,6 +258,9 @@ const ImageWrapper = styled.div`
     }
     ${$breakPoint(500)} {
         display: none;
+    }
+    &.spin {
+        animation: slowSpin 0.6s ease-in-out;
     }
     > img {
         position: absolute;
@@ -247,7 +303,8 @@ const NavLinks = styled.nav`
         transition: width 0.3s ease-in-out;
     }
 
-    .nav-link:hover::after {
+    .nav-link:hover::after,
+    .nav-link.active::after {
         width: 100%;
     }
 

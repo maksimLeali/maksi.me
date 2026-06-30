@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { WebDevSection } from "../../components/WebDevSection";
 
 export const metadata: Metadata = {
-    title: "Web Development | LeMaks",
+    title: "Web Development",
     description:
         "Web development projects by Maksim Leali — minimal design, real usability, clear interfaces. From concept to production.",
     alternates: { canonical: "https://lemaks.it/web-dev" },

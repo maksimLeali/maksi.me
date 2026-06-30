@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { ServicesSection } from "../../components/ServicesSection";
 
 export const metadata: Metadata = {
-    title: "Services | LeMaks",
+    title: "Services",
     description:
         "Web development and dog training services by Maksim Leali. Custom websites, UI design, and canine education tailored to your needs.",
     alternates: { canonical: "https://lemaks.it/services" },

@@ -4,6 +4,7 @@ import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 type Props = {
     ns: "localServices" | "events" | "automations";
@@ -88,7 +89,7 @@ const Body = styled.p`
     }
 `;
 
-const Cta = styled.a`
+const Cta = styled(Link)`
     align-self: flex-start;
     margin-top: ${$uw(1)};
     font-family: "Space Mono", monospace;

@@ -3,6 +3,7 @@
 import { TextInput, TextAreaInput, CTA, Checkbox } from "@components";
 import { $uw, $breakPoint, $color } from "@theme";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
@@ -15,6 +16,7 @@ type props = {
 
 const ContactForm: React.FC<props> = ({ width = "100%" }) => {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">(
         "idle",
     );
@@ -123,7 +125,7 @@ const ContactForm: React.FC<props> = ({ width = "100%" }) => {
                         labelNode={
                             <>
                                 {t("contact.form.privacyBefore")}
-                                <PrivacyLink href="/privacy-policy">
+                                <PrivacyLink href={`/${lang}/privacy-policy`}>
                                     {t("contact.form.privacyLink")}
                                 </PrivacyLink>
                             </>
