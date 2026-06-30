@@ -9,14 +9,15 @@ import { I18nProvider } from "@i18n";
 
 type Props = {
     children: ReactNode;
+    lang: string;
 };
 
-export const MainLayout: React.FC<Props> = ({ children }) => {
+export const MainLayout: React.FC<Props> = ({ children, lang }) => {
     const [visible, setVisible] = useState(false);
 
     useHotkeys("mod+alt+g", () => setVisible(!visible));
     return (
-        <I18nProvider>
+        <I18nProvider lang={lang}>
             <Container>
                 <TopBar />
                 <MainWrapper id="mainWrapper">

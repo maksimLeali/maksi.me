@@ -1,10 +1,12 @@
 "use client";
+import { useParams } from "next/navigation";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import { useTranslation } from "react-i18next";
 
 export default function TerminiECondizioni() {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     const tr = (k: string) => t(`legal.terms.${k}`);
     return (
         <Container>
@@ -67,7 +69,7 @@ export default function TerminiECondizioni() {
                 <SectionTitle>{tr("s7.title")}</SectionTitle>
                 <Paragraph>
                     {tr("s7.p1Pre")}{" "}
-                    <a href="/privacy-policy">{tr("s7.p1Link")}</a>{" "}
+                    <a href={`/${lang}/privacy-policy`}>{tr("s7.p1Link")}</a>{" "}
                     {tr("s7.p1Post")}
                 </Paragraph>
                 <Paragraph>{tr("s7.p2")}</Paragraph>

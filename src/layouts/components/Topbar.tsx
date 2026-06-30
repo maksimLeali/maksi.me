@@ -4,18 +4,21 @@ import { useOnClickOutside } from "@hooks";
 import React, { useEffect, useRef, useState } from "react";
 import { RiCloseLine, RiMenuLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 import styled from "styled-components";
 
 import { LanguageSelector } from "./LanguageSelector";
 
 const NAV_LINKS = [
-    { key: "web", href: "/#web" },
-    { key: "game", href: "/#game" },
+    { key: "web", href: "/web-dev" },
+    { key: "game", href: "/game-dev" },
+    { key: "cinofila", href: "/dog-training" },
     { key: "contact", href: "/#contact" },
 ] as const;
 
 export const TopBar: React.FC = () => {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const drawerRef = useRef<HTMLDivElement>(null);
@@ -51,7 +54,7 @@ export const TopBar: React.FC = () => {
     return (
         <TopBarContainer className={`menu ${isScrolled ? "scrolled" : ""}`}>
             <Wrapper>
-                <Brand href="/" onClick={closeMenu}>
+                <Brand href={`/${lang}`} onClick={closeMenu}>
                     <ImageWrapper>
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/logo_dark.svg" alt="LeMaks" />
@@ -65,7 +68,7 @@ export const TopBar: React.FC = () => {
                         <a
                             key={link.href}
                             className="nav-link"
-                            href={link.href}
+                            href={`/${lang}${link.href}`}
                         >
                             {t(`nav.${link.key}`)}
                         </a>
@@ -98,7 +101,7 @@ export const TopBar: React.FC = () => {
                 </DrawerHeader>
                 <DrawerNav>
                     {NAV_LINKS.map((link) => (
-                        <a key={link.href} href={link.href} onClick={closeMenu}>
+                        <a key={link.href} href={`/${lang}${link.href}`} onClick={closeMenu}>
                             {t(`nav.${link.key}`)}
                         </a>
                     ))}

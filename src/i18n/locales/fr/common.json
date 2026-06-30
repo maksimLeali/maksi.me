@@ -1,518 +1,527 @@
 {
-    "nav": {
-        "web": "Développement Web",
-        "game": "Développement de Jeux",
-        "contact": "Contact"
-    },
-    "menu": {
-        "open": "Ouvrir le menu",
-        "close": "Fermer le menu",
-        "title": "MENU"
-    },
-    "footer": {
-        "tagline": "Développement Web · Éducation Canine · Développement de Jeux",
-        "claim": "Je crée des expériences essentielles.",
-        "privacy": "Politique de confidentialité",
-        "cookies": "Politique des cookies",
-        "terms": "Conditions générales"
-    },
-    "language": {
-        "selector": "Choisir la langue",
-        "it": "IT-it",
-        "en": "EN-en",
-        "fr": "FR-fr",
-        "es": "ES-es"
-    },
-    "main": {
-        "rotatingWords": [
-            "essentielles",
-            "claires",
-            "utiles",
-            "jouables",
-            "conscientes"
-        ],
-        "titleLine1": "Je crée des",
-        "titleLine2": "expériences",
-        "lead1": "Je conçois des sites web, j'étudie la relation entre les personnes et les chiens, et j'expérimente avec le développement de jeux.",
-        "lead2": "Trois parcours différents, une seule direction : observer, simplifier et construire quelque chose qui fonctionne vraiment.",
-        "techLabel": "WEB / DÉVELOPPEMENT DE JEUX / CYNOLOGIE",
-        "ctaPrimary": "Explorer mon monde",
-        "ctaGhost": "Me contacter",
-        "scrollDown": "En savoir plus"
-    },
-    "manifesto": {
-        "techLabel": "MANIFESTE",
-        "title": "Trois directions. Une seule façon de travailler.",
-        "intro": "Je n'aime pas ajouter de la complexité là où ce n'est pas nécessaire. Dans chaque projet, je pars de l'essentiel : comprendre le contexte, observer ce qui compte et construire une expérience plus simple à vivre.",
-        "columns": {
-            "clarity": {
-                "context": "Sur le web je cherche",
-                "keyword": "la clarté",
-                "desc": "Comprendre le contexte, retirer le superflu et rendre chaque page facile à lire."
-            },
-            "comprehension": {
-                "context": "Avec les chiens je cherche",
-                "keyword": "la compréhension",
-                "desc": "Observer l'individu, écouter ses signaux et construire la confiance, pas à pas."
-            },
-            "interaction": {
-                "context": "Dans les jeux vidéo je cherche",
-                "keyword": "l'interaction",
-                "desc": "Transformer une idée en mécanique, et une mécanique en expérience à jouer."
-            }
-        }
-    },
-    "web": {
-        "techLabel": "01 / DÉVELOPPEMENT WEB",
-        "title": "Des sites web qui racontent vraiment qui vous êtes.",
-        "intro": "Depuis plus de 8 ans, je conçois et développe des sites de présentation pour des professionnels, des activités locales et des entreprises. Je crée des expériences numériques claires, rapides et pensées pour aider les visiteurs à saisir immédiatement une chose : pourquoi vous choisir.",
-        "cta": "Parlons de votre site",
-        "mockupAltDesktop": "Maquette desktop d'un site développé par LeMaks",
-        "mockupAltMobile": "Maquette mobile d'un site développé par LeMaks",
-        "block1Title": "Je conçois des sites qui fonctionnent avant même d'être beaux.",
-        "block1Muted": "Un site efficace ne doit pas seulement avoir un bon design. Il doit guider, expliquer, rassurer et conduire les personnes vers une action concrète.",
-        "services": {
-            "showcase": {
-                "title": "Sites vitrines",
-                "desc": "Pour les professionnels et les activités qui veulent se raconter avec clarté."
-            },
-            "corporate": {
-                "title": "Sites d'entreprise",
-                "desc": "Pour les entreprises qui ont besoin d'une présence en ligne crédible et soignée."
-            },
-            "landing": {
-                "title": "Landing pages",
-                "desc": "Pour des services, campagnes, produits ou idées à présenter de manière directe."
-            },
-            "restyling": {
-                "title": "Refonte",
-                "desc": "Pour transformer un site dépassé en un outil plus clair, rapide et actuel."
-            }
-        },
-        "block2Title": "Stratégie, design et développement dans le même parcours.",
-        "block2Muted": "Chaque projet part d'une question simple : que doit comprendre une personne lorsqu'elle arrive sur votre site ? À partir de là, je construis la structure, les contenus, le design et le développement.",
-        "demoLink": "Voir ce site de démo",
-        "process": {
-            "01": "Comprendre les objectifs et le public",
-            "02": "Organiser les contenus et la structure",
-            "03": "Dessiner une interface cohérente",
-            "04": "Développer, tester et optimiser",
-            "05": "Publier un site prêt à grandir"
-        }
-    },
-    "game": {
-        "techLabel": "02 / DÉVELOPPEMENT DE JEUX",
-        "title": "Je crée des jeux pour le web. Maintenant j'explore aussi Godot.",
-        "intro1": "J'ai déjà créé des jeux sous forme de web apps, en transformant des idées et des mécaniques en expériences accessibles directement depuis le navigateur.",
-        "intro2": "Aujourd'hui j'approfondis Godot pour aborder le développement de jeux de manière plus structurée : prototypage, game design, physique, interactions et construction de petits mondes jouables.",
-        "cta": "Découvrir mes jeux",
-        "previewAlt": "Manette et écran de jeu",
-        "credit": {
-            "by": "Photo de",
-            "on": "sur"
-        },
-        "browserBlock": {
-            "title": "Du navigateur au moteur de jeu.",
-            "p1": "Mon parcours dans le développement de jeux a commencé sur le web : des jeux et de petites expériences interactives conçus pour être immédiats, accessibles et jouables partout.",
-            "p2": "Aujourd'hui j'étudie Godot pour élargir ma façon de concevoir des jeux, en expérimentant avec des outils pensés spécifiquement pour le game development.",
-            "p3": "Je ne pars pas de zéro : j'apporte l'expérience acquise dans le développement web, la conception d'interfaces et la création d'interactions claires."
-        },
-        "createBlock": {
-            "title": "Ce que je crée"
-        },
-        "categories": {
-            "webApp": {
-                "title": "Jeux web app",
-                "desc": "Des expériences interactives accessibles depuis le navigateur, conçues pour être faciles à lancer et engageantes à jouer."
-            },
-            "prototypes": {
-                "title": "Prototypes et mécaniques",
-                "desc": "Petites expérimentations pour tester des idées, des règles, du rythme et des retours de jeu."
-            },
-            "godot": {
-                "title": "Projets avec Godot",
-                "desc": "Nouveaux exercices et prototypes réalisés pour approfondir le développement 2D, GDScript, la physique et le level design."
-            }
-        },
-        "spotlight": {
-            "techLabel": "WEB GAME / MOBILE FIRST",
-            "title": "Un jeu de mots, pensé pour l'écran que vous avez en main.",
-            "p1": "Un petit jeu web inspiré des word games à essais : simple à comprendre, rapide à jouer et conçu pour fonctionner au mieux depuis le smartphone.",
-            "p2": "L'objectif est de deviner le bon mot à travers des essais, des indices et des retours visuels. Chaque choix doit être immédiat, lisible et satisfaisant.",
-            "tags": {
-                "platform": "PLATEFORME : WEB",
-                "format": "FORMAT : MOBILE FIRST",
-                "status": "STATUT : PUBLIÉ"
-            },
-            "cta": "Essayer le jeu ↗",
-            "screenAlt1": "Capture d'écran du jeu — écran 1",
-            "screenAlt2": "Capture d'écran du jeu — écran 2",
-            "screenAlt3": "Capture d'écran du jeu — écran 3",
-            "note": "Le jeu est principalement optimisé pour les appareils mobiles. Les captures présentées représentent l'expérience pensée pour smartphone."
-        },
-        "skillsTitle": "Ce que j'approfondis avec Godot",
-        "skills": {
-            "gdscript": "GDScript",
-            "twod": "Développement 2D",
-            "physics": "Mouvement et physique",
-            "interactions": "Interactions entre objets",
-            "ui": "UI et retours de jeu",
-            "leveldesign": "Level design",
-            "prototyping": "Prototypage"
-        },
-        "projects": {
-            "title": "Des idées qui deviennent jouables.",
-            "muted1": "Je rassemble ici des jeux web, des prototypes et des projets en développement.",
-            "muted2": "Certains naissent pour explorer une mécanique, d'autres pour créer une expérience complète. Chaque projet est une occasion de mieux comprendre comment fonctionnent l'interaction, le rythme, la difficulté et le plaisir.",
-            "proto": {
-                "imageAlt": "Concept visuel du premier jeu web",
-                "title": "Premier jeu Godot",
-                "desc": "Une expérience interactive conçue pour le navigateur, entre mécanique simple et rythme de jeu.",
-                "aiNote": "Concept visuel généré par IA, utilisé comme placeholder pour représenter l'idée et l'atmosphère du jeu. Ce n'est pas un matériau artistique définitif.",
-                "tags": {
-                    "platform": "PLATEFORME : GODOT",
-                    "type": "TYPE : JEU",
-                    "status": "STATUT : EN DÉVELOPPEMENT"
-                },
-                "build": "BUILD 0.1.0"
-            }
-        },
-        "vision": {
-            "title": "Construire des expériences qui invitent à jouer.",
-            "p1": "Je veux continuer à développer des jeux pour le web et, en même temps, faire grandir mes compétences avec Godot.",
-            "p2": "L'objectif est d'unir ce que je connais déjà du web avec les outils et la logique propres au game development, pour créer des expériences plus soignées, interactives et mémorables."
-        }
-    },
-    "cinofila": {
-        "techLabel": "03 / ÉDUCATION CANINE",
-        "title": "Comprendre le chien est le premier pas pour l'éduquer.",
-        "intro": "J'approfondis la méthode cognitivo-relationnelle pour apprendre à observer le chien comme un individu : avec des émotions, des besoins, des expériences et sa propre manière de communiquer. Un parcours en formation, mené avec sérieux, étude et respect.",
-        "cta": "Découvrir mon parcours",
-        "photoAlt1": "Chien lors d'une séance d'éducation",
-        "photoAlt2": "Chien dans un moment de détente",
-        "photoAlt3": "Un moment de connexion avec le chien",
-        "approach": {
-            "title": "Chaque chien a une histoire. C'est de là qu'on commence.",
-            "p1Before": "Il n'existe pas de solutions standards valables pour tous. Chaque parcours part de l'",
-            "p1Highlight1": "observation",
-            "p1After": " du chien, du contexte dans lequel il vit et des besoins de sa famille.",
-            "p2Before": "La méthode cognitivo-relationnelle valorise la ",
-            "p2Highlight1": "collaboration",
-            "p2Middle": " et la ",
-            "p2Highlight2": "confiance",
-            "p2After": ". L'objectif n'est pas d'avoir un chien parfait, mais un chien plus serein, écouté et capable d'affronter le monde aux côtés de sa personne."
-        },
-        "topics": {
-            "title": "Petits pas, utiles dans la vie réelle.",
-            "items": {
-                "puppies": {
-                    "title": "Chiots et premiers mois",
-                    "desc": "Routine, intégration dans la famille et construction des premières bases.",
-                    "hint": "Construire des habitudes sereines dès le début."
-                },
-                "communication": {
-                    "title": "Communication",
-                    "desc": "Apprendre à lire les signaux, les besoins et les moments de difficulté.",
-                    "hint": "Écouter avant de demander."
-                },
-                "walking": {
-                    "title": "Promenade et environnement",
-                    "desc": "Créer des expériences plus sereines à l'intérieur comme à l'extérieur de la maison.",
-                    "hint": "L'environnement fait partie de l'éducation."
-                },
-                "adopted": {
-                    "title": "Chiens adoptés",
-                    "desc": "Accueillir l'histoire du chien et construire de nouvelles habitudes progressivement.",
-                    "hint": "Chaque histoire mérite du temps."
-                }
-            }
-        },
-        "diary": {
-            "title": "J'étudie, j'observe, j'apprends.",
-            "desc": "Cet espace rassemble notes, réflexions et observations de mon parcours de formation. Il ne veut pas donner de réponses absolues : il veut partager de meilleures questions et une manière plus consciente d'être aux côtés des chiens.",
-            "soon": "JOURNAL À VENIR"
-        }
-    },
-    "articles": {
-        "techLabel": "04 / ARTICLES",
-        "title": "J'écris sur ce que je construis.",
-        "p1": "Je rassemble ici articles, notes techniques et approfondissements nés de mes projets.",
-        "p2": "Ce ne sont pas des contenus publiés automatiquement : je ne sélectionne que ceux qui représentent bien ma façon de travailler, les technologies que j'utilise et les idées que je veux partager.",
-        "cta": "Découvrir les articles",
-        "featured": {
-            "title": "Article en avant",
-            "category": "REACT / STYLED-COMPONENTS / RESPONSIVE DESIGN",
-            "articleTitle": "Enhancing React Development with Dynamic Styled Components and a Custom Grid System",
-            "articleDesc": "Une exploration de la manière d'utiliser des fonctions et utilitaires personnalisés avec styled-components pour gérer couleurs, espacements, breakpoints et un système de grille responsive construit sur mesure.",
-            "meta": "8 min de lecture · Medium · 30 mai 2024",
-            "read": "Lire l'article sur Medium"
-        }
-    },
-    "about": {
-        "techLabel": "À PROPOS",
-        "title": "Je conçois, j'observe, j'expérimente.",
-        "p1": "Je suis Maksim, développeur web avec plus de 8 ans d'expérience. Le web est mon métier principal : je conçois des sites de présentation pour aider activités, professionnels et entreprises à mieux se raconter en ligne.",
-        "p2": "À côté du travail, j'approfondis deux parcours qui m'apprennent beaucoup : l'éducation canine cognitivo-relationnelle et le développement de jeux avec Godot.",
-        "p3": "Ce sont des domaines différents, mais ils ont quelque chose en commun : ils demandent de l'écoute, de l'observation, de la patience et la capacité de construire des expériences qui aient du sens pour celles et ceux qui les vivent.",
-        "typed": "Curiosité\nappliquée.",
-        "portraitAlt": "Photo de Maksim Leali"
-    },
+  "nav": {
+    "web": "Développement Web",
+    "game": "Développement de Jeux",
+    "contact": "Contact",
+    "cinofila": "Cynophilie",
+    "articles": "Articles"
+  },
+  "menu": {
+    "open": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "title": "MENU"
+  },
+  "footer": {
+    "tagline": "Développement Web · Éducation Canine · Développement de Jeux",
+    "claim": "Je crée des expériences essentielles.",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique des cookies",
+    "terms": "Conditions générales",
+    "work": "Métiers",
+    "hobbies": "Passions"
+  },
+  "language": {
+    "selector": "Choisir la langue",
+    "it": "IT-it",
+    "en": "EN-en",
+    "fr": "FR-fr",
+    "es": "ES-es"
+  },
+  "main": {
+    "rotatingWords": [
+      "essentielles",
+      "claires",
+      "utiles",
+      "jouables",
+      "conscientes"
+    ],
+    "titleLine1": "Je crée des",
+    "titleLine2": "expériences",
+    "lead1": "Je conçois des sites web, j'étudie la relation entre les personnes et les chiens, et j'expérimente avec le développement de jeux.",
+    "lead2": "Trois parcours différents, une seule direction : observer, simplifier et construire quelque chose qui fonctionne vraiment.",
+    "techLabel": "WEB / DÉVELOPPEMENT DE JEUX / CYNOLOGIE",
+    "ctaPrimary": "Explorer mon monde",
+    "ctaGhost": "Me contacter",
+    "scrollDown": "En savoir plus"
+  },
+  "manifesto": {
+    "techLabel": "MANIFESTE",
+    "title": "Trois directions. Une seule façon de travailler.",
+    "intro": "Je n'aime pas ajouter de la complexité là où ce n'est pas nécessaire. Dans chaque projet, je pars de l'essentiel : comprendre le contexte, observer ce qui compte et construire une expérience plus simple à vivre.",
+    "columns": {
+      "clarity": {
+        "context": "Sur le web je cherche",
+        "keyword": "la clarté",
+        "desc": "Comprendre le contexte, retirer le superflu et rendre chaque page facile à lire."
+      },
+      "comprehension": {
+        "context": "Avec les chiens je cherche",
+        "keyword": "la compréhension",
+        "desc": "Observer l'individu, écouter ses signaux et construire la confiance, pas à pas."
+      },
+      "interaction": {
+        "context": "Dans les jeux vidéo je cherche",
+        "keyword": "l'interaction",
+        "desc": "Transformer une idée en mécanique, et une mécanique en expérience à jouer."
+      }
+    }
+  },
+  "web": {
+    "techLabel": "DÉVELOPPEMENT WEB",
+    "title": "Des sites web qui racontent vraiment qui vous êtes.",
+    "intro": "Depuis plus de 8 ans, je conçois et développe des sites de présentation pour des professionnels, des activités locales et des entreprises. Je crée des expériences numériques claires, rapides et pensées pour aider les visiteurs à saisir immédiatement une chose : pourquoi vous choisir.",
+    "cta": "Parlons de votre site",
+    "mockupAltDesktop": "Maquette desktop d'un site développé par LeMaks",
+    "mockupAltMobile": "Maquette mobile d'un site développé par LeMaks",
+    "block1Title": "Je conçois des sites qui fonctionnent avant même d'être beaux.",
+    "block1Muted": "Un site efficace ne doit pas seulement avoir un bon design. Il doit guider, expliquer, rassurer et conduire les personnes vers une action concrète.",
     "services": {
-        "techLabel": "SERVICES",
-        "title": "Ce que je peux faire pour vous",
-        "subtitle": "Je travaille avec des réalités locales, des associations, des événements et de petites activités. Écrivez-moi pour voir si je peux vous aider.",
-        "items": {
-            "local": {
-                "title": "Sites pour événements et activités locales",
-                "desc": "Landing pages rapides, mobiles et faciles à partager : programme, cartes, contacts, inscriptions et liens sociaux. Tout au même endroit, sans que l'information reste éparpillée entre posts et affiches."
-            },
-            "automation": {
-                "title": "Automatisations pour réduire le travail manuel",
-                "desc": "Formulaires, demandes, confirmations, rappels, feuilles de gestion et petits processus reliés entre eux. Moins de messages à gérer à la main, plus de temps pour le travail qui compte."
-            }
-        },
-        "cta": "Parlons de votre site ou de votre automatisation →"
+      "showcase": {
+        "title": "Sites vitrines",
+        "desc": "Pour les professionnels et les activités qui veulent se raconter avec clarté."
+      },
+      "corporate": {
+        "title": "Sites d'entreprise",
+        "desc": "Pour les entreprises qui ont besoin d'une présence en ligne crédible et soignée."
+      },
+      "landing": {
+        "title": "Landing pages",
+        "desc": "Pour des services, campagnes, produits ou idées à présenter de manière directe."
+      },
+      "restyling": {
+        "title": "Refonte",
+        "desc": "Pour transformer un site dépassé en un outil plus clair, rapide et actuel."
+      }
     },
-    "contact": {
-        "techLabel": "CONTACT",
-        "title": "Parlons de votre site ou de votre automatisation",
-        "subtitle": "Vous avez un événement, une activité ou un processus que vous voulez rendre plus simple à gérer ? Écrivez-moi : je réponds sous 24 heures pour voir ensemble si je peux vous aider.",
-        "privacyNote": "Les données saisies seront utilisées exclusivement pour répondre à votre demande de contact et ne seront pas utilisées à des fins marketing sans votre consentement.",
-        "privacyMore": "Pour plus d'informations, consultez la ",
-        "privacyLink": "politique de confidentialité",
-        "asideTitle": "Où me trouver",
-        "form": {
-            "labels": {
-                "name": "Prénom",
-                "surname": "Nom",
-                "email": "Email",
-                "company": "Entreprise ou projet",
-                "message": "Message"
-            },
-            "errors": {
-                "name": "Veuillez saisir votre prénom.",
-                "surname": "Veuillez saisir votre nom.",
-                "email": "Veuillez saisir votre email.",
-                "emailPattern": "Veuillez saisir une adresse email valide.",
-                "company": "Veuillez saisir le nom de l'entreprise ou du projet.",
-                "message": "Veuillez saisir votre message.",
-                "privacy": "Vous devez accepter la politique de confidentialité.",
-                "unknown": "Erreur inconnue.",
-                "network": "Envoi échoué. Vérifiez votre connexion."
-            },
-            "privacyBefore": "J'ai lu la ",
-            "privacyLink": "politique de confidentialité",
-            "submit": "ENVOYER LE MESSAGE",
-            "sending": "ENVOI EN COURS…",
-            "success": "✓ Message envoyé. Je répondrai dès que possible."
-        }    },
-    "legal": {
-        "lastUpdate": "Dernière mise à jour",
-        "privacy": {
-            "title": "Politique de confidentialité",
-            "s1": { "title": "1. Responsable du traitement", "p1": "Le responsable du traitement des données personnelles est Maksim Leali, joignable par e-mail :" },
-            "s2": {
-                "title": "2. Données personnelles traitées",
-                "sub1": "Données fournies via le formulaire de contact",
-                "p1": "Via le formulaire de contact présent sur le site, les données suivantes peuvent être traitées :",
-                "l1": "prénom ;",
-                "l2": "adresse e-mail ;",
-                "l3": "entreprise ou projet, si renseigné par l'utilisateur ;",
-                "l4": "informations sur la demande ou le service souhaité ;",
-                "l5": "contenu du message ;",
-                "l6": "toute autre donnée que l'utilisateur choisit volontairement de communiquer.",
-                "p2": "L'utilisateur est invité à ne pas soumettre via le formulaire des données personnelles non nécessaires, des catégories particulières de données ou des informations confidentielles.",
-                "sub2": "Données de navigation et statistiques",
-                "p3": "Le site utilise Umami, un système d'analyse statistique auto-hébergé géré par le Responsable via l'infrastructure analytics.lemaks.it.",
-                "p4": "Umami est utilisé exclusivement pour comprendre, sous forme statistique et agrégée, comment le site est utilisé. Des données techniques et de navigation peuvent être traitées, notamment :",
-                "l7": "page visitée, titre de la page et domaine de provenance ;",
-                "l8": "type de navigateur, système d'exploitation, type d'appareil, langue et résolution d'écran ;",
-                "l9": "informations géographiques approximatives ;",
-                "l10": "date et heure de la visite.",
-                "p5": "Le tracker est configuré pour ne pas collecter les paramètres de recherche ni les fragments d'URL. L'adresse IP peut être temporairement utilisée par le système pour produire des statistiques géographiques, mais n'est pas conservée par Umami.",
-                "p6": "Le site n'utilise pas de cookies de profilage, de cookies publicitaires, d'outils de remarketing ou de technologies destinées à suivre l'utilisateur sur différents sites.",
-                "sub3": "Journaux techniques",
-                "p7": "Pour des raisons de sécurité, de maintenance et de prévention des abus, le serveur peut enregistrer des données techniques telles que l'adresse IP, la date et l'heure de la requête, la ressource demandée, le code de réponse et les informations du navigateur."
-            },
-            "s3": {
-                "title": "3. Finalités du traitement",
-                "p1": "Les données personnelles sont traitées pour :",
-                "l1": "répondre aux demandes envoyées via le formulaire de contact ;",
-                "l2": "recontacter l'utilisateur en lien avec la demande reçue ;",
-                "l3": "gérer les demandes d'informations, de collaboration ou de devis ;",
-                "l4": "assurer la sécurité, la maintenance et le bon fonctionnement du site ;",
-                "l5": "produire des statistiques agrégées sur l'utilisation du site et en améliorer le contenu, la structure et les performances ;",
-                "l6": "protéger les droits du Responsable en cas d'abus, de violations ou de litiges.",
-                "p2": "Les données ne sont pas utilisées à des fins de newsletter, de communications commerciales, de profilage ou de marketing direct sans le consentement spécifique de l'utilisateur."
-            },
-            "s4": {
-                "title": "4. Base juridique du traitement",
-                "p1": "Le traitement a lieu :",
-                "l1": "pour l'exécution de mesures précontractuelles prises à la demande de la personne concernée, lorsque l'utilisateur demande des informations, un contact ou un devis ;",
-                "l2": "pour l'intérêt légitime du Responsable à assurer la sécurité du site, prévenir les abus et analyser son utilisation de manière agrégée ;",
-                "l3": "sur la base du consentement de l'utilisateur, uniquement lorsque requis pour des finalités supplémentaires non nécessaires, telles que d'éventuelles communications marketing futures."
-            },
-            "s5": {
-                "title": "5. Caractère obligatoire de la fourniture",
-                "p1": "La fourniture des données identifiées comme obligatoires dans le formulaire de contact est nécessaire pour envoyer et traiter la demande.",
-                "p2": "Le refus de les fournir peut rendre impossible toute réponse à l'utilisateur."
-            },
-            "s6": {
-                "title": "6. Modalités du traitement",
-                "p1": "Les données envoyées via le formulaire de contact ne sont pas stockées dans une base de données du site. Elles sont transmises par e-mail à la boîte de contact du Responsable et utilisées exclusivement pour traiter la demande de l'utilisateur.",
-                "p2": "Les statistiques de navigation sont stockées dans une base de données distincte utilisée exclusivement par le système Umami auto-hébergé.",
-                "p3": "Le traitement est effectué par des outils informatiques et électroniques, avec des mesures techniques et organisationnelles appropriées pour prévenir les accès non autorisés, la perte, l'altération ou la divulgation des données."
-            },
-            "s7": {
-                "title": "7. Destinataires des données",
-                "p1": "Les données personnelles peuvent être traitées par les parties suivantes :",
-                "l1": "Maksim Leali, en tant que Responsable du traitement ;",
-                "l2": "DigitalOcean, LLC, en tant que fournisseur d'infrastructure cloud et d'hébergement pour le site et le système d'analyse statistique auto-hébergé ;",
-                "l3": "fournisseur du service de messagerie et/ou d'envoi des messages générés par le formulaire de contact ;",
-                "l4": "tout tiers autorisé par le Responsable ou prestataires techniques strictement nécessaires à la gestion, à la sécurité et à la maintenance du site.",
-                "p2": "Les données ne sont pas cédées, vendues ou communiquées à des tiers à des fins publicitaires ou de marketing."
-            },
-            "s8": {
-                "title": "8. Transferts hors de l'Espace économique européen",
-                "p1": "Le site et le système d'analyse Umami sont hébergés sur des infrastructures DigitalOcean situées dans l'Espace économique européen.",
-                "p2": "Si, pour des raisons techniques liées aux services fournis par les prestataires indiqués, un transfert hors de l'Espace économique européen s'avérait nécessaire, ce transfert s'effectuera dans le respect des garanties prévues aux articles 44 et suivants du Règlement UE 2016/679.",
-                "p3": "Des informations sur les garanties applicables peuvent être obtenues en contactant le Responsable."
-            },
-            "s9": {
-                "title": "9. Durée de conservation",
-                "p1Pre": "Les messages reçus via le formulaire de contact sont conservés pendant le temps nécessaire au traitement de la demande et, en tout état de cause, pas plus de",
-                "p1Bold": "12 mois",
-                "p1Post": "à compter de la réception, sauf nécessité de conservation supplémentaire pour des obligations légales ou la protection des droits du Responsable.",
-                "p2Pre": "Les données statistiques collectées via Umami sont conservées pour une durée maximale de",
-                "p2Bold": "12 mois",
-                "p2Post": "puis supprimées ou anonymisées.",
-                "p3Pre": "Les journaux techniques du serveur sont conservés pendant le temps strictement nécessaire aux finalités de sécurité et de maintenance, et en principe pas plus de",
-                "p3Bold": "30 jours",
-                "p3Post": "sauf nécessité de conservation supplémentaire en cas d'incidents de sécurité ou de demandes des autorités compétentes."
-            },
-            "s10": {
-                "title": "10. Droits de la personne concernée",
-                "p1": "L'utilisateur peut exercer les droits prévus aux articles 15-22 du Règlement UE 2016/679, notamment :",
-                "l1": "obtenir la confirmation de l'existence de ses données personnelles ;",
-                "l2": "demander l'accès, la rectification ou la suppression des données ;",
-                "l3": "demander la limitation du traitement ;",
-                "l4": "s'opposer au traitement, dans les cas prévus ;",
-                "l5": "demander la portabilité des données, le cas échéant ;",
-                "l6": "retirer son consentement à tout moment, lorsque le traitement repose sur le consentement.",
-                "p2": "Pour exercer ses droits, l'utilisateur peut contacter le Responsable à l'adresse :",
-                "p3": "L'utilisateur a également le droit d'introduire une réclamation auprès de l'autorité de contrôle compétente."
-            },
-            "s11": {
-                "title": "11. Décisions automatisées et profilage",
-                "p1": "Les données personnelles ne sont pas utilisées dans des processus décisionnels automatisés ni à des fins de profilage."
-            },
-            "s12": {
-                "title": "12. Modifications de la présente politique",
-                "p1": "La présente politique peut être mise à jour au fil du temps. Toute modification sera publiée sur cette page avec l'indication de la date de la dernière mise à jour."
-            }
+    "block2Title": "Stratégie, design et développement dans le même parcours.",
+    "block2Muted": "Chaque projet part d'une question simple : que doit comprendre une personne lorsqu'elle arrive sur votre site ? À partir de là, je construis la structure, les contenus, le design et le développement.",
+    "demoLink": "Voir ce site de démo",
+    "process": {
+      "01": "Comprendre les objectifs et le public",
+      "02": "Organiser les contenus et la structure",
+      "03": "Dessiner une interface cohérente",
+      "04": "Développer, tester et optimiser",
+      "05": "Publier un site prêt à grandir"
+    }
+  },
+  "game": {
+    "techLabel": "DÉVELOPPEMENT DE JEUX",
+    "title": "Je crée des jeux pour le web. Maintenant j'explore aussi Godot.",
+    "intro1": "J'ai déjà créé des jeux sous forme de web apps, en transformant des idées et des mécaniques en expériences accessibles directement depuis le navigateur.",
+    "intro2": "Aujourd'hui j'approfondis Godot pour aborder le développement de jeux de manière plus structurée : prototypage, game design, physique, interactions et construction de petits mondes jouables.",
+    "cta": "Découvrir mes jeux",
+    "previewAlt": "Manette et écran de jeu",
+    "credit": {
+      "by": "Photo de",
+      "on": "sur"
+    },
+    "browserBlock": {
+      "title": "Du navigateur au moteur de jeu.",
+      "p1": "Mon parcours dans le développement de jeux a commencé sur le web : des jeux et de petites expériences interactives conçus pour être immédiats, accessibles et jouables partout.",
+      "p2": "Aujourd'hui j'étudie Godot pour élargir ma façon de concevoir des jeux, en expérimentant avec des outils pensés spécifiquement pour le game development.",
+      "p3": "Je ne pars pas de zéro : j'apporte l'expérience acquise dans le développement web, la conception d'interfaces et la création d'interactions claires."
+    },
+    "createBlock": {
+      "title": "Ce que je crée"
+    },
+    "categories": {
+      "webApp": {
+        "title": "Jeux web app",
+        "desc": "Des expériences interactives accessibles depuis le navigateur, conçues pour être faciles à lancer et engageantes à jouer."
+      },
+      "prototypes": {
+        "title": "Prototypes et mécaniques",
+        "desc": "Petites expérimentations pour tester des idées, des règles, du rythme et des retours de jeu."
+      },
+      "godot": {
+        "title": "Projets avec Godot",
+        "desc": "Nouveaux exercices et prototypes réalisés pour approfondir le développement 2D, GDScript, la physique et le level design."
+      }
+    },
+    "spotlight": {
+      "techLabel": "WEB GAME / MOBILE FIRST",
+      "title": "Un jeu de mots, pensé pour l'écran que vous avez en main.",
+      "p1": "Un petit jeu web inspiré des word games à essais : simple à comprendre, rapide à jouer et conçu pour fonctionner au mieux depuis le smartphone.",
+      "p2": "L'objectif est de deviner le bon mot à travers des essais, des indices et des retours visuels. Chaque choix doit être immédiat, lisible et satisfaisant.",
+      "tags": {
+        "platform": "PLATEFORME : WEB",
+        "format": "FORMAT : MOBILE FIRST",
+        "status": "STATUT : PUBLIÉ"
+      },
+      "cta": "Essayer le jeu ↗",
+      "screenAlt1": "Capture d'écran du jeu — écran 1",
+      "screenAlt2": "Capture d'écran du jeu — écran 2",
+      "screenAlt3": "Capture d'écran du jeu — écran 3",
+      "note": "Le jeu est principalement optimisé pour les appareils mobiles. Les captures présentées représentent l'expérience pensée pour smartphone."
+    },
+    "skillsTitle": "Ce que j'approfondis avec Godot",
+    "skills": {
+      "gdscript": "GDScript",
+      "twod": "Développement 2D",
+      "physics": "Mouvement et physique",
+      "interactions": "Interactions entre objets",
+      "ui": "UI et retours de jeu",
+      "leveldesign": "Level design",
+      "prototyping": "Prototypage"
+    },
+    "projects": {
+      "title": "Des idées qui deviennent jouables.",
+      "muted1": "Je rassemble ici des jeux web, des prototypes et des projets en développement.",
+      "muted2": "Certains naissent pour explorer une mécanique, d'autres pour créer une expérience complète. Chaque projet est une occasion de mieux comprendre comment fonctionnent l'interaction, le rythme, la difficulté et le plaisir.",
+      "proto": {
+        "imageAlt": "Concept visuel du premier jeu web",
+        "title": "Premier jeu Godot",
+        "desc": "Une expérience interactive conçue pour le navigateur, entre mécanique simple et rythme de jeu.",
+        "aiNote": "Concept visuel généré par IA, utilisé comme placeholder pour représenter l'idée et l'atmosphère du jeu. Ce n'est pas un matériau artistique définitif.",
+        "tags": {
+          "platform": "PLATEFORME : GODOT",
+          "type": "TYPE : JEU",
+          "status": "STATUT : EN DÉVELOPPEMENT"
         },
-        "cookie": {
-            "title": "Politique en matière de cookies",
-            "s1": {
-                "title": "1. Qu'est-ce qu'un cookie",
-                "p1": "Les cookies sont de petits fichiers texte que les sites web peuvent enregistrer sur l'appareil de l'utilisateur pour activer certaines fonctionnalités, mémoriser des préférences ou analyser la navigation.",
-                "p2": "Certaines technologies d'analyse peuvent collecter des informations sans utiliser de cookies."
-            },
-            "s2": {
-                "title": "2. Cookies utilisés par le site",
-                "p1": "Le site lemaks.it n'utilise pas de cookies de profilage, de cookies publicitaires, de cookies de remarketing ni de cookies destinés à suivre les utilisateurs sur différents sites web.",
-                "p2": "Le site n'utilise pas de cookies analytics de tiers tels que Google Analytics, Meta Pixel, Microsoft Clarity, Hotjar ou des outils équivalents."
-            },
-            "s3": {
-                "title": "3. Analyse statistique auto-hébergée",
-                "p1": "Le site utilise Umami, un système d'analyse statistique auto-hébergé accessible via analytics.lemaks.it.",
-                "p2": "Umami n'utilise pas de cookies et ne stocke pas les adresses IP. Le service est utilisé exclusivement pour produire des statistiques agrégées sur le trafic du site, telles que les pages visitées, la source de la visite, le navigateur, l'appareil, la langue et la zone géographique approximative.",
-                "p3": "Le tracker est configuré pour :",
-                "l1": "limiter son fonctionnement aux domaines lemaks.it et www.lemaks.it ;",
-                "l2": "ne pas collecter les paramètres de recherche ni les fragments d'URL ;",
-                "l3": "respecter le paramètre \"Do Not Track\" du navigateur ;",
-                "l4": "ne pas transmettre les données contenues dans les formulaires de contact ;",
-                "l5": "ne pas utiliser d'identifiants personnels, de profilage, de publicité comportementale ni de suivi intersites.",
-                "p4": "Aucun outil de session replay, de carte de chaleur, de pixel de conversion, d'identifiant persistant ou de fonctionnalité équivalente n'est actif."
-            },
-            "s4": {
-                "title": "4. Technologies similaires : stockage local de la langue",
-                "p1Pre": "Le site est disponible en plusieurs langues (italien, anglais, français et espagnol). Pour mémoriser la langue choisie par l'utilisateur entre deux visites, le site utilise le",
-                "p1Bold": "stockage local du navigateur",
-                "p1Post": "(localStorage), via une entrée unique appelée",
-                "p2": "Il ne s'agit pas d'un cookie : la valeur n'est jamais envoyée au serveur, ne contient aucune donnée personnelle, n'est pas partagée avec des tiers et ne peut pas être utilisée pour profiler l'utilisateur ni le suivre sur d'autres sites.",
-                "p3Pre": "Cette technologie est considérée comme",
-                "p3Bold": "strictement nécessaire",
-                "p3Post": "pour fournir la fonctionnalité de changement de langue expressément demandée par l'utilisateur, et ne requiert donc pas de consentement préalable.",
-                "p4": "L'utilisateur peut supprimer la préférence à tout moment depuis les paramètres du navigateur (section \"données des sites\" / \"stockage\" / \"cookies et données des sites\")."
-            },
-            "s5": {
-                "title": "5. Consentement et bannière cookies",
-                "p1": "Le site n'utilisant pas de cookies ni d'outils de suivi à des fins de profilage ou de marketing, et les technologies utilisées (statistiques agrégées et mémorisation de la langue) étant strictement nécessaires au fonctionnement du site, le consentement préalable via une bannière cookies n'est pas requis.",
-                "p2": "L'utilisateur peut néanmoins empêcher l'envoi des statistiques en activant le paramètre \"Do Not Track\" dans son navigateur."
-            },
-            "s6": {
-                "title": "6. Données traitées et durée de conservation",
-                "p1": "Les informations collectées via Umami sont utilisées exclusivement pour analyser et améliorer le site.",
-                "p2Pre": "Les données statistiques sont conservées pour une durée maximale de",
-                "p2Bold": "12 mois",
-                "p2Post": "puis supprimées ou anonymisées.",
-                "p3": "La préférence de langue stockée localement dans le navigateur est conservée jusqu'à ce que l'utilisateur la supprime manuellement ou vide les données du site depuis les paramètres du navigateur.",
-                "p4Pre": "Pour plus d'informations sur le traitement des données personnelles et les droits de l'utilisateur, veuillez consulter la",
-                "p4Link": "Politique de confidentialité",
-                "p4Post": "."
-            },
-            "s7": {
-                "title": "7. Modifications de la politique cookies",
-                "p1": "La présente politique en matière de cookies peut être mise à jour au fil du temps. Toute modification sera publiée sur cette page avec l'indication de la date de la dernière mise à jour."
-            }
+        "build": "BUILD 0.1.0"
+      }
+    },
+    "vision": {
+      "title": "Construire des expériences qui invitent à jouer.",
+      "p1": "Je veux continuer à développer des jeux pour le web et, en même temps, faire grandir mes compétences avec Godot.",
+      "p2": "L'objectif est d'unir ce que je connais déjà du web avec les outils et la logique propres au game development, pour créer des expériences plus soignées, interactives et mémorables."
+    }
+  },
+  "cinofila": {
+    "techLabel": "ÉDUCATION CANINE",
+    "title": "Comprendre le chien est le premier pas pour l'éduquer.",
+    "intro": "J'approfondis la méthode cognitivo-relationnelle pour apprendre à observer le chien comme un individu : avec des émotions, des besoins, des expériences et sa propre manière de communiquer. Un parcours en formation, mené avec sérieux, étude et respect.",
+    "cta": "Découvrir mon parcours",
+    "photoAlt1": "Chien lors d'une séance d'éducation",
+    "photoAlt2": "Chien dans un moment de détente",
+    "photoAlt3": "Un moment de connexion avec le chien",
+    "approach": {
+      "title": "Chaque chien a une histoire. C'est de là qu'on commence.",
+      "p1Before": "Il n'existe pas de solutions standards valables pour tous. Chaque parcours part de l'",
+      "p1Highlight1": "observation",
+      "p1After": " du chien, du contexte dans lequel il vit et des besoins de sa famille.",
+      "p2Before": "La méthode cognitivo-relationnelle valorise la ",
+      "p2Highlight1": "collaboration",
+      "p2Middle": " et la ",
+      "p2Highlight2": "confiance",
+      "p2After": ". L'objectif n'est pas d'avoir un chien parfait, mais un chien plus serein, écouté et capable d'affronter le monde aux côtés de sa personne."
+    },
+    "topics": {
+      "title": "Petits pas, utiles dans la vie réelle.",
+      "items": {
+        "puppies": {
+          "title": "Chiots et premiers mois",
+          "desc": "Routine, intégration dans la famille et construction des premières bases.",
+          "hint": "Construire des habitudes sereines dès le début."
         },
-        "terms": {
-            "title": "Conditions générales d'utilisation",
-            "s1": {
-                "title": "1. Propriétaire du site",
-                "p1": "Le site lemaks.it est géré par Maksim Leali, joignable par e-mail :"
-            },
-            "s2": {
-                "title": "2. Objet du site",
-                "p1": "Le site a une vocation informative et présente des activités, projets et services liés au développement web, au développement de jeux vidéo et aux contenus sur l'éducation canine.",
-                "p2": "Les informations publiées ont un caractère général et ne constituent pas un devis, une offre contractuelle contraignante, un conseil professionnel, une promesse de résultat ou une garantie de disponibilité des services décrits."
-            },
-            "s3": {
-                "title": "3. Demandes de contact et devis",
-                "p1": "L'envoi d'une demande via le formulaire de contact ou par e-mail ne constitue pas la conclusion d'un contrat.",
-                "p2": "Tout service, délai de réalisation, rémunération, modalité de paiement, révision, livraison, assistance et droit d'utilisation sera régi séparément par un devis, un accord écrit ou tout autre document contractuel convenu entre les parties."
-            },
-            "s4": {
-                "title": "4. Propriété intellectuelle",
-                "p1": "Sauf indication contraire, les contenus présents sur le site, y compris les textes, la structure, la mise en page, les éléments visuels, les images, le code, les logos et les matériaux originaux, sont la propriété du Responsable ou utilisés avec autorisation.",
-                "p2": "Il est interdit de copier, reproduire, modifier, distribuer, publier ou utiliser ces contenus à des fins commerciales sans autorisation écrite préalable du Responsable, sous réserve des utilisations autorisées par la loi."
-            },
-            "s5": {
-                "title": "5. Liens vers des sites et services externes",
-                "p1": "Le site peut contenir des liens vers des sites, plateformes ou services de tiers.",
-                "p2": "Le Responsable ne contrôle pas ces ressources et n'est pas responsable de leur contenu, disponibilité, sécurité, politique de confidentialité, politique en matière de cookies ni conditions d'utilisation. L'utilisateur est invité à consulter les politiques et conditions applicables aux services externes avant de les utiliser."
-            },
-            "s6": {
-                "title": "6. Disponibilité et limitation de responsabilité",
-                "p1": "Le Responsable s'engage à maintenir les informations du site raisonnablement exactes et à jour, mais ne garantit pas l'absence d'erreurs, d'omissions, d'interruptions, de dysfonctionnements ou d'indisponibilités temporaires.",
-                "p2": "Dans les limites autorisées par la loi, le Responsable n'est pas responsable des dommages directs ou indirects découlant de l'utilisation ou de l'impossibilité d'utiliser le site, son contenu ou des services externes liés."
-            },
-            "s7": {
-                "title": "7. Confidentialité et cookies",
-                "p1Pre": "Le traitement des données personnelles est décrit dans la",
-                "p1Link": "Politique de confidentialité",
-                "p1Post": "disponible sur le site.",
-                "p2": "Les informations relatives aux cookies et aux outils d'analyse statistique sont disponibles dans la politique en matière de cookies."
-            },
-            "s8": {
-                "title": "8. Modifications des conditions",
-                "p1": "Le Responsable peut mettre à jour les présentes conditions à tout moment. Les modifications prendront effet à la date de publication de la version mise à jour sur le site."
-            },
-            "s9": {
-                "title": "9. Droit applicable",
-                "p1": "Les présentes conditions sont régies par le droit italien.",
-                "p2": "Les droits inaliénables reconnus par la réglementation applicable aux utilisateurs consommateurs restent inchangés."
-            }
-        }    }
+        "communication": {
+          "title": "Communication",
+          "desc": "Apprendre à lire les signaux, les besoins et les moments de difficulté.",
+          "hint": "Écouter avant de demander."
+        },
+        "walking": {
+          "title": "Promenade et environnement",
+          "desc": "Créer des expériences plus sereines à l'intérieur comme à l'extérieur de la maison.",
+          "hint": "L'environnement fait partie de l'éducation."
+        },
+        "adopted": {
+          "title": "Chiens adoptés",
+          "desc": "Accueillir l'histoire du chien et construire de nouvelles habitudes progressivement.",
+          "hint": "Chaque histoire mérite du temps."
+        }
+      }
+    },
+    "diary": {
+      "title": "J'étudie, j'observe, j'apprends.",
+      "desc": "Cet espace rassemble notes, réflexions et observations de mon parcours de formation. Il ne veut pas donner de réponses absolues : il veut partager de meilleures questions et une manière plus consciente d'être aux côtés des chiens.",
+      "soon": "JOURNAL À VENIR"
+    }
+  },
+  "articles": {
+    "techLabel": "ARTICLES",
+    "title": "J'écris sur ce que je construis.",
+    "p1": "Je rassemble ici articles, notes techniques et approfondissements nés de mes projets.",
+    "p2": "Ce ne sont pas des contenus publiés automatiquement : je ne sélectionne que ceux qui représentent bien ma façon de travailler, les technologies que j'utilise et les idées que je veux partager.",
+    "cta": "Découvrir les articles",
+    "featured": {
+      "title": "Article en avant",
+      "category": "REACT / STYLED-COMPONENTS / RESPONSIVE DESIGN",
+      "articleTitle": "Enhancing React Development with Dynamic Styled Components and a Custom Grid System",
+      "articleDesc": "Une exploration de la manière d'utiliser des fonctions et utilitaires personnalisés avec styled-components pour gérer couleurs, espacements, breakpoints et un système de grille responsive construit sur mesure.",
+      "meta": "8 min de lecture · Medium · 30 mai 2024",
+      "read": "Lire l'article sur Medium"
+    }
+  },
+  "about": {
+    "techLabel": "À PROPOS",
+    "title": "Je conçois, j'observe, j'expérimente.",
+    "p1": "Je suis Maksim, développeur web avec plus de 8 ans d'expérience. Le web est mon métier principal : je conçois des sites de présentation pour aider activités, professionnels et entreprises à mieux se raconter en ligne.",
+    "p2": "À côté du travail, j'approfondis deux parcours qui m'apprennent beaucoup : l'éducation canine cognitivo-relationnelle et le développement de jeux avec Godot.",
+    "p3": "Ce sont des domaines différents, mais ils ont quelque chose en commun : ils demandent de l'écoute, de l'observation, de la patience et la capacité de construire des expériences qui aient du sens pour celles et ceux qui les vivent.",
+    "typed": "Curiosité\nappliquée.",
+    "portraitAlt": "Photo de Maksim Leali"
+  },
+  "services": {
+    "techLabel": "SERVICES",
+    "title": "Ce que je peux faire pour vous",
+    "subtitle": "Je travaille avec des réalités locales, des associations, des événements et de petites activités. Écrivez-moi pour voir si je peux vous aider.",
+    "items": {
+      "local": {
+        "title": "Sites pour événements et activités locales",
+        "desc": "Landing pages rapides, mobiles et faciles à partager : programme, cartes, contacts, inscriptions et liens sociaux. Tout au même endroit, sans que l'information reste éparpillée entre posts et affiches."
+      },
+      "automation": {
+        "title": "Automatisations pour réduire le travail manuel",
+        "desc": "Formulaires, demandes, confirmations, rappels, feuilles de gestion et petits processus reliés entre eux. Moins de messages à gérer à la main, plus de temps pour le travail qui compte."
+      }
+    },
+    "cta": "Parlons de votre site ou de votre automatisation →"
+  },
+  "contact": {
+    "techLabel": "CONTACT",
+    "title": "Parlons de votre site ou de votre automatisation",
+    "subtitle": "Vous avez un événement, une activité ou un processus que vous voulez rendre plus simple à gérer ? Écrivez-moi : je réponds sous 24 heures pour voir ensemble si je peux vous aider.",
+    "privacyNote": "Les données saisies seront utilisées exclusivement pour répondre à votre demande de contact et ne seront pas utilisées à des fins marketing sans votre consentement.",
+    "privacyMore": "Pour plus d'informations, consultez la ",
+    "privacyLink": "politique de confidentialité",
+    "asideTitle": "Où me trouver",
+    "form": {
+      "labels": {
+        "name": "Prénom",
+        "surname": "Nom",
+        "email": "Email",
+        "company": "Entreprise ou projet",
+        "message": "Message"
+      },
+      "errors": {
+        "name": "Veuillez saisir votre prénom.",
+        "surname": "Veuillez saisir votre nom.",
+        "email": "Veuillez saisir votre email.",
+        "emailPattern": "Veuillez saisir une adresse email valide.",
+        "company": "Veuillez saisir le nom de l'entreprise ou du projet.",
+        "message": "Veuillez saisir votre message.",
+        "privacy": "Vous devez accepter la politique de confidentialité.",
+        "unknown": "Erreur inconnue.",
+        "network": "Envoi échoué. Vérifiez votre connexion."
+      },
+      "privacyBefore": "J'ai lu la ",
+      "privacyLink": "politique de confidentialité",
+      "submit": "ENVOYER LE MESSAGE",
+      "sending": "ENVOI EN COURS…",
+      "success": "✓ Message envoyé. Je répondrai dès que possible."
+    }
+  },
+  "legal": {
+    "lastUpdate": "Dernière mise à jour",
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "s1": {
+        "title": "1. Responsable du traitement",
+        "p1": "Le responsable du traitement des données personnelles est Maksim Leali, joignable par e-mail :"
+      },
+      "s2": {
+        "title": "2. Données personnelles traitées",
+        "sub1": "Données fournies via le formulaire de contact",
+        "p1": "Via le formulaire de contact présent sur le site, les données suivantes peuvent être traitées :",
+        "l1": "prénom ;",
+        "l2": "adresse e-mail ;",
+        "l3": "entreprise ou projet, si renseigné par l'utilisateur ;",
+        "l4": "informations sur la demande ou le service souhaité ;",
+        "l5": "contenu du message ;",
+        "l6": "toute autre donnée que l'utilisateur choisit volontairement de communiquer.",
+        "p2": "L'utilisateur est invité à ne pas soumettre via le formulaire des données personnelles non nécessaires, des catégories particulières de données ou des informations confidentielles.",
+        "sub2": "Données de navigation et statistiques",
+        "p3": "Le site utilise Umami, un système d'analyse statistique auto-hébergé géré par le Responsable via l'infrastructure analytics.lemaks.it.",
+        "p4": "Umami est utilisé exclusivement pour comprendre, sous forme statistique et agrégée, comment le site est utilisé. Des données techniques et de navigation peuvent être traitées, notamment :",
+        "l7": "page visitée, titre de la page et domaine de provenance ;",
+        "l8": "type de navigateur, système d'exploitation, type d'appareil, langue et résolution d'écran ;",
+        "l9": "informations géographiques approximatives ;",
+        "l10": "date et heure de la visite.",
+        "p5": "Le tracker est configuré pour ne pas collecter les paramètres de recherche ni les fragments d'URL. L'adresse IP peut être temporairement utilisée par le système pour produire des statistiques géographiques, mais n'est pas conservée par Umami.",
+        "p6": "Le site n'utilise pas de cookies de profilage, de cookies publicitaires, d'outils de remarketing ou de technologies destinées à suivre l'utilisateur sur différents sites.",
+        "sub3": "Journaux techniques",
+        "p7": "Pour des raisons de sécurité, de maintenance et de prévention des abus, le serveur peut enregistrer des données techniques telles que l'adresse IP, la date et l'heure de la requête, la ressource demandée, le code de réponse et les informations du navigateur."
+      },
+      "s3": {
+        "title": "3. Finalités du traitement",
+        "p1": "Les données personnelles sont traitées pour :",
+        "l1": "répondre aux demandes envoyées via le formulaire de contact ;",
+        "l2": "recontacter l'utilisateur en lien avec la demande reçue ;",
+        "l3": "gérer les demandes d'informations, de collaboration ou de devis ;",
+        "l4": "assurer la sécurité, la maintenance et le bon fonctionnement du site ;",
+        "l5": "produire des statistiques agrégées sur l'utilisation du site et en améliorer le contenu, la structure et les performances ;",
+        "l6": "protéger les droits du Responsable en cas d'abus, de violations ou de litiges.",
+        "p2": "Les données ne sont pas utilisées à des fins de newsletter, de communications commerciales, de profilage ou de marketing direct sans le consentement spécifique de l'utilisateur."
+      },
+      "s4": {
+        "title": "4. Base juridique du traitement",
+        "p1": "Le traitement a lieu :",
+        "l1": "pour l'exécution de mesures précontractuelles prises à la demande de la personne concernée, lorsque l'utilisateur demande des informations, un contact ou un devis ;",
+        "l2": "pour l'intérêt légitime du Responsable à assurer la sécurité du site, prévenir les abus et analyser son utilisation de manière agrégée ;",
+        "l3": "sur la base du consentement de l'utilisateur, uniquement lorsque requis pour des finalités supplémentaires non nécessaires, telles que d'éventuelles communications marketing futures."
+      },
+      "s5": {
+        "title": "5. Caractère obligatoire de la fourniture",
+        "p1": "La fourniture des données identifiées comme obligatoires dans le formulaire de contact est nécessaire pour envoyer et traiter la demande.",
+        "p2": "Le refus de les fournir peut rendre impossible toute réponse à l'utilisateur."
+      },
+      "s6": {
+        "title": "6. Modalités du traitement",
+        "p1": "Les données envoyées via le formulaire de contact ne sont pas stockées dans une base de données du site. Elles sont transmises par e-mail à la boîte de contact du Responsable et utilisées exclusivement pour traiter la demande de l'utilisateur.",
+        "p2": "Les statistiques de navigation sont stockées dans une base de données distincte utilisée exclusivement par le système Umami auto-hébergé.",
+        "p3": "Le traitement est effectué par des outils informatiques et électroniques, avec des mesures techniques et organisationnelles appropriées pour prévenir les accès non autorisés, la perte, l'altération ou la divulgation des données."
+      },
+      "s7": {
+        "title": "7. Destinataires des données",
+        "p1": "Les données personnelles peuvent être traitées par les parties suivantes :",
+        "l1": "Maksim Leali, en tant que Responsable du traitement ;",
+        "l2": "DigitalOcean, LLC, en tant que fournisseur d'infrastructure cloud et d'hébergement pour le site et le système d'analyse statistique auto-hébergé ;",
+        "l3": "fournisseur du service de messagerie et/ou d'envoi des messages générés par le formulaire de contact ;",
+        "l4": "tout tiers autorisé par le Responsable ou prestataires techniques strictement nécessaires à la gestion, à la sécurité et à la maintenance du site.",
+        "p2": "Les données ne sont pas cédées, vendues ou communiquées à des tiers à des fins publicitaires ou de marketing."
+      },
+      "s8": {
+        "title": "8. Transferts hors de l'Espace économique européen",
+        "p1": "Le site et le système d'analyse Umami sont hébergés sur des infrastructures DigitalOcean situées dans l'Espace économique européen.",
+        "p2": "Si, pour des raisons techniques liées aux services fournis par les prestataires indiqués, un transfert hors de l'Espace économique européen s'avérait nécessaire, ce transfert s'effectuera dans le respect des garanties prévues aux articles 44 et suivants du Règlement UE 2016/679.",
+        "p3": "Des informations sur les garanties applicables peuvent être obtenues en contactant le Responsable."
+      },
+      "s9": {
+        "title": "9. Durée de conservation",
+        "p1Pre": "Les messages reçus via le formulaire de contact sont conservés pendant le temps nécessaire au traitement de la demande et, en tout état de cause, pas plus de",
+        "p1Bold": "12 mois",
+        "p1Post": "à compter de la réception, sauf nécessité de conservation supplémentaire pour des obligations légales ou la protection des droits du Responsable.",
+        "p2Pre": "Les données statistiques collectées via Umami sont conservées pour une durée maximale de",
+        "p2Bold": "12 mois",
+        "p2Post": "puis supprimées ou anonymisées.",
+        "p3Pre": "Les journaux techniques du serveur sont conservés pendant le temps strictement nécessaire aux finalités de sécurité et de maintenance, et en principe pas plus de",
+        "p3Bold": "30 jours",
+        "p3Post": "sauf nécessité de conservation supplémentaire en cas d'incidents de sécurité ou de demandes des autorités compétentes."
+      },
+      "s10": {
+        "title": "10. Droits de la personne concernée",
+        "p1": "L'utilisateur peut exercer les droits prévus aux articles 15-22 du Règlement UE 2016/679, notamment :",
+        "l1": "obtenir la confirmation de l'existence de ses données personnelles ;",
+        "l2": "demander l'accès, la rectification ou la suppression des données ;",
+        "l3": "demander la limitation du traitement ;",
+        "l4": "s'opposer au traitement, dans les cas prévus ;",
+        "l5": "demander la portabilité des données, le cas échéant ;",
+        "l6": "retirer son consentement à tout moment, lorsque le traitement repose sur le consentement.",
+        "p2": "Pour exercer ses droits, l'utilisateur peut contacter le Responsable à l'adresse :",
+        "p3": "L'utilisateur a également le droit d'introduire une réclamation auprès de l'autorité de contrôle compétente."
+      },
+      "s11": {
+        "title": "11. Décisions automatisées et profilage",
+        "p1": "Les données personnelles ne sont pas utilisées dans des processus décisionnels automatisés ni à des fins de profilage."
+      },
+      "s12": {
+        "title": "12. Modifications de la présente politique",
+        "p1": "La présente politique peut être mise à jour au fil du temps. Toute modification sera publiée sur cette page avec l'indication de la date de la dernière mise à jour."
+      }
+    },
+    "cookie": {
+      "title": "Politique en matière de cookies",
+      "s1": {
+        "title": "1. Qu'est-ce qu'un cookie",
+        "p1": "Les cookies sont de petits fichiers texte que les sites web peuvent enregistrer sur l'appareil de l'utilisateur pour activer certaines fonctionnalités, mémoriser des préférences ou analyser la navigation.",
+        "p2": "Certaines technologies d'analyse peuvent collecter des informations sans utiliser de cookies."
+      },
+      "s2": {
+        "title": "2. Cookies utilisés par le site",
+        "p1": "Le site lemaks.it n'utilise pas de cookies de profilage, de cookies publicitaires, de cookies de remarketing ni de cookies destinés à suivre les utilisateurs sur différents sites web.",
+        "p2": "Le site n'utilise pas de cookies analytics de tiers tels que Google Analytics, Meta Pixel, Microsoft Clarity, Hotjar ou des outils équivalents."
+      },
+      "s3": {
+        "title": "3. Analyse statistique auto-hébergée",
+        "p1": "Le site utilise Umami, un système d'analyse statistique auto-hébergé accessible via analytics.lemaks.it.",
+        "p2": "Umami n'utilise pas de cookies et ne stocke pas les adresses IP. Le service est utilisé exclusivement pour produire des statistiques agrégées sur le trafic du site, telles que les pages visitées, la source de la visite, le navigateur, l'appareil, la langue et la zone géographique approximative.",
+        "p3": "Le tracker est configuré pour :",
+        "l1": "limiter son fonctionnement aux domaines lemaks.it et www.lemaks.it ;",
+        "l2": "ne pas collecter les paramètres de recherche ni les fragments d'URL ;",
+        "l3": "respecter le paramètre \"Do Not Track\" du navigateur ;",
+        "l4": "ne pas transmettre les données contenues dans les formulaires de contact ;",
+        "l5": "ne pas utiliser d'identifiants personnels, de profilage, de publicité comportementale ni de suivi intersites.",
+        "p4": "Aucun outil de session replay, de carte de chaleur, de pixel de conversion, d'identifiant persistant ou de fonctionnalité équivalente n'est actif."
+      },
+      "s4": {
+        "title": "4. Technologies similaires : stockage local de la langue",
+        "p1Pre": "Le site est disponible en plusieurs langues (italien, anglais, français et espagnol). Pour mémoriser la langue choisie par l'utilisateur entre deux visites, le site utilise le",
+        "p1Bold": "stockage local du navigateur",
+        "p1Post": "(localStorage), via une entrée unique appelée",
+        "p2": "Il ne s'agit pas d'un cookie : la valeur n'est jamais envoyée au serveur, ne contient aucune donnée personnelle, n'est pas partagée avec des tiers et ne peut pas être utilisée pour profiler l'utilisateur ni le suivre sur d'autres sites.",
+        "p3Pre": "Cette technologie est considérée comme",
+        "p3Bold": "strictement nécessaire",
+        "p3Post": "pour fournir la fonctionnalité de changement de langue expressément demandée par l'utilisateur, et ne requiert donc pas de consentement préalable.",
+        "p4": "L'utilisateur peut supprimer la préférence à tout moment depuis les paramètres du navigateur (section \"données des sites\" / \"stockage\" / \"cookies et données des sites\")."
+      },
+      "s5": {
+        "title": "5. Consentement et bannière cookies",
+        "p1": "Le site n'utilisant pas de cookies ni d'outils de suivi à des fins de profilage ou de marketing, et les technologies utilisées (statistiques agrégées et mémorisation de la langue) étant strictement nécessaires au fonctionnement du site, le consentement préalable via une bannière cookies n'est pas requis.",
+        "p2": "L'utilisateur peut néanmoins empêcher l'envoi des statistiques en activant le paramètre \"Do Not Track\" dans son navigateur."
+      },
+      "s6": {
+        "title": "6. Données traitées et durée de conservation",
+        "p1": "Les informations collectées via Umami sont utilisées exclusivement pour analyser et améliorer le site.",
+        "p2Pre": "Les données statistiques sont conservées pour une durée maximale de",
+        "p2Bold": "12 mois",
+        "p2Post": "puis supprimées ou anonymisées.",
+        "p3": "La préférence de langue stockée localement dans le navigateur est conservée jusqu'à ce que l'utilisateur la supprime manuellement ou vide les données du site depuis les paramètres du navigateur.",
+        "p4Pre": "Pour plus d'informations sur le traitement des données personnelles et les droits de l'utilisateur, veuillez consulter la",
+        "p4Link": "Politique de confidentialité",
+        "p4Post": "."
+      },
+      "s7": {
+        "title": "7. Modifications de la politique cookies",
+        "p1": "La présente politique en matière de cookies peut être mise à jour au fil du temps. Toute modification sera publiée sur cette page avec l'indication de la date de la dernière mise à jour."
+      }
+    },
+    "terms": {
+      "title": "Conditions générales d'utilisation",
+      "s1": {
+        "title": "1. Propriétaire du site",
+        "p1": "Le site lemaks.it est géré par Maksim Leali, joignable par e-mail :"
+      },
+      "s2": {
+        "title": "2. Objet du site",
+        "p1": "Le site a une vocation informative et présente des activités, projets et services liés au développement web, au développement de jeux vidéo et aux contenus sur l'éducation canine.",
+        "p2": "Les informations publiées ont un caractère général et ne constituent pas un devis, une offre contractuelle contraignante, un conseil professionnel, une promesse de résultat ou une garantie de disponibilité des services décrits."
+      },
+      "s3": {
+        "title": "3. Demandes de contact et devis",
+        "p1": "L'envoi d'une demande via le formulaire de contact ou par e-mail ne constitue pas la conclusion d'un contrat.",
+        "p2": "Tout service, délai de réalisation, rémunération, modalité de paiement, révision, livraison, assistance et droit d'utilisation sera régi séparément par un devis, un accord écrit ou tout autre document contractuel convenu entre les parties."
+      },
+      "s4": {
+        "title": "4. Propriété intellectuelle",
+        "p1": "Sauf indication contraire, les contenus présents sur le site, y compris les textes, la structure, la mise en page, les éléments visuels, les images, le code, les logos et les matériaux originaux, sont la propriété du Responsable ou utilisés avec autorisation.",
+        "p2": "Il est interdit de copier, reproduire, modifier, distribuer, publier ou utiliser ces contenus à des fins commerciales sans autorisation écrite préalable du Responsable, sous réserve des utilisations autorisées par la loi."
+      },
+      "s5": {
+        "title": "5. Liens vers des sites et services externes",
+        "p1": "Le site peut contenir des liens vers des sites, plateformes ou services de tiers.",
+        "p2": "Le Responsable ne contrôle pas ces ressources et n'est pas responsable de leur contenu, disponibilité, sécurité, politique de confidentialité, politique en matière de cookies ni conditions d'utilisation. L'utilisateur est invité à consulter les politiques et conditions applicables aux services externes avant de les utiliser."
+      },
+      "s6": {
+        "title": "6. Disponibilité et limitation de responsabilité",
+        "p1": "Le Responsable s'engage à maintenir les informations du site raisonnablement exactes et à jour, mais ne garantit pas l'absence d'erreurs, d'omissions, d'interruptions, de dysfonctionnements ou d'indisponibilités temporaires.",
+        "p2": "Dans les limites autorisées par la loi, le Responsable n'est pas responsable des dommages directs ou indirects découlant de l'utilisation ou de l'impossibilité d'utiliser le site, son contenu ou des services externes liés."
+      },
+      "s7": {
+        "title": "7. Confidentialité et cookies",
+        "p1Pre": "Le traitement des données personnelles est décrit dans la",
+        "p1Link": "Politique de confidentialité",
+        "p1Post": "disponible sur le site.",
+        "p2": "Les informations relatives aux cookies et aux outils d'analyse statistique sont disponibles dans la politique en matière de cookies."
+      },
+      "s8": {
+        "title": "8. Modifications des conditions",
+        "p1": "Le Responsable peut mettre à jour les présentes conditions à tout moment. Les modifications prendront effet à la date de publication de la version mise à jour sur le site."
+      },
+      "s9": {
+        "title": "9. Droit applicable",
+        "p1": "Les présentes conditions sont régies par le droit italien.",
+        "p2": "Les droits inaliénables reconnus par la réglementation applicable aux utilisateurs consommateurs restent inchangés."
+      }
+    }
+  }
 }

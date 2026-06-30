@@ -1,10 +1,12 @@
 "use client";
+import { useParams } from "next/navigation";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import { useTranslation } from "react-i18next";
 
 export default function CookiePolicy() {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     const c = (k: string) => t(`legal.cookie.${k}`);
     return (
         <Container>
@@ -80,7 +82,7 @@ export default function CookiePolicy() {
                 <Paragraph>{c("s6.p3")}</Paragraph>
                 <Paragraph>
                     {c("s6.p4Pre")}{" "}
-                    <a href="/privacy-policy">{c("s6.p4Link")}</a>
+                    <a href={`/${lang}/privacy-policy`}>{c("s6.p4Link")}</a>
                     {c("s6.p4Post")}
                 </Paragraph>
             </Section>

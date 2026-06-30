@@ -7,9 +7,11 @@ import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { RiMailLine } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 
 export const ContactSection = () => {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     return (
         <Section id="contact">
             <Header>
@@ -27,7 +29,7 @@ export const ContactSection = () => {
                         {t("contact.privacyNote")}
                         <br />
                         {t("contact.privacyMore")}
-                        <Link href="/privacy-policy">
+                        <Link href={`/${lang}/privacy-policy`}>
                             {t("contact.privacyLink")}
                         </Link>
                         .

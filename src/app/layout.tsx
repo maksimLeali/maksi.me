@@ -1,22 +1,56 @@
+import { headers } from "next/headers";
 import StyledComponentsRegistry from "../layouts/StyledComponentsRegistry";
 import "./globals.css";
-import { MainLayout } from "@layouts";
 import Script from "next/script";
 
-export const metadata = {
-    title: "Le Maks",
+export const metadata: import("next").Metadata = {
+    title: {
+        default: "Le Maks",
+        template: "%s | Le Maks",
+    },
     description:
-        "Il sito personale di Maksim Leali, sviluppatore web e appassionato di tecnologia.",
+        "Maksim Leali — web developer, dog trainer and game developer. I design websites, study the relationship between people and dogs, and experiment with game development.",
+    metadataBase: new URL("https://lemaks.it"),
+    alternates: { canonical: "/" },
+    keywords: [
+        "web development",
+        "dog training",
+        "game development",
+        "Maksim Leali",
+        "Le Maks",
+        "sviluppatore web",
+    ],
+    openGraph: {
+        type: "website",
+        siteName: "Le Maks",
+        title: "Le Maks",
+        description:
+            "Maksim Leali — web developer, dog trainer and game developer.",
+        url: "https://lemaks.it",
+    },
+    twitter: {
+        card: "summary",
+        title: "Le Maks",
+        description:
+            "Maksim Leali — web developer, dog trainer and game developer.",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
+    const headersList = await headers();
+    const locale = headersList.get("x-locale") ?? "it";
+
     return (
         <StyledComponentsRegistry>
-            <html lang="en">
+            <html lang={locale}>
                 <head>
                     <meta charSet="UTF-8" />
                     <meta
@@ -44,7 +78,7 @@ export default function RootLayout({
                     {/* eslint-enable @next/next/no-page-custom-font */}
                 </head>
                 <body>
-                    <MainLayout>{children}</MainLayout>
+                    {children}
                     <Script
                         defer
                         src="https://analytics.lemaks.it/script.js"

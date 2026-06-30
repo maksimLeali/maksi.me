@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled, { css } from "styled-components";
 import { RiArrowDownSLine } from "react-icons/ri";
@@ -12,6 +12,7 @@ import ES from "country-flag-icons/react/3x2/ES";
 import { $breakPoint, $color, $uw } from "@theme";
 import { useOnClickOutside } from "@hooks";
 import { SUPPORTED_LANGUAGES, SupportedLanguage } from "@i18n";
+import { useParams, usePathname, useRouter } from "next/navigation";
 
 type LanguageOption = {
     code: SupportedLanguage;
@@ -36,6 +37,9 @@ const resolveLanguage = (raw?: string): LanguageOption => {
 
 export const LanguageSelector: React.FC = () => {
     const { i18n, t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
+    const pathname = usePathname();
+    const router = useRouter();
     const [open, setOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -43,21 +47,12 @@ export const LanguageSelector: React.FC = () => {
         if (open) setOpen(false);
     });
 
-    // Ri-render alla cambio lingua (i18next.language è esterno a React)
-    const [, force] = useState(0);
-    useEffect(() => {
-        const handler = () => force((n) => n + 1);
-        i18n.on("languageChanged", handler);
-        return () => {
-            i18n.off("languageChanged", handler);
-        };
-    }, [i18n]);
-
-    const current = resolveLanguage(i18n.language);
+    const current = resolveLanguage(lang ?? i18n.language);
 
     const handleSelect = (code: SupportedLanguage) => {
         if (code !== current.code) {
-            void i18n.changeLanguage(code);
+            const newPath = pathname.replace(/^\/[^/]+/, `/${code}`);
+            router.push(newPath);
         }
         setOpen(false);
     };

@@ -3,8 +3,9 @@ import React from "react";
 import styled from "styled-components";
 import { $breakPoint, $color, $cssTRBL, $uw } from "@theme";
 import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 
-const LINKS = [
+const SOCIAL_LINKS = [
     {
         label: "LinkedIn",
         href: "https://www.linkedin.com/in/maksim-leali-50a940168/",
@@ -16,6 +17,18 @@ const LINKS = [
 
 export const Footer: React.FC = () => {
     const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
+
+    const WORK_LINKS = [
+        { label: t("nav.web"), href: `/${lang}/web-dev` },
+        { label: t("nav.game"), href: `/${lang}/game-dev` },
+    ];
+
+    const HOBBY_LINKS = [
+        { label: t("nav.cinofila"), href: `/${lang}/dog-training` },
+        { label: t("nav.articles"), href: `/${lang}/articles` },
+    ];
+
     return (
         <FooterContainer className="menu">
             <Logo src="/logo.svg" alt="" aria-hidden="true" />
@@ -25,8 +38,28 @@ export const Footer: React.FC = () => {
                     <span className="disc">{t("footer.tagline")}</span>
                     <span className="claim mono">{t("footer.claim")}</span>
                 </Brand>
+
+                <NavGroups>
+                    <NavGroup>
+                        <NavGroupLabel>{t("footer.work")}</NavGroupLabel>
+                        {WORK_LINKS.map((l) => (
+                            <NavLink key={l.href} href={l.href}>
+                                {l.label}
+                            </NavLink>
+                        ))}
+                    </NavGroup>
+                    <NavGroup>
+                        <NavGroupLabel>{t("footer.hobbies")}</NavGroupLabel>
+                        {HOBBY_LINKS.map((l) => (
+                            <NavLink key={l.href} href={l.href}>
+                                {l.label}
+                            </NavLink>
+                        ))}
+                    </NavGroup>
+                </NavGroups>
+
                 <Links>
-                    {LINKS.map((l) => (
+                    {SOCIAL_LINKS.map((l) => (
                         <FooterLink
                             key={l.label}
                             href={l.href}
@@ -43,15 +76,15 @@ export const Footer: React.FC = () => {
             <Copy>
                 © 2026 LeMaks
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/privacy-policy">
+                <PrivacyLink href={`/${lang}/privacy-policy`}>
                     {t("footer.privacy")}
                 </PrivacyLink>
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/cookie-policy">
+                <PrivacyLink href={`/${lang}/cookie-policy`}>
                     {t("footer.cookies")}
                 </PrivacyLink>
                 <span aria-hidden="true"> · </span>
-                <PrivacyLink href="/termini-e-condizioni">
+                <PrivacyLink href={`/${lang}/terms-and-conditions`}>
                     {t("footer.terms")}
                 </PrivacyLink>
             </Copy>
@@ -132,6 +165,47 @@ const Brand = styled.div`
             font-size: 1.4rem;
             margin-top: ${$uw(0.8)};
         }
+    }
+`;
+
+const NavGroups = styled.div`
+    display: flex;
+    gap: ${$uw(3)};
+    ${$breakPoint(590)} {
+        flex-direction: column;
+        width: 100%;
+        gap: ${$uw(2)};
+    }
+`;
+
+const NavGroup = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: ${$uw(0.5)};
+    ${$breakPoint(590)} {
+        width: 100%;
+    }
+`;
+
+const NavGroupLabel = styled.span`
+    font-family: "Space Mono", "Martian Mono", monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: ${$color("tertiary-dark")};
+    margin-bottom: ${$uw(0.3)};
+`;
+
+const NavLink = styled.a`
+    color: ${$color("white-dark")};
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+    ${$breakPoint(500)} {
+        font-size: 1.5rem;
+    }
+    &:hover {
+        color: ${$color("tertiary")};
     }
 `;
 
