@@ -17,7 +17,7 @@ export const metadata: import("next").Metadata = {
         "dog training",
         "game development",
         "Maksim Leali",
-        "Le Maks",
+        "LeMaks",
         "sviluppatore web",
     ],
     openGraph: {
@@ -86,7 +86,7 @@ export default async function RootLayout({
                                         "@type": "Person",
                                         "@id": "https://lemaks.it/#person",
                                         name: "Maksim Leali",
-                                        alternateName: "Le Maks",
+                                        alternateName: "LeMaks",
                                         url: "https://lemaks.it",
                                         jobTitle: "Web Developer",
                                         sameAs: [
